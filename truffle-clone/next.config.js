@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   distDir: 'out',
-  allowedDevOrigins: ['https://builder.io', '*.fly.dev', 'https://e5fdd11587534640ab84596faaf47bce-2e1a48e0-0808-4133-9129-94138a.fly.dev'],
+  allowedDevOrigins: ['builder.io', 'https://builder.io', '*.fly.dev', 'e5fdd11587534640ab84596faaf47bce-2e1a48e0-0808-4133-9129-94138a.fly.dev', 'https://e5fdd11587534640ab84596faaf47bce-2e1a48e0-0808-4133-9129-94138a.fly.dev'],
   images: {
     unoptimized: true,
     domains: [
