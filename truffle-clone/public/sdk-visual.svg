@@ -1,0 +1,15 @@
+<svg width="440" height="440" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="440" height="440" rx="60" fill="#F8F8F8"/>
+  <rect x="80" y="80" width="280" height="280" rx="40" fill="#E5E5E5"/>
+  <rect x="120" y="120" width="200" height="200" rx="20" fill="#CCCCCC"/>
+
+  <!-- Code brackets symbol -->
+  <path d="M180 200L160 220L180 240" stroke="#666666" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M260 200L280 220L260 240" stroke="#666666" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M240 190L200 250" stroke="#666666" strokeWidth="3" strokeLinecap="round"/>
+
+  <!-- Small decorative elements -->
+  <circle cx="200" cy="160" r="4" fill="#999999"/>
+  <circle cx="220" cy="160" r="4" fill="#999999"/>
+  <circle cx="240" cy="160" r="4" fill="#999999"/>
+</svg>

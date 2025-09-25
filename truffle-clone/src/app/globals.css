@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom villa button animations */
+@keyframes villa-glow {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes villa-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(180, 136, 40, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(180, 136, 40, 0.8), 0 0 35px rgba(180, 136, 40, 0.6);
+  }
+}
+
+@keyframes villa-pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(38, 79, 40, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(38, 79, 40, 0.8), 0 0 35px rgba(38, 79, 40, 0.6);
+  }
+}
+
+.villa-button-gold {
+  animation: villa-pulse 2s ease-in-out infinite;
+}
+
+.villa-button-green {
+  animation: villa-pulse-green 2s ease-in-out infinite;
+}
+
+.villa-glow {
+  animation: villa-glow 3s linear infinite;
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('https://ext.same-assets.com/2437440703/2335934149.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 35 23% 90%; /* #ede5d9 - Your logo background color */
+    --foreground: 0 0% 3.9%;
+    --card: 35 23% 90%; /* #ede5d9 - Your logo background color */
+    --card-foreground: 0 0% 3.9%;
+    --popover: 35 23% 90%; /* #ede5d9 - Your logo background color */
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 35 23% 90%; /* #ede5d9 for contrast */
+    --secondary: 35 20% 85%; /* Slightly darker version of your logo color */
+    --secondary-foreground: 0 0% 9%;
+    --muted: 35 20% 85%; /* Muted version of your logo color */
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 35 20% 85%; /* Accent version of your logo color */
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 35 23% 90%;
+    --border: 35 15% 80%; /* Border using your logo color family */
+    --input: 35 15% 80%; /* Input using your logo color family */
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 42 20% 95%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 42 20% 95%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 42 20% 95%;
+    --primary: 42 20% 95%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 42 20% 95%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 42 20% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 42 20% 95%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 42 20% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+    min-height: auto;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Suisse Intl', system-ui, sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23b48828' fill-opacity='0.015'%3E%3Cpath d='M0 0h40v40H0z'/%3E%3Cpath d='M20 20.5a.5.5 0 010-1h10a.5.5 0 010 1H20zM15 25a.5.5 0 010-1h20a.5.5 0 010 1H15zM25 30a.5.5 0 010-1h10a.5.5 0 010 1H25zM5 15a.5.5 0 010-1h25a.5.5 0 010 1H5zM10 10a.5.5 0 010-1h15a.5.5 0 010 1H10z'/%3E%3C/g%3E%3C/svg%3E");
+    transition: opacity 0.3s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 100vw;
+    height: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Enhanced Navigation Animations */
+@layer components {
+  .nav-transition {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  .page-transition-enter {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: pageEnter 0.5s ease-out forwards;
+  }
+
+  .page-transition-exit {
+    opacity: 1;
+    transform: translateY(0);
+    animation: pageExit 0.3s ease-in forwards;
+  }
+
+  .luxury-shadow {
+    box-shadow: 0 10px 25px rgba(180, 136, 40, 0.1), 0 6px 12px rgba(180, 136, 40, 0.05);
+  }
+
+  .luxury-shadow-hover {
+    box-shadow: 0 20px 40px rgba(180, 136, 40, 0.15), 0 10px 20px rgba(180, 136, 40, 0.1);
+  }
+
+  .sparkle-border {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .sparkle-border-reverse {
+    animation: sparkle 1.5s ease-in-out infinite reverse;
+  }
+}
+
+/* Prevent horizontal scrolling everywhere */
+.container, .max-w-6xl, .max-w-5xl, .max-w-7xl {
+  overflow-x: hidden;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .grid {
+    overflow-x: hidden;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Disable scrolling in villa sections */
+.villa-section-no-scroll {
+  overflow: visible !important;
+  touch-action: auto !important;
+  overscroll-behavior: none !important;
+  scroll-behavior: auto !important;
+  height: auto !important;
+}
+
+.villa-container-static {
+  overflow: visible !important;
+  touch-action: auto !important;
+  scroll-snap-type: none !important;
+}
+
+/* Ensure single page scroll context */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+html::-webkit-scrollbar {
+  display: block !important; /* Show main page scrollbar */
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgba(180, 136, 40, 0.3);
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgba(180, 136, 40, 0.5);
+}
+
+/* Completely eliminate any extra space at bottom */
+html, body {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+body::after, html::after {
+  display: none !important;
+}
+
+/* Remove any pseudo-elements that might add space */
+*::after, *::before {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force footer to be the last element with no margin */
+footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Absolutely no space after footer */
+footer::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* No space after contact section */
+#contact {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Ensure page container has no extra height */
+.antialiased {
+  height: auto !important;
+  min-height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force all containers to have proper height settings */
+#__next, [data-nextjs-root], main, section, footer, .antialiased {
+  height: auto !important;
+  min-height: auto !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Ensure page ends at footer */
+body, body > *, html {
+  height: auto !important;
+  min-height: auto !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255,215,0,0.8), 0 0 40px rgba(255,215,0,0.6), 0 0 60px rgba(255,215,0,0.4);
+    border-color: #FFD700;
+  }
+  25% {
+    box-shadow: 0 0 30px rgba(255,255,0,1), 0 0 60px rgba(255,215,0,0.8), 0 0 90px rgba(255,215,0,0.6);
+    border-color: #FFFF00;
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255,165,0,1), 0 0 80px rgba(255,215,0,1), 0 0 120px rgba(255,215,0,0.8);
+    border-color: #FFA500;
+  }
+  75% {
+    box-shadow: 0 0 35px rgba(255,255,0,0.9), 0 0 70px rgba(255,215,0,0.7), 0 0 105px rgba(255,215,0,0.5);
+    border-color: #FFFF00;
+  }
+}
+
+@keyframes golden-glow {
+  0%, 100% {
+    background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+  }
+  33% {
+    background: linear-gradient(45deg, #FFFF00, #FFD700, #FFFF00);
+  }
+  66% {
+    background: linear-gradient(45deg, #FFA500, #FFFF00, #FFA500);
+  }
+}
+
+/* Smooth scrolling with offset for fixed navigation */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-padding-top: 80px;
+  }
+}

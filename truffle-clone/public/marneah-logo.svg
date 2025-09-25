@@ -1,0 +1,15 @@
+<svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaf container shape -->
+  <path d="M100 20L120 40L100 80L80 40Z" fill="#B8860B" stroke="#B8860B" stroke-width="2"/>
+
+  <!-- Green leaves -->
+  <path d="M88 35C88 35 92 45 100 45C108 45 112 35 112 35C112 35 108 25 100 25C92 25 88 35 88 35Z" fill="#2F4F2F"/>
+  <path d="M85 42C85 42 89 52 97 52C105 52 109 42 109 42C109 42 105 32 97 32C89 32 85 42 85 42Z" fill="#2F4F2F"/>
+  <path d="M91 49C91 49 95 59 103 59C111 59 115 49 115 49C115 49 111 39 103 39C95 39 91 49 91 49Z" fill="#2F4F2F"/>
+
+  <!-- MARNEAH text -->
+  <text x="100" y="100" text-anchor="middle" fill="#B8860B" font-family="serif" font-size="16" font-weight="bold">MARNEAH</text>
+
+  <!-- POOL VILLAS text -->
+  <text x="100" y="115" text-anchor="middle" fill="#2F4F2F" font-family="serif" font-size="8" font-weight="bold" letter-spacing="2">POOL VILLAS</text>
+</svg>
