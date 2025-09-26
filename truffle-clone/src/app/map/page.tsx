@@ -20,7 +20,7 @@ export default function MapPage() {
   const highlightCards = [
     {
       title: t.location.locationStats.beaches.title,
-      subtitle: t.location.locationStats.beaches.subtitle,
+      subtitle: 'A seaside escape',
       iconBackground: 'bg-gradient-to-br from-[#b48828] to-[#d4af37]',
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
