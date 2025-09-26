@@ -3,7 +3,7 @@ import { useT } from '@/lib/useTranslation'
 export default function ExclusiveSection() {
   const t = useT()
   return (
-    <div className="max-w-7xl mx-auto pt-6 pb-6 sm:pt-12 sm:pb-14 lg:pt-20 lg:pb-20 px-4 sm:px-6 flex flex-col-reverse lg:flex-row items-center justify-between gap-y-6 sm:gap-y-8 lg:gap-y-10 lg:gap-x-12">
+    <div className="max-w-7xl mx-auto pt-6 pb-6 sm:pt-8 sm:pb-10 lg:pt-20 lg:pb-20 px-4 sm:px-6 flex flex-col-reverse lg:flex-row items-center justify-between gap-y-6 sm:gap-y-8 lg:gap-y-10 lg:gap-x-12">
       <div className="w-full lg:w-1/2 flex justify-center relative">
         {/* Glow effect behind the image */}
         <div
