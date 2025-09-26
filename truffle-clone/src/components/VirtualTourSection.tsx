@@ -105,7 +105,7 @@ export default function VirtualTourSection() {
               style={{
                 background: 'radial-gradient(circle, rgba(237,229,217,0.8) 0%, rgba(237,229,217,0.4) 50%, rgba(237,229,217,0) 100%)',
                 filter: 'blur(30px)',
-                transform: 'scale(1.2)'
+                transform: 'scale(1.05)'
               }}
             />
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-4 border-[#b48828]/30 overflow-hidden shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
