@@ -137,8 +137,9 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
 
       if (cached) {
         // Fast path: use cached translation
+        const overriddenCached = applyTranslationOverrides(newLanguage, cached)
         setLoadingProgress(90)
-        setCurrentTranslations(cached)
+        setCurrentTranslations(overriddenCached)
         setLanguageState(newLanguage)
         localStorage.setItem('preferred-language', newLanguage)
         setLoadingProgress(100)
@@ -154,6 +155,7 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
       setLoadingProgress(30)
 
       const translation = await translationLoader.loadTranslation(newLanguage)
+      const overriddenTranslation = applyTranslationOverrides(newLanguage, translation)
 
       // Check if this is still the latest request
       if (latestLanguageRequest.current !== newLanguage) {
@@ -161,7 +163,7 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
       }
 
       setLoadingProgress(70)
-      setCurrentTranslations(translation)
+      setCurrentTranslations(overriddenTranslation)
       setLanguageState(newLanguage)
       localStorage.setItem('preferred-language', newLanguage)
       setLoadingProgress(100)
