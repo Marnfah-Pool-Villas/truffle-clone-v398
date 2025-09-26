@@ -67,8 +67,7 @@ export default function InvestmentSection() {
           {/* Beautiful Minimalist Price Chart - Smaller Size */}
           <div className="mt-4 p-4 bg-gradient-to-br from-white/80 to-[#264f28]/5 rounded-2xl border border-[#264f28]/20">
             <div className="flex items-center justify-between mb-3">
-              <h4 className="text-base font-semibold text-[#264f28]">Thailand Luxury Real Estate Trends</h4>
-              <span className="text-xs text-[#264f28] font-medium">2009 - 2024</span>
+              <h4 className="text-base font-semibold text-[#264f28]">Thai Luxury Property Market Trends</h4>
             </div>
 
             {/* Chart Container - Enhanced */}
@@ -152,7 +151,7 @@ export default function InvestmentSection() {
                     {/* 2024 Current */}
                     <div className="absolute right-0 bottom-0 transform translate-x-1/2">
                       <div className="w-px h-3 bg-[#264f28] mb-1"></div>
-                      <div className="text-xs text-[#264f28] font-medium whitespace-nowrap transform -rotate-45 origin-bottom-left">2024</div>
+                      <div className="text-xs text-[#264f28] font-medium whitespace-nowrap transform -rotate-45 origin-bottom-left">2025</div>
                     </div>
                   </div>
                 </div>
