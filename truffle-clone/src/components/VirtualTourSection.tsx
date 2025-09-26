@@ -108,6 +108,14 @@ export default function VirtualTourSection() {
                 transform: 'scale(1.05)'
               }}
             />
+            <div
+              className="absolute inset-0 w-full h-full rounded-3xl opacity-15 -z-20"
+              style={{
+                background: 'radial-gradient(circle, rgba(237,229,217,0.8) 0%, rgba(237,229,217,0.3) 45%, rgba(237,229,217,0) 100%)',
+                filter: 'blur(45px)',
+                transform: 'scale(1.2)'
+              }}
+            />
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-4 border-[#b48828]/30 overflow-hidden shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
               <div className="relative h-64 overflow-hidden">
                 <img
