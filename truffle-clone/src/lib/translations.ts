@@ -401,7 +401,7 @@ export const translations: Record<Language, Translations> = {
       marketAnalysis: {
         title: "Market Analysis",
         luxuryGrowth: "Luxury Property Growth (2009-2025)",
-        foreignInvestment: "Foreign Investment Increase (2009-2025)",
+        foreignInvestment: "Foreign Investment (2009-2025)",
         gdpGrowth: "GDP Growth Projection (2025)",
         chartTitle: "Thailand Luxury Real Estate Trends",
         chartInsights: {
@@ -564,7 +564,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       residence: "บ้า��� ↗",
       location: "ชม ↗",
-      wealth: "ลงทุน ↗",
+      wealth: "ลงทุ��� ↗",
       language: "ภาษา",
       contact: "ติดต่อ"
     },
@@ -593,7 +593,7 @@ export const translations: Record<Language, Translations> = {
         name: "ความกลมกลืน",
         features: "5 ห้องนอน | Type 1",
         description: "",
-        status: "เหลือ 1 หลัง"
+        status: "เ��ลือ 1 หลัง"
       },
       startingFrom: "เริ่มต้นที่",
       available: "ว่าง",
@@ -611,7 +611,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "ไลฟ์สไตล์สั่งทำพิเศษ",
-      description: "ความใส่ใจในรายละเอียดอย่างมหาศาล - ออกแบบเพื่อคุณค่าทางสุนทรียศาสตร์อย่างแท้จริง\nออกแบบเพื่อเสริมการไหลของพลังงานเชิงบวก\nสำหรับผู้ที่รักสิ่งประณีต",
+      description: "ความใส่ใจในรายละเอียดอย่างมหาศาล - ออกแบบเพื่อคุณค่าทางสุนทรียศาสตร์อย่างแท��จริง\nออกแบบเพื่อเสริมการไหลของพลังงานเชิงบวก\nสำหรับผู้ที่รักสิ่งประณีต",
       buttonText: "ดูโบรชัวร์"
     },
     location: {
@@ -648,7 +648,7 @@ export const translations: Record<Language, Translations> = {
         },
         karon: {
           title: "หาดกะรน",
-          description: "ชายหาดทรายขาวยาว 3 กิโลเมตร มอบความผ่อนคลายและวิวทะเลที่สวยงาม",
+          description: "ชายหาดทรายขาวยาว 3 กิโลเมตร มอบความผ่อนคลายและวิ���ทะเลที่สวยงาม",
           features: ["ที่พักเงียบสงบ", "น้ำใสสะอาด", "รีสอร์ทสปา", "เดินชมธรรมชาติ"]
         }
       },
@@ -694,7 +694,7 @@ export const translations: Record<Language, Translations> = {
           },
           tax: {
             title: "วางแผนภาษี",
-            description: "ไม่มีภาษีกำไรจากทุนสำหรับนักลงทุนต่างชาติที่เข้าเงื่อนไข"
+            description: "ไม่มีภาษีกำไรจากทุนสำหรับนักลงทุนต่���งชาติที่เข้าเงื่อนไข"
           },
           currency: {
             title: "กระจายสกุลเงิน",
@@ -716,7 +716,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "เสถียรภาพและการเติบโตเศรษฐกิจไทย",
-        description: "สภาพแวดล้อมทางการเมืองที่มั่นคง อุตสาหกรรมท่องเที่ยวแข็งแกร่ง และทำเลยุทธศาสตร์ในอาเซียน ทำให้ไทยเป็นตัวเลือกที่ชาญฉลาดสำหรับนักลงทุนอสังหาฯ นโยบายรัฐและโครงสร้างพื้นฐานส่งเสริมโอกาสการลงทุนอย่างต่อเนื่อง",
+        description: "สภาพแวดล���อมทางการเมืองที่มั่นคง อุตสาหกรรมท่องเที่ยวแข็งแกร่ง และทำเลยุทธศาสตร์ในอาเซียน ทำให้ไทยเป็นตัวเลือกที่ชาญฉลาดสำหรับนักลงทุนอสังหาฯ นโยบายรัฐและโครงสร้างพื้นฐานส่งเสริมโอกาสการลงทุนอย่างต่อเนื่อง",
         metrics: {
           rating: {
             title: "อันดับเครดิต",
@@ -735,7 +735,7 @@ export const translations: Record<Language, Translations> = {
     },
     virtualTour: {
       title: "ประสบการณ์วิลล่าเสมือนจริง",
-      subtitle: "สำรวจวิลล่าหรูของเราผ่านทัวร์ 360° สุดสมจริง",
+      subtitle: "สำรว��วิลล่าหรูของเราผ่านทัวร์ 360° สุดสมจริง",
       features: {
         views360: {
           title: "มุมมอง 360°",
@@ -941,7 +941,7 @@ export const translations: Record<Language, Translations> = {
         },
         yield: {
           title: "租金收益率",
-          subtitle: "明智的位置选择"
+          subtitle: "明智的位置选��"
         },
         tax: {
           title: "资本利得税",
@@ -1063,7 +1063,7 @@ export const translations: Record<Language, Translations> = {
             master: "主人套房",
             pool: "私人圣地",
             kitchen: "主厨厨房",
-            garden: "禅意花园"
+            garden: "禅意���园"
           }
         }
       },
@@ -1343,7 +1343,7 @@ export const translations: Record<Language, Translations> = {
         }
       },
       interface: {
-        selectVilla: "選擇別墅開始您的虛擬遊覽",
+        selectVilla: "選擇別墅開始��的虛擬遊覽",
         startTour: "開始虛擬遊覽",
         nextRoom: "下一間房",
         prevRoom: "上一間房",
@@ -1512,7 +1512,7 @@ export const translations: Record<Language, Translations> = {
         }
       },
       benefits: {
-        title: "Преимущества",
+        title: "Преимущ��ства",
         items: {
           residency: {
             title: "Тайская элитная резиденция",
@@ -1535,7 +1535,7 @@ export const translations: Record<Language, Translations> = {
             description: "Права личного пользования с роскошными удобствами"
           },
           ownership: {
-            title: "Собственность в полном владении",
+            title: "Со��ственность в полном владении",
             description: "90-летние арендные структуры с правами наследования"
           }
         }
@@ -1648,7 +1648,7 @@ export const translations: Record<Language, Translations> = {
           villa2: "Вилла 2",
           villa3: "Вилла 3",
           villa4: "Вилла 4",
-          message: "Я заинтересован узнать больше о..."
+          message: "Я заинт��ресован узнать больше о..."
         }
       }
     },
@@ -1843,7 +1843,7 @@ export const translations: Record<Language, Translations> = {
           description: "완전한 파노라마 몰입"
         },
         navigation: {
-          title: "룸 내비게이션",
+          title: "룸 내비게이��",
           description: "매끄러운 공간 전환"
         },
         walkthrough: {
@@ -1988,7 +1988,7 @@ export const translations: Record<Language, Translations> = {
     exclusive: {
       title: "オーダーメイドライフスタイル",
       description: "完全な豊かさ��中で王族のように生活してください。エネルギーの流れを向上させるために特別に設計されています。より良いものを愛する人々のために。",
-      buttonText: "パンフレットを見る"
+      buttonText: "パ��フレットを見る"
     },
     location: {
       title: "パラダイスに位置",
@@ -2019,7 +2019,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "カタビーチ",
-          description: "サーフィン、日光浴、本格的なタイのビーチ文化を体験するのに最適な原始的な黄金の砂浜。",
+          description: "サーフィン、日光浴、本格的なタイのビーチ��化を体験するのに最適な原始的な黄金の砂浜。",
           features: ["サーフィンの波", "夕日の景色", "地元料理", "平和な雰囲気"]
         },
         karon: {
@@ -2082,7 +2082,7 @@ export const translations: Record<Language, Translations> = {
           },
           lifestyle: {
             title: "ライフスタイルアクセス",
-            description: "ラグジュアリーアメニティ付き個人使用権"
+            description: "ラグジュアリーアメニティ付��個人使用権"
           },
           ownership: {
             title: "フリーホールド所有権",
@@ -2250,7 +2250,7 @@ export const translations: Record<Language, Translations> = {
       reserved: "आरक्षित"
     },
     amenities: {
-      title: "प्रीमियम सुविधाएं",
+      title: "प्रीमियम सु���िधाएं",
       description: "रुचिशील घर के मालिक के लिए विश्व स्तरीय डिज़ाइन। हर तथ्य और कपड़े को सावधानीपूर्वक तैयार किया गया। एक बेजोड़ जीवन अनुभव का आनंद लें।",
       features: {
         pools: "अनंत किनारे पूल",
@@ -2289,7 +2289,7 @@ export const translations: Record<Language, Translations> = {
         patong: {
           title: "पाटोंग बीच",
           description: "फुकेत का जीवंत दिल, विश्व स्तरीय मनोरंजन, भोजन और रात्रि जीवन के साथ क्रिस्टल-स्पष्ट पानी से कुछ ही कदम दूर।",
-          features: ["5-सितारा रिसॉर्ट्स", "बीच क्लब", "जल खेल", "शॉपिंग सेंटर"]
+          features: ["5-सितार�� रिसॉर्ट्स", "बीच क्लब", "जल खेल", "शॉपिंग सेंटर"]
         },
         kata: {
           title: "काता बीच",
@@ -2325,7 +2325,7 @@ export const translations: Record<Language, Translations> = {
       },
       marketAnalysis: {
         title: "बाजार विश्लेषण",
-        luxuryGrowth: "लक्जरी संपत्ति वृद्धि (2009-2025)",
+        luxuryGrowth: "लक्जरी संपत्���ि वृद्धि (2009-2025)",
         foreignInvestment: "विदेशी निवेश वृद्धि (2009-2025)",
         gdpGrowth: "जीडीपी वृद्धि प्रक्षेपण (2025)",
         chartTitle: "थाईलैंड लक्जरी रियल एस्टेट ट्रेंड्स",
@@ -2348,7 +2348,7 @@ export const translations: Record<Language, Translations> = {
           },
           currency: {
             title: "मुद्रा विविधीकरण",
-            description: "थाई बाहत स्थिरता और क्षेत्रीय आर्थिक विकास"
+            description: "थाई बाहत स्थिरता और क्षेत्रीय आर्थ��क विकास"
           },
           management: {
             title: "किराया प्रबंधन",
@@ -2388,7 +2388,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "हमारे लक्जरी विला को इमर्सिव 360° टूर के साथ एक्सप्लोर करें",
       features: {
         views360: {
-          title: "360° दृश्य",
+          title: "360° ���ृश्य",
           description: "संपूर्ण पैनोरमिक विसर्जन"
         },
         navigation: {
@@ -3150,7 +3150,7 @@ export const translations: Record<Language, Translations> = {
         luxuryGrowth: "نمو العقارات الفاخرة (2009-2025)",
         foreignInvestment: "زيادة الاستثمار الأجنبي (2009-2025)",
         gdpGrowth: "توقعات نمو الناتج المحلي الإجمالي (2025)",
-        chartTitle: "اتجاهات العقارات الفاخرة في تايلاند",
+        chartTitle: "اتجاهات العقارات الفاخ��ة في تايلاند",
         chartInsights: {
           growth: "نمو 15 سنة",
           average2009: "متوسط 2009",
@@ -3621,7 +3621,7 @@ export const translations: Record<Language, Translations> = {
     },
     amenities: {
       title: "Tiện ích Cao cấp",
-      description: "Thiết kế đẳng cấp thế giới cho chủ nhà có gu. Mọi sự thật và chất liệu được tuyển chọn cẩn thận. Tận hưởng trải nghiệm sống không gì sánh được.",
+      description: "Thi��t kế đẳng cấp thế giới cho chủ nhà có gu. Mọi sự thật và chất liệu được tuyển chọn cẩn thận. Tận hưởng trải nghiệm sống không gì sánh được.",
       features: {
         pools: "Hồ bơi viền vô cực",
         spa: "Pavilion Spa riêng",
@@ -3736,7 +3736,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "Ổn định và Tăng trưởng Kinh tế Thái Lan",
-        description: "Môi trường chính trị ổn định của Thái Lan, ngành du lịch mạnh mẽ và vị trí chiến lược ở Đông Nam Á khiến nó trở thành lựa chọn thông minh cho các nhà đầu tư bất động sản sành sỏi. Các chính sách ủng hộ đầu tư của chính phủ và phát triển cơ sở hạ tầng tiếp tục thúc đẩy các cơ hội tiền thông minh.",
+        description: "Môi trường chính trị ổn định của Thái Lan, ngành du lịch mạnh mẽ và vị trí chiến lư��c ở Đông Nam Á khiến nó trở thành lựa chọn thông minh cho các nhà đầu tư bất động sản sành sỏi. Các chính sách ủng hộ đầu tư của chính phủ và phát triển cơ sở hạ tầng tiếp tục thúc đẩy các cơ hội tiền thông minh.",
         metrics: {
           rating: {
             title: "Xếp hạng tín dụng",
