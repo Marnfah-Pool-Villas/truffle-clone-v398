@@ -29,20 +29,10 @@ export default function InvestmentSection() {
       </div>
 
       {/* Key Investment Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className="grid grid-cols-1 gap-6 mb-8">
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#b48828]/20 text-center">
-          <div className="text-3xl font-bold text-[#264f28] mb-2">10-14%</div>
-          <div className="text-[#b48828] font-medium mb-1">{t.investment.metrics.roi.title}</div>
-          <div className="text-sm text-black/60">{t.investment.metrics.roi.subtitle}</div>
-        </div>
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#b48828]/20 text-center">
-          <div className="text-3xl font-bold text-[#264f28] mb-2">8-10%</div>
+          <div className="text-3xl font-bold text-[#264f28] mb-2">Up to 12%</div>
           <div className="text-[#b48828] font-medium mb-1">{t.investment.metrics.yield.title}</div>
-          <div className="text-sm text-black/60">{t.investment.metrics.yield.subtitle}</div>
-        </div>
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#b48828]/20 text-center">
-          <div className="text-3xl font-bold text-[#264f28] mb-2">0%</div>
-          <div className="text-[#b48828] font-medium mb-1">{t.investment.metrics.tax.title}</div>
           <div className="text-sm text-black/60">{t.investment.metrics.tax.subtitle}</div>
         </div>
       </div>
