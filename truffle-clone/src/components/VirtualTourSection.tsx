@@ -112,27 +112,6 @@ export default function VirtualTourSection() {
                 </div>
               </div>
 
-              <div className="px-6 py-4 flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-4 w-full">
-                  <button
-                    className="px-3 py-4 bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 text-[#264f28] transition-all duration-300 sm:hover:scale-[1.02] rounded-xl font-medium text-sm flex flex-col items-center justify-center gap-2"
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                      <circle cx="8.5" cy="8.5" r="1.5"/>
-                      <polyline points="21,15 16,10 5,21"/>
-                    </svg>
-                    {t.virtualTour.buttons.pictures}
-                  </button>
-                  <button className="px-3 py-4 bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 hover:bg-[#b48828]/20 transition-all duration-300 rounded-xl font-medium text-sm flex flex-col items-center justify-center gap-2">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M23 7L16 12 23 17V7Z"/>
-                      <rect width="15" height="14" x="1" y="5" rx="2" ry="2"/>
-                    </svg>
-                    {t.virtualTour.buttons.videoTour}
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         ))}
