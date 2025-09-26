@@ -92,7 +92,7 @@ export default function MapPage() {
                     </div>
                   </div>
                   <p className="mt-6 text-base sm:text-lg text-[#264f28]/70 leading-relaxed">
-                    {t.location.mapSection.description}
+                    Perfectly positioned between Pattaya's best beaches. Easy access to luxury shopping, fine dining, and an international airport
                   </p>
                 </div>
 
