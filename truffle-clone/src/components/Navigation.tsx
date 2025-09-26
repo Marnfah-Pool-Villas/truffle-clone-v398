@@ -234,7 +234,10 @@ export default function Navigation() {
                             touchAction: 'manipulation'
                           }}
                         >
-                          {lang.name}
+                          <span className="inline-flex items-center justify-center gap-2">
+                            <span aria-hidden className="text-base leading-none">{lang.currency}</span>
+                            <span>{lang.name}</span>
+                          </span>
                         </button>
                       ))}
                     </div>
@@ -311,7 +314,10 @@ export default function Navigation() {
                           textAlign: 'center'
                         }}
                       >
-                        {lang.name}
+                        <span className="inline-flex items-center justify-center gap-2">
+                          <span aria-hidden className="text-base leading-none">{lang.currency}</span>
+                          <span>{lang.name}</span>
+                        </span>
                       </button>
                     ))}
                   </div>
