@@ -83,6 +83,22 @@ export default function MapPage() {
                   </div>
                 </div>
 
+                <div className="mt-10 sm:mt-12 lg:mt-16 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/50 backdrop-blur-md border border-[#b48828]/30 rounded-3xl px-6 py-6 sm:px-8 sm:py-8">
+                  <div className="text-center sm:text-left">
+                    <h2 className="text-2xl font-medium text-[#264f28]">{t.nav.map?.replace(' ↗', '') ?? 'Map'} Hub</h2>
+                    <p className="mt-2 text-sm sm:text-base text-[#264f28]/70 max-w-xl">
+                      {[t.location.stats.beaches, t.location.stats.restaurants, t.location.stats.amenities].join(' • ')}
+                    </p>
+                  </div>
+                  <Link
+                    href="/#contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 hover:bg-[#264f28]/20 hover:scale-105 font-medium"
+                  >
+                    <span>{t.nav.contact}</span>
+                    <span className="text-lg">↗</span>
+                  </Link>
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
                   {highlightCards.map((card) => (
                     <div key={card.title} className="p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20 text-center">
