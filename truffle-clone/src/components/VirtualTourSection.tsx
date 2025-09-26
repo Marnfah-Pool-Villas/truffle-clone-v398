@@ -95,39 +95,6 @@ export default function VirtualTourSection() {
         </div>
       </div>
 
-      {/* Virtual Tour Features */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20 shadow-lg">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#b48828] to-[#d4af37] rounded-full flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"/>
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-[#264f28] mb-2">{t.virtualTour.features.views360.title}</h3>
-          <p className="text-sm text-[#264f28]/70">{t.virtualTour.features.views360.description}</p>
-        </div>
-
-        <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20 shadow-lg">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#264f28] to-[#2d5a30] rounded-full flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-[#264f28] mb-2">{t.virtualTour.features.navigation.title}</h3>
-          <p className="text-sm text-[#264f28]/70">{t.virtualTour.features.navigation.description}</p>
-        </div>
-
-        <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20 shadow-lg">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#b48828] to-[#d4af37] rounded-full flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-              <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/>
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-[#264f28] mb-2">{t.virtualTour.features.walkthrough.title}</h3>
-          <p className="text-sm text-[#264f28]/70">{t.virtualTour.features.walkthrough.description}</p>
-        </div>
-      </div>
-
       {/* Villa Tour Selection */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {villas.map((villa) => (
