@@ -157,7 +157,7 @@ export default function ContactForm() {
               />
               <button
                 type="submit"
-                className="flex-1 md:flex-none md:self-center md:w-auto bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-xl px-4 py-3 transition-all duration-300 hover:scale-105 transform text-[#264f28] text-base font-medium flex items-center justify-center gap-3"
+                className="flex-1 h-full md:h-auto md:flex-none md:self-center md:w-auto bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-xl px-4 py-3 transition-all duration-300 hover:scale-105 transform text-[#264f28] text-base font-medium flex items-center justify-center gap-3"
               >
                 {t.contact.form.submit}
               </button>
