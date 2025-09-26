@@ -1,34 +1,10 @@
 // CACHE BUST v68 - FORCED VILLA ORDER: Tranquility (12.3M) → Serenity (18.8M) → Harmony (23.4M) THB
 
-import { useCurrency } from '@/lib/useCurrency'
-import { useState, useEffect } from 'react'
 import { useTranslation } from '@/lib/useTranslation'
 
 export default function PropertiesSection() {
-  const { language, t } = useTranslation()
-  const { convertVillaPrice, getCurrencyCode } = useCurrency(language)
+  const { t } = useTranslation()
 
-  // State for converted prices
-  const [prices, setPrices] = useState({
-    tranquility: '฿12.3M THB',
-    serenity: '฿18.8M THB',
-    harmony: '฿23.4M THB'
-  })
-
-
-
-  // Update prices when language changes (now instant with static prices)
-  useEffect(() => {
-    try {
-      setPrices({
-        tranquility: convertVillaPrice('tranquility'),
-        serenity: convertVillaPrice('serenity'),
-        harmony: convertVillaPrice('harmony')
-      })
-    } catch (error) {
-      console.error('Failed to update villa prices:', error)
-    }
-  }, [convertVillaPrice, language])
   return (
     <div className="w-full villa-section-no-scroll">
       <div className="bg-[#ede5d9]/50 w-full villa-section-no-scroll">
@@ -84,9 +60,6 @@ export default function PropertiesSection() {
                         <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
                               style={{boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)'}}></span>
                       </p>
-                      <p className="text-white font-bold text-base lg:text-lg">
-                        {prices.tranquility}
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -119,9 +92,6 @@ export default function PropertiesSection() {
                         <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
                               style={{boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)'}}></span>
                       </p>
-                      <p className="text-white font-bold text-base lg:text-lg">
-                        {prices.serenity}
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -153,9 +123,6 @@ export default function PropertiesSection() {
                         {t.properties.villa3.features}
                         <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
                               style={{boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)'}}></span>
-                      </p>
-                      <p className="text-white font-bold text-base lg:text-lg">
-                        {prices.harmony}
                       </p>
                     </div>
                   </div>
