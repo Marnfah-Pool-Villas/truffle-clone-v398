@@ -46,22 +46,24 @@ export default function MapPage() {
             <section className="bg-[#ede5d9]/25 py-10 sm:py-14 lg:py-20">
               <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-                  <div className="inline-flex items-center justify-center gap-2 text-[#b48828] font-medium mb-4">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b48828" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M3 11l9-9 9 9" />
-                      <path d="M4 10v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V10" />
-                      <path d="M9 21V12h6v9" />
-                    </svg>
-                    <span>{t.location.stats.amenities}</span>
+                  <div className="relative inline-block">
+                    <div className="inline-flex items-center justify-center gap-2 text-[#b48828] font-medium mb-4">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z" />
+                      </svg>
+                    </div>
+                    <div className="relative mb-6">
+                      <h1 className="text-3xl md:text-5xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
+                        <span className="relative inline-block">
+                          <span className="absolute -inset-2 bg-gradient-to-r from-[#264f28]/20 via-[#264f28]/10 to-transparent rounded-2xl blur-sm"></span>
+                          <span className="relative bg-gradient-to-r from-[#264f28] to-[#2d5a30] bg-clip-text text-transparent font-medium">
+                            {t.location.title}
+                          </span>
+                        </span>
+                      </h1>
+                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[#b48828] to-[#d4af37] rounded-full"></div>
+                    </div>
                   </div>
-                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
-                    <span className="relative inline-block">
-                      <span className="absolute -inset-2 bg-gradient-to-r from-[#264f28]/20 via-[#264f28]/10 to-transparent rounded-2xl blur-sm"></span>
-                      <span className="relative bg-gradient-to-r from-[#264f28] to-[#2d5a30] bg-clip-text text-transparent font-medium">
-                        {t.location.mapSection.title}
-                      </span>
-                    </span>
-                  </h1>
                   <p className="mt-6 text-base sm:text-lg text-[#264f28]/70 leading-relaxed">
                     {t.location.mapSection.description}
                   </p>
