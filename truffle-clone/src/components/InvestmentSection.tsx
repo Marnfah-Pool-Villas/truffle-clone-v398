@@ -159,11 +159,7 @@ export default function InvestmentSection() {
             </div>
 
             {/* Chart insights */}
-            <div className="mt-3 grid grid-cols-3 gap-2 text-center">
-              <div className="p-2 bg-white/60 rounded-lg">
-                <div className="text-sm font-bold text-[#264f28]">+284%</div>
-                <div className="text-xs text-[#264f28]">15-Year Growth</div>
-              </div>
+            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-center">
               <div className="p-2 bg-white/60 rounded-lg">
                 <div className="text-sm font-bold text-[#264f28]">₿8.2M</div>
                 <div className="text-xs text-[#264f28]">2009 Average</div>
