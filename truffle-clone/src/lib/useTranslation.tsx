@@ -4,6 +4,7 @@ import React, { createContext, useContext, useState, useEffect, useCallback, use
 import type { Language, Translations } from './translations'
 import { translations } from './translations'
 import { translationLoader } from './translationLoader'
+import { applyTranslationOverrides } from './translationOverrides'
 
 // Language information for the dropdown
 export const languageInfo = [
@@ -39,7 +40,9 @@ interface TranslationProviderProps {
 
 export function TranslationProvider({ children }: TranslationProviderProps) {
   const [language, setLanguageState] = useState<Language>('en')
-  const [currentTranslations, setCurrentTranslations] = useState<Translations>(translations.en)
+  const [currentTranslations, setCurrentTranslations] = useState<Translations>(
+    applyTranslationOverrides('en', translations.en)
+  )
   const [isLoading, setIsLoading] = useState(false)
   const [isChangingLanguage, setIsChangingLanguage] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
