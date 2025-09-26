@@ -96,9 +96,9 @@ export default function VirtualTourSection() {
       </div>
 
       {/* Villa Tour Selection */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 overflow-hidden sm:overflow-visible">
         {villas.map((villa) => (
-          <div key={villa.id} className="group cursor-pointer relative">
+          <div key={villa.id} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
             {/* Glow effect behind the card */}
             <div
               className="absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-10"
