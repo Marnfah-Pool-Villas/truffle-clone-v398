@@ -17,6 +17,26 @@ export function applyTranslationOverrides(language: Language, base: Translations
     }
   }
 
+  const contact = result.contact
+  const contactForm = contact?.form
+  const contactPlaceholders = contactForm?.placeholders
+
+  if (contact && contactForm && contactPlaceholders?.message) {
+    result = {
+      ...result,
+      contact: {
+        ...contact,
+        form: {
+          ...contactForm,
+          placeholders: {
+            ...contactPlaceholders,
+            message: 'Interested in...'
+          }
+        }
+      }
+    }
+  }
+
   const investment = result.investment
   const benefits = investment?.benefits
   const items = benefits?.items
