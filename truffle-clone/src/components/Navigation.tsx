@@ -329,49 +329,26 @@ export default function Navigation() {
         className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3 md:bottom-6 md:right-6"
       >
         {isContactMenuOpen && (
-          <div className="w-56 bg-white/90 backdrop-blur-lg border border-[#264f28]/20 rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
-            <div className="text-xs uppercase tracking-[0.2em] text-[#264f28]/60 font-semibold">
-              {t.nav.contact}
-            </div>
-            <a
-              href="https://wa.me/66635517979"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                hapticFeedback.light()
-                setIsContactMenuOpen(false)
-              }}
-              className="flex items-center justify-between gap-3 px-3 py-2 rounded-xl bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 transition-all duration-300 hover:scale-[1.01]"
-            >
-              <span className="text-sm font-medium text-[#264f28]">{t.footer.whatsapp}</span>
-              <span className="text-xs text-[#264f28]/70">↗</span>
-            </a>
-            <a
-              href="weixin://dl/chat?MarnfahVillas"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                hapticFeedback.light()
-                setIsContactMenuOpen(false)
-              }}
-              className="flex items-center justify-between gap-3 px-3 py-2 rounded-xl bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 transition-all duration-300 hover:scale-[1.01]"
-            >
-              <span className="text-sm font-medium text-[#264f28]">{t.footer.wechat}</span>
-              <span className="text-xs text-[#264f28]/70">↗</span>
-            </a>
-            <a
-              href="https://line.me/ti/p/MarnfahPoolVillas"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                hapticFeedback.light()
-                setIsContactMenuOpen(false)
-              }}
-              className="flex items-center justify-between gap-3 px-3 py-2 rounded-xl bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 transition-all duration-300 hover:scale-[1.01]"
-            >
-              <span className="text-sm font-medium text-[#264f28]">{t.footer.line}</span>
-              <span className="text-xs text-[#264f28]/70">↗</span>
-            </a>
+          <div className="flex flex-col items-end gap-2 sm:gap-3">
+            {contactOptions.map(option => (
+              <a
+                key={option.key}
+                href={option.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  hapticFeedback.light()
+                  setIsContactMenuOpen(false)
+                }}
+                className="inline-flex items-center justify-center rounded-full border border-[#264f28]/20 bg-[#264f28]/10 text-[#264f28] shadow-2xl backdrop-blur-md transition-all duration-300 hover:bg-[#264f28]/20 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#264f28]/40 w-16 h-16 sm:w-[72px] sm:h-[72px]"
+                aria-label={option.label}
+              >
+                <span className="sr-only">{option.label}</span>
+                <span className="text-xs font-semibold tracking-wide uppercase text-[#264f28]">
+                  {option.abbr}
+                </span>
+              </a>
+            ))}
           </div>
         )}
         <button
