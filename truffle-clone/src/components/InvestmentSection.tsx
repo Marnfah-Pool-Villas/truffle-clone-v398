@@ -48,7 +48,7 @@ export default function InvestmentSection() {
             </svg>
             Market Analysis
           </h3>
-          <div className="space-y-8">
+          <div className="space-y-0">
             <div className="flex justify-between items-center py-3 border-b border-[#264f28]/10">
               <span className="text-black/70">{t.investment.marketAnalysis.luxuryGrowth}</span>
               <span className="font-semibold text-[#264f28]">+340%</span>
