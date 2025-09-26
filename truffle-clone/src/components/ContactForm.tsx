@@ -59,8 +59,8 @@ export default function ContactForm() {
             className="grid gap-3 sm:gap-4 lg:gap-5"
             style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}
           >
-            <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-[#264f28] mb-2">
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="firstName" className="text-sm font-medium text-[#264f28]">
                 {t.contact.form.firstName}
               </label>
               <input
@@ -75,8 +75,8 @@ export default function ContactForm() {
               />
             </div>
 
-            <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-[#264f28] mb-2">
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="lastName" className="text-sm font-medium text-[#264f28]">
                 {t.contact.form.lastName}
               </label>
               <input
