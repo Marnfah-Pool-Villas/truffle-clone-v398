@@ -107,11 +107,11 @@ export default function MapPage() {
                   </div>
                 )}
 
-                <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/30 backdrop-blur-sm mt-6 sm:mt-8 mb-8 sm:mb-10">
+                <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/30 backdrop-blur-sm mt-6 sm:mt-8 mb-8 sm:mb-10 aspect-[1980/1488]">
                   <iframe
                     src="https://maps.google.com/maps?q=Pattaya%20Thailand&z=12&output=embed"
                     title="Pattaya Map"
-                    className="w-full h-[360px] sm:h-[440px] lg:h-[540px]"
+                    className="absolute inset-0 w-full h-full"
                     loading="lazy"
                     allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
