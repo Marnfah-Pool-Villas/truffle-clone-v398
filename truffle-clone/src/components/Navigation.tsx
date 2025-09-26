@@ -25,6 +25,9 @@ export default function Navigation() {
       if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target as Node)) {
         setIsLanguageDropdownOpen(false)
       }
+      if (contactMenuRef.current && !contactMenuRef.current.contains(event.target as Node)) {
+        setIsContactMenuOpen(false)
+      }
     }
 
     document.addEventListener('mousedown', handleClickOutside)
