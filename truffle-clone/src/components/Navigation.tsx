@@ -112,19 +112,19 @@ export default function Navigation() {
             </Link>
             <div className="flex items-center gap-x-1 lg:gap-x-2">
               <Link
-                href="/view"
-                onClick={() => hapticFeedback.light()}
-                className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
-              >
-                <span>{t.nav.location.replace(' ↗', '')}</span>
-                <span className="text-xl lg:text-2xl">↗</span>
-              </Link>
-              <Link
                 href="/map"
                 onClick={() => hapticFeedback.light()}
                 className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
               >
                 <span>{t.nav.map?.replace(' ↗', '') ?? 'Map'}</span>
+                <span className="text-xl lg:text-2xl">↗</span>
+              </Link>
+              <Link
+                href="/view"
+                onClick={() => hapticFeedback.light()}
+                className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
+              >
+                <span>{t.nav.location.replace(' ↗', '')}</span>
                 <span className="text-xl lg:text-2xl">↗</span>
               </Link>
               <Link
@@ -141,20 +141,20 @@ export default function Navigation() {
           {/* Mobile navigation buttons - moved 0.5cm left with equal sizing and minimal spacing, then adjusted */}
           <div className="flex items-center gap-x-0.5 md:hidden absolute left-16 ml-1 rounded-sm px-0.5 py-0.5" style={{ marginLeft: '-0.22cm' }}>
             <Link
-              href="/view"
-              onClick={() => hapticFeedback.light()}
-              className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
-            >
-              <span className="text-lg">↗</span>
-              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.location.replace(' ↗', '')}</span>
-            </Link>
-            <Link
               href="/map"
               onClick={() => hapticFeedback.light()}
               className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
             >
               <span className="text-lg">↗</span>
               <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.map?.replace(' ↗', '') ?? 'Map'}</span>
+            </Link>
+            <Link
+              href="/view"
+              onClick={() => hapticFeedback.light()}
+              className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
+            >
+              <span className="text-lg">↗</span>
+              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.location.replace(' ↗', '')}</span>
             </Link>
             <Link
               href="/capital"
