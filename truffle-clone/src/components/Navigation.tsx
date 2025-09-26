@@ -24,49 +24,19 @@ export default function Navigation() {
       key: 'whatsapp',
       label: t.footer.whatsapp,
       href: 'https://wa.me/66635517979',
-      buttonClass: 'bg-[#25D366] hover:bg-[#1ebe5d] border border-[#1ebe5d] text-white focus-visible:outline-[#d5ffe5] focus-visible:outline-offset-4',
-      icon: (
-        <svg
-          viewBox="0 0 32 32"
-          aria-hidden="true"
-          className="w-7 h-7 sm:w-9 sm:h-9"
-          fill="currentColor"
-        >
-          <path d="M16.019 0C7.168 0 0 7.168 0 16.019c0 2.818.744 5.577 2.154 8.006L0 32l8.188-2.136a16.02 16.02 0 1 0 7.83-29.864zM25.474 22.909c-.403 1.156-2.36 2.193-3.22 2.347-.82.123-1.874.175-3.017-.187-.693-.22-1.578-.508-2.713-1.015-4.78-2.073-7.893-6.865-8.137-7.185-.244-.319-1.942-2.592-1.942-4.95 0-2.357 1.228-3.501 1.662-3.983.433-.48.95-.6 1.266-.6.316 0 .633 0 .909.018.29.017.68-.11 1.066.817.403.967 1.372 3.328 1.49 3.569.118.244.197.528.034.848-.17.316-.257.508-.484.804-.227.295-.484.553-.205 1.085.278.53 1.237 2.04 2.665 3.306 1.834 1.632 3.378 2.145 3.874 2.379.496.233.785.2 1.077-.12.295-.325 1.23-1.43 1.559-1.918.33-.487.682-.4 1.153-.244.472.156 2.986 1.408 3.5 1.661.515.252.858.379.984.59.126.21.126 1.219-.278 2.375z" />
-        </svg>
-      )
+      imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F3ca95af26ebe4c74850ec260d05ce271?format=webp&width=800'
     },
     {
       key: 'wechat',
       label: t.footer.wechat,
       href: 'weixin://dl/chat?MarnfahVillas',
-      buttonClass: 'bg-[#07C160] hover:bg-[#05a955] border border-[#05a955] text-white focus-visible:outline-[#d4ffe9] focus-visible:outline-offset-4',
-      icon: (
-        <svg
-          viewBox="0 0 26 26"
-          aria-hidden="true"
-          className="w-7 h-7 sm:w-9 sm:h-9"
-          fill="currentColor"
-        >
-          <path d="M17.498 2C13.12 2 9.492 4.81 9.492 8.479c0 1.944 1 3.633 2.614 4.872-.114.46-.4 1.644-.458 1.935l-.145.693.68-.151 1.927-.429c.914.28 1.657.427 2.573.427 4.379 0 7.998-3.81 7.998-8.478C25.68 5.81 21.876 2 17.498 2zm-4.176 3.206c.431 0 .78.352.78.785 0 .434-.349.786-.78.786-.433 0-.782-.352-.782-.786 0-.433.35-.785.782-.785zm8.254 4.098c-.433 0-.782-.352-.782-.785 0-.434.35-.786.782-.786.432 0 .78.352.78.786 0 .433-.35.785-.78.785zm-2.747 0c-.431 0-.782-.352-.782-.785 0-.434.35-.786.782-.786.433 0 .782.352.782.786 0 .433-.349.785-.782.785zm-5.62 3.12c-4.378 0-7.997 3.81-7.997 8.478 0 2.264 1.092 4.209 2.96 5.567-.124.482-.466 1.725-.531 2.031l-.16.724.713-.158 1.969-.438c.933.291 1.673.443 2.586.443 4.378 0 7.997-3.81 7.997-8.478 0-4.668-3.804-8.369-7.997-8.369zm-4.175 3.103c.431 0 .78.352.78.785 0 .434-.349.786-.78.786-.433 0-.782-.352-.782-.786 0-.433.35-.785.782-.785zm-2.747 0c.432 0 .782.352.782.785 0 .434-.35.786-.782.786-.433 0-.782-.352-.782-.786 0-.433.349-.785.782-.785zm7.075 5.589H9.618c-.432 0-.782-.353-.782-.786 0-.432.35-.785.782-.785h4.76c.432 0 .782.353.782.785 0 .433-.35.786-.782.786zm-2.559-2.356H9.618c-.432 0-.782-.352-.782-.785 0-.434.35-.786.782-.786h1.97c.432 0 .782.352.782.786 0 .433-.35.785-.782.785z" />
-        </svg>
-      )
+      imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fabb0ec401a4e4035a9e1722644989e26?format=webp&width=800'
     },
     {
       key: 'line',
       label: t.footer.line,
       href: 'https://line.me/ti/p/MarnfahPoolVillas',
-      buttonClass: 'bg-[#00B900] hover:bg-[#009900] border border-[#009900] text-white focus-visible:outline-[#d6ffd6] focus-visible:outline-offset-4',
-      icon: (
-        <svg
-          viewBox="0 0 22 24"
-          aria-hidden="true"
-          className="w-7 h-7 sm:w-9 sm:h-9"
-          fill="currentColor"
-        >
-          <path d="M19.5 0h-15C1.121 0 0 1.121 0 2.5v15C0 18.879 1.121 20 2.5 20H6l4 4v-4h9.5c1.379 0 2.5-1.121 2.5-2.5v-15C22 1.121 20.879 0 19.5 0zM7.958 12H6.333V8.75h-1v3.25H3.708V6.75h4.25v5.25zm3.541 0H9.792V6.75h1.707v5.25zm4.75 0-2.041-2.938V12H12.5V6.75h1.708l2.041 2.938V6.75h1.707V12zm3.75-3.167h-1.458V12H17.75V6.75H22v2.083z" />
-        </svg>
-      )
+      imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F9487ed1d900b4348834f3adb2824e1e9?format=webp&width=800'
     }
   ] as const
 
@@ -204,7 +174,7 @@ export default function Navigation() {
               onClick={() => hapticFeedback.light()}
               className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
             >
-              <span className="text-lg">↗</span>
+              <span className="text-lg">���</span>
               <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.location.replace(' ↗', '')}</span>
             </Link>
             <Link
@@ -370,11 +340,16 @@ export default function Navigation() {
                   hapticFeedback.light()
                   setIsContactMenuOpen(false)
                 }}
-                className={`inline-flex items-center justify-center rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 w-16 h-16 sm:w-[72px] sm:h-[72px] ${option.buttonClass}`}
+                className="inline-flex items-center justify-center rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#264f28]/20 border border-white/60 bg-white w-16 h-16 sm:w-[72px] sm:h-[72px]"
                 aria-label={option.label}
               >
                 <span className="sr-only">{option.label}</span>
-                {option.icon}
+                <img
+                  src={option.imgSrc}
+                  alt={option.label}
+                  className="w-9 h-9 sm:w-12 sm:h-12 object-contain"
+                  loading="lazy"
+                />
               </a>
             ))}
           </div>
