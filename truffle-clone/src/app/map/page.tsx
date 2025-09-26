@@ -92,7 +92,7 @@ export default function MapPage() {
                   <div className="text-center sm:text-left">
                     <h2 className="text-2xl font-medium text-[#264f28]">{t.nav.map?.replace(' ↗', '') ?? 'Map'} Hub</h2>
                     <p className="mt-2 text-sm sm:text-base text-[#264f28]/70 max-w-xl">
-                      Seamlessly plan your visit with real-time navigation links and localized guides curated for international investors and lifestyle seekers.
+                      {[t.location.stats.beaches, t.location.stats.restaurants, t.location.stats.amenities].join(' • ')}
                     </p>
                   </div>
                   <Link
