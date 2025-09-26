@@ -1,5 +1,6 @@
 import type { Language, Translations } from './translations'
 import { translationCache } from './translationCache'
+import { applyTranslationOverrides } from './translationOverrides'
 
 // Loading states to prevent duplicate requests
 const loadingStates = new Map<Language, Promise<Translations>>()
