@@ -75,25 +75,6 @@ export default function LocationSection() {
           </div>
         </div>
 
-        {/* Big Map Section */}
-        <div className="relative">
-          <div
-            className="absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-10"
-            style={{
-              background: 'radial-gradient(circle, rgba(237,229,217,0.8) 0%, rgba(237,229,217,0.4) 50%, rgba(237,229,217,0) 100%)',
-              filter: 'blur(30px)',
-              transform: 'scale(1.05)'
-            }}
-          />
-          <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/10 backdrop-blur-sm">
-            <img
-              src="/mapp.png"
-              alt="Thailand location map showing Marnfah Pool Villas"
-              className="w-full h-auto object-contain transform scale-[1.009]"
-              style={{ transformOrigin: 'center left' }}
-            />
-          </div>
-        </div>
       </div>
     </div>
   )
