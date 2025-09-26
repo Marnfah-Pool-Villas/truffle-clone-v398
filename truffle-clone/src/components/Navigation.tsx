@@ -11,8 +11,10 @@ import type { Language } from '@/lib/translations'
 export default function Navigation() {
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
+  const [isContactMenuOpen, setIsContactMenuOpen] = useState(false)
 
   const languageDropdownRef = useRef<HTMLDivElement>(null)
+  const contactMenuRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
   const pathname = usePathname()
   const { language, setLanguage, t } = useTranslation()
