@@ -58,6 +58,7 @@ export default function MapPage() {
       )
     }
   ]
+  const [primaryHighlight, ...secondaryHighlights] = highlightCards
 
   return (
     <div className="antialiased min-h-screen">
@@ -93,6 +94,18 @@ export default function MapPage() {
                   </div>
                 </div>
 
+                {primaryHighlight && (
+                  <div className="flex justify-center mt-10">
+                    <div className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-[#b48828]/30 max-w-md w-full">
+                      <div className={`w-16 h-16 ${primaryHighlight.iconBackground} rounded-full flex items-center justify-center mb-4`}>
+                        {primaryHighlight.icon}
+                      </div>
+                      <div className="text-lg font-semibold text-[#264f28] mb-2">{primaryHighlight.title}</div>
+                      <div className="text-sm text-[#264f28]/70">{primaryHighlight.subtitle}</div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/30 backdrop-blur-sm">
                   <iframe
                     src="https://maps.google.com/maps?q=Pattaya%20Thailand&z=12&output=embed"
@@ -126,15 +139,17 @@ export default function MapPage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
-                  {highlightCards.map((card) => (
-                    <div key={card.title} className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20">
-                      <div className={`w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center mb-4`}>{card.icon}</div>
-                      <div className="text-lg font-semibold text-[#264f28] mb-2">{card.title}</div>
-                      <div className="text-sm text-[#264f28]/70">{card.subtitle}</div>
-                    </div>
-                  ))}
-                </div>
+                {secondaryHighlights.length > 0 && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-10">
+                    {secondaryHighlights.map((card) => (
+                      <div key={card.title} className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20">
+                        <div className={`w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center mb-4`}>{card.icon}</div>
+                        <div className="text-lg font-semibold text-[#264f28] mb-2">{card.title}</div>
+                        <div className="text-sm text-[#264f28]/70">{card.subtitle}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </section>
             <ContactFooter />
