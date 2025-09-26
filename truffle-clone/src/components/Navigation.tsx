@@ -359,7 +359,7 @@ export default function Navigation() {
             hapticFeedback.light()
             setIsContactMenuOpen(prev => !prev)
           }}
-          className="group inline-flex items-center gap-3 px-4 py-3 rounded-full bg-[#264f28] text-white shadow-2xl hover:bg-[#1f3f20] transition-all duration-300 hover:scale-105"
+          className={`group inline-flex items-center justify-center rounded-full border border-[#264f28]/20 bg-[#264f28]/10 text-[#264f28] shadow-2xl backdrop-blur-md transition-all duration-300 hover:bg-[#264f28]/20 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#264f28]/40 w-14 h-14 ${isContactMenuOpen ? 'bg-[#264f28]/20' : ''}`}
           aria-expanded={isContactMenuOpen}
           aria-label={t.nav.contact}
         >
@@ -376,7 +376,6 @@ export default function Navigation() {
           >
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
-          <span className="font-medium text-sm sm:text-base tracking-wide">{t.nav.contact}</span>
         </button>
       </div>
     </>
