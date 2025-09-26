@@ -29,7 +29,7 @@ export default function Navigation() {
     {
       key: 'wechat',
       label: t.footer.wechat,
-      abbr: 'WC',
+      abbr: 'WE',
       href: 'weixin://dl/chat?MarnfahVillas'
     },
     {
