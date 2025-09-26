@@ -99,7 +99,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop layout: Logo + buttons grouped - moved further left */}
-          <div className="hidden md:flex items-center gap-x-1 lg:gap-x-2" style={{ transform: 'translateX(-32px)' }}>
+          <div className="hidden md:flex items-center gap-x-1 lg:gap-x-2" style={{ transform: 'translateX(-28px)' }}>
             <Link href="/" onClick={() => hapticFeedback.light()} className="flex items-center">
               <Image
                 src="/leafy.jpg"
@@ -139,7 +139,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile navigation buttons - moved 0.5cm left with equal sizing and minimal spacing, then adjusted */}
-          <div className="flex items-center gap-x-0.5 md:hidden absolute left-16 ml-1 rounded-sm px-0.5 py-0.5" style={{ marginLeft: '-0.18cm' }}>
+          <div className="flex items-center gap-x-0.5 md:hidden absolute left-16 ml-1 rounded-sm px-0.5 py-0.5" style={{ marginLeft: '-0.03cm' }}>
             <Link
               href="/map"
               onClick={() => hapticFeedback.light()}
