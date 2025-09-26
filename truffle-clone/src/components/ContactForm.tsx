@@ -55,10 +55,7 @@ export default function ContactForm() {
 
       <div className="bg-[#ede5d9]/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#b48828]/20">
         <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 lg:space-y-6">
-          <div
-            className="grid gap-3 sm:gap-4 lg:gap-5"
-            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}
-          >
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
             <div className="flex flex-col gap-1.5">
               <label htmlFor="firstName" className="text-sm font-medium text-[#264f28]">
                 {t.contact.form.firstName}
