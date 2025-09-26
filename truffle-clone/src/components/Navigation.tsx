@@ -242,7 +242,7 @@ export default function Navigation() {
                             handleLanguageSelect(lang)
                           }}
                           type="button"
-                          className={`w-full py-2 hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-center text-sm active:bg-[#b48828]/30`}
+                          className={`w-full px-3 py-2 hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-between text-sm active:bg-[#b48828]/30`}
                           style={{
                             backgroundColor: language === lang.code ? 'rgba(180, 136, 40, 0.2)' : 'transparent',
                             marginBottom: index < languageInfo.length - 1 ? '4px' : '0px',
@@ -250,10 +250,8 @@ export default function Navigation() {
                             touchAction: 'manipulation'
                           }}
                         >
-                          <span className="inline-flex items-center justify-center gap-2">
-                            <span aria-hidden className="text-base leading-none">{lang.currency}</span>
-                            <span>{lang.name}</span>
-                          </span>
+                          <span className="text-left flex-1 truncate">{lang.name}</span>
+                          <span aria-hidden className="ml-3 text-lg leading-none">{lang.currency}</span>
                         </button>
                       ))}
                     </div>
@@ -300,20 +298,18 @@ export default function Navigation() {
                       <button
                         key={lang.code}
                         onClick={() => handleLanguageSelect(lang)}
-                        className={`w-full px-4 py-2 text-center bg-transparent hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200`}
+                        className={`w-full px-4 py-2 bg-transparent hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-between`}
                         style={{
-                          display: 'block',
+                          display: 'flex',
                           width: '100%',
                           padding: '8px 16px',
                           backgroundColor: language === lang.code ? 'rgba(180, 136, 40, 0.2)' : 'transparent',
                           marginBottom: index < languageInfo.length - 1 ? '4px' : '0px',
-                          textAlign: 'center'
+                          textAlign: 'left'
                         }}
                       >
-                        <span className="inline-flex items-center justify-center gap-2">
-                          <span aria-hidden className="text-base leading-none">{lang.currency}</span>
-                          <span>{lang.name}</span>
-                        </span>
+                        <span className="text-left flex-1 truncate">{lang.name}</span>
+                        <span aria-hidden className="ml-3 text-lg leading-none">{lang.currency}</span>
                       </button>
                     ))}
                   </div>
