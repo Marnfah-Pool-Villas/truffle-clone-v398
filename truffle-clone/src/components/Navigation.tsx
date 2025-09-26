@@ -238,26 +238,6 @@ export default function Navigation() {
                 </>
               )}
             </div>
-            <button
-              onClick={() => {
-                hapticFeedback.light()
-                goToContact()
-              }}
-              className="flex w-16 items-center justify-center py-2.5 rounded-xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 group cursor-pointer hover:bg-[#264f28]/20 hover:scale-[1.02] transform hover:shadow-md h-16"
-            >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-            </button>
           </div>
 
           {/* Desktop Language + Contact - moved further right */}
