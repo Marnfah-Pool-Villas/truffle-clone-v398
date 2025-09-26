@@ -81,7 +81,8 @@ export default function Navigation() {
   }, [pathname])
 
   return (
-    <nav className="relative w-full z-30 pt-1 md:pt-2 pb-0 transition-all duration-300">
+    <>
+      <nav className="relative w-full z-30 pt-1 md:pt-2 pb-0 transition-all duration-300">
       <div className="px-4 md:w-full md:px-12 lg:px-16 xl:px-20">
         <div className="relative flex justify-center items-center h-24 md:h-28 w-full md:justify-between">
           {/* Mobile layout: Logo moved 0.5cm left from hero border edge */}
@@ -301,5 +302,82 @@ export default function Navigation() {
         </div>
       </div>
     </nav>
+      <div
+        ref={contactMenuRef}
+        className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3 md:bottom-6 md:right-6"
+      >
+        {isContactMenuOpen && (
+          <div className="w-56 bg-white/90 backdrop-blur-lg border border-[#264f28]/20 rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
+            <div className="text-xs uppercase tracking-[0.2em] text-[#264f28]/60 font-semibold">
+              {t.nav.contact}
+            </div>
+            <a
+              href="https://wa.me/66635517979"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                hapticFeedback.light()
+                setIsContactMenuOpen(false)
+              }}
+              className="flex items-center justify-between gap-3 px-3 py-2 rounded-xl bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 transition-all duration-300 hover:scale-[1.01]"
+            >
+              <span className="text-sm font-medium text-[#264f28]">{t.footer.whatsapp}</span>
+              <span className="text-xs text-[#264f28]/70">↗</span>
+            </a>
+            <a
+              href="weixin://dl/chat?MarnfahVillas"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                hapticFeedback.light()
+                setIsContactMenuOpen(false)
+              }}
+              className="flex items-center justify-between gap-3 px-3 py-2 rounded-xl bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 transition-all duration-300 hover:scale-[1.01]"
+            >
+              <span className="text-sm font-medium text-[#264f28]">{t.footer.wechat}</span>
+              <span className="text-xs text-[#264f28]/70">↗</span>
+            </a>
+            <a
+              href="https://line.me/ti/p/MarnfahPoolVillas"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                hapticFeedback.light()
+                setIsContactMenuOpen(false)
+              }}
+              className="flex items-center justify-between gap-3 px-3 py-2 rounded-xl bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 transition-all duration-300 hover:scale-[1.01]"
+            >
+              <span className="text-sm font-medium text-[#264f28]">{t.footer.line}</span>
+              <span className="text-xs text-[#264f28]/70">↗</span>
+            </a>
+          </div>
+        )}
+        <button
+          type="button"
+          onClick={() => {
+            hapticFeedback.light()
+            setIsContactMenuOpen(prev => !prev)
+          }}
+          className="group inline-flex items-center gap-3 px-4 py-3 rounded-full bg-[#264f28] text-white shadow-2xl hover:bg-[#1f3f20] transition-all duration-300 hover:scale-105"
+          aria-expanded={isContactMenuOpen}
+          aria-label={t.nav.contact}
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="opacity-90"
+          >
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          <span className="font-medium text-sm sm:text-base tracking-wide">{t.nav.contact}</span>
+        </button>
+      </div>
+    </>
   )
 }
