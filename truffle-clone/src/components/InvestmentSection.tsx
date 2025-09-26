@@ -66,7 +66,7 @@ export default function InvestmentSection() {
 
           {/* Beautiful Minimalist Price Chart - Smaller Size */}
           <div className="mt-4 p-4 bg-gradient-to-br from-white/80 to-[#264f28]/5 rounded-2xl border border-[#264f28]/20">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-start mb-3">
               <h4 className="text-base font-semibold text-[#264f28]">Thai Luxury Property Market Trends</h4>
             </div>
 
