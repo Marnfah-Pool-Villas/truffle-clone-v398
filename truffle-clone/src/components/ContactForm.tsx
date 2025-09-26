@@ -149,10 +149,10 @@ export default function ContactForm() {
               <textarea
                 id="message"
                 name="message"
-                rows={4}
+                rows={3}
                 value={formData.message}
                 onChange={handleInputChange}
-                className="flex-1 px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300 resize-none min-h-[120px] md:min-h-[160px]"
+                className="flex-1 h-full md:h-auto px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300 resize-none min-h-[56px] md:min-h-[160px]"
                 placeholder={t.contact.form.placeholders.message}
               />
               <button
