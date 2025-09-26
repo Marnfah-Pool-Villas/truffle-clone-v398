@@ -74,12 +74,12 @@ export class TranslationLoader {
     try {
       // For now, we'll use embedded translations but with optimized loading
       const { translations } = await import('./translations')
-      return translations[language]
+      return applyTranslationOverrides(language, translations[language])
     } catch (error) {
       console.error(`Failed to load translation for ${language}:`, error)
       // Fallback to English
       const { translations } = await import('./translations')
-      return translations.en
+      return applyTranslationOverrides('en', translations.en)
     }
   }
 
