@@ -1,7 +1,13 @@
-import { useT } from '@/lib/useTranslation'
+import { useTranslation } from '@/lib/useTranslation'
 
 export default function InvestmentSection() {
-  const t = useT()
+  const { language, t } = useTranslation()
+  const ownershipTitle = language === 'en'
+    ? 'Free & Leasehold Ownership'
+    : t.investment.benefits.items.ownership.title
+  const ownershipDescription = language === 'en'
+    ? 'Structured with inheritance rights'
+    : t.investment.benefits.items.ownership.description
 
   return (
     <div className="max-w-6xl mx-auto pt-2 sm:pt-4 pb-2 sm:pb-8 px-4 sm:px-6">
@@ -226,8 +232,8 @@ export default function InvestmentSection() {
             <div className="flex items-start gap-3">
               <div className="w-4 h-4 rounded-full mt-2" style={{backgroundColor: 'rgba(180, 136, 40, 0.3)'}}></div>
               <div>
-                <div className="font-medium text-[#264f28] mb-1">{t.investment.benefits.items.ownership.title}</div>
-                <div className="text-sm text-black/60">{t.investment.benefits.items.ownership.description}</div>
+                <div className="font-medium text-[#264f28] mb-1">{ownershipTitle}</div>
+                <div className="text-sm text-black/60">{ownershipDescription}</div>
               </div>
             </div>
 
