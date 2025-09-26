@@ -74,14 +74,14 @@ export default function VirtualTourSection() {
   return (
     <div className="max-w-6xl mx-auto pt-2 sm:pt-4 pb-10 sm:pb-20 px-4 sm:px-6">
       {/* Header */}
-      <div className="flex flex-col gap-y-6 mb-12 text-center">
+      <div className="flex flex-col gap-y-6 mb-6 text-center">
         <div className="relative">
-          <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4">
+          <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-3">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z"/>
             </svg>
           </div>
-          <div className="relative mb-6">
+          <div className="relative mb-4">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
               <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#264f28]/20 via-[#264f28]/10 to-transparent rounded-2xl blur-sm"></span>
