@@ -359,13 +359,13 @@ export default function Navigation() {
             hapticFeedback.light()
             setIsContactMenuOpen(prev => !prev)
           }}
-          className={`group inline-flex items-center justify-center rounded-full border border-[#264f28]/20 bg-[#264f28]/10 text-[#264f28] shadow-2xl backdrop-blur-md transition-all duration-300 hover:bg-[#264f28]/20 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#264f28]/40 w-14 h-14 ${isContactMenuOpen ? 'bg-[#264f28]/20' : ''}`}
+          className={`group inline-flex items-center justify-center rounded-full border border-[#264f28]/20 bg-[#264f28]/10 text-[#264f28] shadow-2xl backdrop-blur-md transition-all duration-300 hover:bg-[#264f28]/20 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#264f28]/40 w-16 h-16 sm:w-[72px] sm:h-[72px] ${isContactMenuOpen ? 'bg-[#264f28]/20' : ''}`}
           aria-expanded={isContactMenuOpen}
           aria-label={t.nav.contact}
         >
           <svg
-            width="22"
-            height="22"
+            width="26"
+            height="26"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
