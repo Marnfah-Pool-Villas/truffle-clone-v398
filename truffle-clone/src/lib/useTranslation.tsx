@@ -178,6 +178,7 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
       console.error('Error changing language:', error)
       setIsChangingLanguage(false)
       setLoadingProgress(0)
+      setCurrentTranslations(applyTranslationOverrides('en', translations.en))
       // Keep current language on error
     }
   }, [language])
