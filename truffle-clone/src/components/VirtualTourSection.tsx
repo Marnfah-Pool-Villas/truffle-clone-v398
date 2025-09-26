@@ -101,19 +101,19 @@ export default function VirtualTourSection() {
           <div key={villa.id} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
             {/* Glow effect behind the card */}
             <div
-              className="absolute inset-0 w-full h-full rounded-3xl opacity-25 -z-10"
+              className="pointer-events-none absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-10"
               style={{
-                background: 'radial-gradient(circle, rgba(237,229,217,0.8) 0%, rgba(237,229,217,0.4) 50%, rgba(237,229,217,0) 100%)',
-                filter: 'blur(28px)',
-                transform: 'scale(1.05)'
+                background: 'radial-gradient(ellipse at center, rgba(237,229,217,0.85) 0%, rgba(237,229,217,0.45) 42%, rgba(237,229,217,0) 100%)',
+                filter: 'blur(36px)',
+                transform: 'scale(1.1)'
               }}
             />
             <div
-              className="absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-20 md:hidden"
+              className="pointer-events-none absolute inset-0 w-full h-full rounded-[2.5rem] opacity-15 -z-20 md:hidden"
               style={{
-                background: 'radial-gradient(circle, rgba(237,229,217,0.7) 0%, rgba(237,229,217,0.3) 45%, rgba(237,229,217,0) 100%)',
-                filter: 'blur(52px)',
-                transform: 'scale(1.28)'
+                background: 'radial-gradient(ellipse at center, rgba(237,229,217,0.7) 0%, rgba(237,229,217,0.28) 48%, rgba(237,229,217,0) 100%)',
+                filter: 'blur(64px)',
+                transform: 'scale(1.24)'
               }}
             />
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-4 border-[#b48828]/30 overflow-hidden shadow-xl transition-all duration-300 sm:group-hover:scale-[1.02]">
