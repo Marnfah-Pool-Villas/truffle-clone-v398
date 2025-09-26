@@ -5,36 +5,42 @@ export function applyTranslationOverrides(language: Language, base: Translations
     return base
   }
 
-  const investment = base.investment
-  if (!investment) {
-    return base
+  let result = base
+
+  if (result.virtualTour?.title) {
+    result = {
+      ...result,
+      virtualTour: {
+        ...result.virtualTour,
+        title: 'Luxury Villa Experience'
+      }
+    }
   }
 
-  const benefits = investment.benefits
-  if (!benefits) {
-    return base
-  }
+  const investment = result.investment
+  const benefits = investment?.benefits
+  const items = benefits?.items
+  const ownership = items?.ownership
 
-  const items = benefits.items
-  if (!items || !items.ownership) {
-    return base
-  }
-
-  return {
-    ...base,
-    investment: {
-      ...investment,
-      benefits: {
-        ...benefits,
-        items: {
-          ...items,
-          ownership: {
-            ...items.ownership,
-            title: 'Free & Leasehold Ownership',
-            description: 'Structured with inheritance rights'
+  if (investment && benefits && items && ownership) {
+    result = {
+      ...result,
+      investment: {
+        ...investment,
+        benefits: {
+          ...benefits,
+          items: {
+            ...items,
+            ownership: {
+              ...ownership,
+              title: 'Free & Leasehold Ownership',
+              description: 'Structured with inheritance rights'
+            }
           }
         }
       }
     }
   }
+
+  return result
 }
