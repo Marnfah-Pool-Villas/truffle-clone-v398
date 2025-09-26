@@ -141,6 +141,14 @@ export default function Navigation() {
                 <span className="text-xl lg:text-2xl">↗</span>
               </Link>
               <Link
+                href="/map"
+                onClick={() => hapticFeedback.light()}
+                className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
+              >
+                <span>{t.nav.map?.replace(' ↗', '') ?? 'Map'}</span>
+                <span className="text-xl lg:text-2xl">↗</span>
+              </Link>
+              <Link
                 href="/capital"
                 onClick={() => hapticFeedback.light()}
                 className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
