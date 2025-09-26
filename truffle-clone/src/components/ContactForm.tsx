@@ -54,8 +54,8 @@ export default function ContactForm() {
       </div>
 
       <div className="bg-[#ede5d9]/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#b48828]/20">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 lg:space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
             <div>
               <label htmlFor="firstName" className="block text-sm font-medium text-[#264f28] mb-2">
                 {t.contact.form.firstName}
@@ -67,7 +67,7 @@ export default function ContactForm() {
                 required
                 value={formData.firstName}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+                className="w-full px-4 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
                 placeholder={t.contact.form.placeholders.firstName}
               />
             </div>
@@ -83,7 +83,7 @@ export default function ContactForm() {
                 required
                 value={formData.lastName}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+                className="w-full px-4 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
                 placeholder={t.contact.form.placeholders.lastName}
               />
             </div>
@@ -100,7 +100,7 @@ export default function ContactForm() {
               required
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+              className="w-full px-4 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
               placeholder={t.contact.form.placeholders.email}
             />
           </div>
@@ -115,7 +115,7 @@ export default function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+              className="w-full px-4 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
               placeholder={t.contact.form.placeholders.phone}
             />
           </div>
