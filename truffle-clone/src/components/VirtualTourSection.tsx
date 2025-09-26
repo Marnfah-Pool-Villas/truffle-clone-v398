@@ -116,12 +116,12 @@ export default function VirtualTourSection() {
                 transform: 'scale(1.28)'
               }}
             />
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-4 border-[#b48828]/30 overflow-hidden shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-4 border-[#b48828]/30 overflow-hidden shadow-xl transition-all duration-300 sm:group-hover:scale-[1.02]">
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={villa.image}
                   alt={villa.name}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 sm:group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -132,7 +132,7 @@ export default function VirtualTourSection() {
               <div className="px-6 py-4 flex items-center justify-center">
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <button
-                    className="px-3 py-4 bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 text-[#264f28] transition-all duration-300 hover:scale-[1.02] rounded-xl font-medium text-sm flex flex-col items-center justify-center gap-2"
+                    className="px-3 py-4 bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 text-[#264f28] transition-all duration-300 sm:hover:scale-[1.02] rounded-xl font-medium text-sm flex flex-col items-center justify-center gap-2"
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
