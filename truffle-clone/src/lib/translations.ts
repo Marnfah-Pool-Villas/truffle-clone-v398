@@ -607,7 +607,7 @@ export const translations: Record<Language, Translations> = {
       description: "การออกแบบระดับโลกสำหรับเจ้าของบ้านที่มีรสนิยม\nทุกข้อเท็จจริงและผ้าถูกคัดสรรมาอย่างละเอียด\nเพลิดเพลินกับความหรูหราที่ไร้ขีดจำกัด",
       features: {
         pools: "สระขอบอินฟินิตี้",
-        spa: "ศาลาสปาส่วนตัว",
+        spa: "ศาลาสปาส่วนตั��",
         concierge: "คอนเซียร์จ 24/7",
         gardens: "สวนเขตร้อน"
       }
@@ -661,7 +661,7 @@ export const translations: Record<Language, Translations> = {
       }
     },
     investment: {
-      title: "การลงทุนที่ชาญฉลาดในไทย",
+      title: "การลงทุนที่ชาญฉลาด��นไทย",
       metrics: {
         roi: {
           title: "ผลตอบแทนต่อปี",
@@ -689,7 +689,7 @@ export const translations: Record<Language, Translations> = {
         }
       },
       benefits: {
-        title: "สิทธิประโยชน์",
+        title: "สิทธิปร��โยชน์",
         items: {
           residency: {
             title: "วีซ่า��ทยอีลิท",
@@ -850,7 +850,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       subtitle1: "芭提雅最负盛名的地产",
       subtitle2: "无缝形式的高端装饰",
-      subtitle3: "永恒设计与激发灵感的景观"
+      subtitle3: "永恒��计与激发灵感的景观"
     },
     properties: {
       title: "至尊优雅",
@@ -976,7 +976,7 @@ export const translations: Record<Language, Translations> = {
             description: "符合条件的外国投资者无资本利得��"
           },
           currency: {
-            title: "货币多元化",
+            title: "货币���元化",
             description: "泰铢稳定性和区域经济增长"
           },
           management: {
@@ -1253,7 +1253,7 @@ export const translations: Record<Language, Translations> = {
           },
           currency: {
             title: "貨幣多元化",
-            description: "泰銖穩定性和區域經濟增長"
+            description: "泰銖穩定性和區域經��增長"
           },
           management: {
             title: "租賃管理",
@@ -1395,6 +1395,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       residence: "Главная ↗",
       location: "Смотреть ↗",
+      map: "Карта ↗",
       wealth: "Богатство ↗",
       language: "Язык",
       contact: "Контакт"
@@ -1406,7 +1407,7 @@ export const translations: Record<Language, Translations> = {
     },
     properties: {
       title: "Испытайте свою высшую реальность",
-      description: "Оазис тропической роскоши, воплощенный как частный рай в природе\nОткройте свой дом в самом великолепном месте на Земле\nОграниченная доступность от",
+      description: "Оазис тропической роскоши, воплощенный как частный рай в природе\nОткройте ��вой дом в самом великолепном месте на Земле\nОграниченная доступность от",
       priceRange: "до",
       villa1: {
         name: "Спокойствие",
@@ -1529,7 +1530,7 @@ export const translations: Record<Language, Translations> = {
           },
           currency: {
             title: "Валютная диверсификация",
-            description: "Стабильность тайского бата и региональный экономический рост"
+            description: "Стаб��льность тайского бата и региональный экономический рост"
           },
           management: {
             title: "Управление арендой",
@@ -1547,7 +1548,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "Экономическая стабильность и рост Таиланда",
-        description: "Стабильная политическая среда Таиланда, крепкая туристическая индустрия и стратегическое расположение в Юго-Восточной Азии делают его умным выбором для проницательных инвесторов в недвижимость. Проинвестиционная политика правительства и развитие инфраструктуры продолжают стимулировать возможности умных денег.",
+        description: "Стабильная политическая среда Таиланда, крепкая туристическая индустрия и стратегическое расположение в Юго-Восточной Азии делают его умным выбором для проницательных инвесторов �� недвижимость. Проинвестиционная политика правительства и развитие инфраструктуры продолжают стимулировать возможности умных денег.",
         metrics: {
           rating: {
             title: "Кредитный рейтинг",
@@ -1750,7 +1751,7 @@ export const translations: Record<Language, Translations> = {
         kata: {
           title: "카타 비치",
           description: "서핑, 일광욕, 정통 태국 해변 문화를 경험하기에 완벽한 원시 황금 모래 해변.",
-          features: ["서핑 파도", "일몰 경치", "현지 요리", "평화로운 분위기"]
+          features: ["서핑 ���도", "일몰 경치", "현지 요리", "평화로운 분위기"]
         },
         karon: {
           title: "카론 비치",
@@ -1968,7 +1969,7 @@ export const translations: Record<Language, Translations> = {
         name: "安らぎ",
         features: "4ベッドルーム | Type 2",
         description: "",
-        status: "2戸販売中"
+        status: "2戸���売中"
       },
       villa3: {
         name: "調和",
@@ -2224,7 +2225,7 @@ export const translations: Record<Language, Translations> = {
       contact: "संपर्क"
     },
     hero: {
-      subtitle1: "पट्टाया की सबसे प्रतिष्ठित संपत्ति में शांति से रहें",
+      subtitle1: "पट्टाया की सबसे प्रति��्ठित संपत्ति में शांति से रहें",
       subtitle2: "क���लातीत डिज़ाइन, अतुलनीय गुणवत्ता और पूर्णता के लिए जुनून की त्रिमूर्ति",
       subtitle3: "निर्बाध अनंत पूल, प्रीमियम फिनिश और आश्चर्यजनक दृश्य जो लक्जरी को फिर से परिभाषित करते हैं"
     },
@@ -2286,7 +2287,7 @@ export const translations: Record<Language, Translations> = {
           subtitle: "विश्व स्तरीय सुविधाएं"
         },
         schools: {
-          title: "शीर्ष स्तर के अंतर्राष्ट्रीय स्कूल",
+          title: "शीर्ष स्तर के अंतर्र��ष्ट्रीय स्कूल",
           subtitle: "पास में एलीट शिक्षा"
         }
       },
@@ -2299,7 +2300,7 @@ export const translations: Record<Language, Translations> = {
         kata: {
           title: "काता बीच",
           description: "सुनहरी रेत का एक प्राचीन खंड जो सर्फिंग, धूप सेंकने और प्रामाणिक थाई समुद्र तट संस्कृति का अनुभव करने के लिए एकदम सही है।",
-          features: ["सर्फिंग तरंगें", "सूर्यास्त दृश्य", "स्थानीय व्यंजन", "शांतिपूर्ण वातावरण"]
+          features: ["सर्फिंग तरंगें", "सूर्यास्त दृश्य", "स्थानीय व्यंजन", "शांतिपूर्ण वातावर���"]
         },
         karon: {
           title: "कैरन बीच",
@@ -2365,7 +2366,7 @@ export const translations: Record<Language, Translations> = {
           },
           ownership: {
             title: "मुक्त भूमि स्वामित्व",
-            description: "विरासत अधिकारों के साथ 90-वर्षीय पट्टा संरचना"
+            description: "विरासत अधिकारों के साथ 90-���र्षीय पट्टा संरचना"
           }
         }
       },
@@ -2440,7 +2441,7 @@ export const translations: Record<Language, Translations> = {
           status: "आरक्षित",
           rooms: {
             living: "ज़ेन लिविंग",
-            master: "मास्टर रिट्रीट",
+            master: "मास्ट��� रिट्रीट",
             pool: "निजी अभयारण्य",
             kitchen: "शेफ की रसोई",
             garden: "ज़ेन गार्डन"
@@ -3089,7 +3090,7 @@ export const translations: Record<Language, Translations> = {
     exclusive: {
       title: "نمط حياة مخصص",
       description: "عيش كالملوك في وفرة تامة. مصمم خصيصاً لتعزيز تدفق الطاقة. لأولئك الذين يحبون الأشياء الجميلة.",
-      buttonText: "عرض الكتيب"
+      buttonText: "ع��ض الكتيب"
     },
     location: {
       title: "يقع في الجنة",
@@ -3120,7 +3121,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "شاطئ كاتا",
-          description: "امتداد نقي من الرمال الذهبية مثالي لركوب الأمواج والاستحمام الشمسي وتجربة ثقافة الشاطئ التايلاندية ��لأصيلة.",
+          description: "امتداد نقي من ال��مال الذهبية مثالي لركوب الأمواج والاستحمام الشمسي وتجربة ثقافة الشاطئ التايلاندية ��لأصيلة.",
           features: ["أمواج ركوب الأمواج", "مناظر الغروب", "مأكولات محلية", "جو هادئ"]
         },
         karon: {
