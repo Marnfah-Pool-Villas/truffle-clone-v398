@@ -29,7 +29,7 @@ export default function LocationSection() {
 
         {/* Location Stats Badges */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20">
+          <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20">
             <div className="w-16 h-16 bg-gradient-to-br from-[#b48828] to-[#d4af37] rounded-full flex items-center justify-center mb-4">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
                 {/* Beach umbrella */}
@@ -48,7 +48,7 @@ export default function LocationSection() {
             <div className="text-sm text-[#264f28]/70">{t.location.locationStats.beaches.subtitle}</div>
           </div>
 
-          <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20">
+          <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20">
             <div className="w-16 h-16 bg-gradient-to-br from-[#264f28] to-[#2d5a30] rounded-full flex items-center justify-center mb-4">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
                 <path d="M10 2v18"/>
@@ -62,7 +62,7 @@ export default function LocationSection() {
             <div className="text-sm text-[#264f28]/70">{t.location.locationStats.golf.subtitle}</div>
           </div>
 
-          <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20">
+          <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20">
             <div className="w-16 h-16 bg-gradient-to-br from-[#b48828] to-[#d4af37] rounded-full flex items-center justify-center mb-4">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
