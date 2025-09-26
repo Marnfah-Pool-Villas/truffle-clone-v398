@@ -174,7 +174,7 @@ export default function Navigation() {
               onClick={() => hapticFeedback.light()}
               className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
             >
-              <span className="text-lg">���</span>
+              <span className="text-lg">↗</span>
               <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.location.replace(' ↗', '')}</span>
             </Link>
             <Link
