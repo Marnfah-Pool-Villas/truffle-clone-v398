@@ -120,50 +120,48 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="flex flex-row md:flex-col items-stretch md:items-start gap-3">
-            <div className="flex-1">
-              <label htmlFor="villaOfInterest" className="block text-sm font-medium text-[#264f28] mb-2">
-                {t.contact.form.villaOfInterest}
-              </label>
-              <select
-                id="villaOfInterest"
-                name="villaOfInterest"
-                required
-                value={formData.villaOfInterest}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
-              >
-                <option value="">{t.contact.form.placeholders.villaSelect}</option>
-                <option value="all">{t.contact.form.placeholders.allVillas}</option>
-                <option value="villa1">{t.contact.form.placeholders.villa1}</option>
-                <option value="villa2">{t.contact.form.placeholders.villa2}</option>
-                <option value="villa3">{t.contact.form.placeholders.villa3}</option>
-                <option value="villa4">{t.contact.form.placeholders.villa4}</option>
-              </select>
-            </div>
-            <div className="flex-1 md:w-full flex justify-end md:justify-center md:mt-4">
-              <button
-                type="submit"
-                className="w-full md:w-auto bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-xl px-4 py-3 transition-all duration-300 hover:scale-105 transform text-[#264f28] text-base font-medium flex items-center justify-center gap-3"
-              >
-                {t.contact.form.submit}
-              </button>
-            </div>
+          <div>
+            <label htmlFor="villaOfInterest" className="block text-sm font-medium text-[#264f28] mb-2">
+              {t.contact.form.villaOfInterest}
+            </label>
+            <select
+              id="villaOfInterest"
+              name="villaOfInterest"
+              required
+              value={formData.villaOfInterest}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+            >
+              <option value="">{t.contact.form.placeholders.villaSelect}</option>
+              <option value="all">{t.contact.form.placeholders.allVillas}</option>
+              <option value="villa1">{t.contact.form.placeholders.villa1}</option>
+              <option value="villa2">{t.contact.form.placeholders.villa2}</option>
+              <option value="villa3">{t.contact.form.placeholders.villa3}</option>
+              <option value="villa4">{t.contact.form.placeholders.villa4}</option>
+            </select>
           </div>
 
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-[#264f28] mb-2">
               {t.contact.form.message}
             </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              value={formData.message}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300 resize-none"
-              placeholder={t.contact.form.placeholders.message}
-            />
+            <div className="flex flex-row md:flex-col gap-3">
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                value={formData.message}
+                onChange={handleInputChange}
+                className="flex-1 px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300 resize-none min-h-[140px] md:min-h-[160px]"
+                placeholder={t.contact.form.placeholders.message}
+              />
+              <button
+                type="submit"
+                className="flex-1 md:flex-none md:self-center md:w-auto bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-xl px-4 py-3 transition-all duration-300 hover:scale-105 transform text-[#264f28] text-base font-medium flex items-center justify-center gap-3"
+              >
+                {t.contact.form.submit}
+              </button>
+            </div>
           </div>
 
         </form>
