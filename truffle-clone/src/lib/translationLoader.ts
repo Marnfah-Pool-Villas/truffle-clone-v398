@@ -30,7 +30,11 @@ export class TranslationLoader {
     // Return cached translation if available
     const cached = translationCache.get(language)
     if (cached) {
-      return cached
+      const overriddenCached = applyTranslationOverrides(language, cached)
+      if (overriddenCached !== cached) {
+        translationCache.set(language, overriddenCached)
+      }
+      return overriddenCached
     }
 
     // Return ongoing loading promise if already loading
