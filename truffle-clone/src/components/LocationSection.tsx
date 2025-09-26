@@ -6,7 +6,7 @@ export default function LocationSection() {
     <div className="bg-[#ede5d9]/15">
       <div className="max-w-6xl mx-auto pt-2 sm:pt-4 pb-10 sm:pb-16 px-4 sm:px-6">
         {/* Header */}
-        <div className="flex flex-col gap-y-6 mb-12 text-center">
+        <div className="flex flex-col gap-y-4 mb-6 text-center">
           <div className="relative">
             <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
