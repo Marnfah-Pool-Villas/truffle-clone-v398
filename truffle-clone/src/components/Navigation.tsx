@@ -340,14 +340,14 @@ export default function Navigation() {
                   hapticFeedback.light()
                   setIsContactMenuOpen(false)
                 }}
-                className="inline-flex items-center justify-center rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#264f28]/20 border border-white/60 bg-white w-16 h-16 sm:w-[72px] sm:h-[72px]"
+                className="inline-flex items-center justify-center rounded-full overflow-hidden shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#264f28]/25 border border-[#264f28]/20 bg-[#264f28]/15 w-16 h-16 sm:w-[72px] sm:h-[72px]"
                 aria-label={option.label}
               >
                 <span className="sr-only">{option.label}</span>
                 <img
                   src={option.imgSrc}
                   alt={option.label}
-                  className="w-9 h-9 sm:w-12 sm:h-12 object-contain"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </a>
