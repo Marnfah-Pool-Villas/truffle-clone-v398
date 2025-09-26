@@ -145,19 +145,19 @@ export default function ContactForm() {
             <label htmlFor="message" className="block text-sm font-medium text-[#264f28] mb-2 md:mb-3">
               {t.contact.form.message}
             </label>
-            <div className="flex flex-row md:flex-col gap-2 md:gap-3">
+            <div className="flex flex-row items-stretch gap-2 md:gap-3">
               <textarea
                 id="message"
                 name="message"
                 rows={2}
                 value={formData.message}
                 onChange={handleInputChange}
-                className="flex-1 h-[48px] md:h-auto px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300 resize-none md:min-h-[160px]"
+                className="flex-1 h-12 md:h-12 px-4 py-2 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300 resize-none"
                 placeholder={t.contact.form.placeholders.message}
               />
               <button
                 type="submit"
-                className="flex-1 h-full md:h-auto md:flex-none md:self-center md:w-auto bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-xl px-4 py-3 transition-all duration-300 hover:scale-105 transform text-[#264f28] text-base font-medium flex items-center justify-center gap-3"
+                className="flex-none w-28 md:w-32 h-12 bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-xl px-4 transition-all duration-300 hover:scale-105 transform text-[#264f28] text-base font-medium flex items-center justify-center gap-3"
               >
                 {t.contact.form.submit}
               </button>
