@@ -31,7 +31,6 @@ export default function LocationPage() {
             <section className="bg-[#ede5d9]/20">
               <VirtualTourSection />
             </section>
-            <LocationSection />
             <ContactFooter />
           </main>
         </PageTransition>
