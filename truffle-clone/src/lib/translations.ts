@@ -568,7 +568,7 @@ export const translations: Record<Language, Translations> = {
       location: "ชม ↗",
       map: "Map ↗",
       wealth: "ล���ทุน ↗",
-      language: "��าษ��",
+      language: "��า�����",
       contact: "ติดต��อ"
     },
     hero: {
@@ -647,7 +647,7 @@ export const translations: Record<Language, Translations> = {
         kata: {
           title: "หาดกะตะ",
           description: "หาดทรายทองคำที่บริสุทธิ์ เหมาะสำหรับการโต้คลื่น อาบแดด และสัมผัสวัฒนธรรมชายหาดไทยแท้",
-          features: ["คลื่นโต���คลื่น", "วิวพระอาทิตย์ตก", "อาหารท้องถิ่น", "บรรยากาศสงบ"]
+          features: ["คลื่นโต���คลื่น", "วิวพระอาทิตย์ตก", "อาหารท้องถิ่น", "บรรยากาศส���บ"]
         },
         karon: {
           title: "หาดกะรน",
@@ -693,7 +693,7 @@ export const translations: Record<Language, Translations> = {
         items: {
           residency: {
             title: "วีซ่า��ทยอีลิท",
-            description: "วีซ่าพำนักต่��อายุได้ 5-20 ปี พร้อมการลงทุน"
+            description: "วีซ่าพำนักต่��อายุได้ 5-20 ปี ��ร้อมการลงทุน"
           },
           tax: {
             title: "วางแผนภาษี",
@@ -713,7 +713,7 @@ export const translations: Record<Language, Translations> = {
           },
           ownership: {
             title: "กรรมสิทธิ์ฟ��ีโฮลด์",
-            description: "โครงสร้างสัญญา��ช่า 90 ปี พร้อมสิทธิ��สืบทอ��"
+            description: "โครงสร้างสัญญา��ช่า 90 ปี พร้���มสิทธิ��สืบทอ��"
           }
         }
       },
@@ -976,7 +976,7 @@ export const translations: Record<Language, Translations> = {
             description: "符合条件的外国投资者无资本利得���"
           },
           currency: {
-            title: "货币���元化",
+            title: "货币�����元化",
             description: "泰铢稳定性��区域经济增长"
           },
           management: {
@@ -1099,7 +1099,7 @@ export const translations: Record<Language, Translations> = {
           allVillas: "全部",
           villa1: "别墅1",
           villa2: "别墅2",
-          villa3: "别墅3",
+          villa3: "别��3",
           villa4: "别墅4",
           message: "我有兴趣了解更多关于..."
         }
@@ -1253,7 +1253,7 @@ export const translations: Record<Language, Translations> = {
           },
           currency: {
             title: "貨幣多元化",
-            description: "泰銖穩定性和區域經��增長"
+            description: "泰銖穩��性和區域經��增長"
           },
           management: {
             title: "租賃管理",
@@ -1290,7 +1290,7 @@ export const translations: Record<Language, Translations> = {
     },
     virtualTour: {
       title: "虛擬別墅體驗",
-      subtitle: "通過沉浸式360°遊覽探索我們的���華別墅",
+      subtitle: "通過沉浸式360°遊覽探索我們的���華���墅",
       features: {
         views360: {
           title: "360° 視角",
@@ -1470,7 +1470,7 @@ export const translations: Record<Language, Translations> = {
       beachCards: {
         patong: {
           title: "Пляж Патонг",
-          description: "Яркое сердце Пхукета с раз��лече��иями мир��вого класса, ресторанами и ночной жизнью в нес��ольких шагах от крист��льно чистых вод.",
+          description: "��ркое сердце Пхукета с раз��лече��иями мир��вого класса, ресторанами и ночной жизнью в нес��ольких шагах от крист��льно чистых вод.",
           features: ["5-звездочные курорты", "Пляжные клубы", "Водные виды спорта", "Торговые центры"]
         },
         kata: {
@@ -1548,7 +1548,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "Экономическая стабильность и рост Таиланда",
-        description: "Стабильная политическая среда Таиланда, крепкая туристическая индустрия и стратегическое расположение в Юго-Восточной Азии делают его умным выбором для проницательных инвесторов �� недвижимость. Проинвестиционная политика правительства и развитие инфраструктуры продолжают стимулировать возможности умных ден��г.",
+        description: "Стабильная политическая среда Таиланда, крепкая туристическая индустрия и стратегическое расположение в Юго-Восточной Азии делают его умным выбором для проницательных инвесторов �� недвижимость. Проинвестиционная политика правительства и развитие инфрастру��туры продолжают стимулировать возможности умных ден��г.",
         metrics: {
           rating: {
             title: "Кредитный рейтинг",
@@ -1613,7 +1613,7 @@ export const translations: Record<Language, Translations> = {
         },
         type3: {
           name: "Вилла Тип 3",
-          description: "3 спальни | Частный бассейн | Дзен-сады",
+          description: "3 с��альни | Частный бассейн | Дзен-сады",
           status: "Заброни��овано",
           rooms: {
             living: "Дзен-гостиная",
@@ -1739,7 +1739,7 @@ export const translations: Record<Language, Translations> = {
           subtitle: "세계적 수준의 시설"
         },
         schools: {
-          title: "최고급 국제학교",
+          title: "��고급 국제학교",
           subtitle: "인근의 엘리트 교육"
         }
       },
@@ -1762,7 +1762,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "전략적 위치",
-        description: "푸켓에서 가장 탐나는 해변 사이에 완벽하게 위치하여 국제공항, 럭셔리 쇼핑, 세계적으로 유명한 골프 코스에 쉽게 접근할 수 있습니다."
+        description: "푸켓에서 가장 탐나는 해변 사이에 완벽하게 위치하여 국제공항, 럭셔리 쇼핑, 세계적��로 유명한 골프 코스에 쉽게 접근할 수 있습니다."
       }
     },
     investment: {
@@ -1802,7 +1802,7 @@ export const translations: Record<Language, Translations> = {
           },
           tax: {
             title: "세금 최적화",
-            description: "자격을 갖춘 외국인 투자자에 대한 양도소득세 없음"
+            description: "자격을 갖춘 외���인 투자자에 대한 양도소득세 없음"
           },
           currency: {
             title: "통화 ��각화",
@@ -1955,7 +1955,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       subtitle1: "パタヤで最も権威ある邸宅で平穏に暮らす",
       subtitle2: "時代を超越したデザイン、比類なき品質、完璧への情熱の三位一体",
-      subtitle3: "シームレスなインフィニテ��プール、プレミアム仕上げ、ラグジュアリーを再定義する��晴らしい景色"
+      subtitle3: "シームレスなインフィニテ�����ール、プレミアム仕上げ、ラグジュアリーを再定義する��晴らしい景色"
     },
     properties: {
       title: "最高の現実を体験してください",
@@ -1985,7 +1985,7 @@ export const translations: Record<Language, Translations> = {
     },
     amenities: {
       title: "プレミアムアメニティ",
-      description: "センスの良い住宅所有者のための世界クラスのデザイン。すべての事実と生地が慎重にキュレーションされています。比類のない生活体験をお楽しみください。",
+      description: "センスの良い住宅所有者のための世界クラスのデザイン。すべての事実と生地が慎重にキュレーションされています。比類のない生活��験をお楽しみください。",
       features: {
         pools: "イン���ィニティエッジプール",
         spa: "プライベートス���パビリオン",
@@ -2234,7 +2234,7 @@ export const translations: Record<Language, Translations> = {
     },
     properties: {
       title: "अपनी सर्वोच्च वास्तविकता का अनुभव करें",
-      description: "उष्णकटिबंधीय ऐश्वर्य का मरुद्यान, प्रकृति में निजी स्वर्ग के रूप में प्रकट\nपृथ्वी के सबसे महान स्थान पर अपना घर खोजें\nसीमित उपलब्धता",
+      description: "उष्णकटिबंधीय ऐश्वर्य का मरुद्यान, प्रकृति में निजी स्वर्ग के रूप में प्रकट\nपृथ्वी के सबसे महान स्थान पर अपना घर खोजें\nसीमित उपलब्धत���",
       priceRange: "से",
       villa1: {
         name: "शांति",
@@ -2263,7 +2263,7 @@ export const translations: Record<Language, Translations> = {
       description: "रुचिशील घर के मालिक के लिए विश्व स्तरीय डिज़ाइन। हर तथ्य और कपड़े ���ो सावधानीपूर्वक तैयार किया गया। एक बेजोड़ जीवन अनुभव का आनंद लें।",
       features: {
         pools: "अनंत किनारे पूल",
-        spa: "निजी स्पा मंड���",
+        spa: "निजी स्प��� मंड���",
         concierge: "24/7 कंसियर्ज",
         gardens: "उष्णकटिबंधीय उद्यान"
       }
@@ -2313,7 +2313,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "रणनीतिक स्थान",
-        description: "अंतर्राष्ट्रीय हवाई अड्डे, लक्���री शॉपिंग और विश्व प्रसिद्ध गोल्फ कोर्स के लिए आसान पहुंच के साथ फुकेत के सबसे प्रतिष्ठित समुद्र तटों के बीच पूरी तरह से स्थित।"
+        description: "अंतर्राष्ट्रीय हवाई अड्डे, लक्���री शॉपिंग और विश्व प्रसिद्ध गोल्फ कोर्स के लिए आसान पहुंच के साथ फुकेत के सबसे प्रतिष्ठित समुद्र त���ों के बीच पूरी तरह से स्थित।"
       }
     },
     investment: {
@@ -2365,7 +2365,7 @@ export const translations: Record<Language, Translations> = {
           },
           lifestyle: {
             title: "जीवनशैली पहुंच",
-            description: "लक्जरी सुविधाओं के साथ व्���क्तिगत उपयोग अधिकार"
+            description: "लक्जरी सुविधाओं ��े साथ व्���क्तिगत उपयोग अधिकार"
           },
           ownership: {
             title: "मुक्त भूम�� स्वामित्व",
@@ -2383,7 +2383,7 @@ export const translations: Record<Language, Translations> = {
           },
           gdp: {
             title: "जीडीपी (2024)",
-            subtitle: "आसियान की दूसर��� सबसे बड़ी अर्थव्यवस्था"
+            subtitle: "आसि��ान की दूसर��� सबसे बड़ी अर्थव्यवस्था"
           },
           tourists: {
             title: "वार्षिक पर्यटक",
@@ -2497,6 +2497,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       residence: "Inicio ↗",
       location: "Ver ↗",
+      map: "Mapa ↗",
       wealth: "Riqueza ↗",
       language: "Idioma",
       contact: "Contacto"
@@ -3086,7 +3087,7 @@ export const translations: Record<Language, Translations> = {
       features: {
         pools: "برك الحافة اللانهائية",
         spa: "أجنحة سبا خاصة",
-        concierge: "بواب 24/7",
+        concierge: "بوا�� 24/7",
         gardens: "حدائق استوائية"
       }
     },
@@ -3119,7 +3120,7 @@ export const translations: Record<Language, Translations> = {
       beachCards: {
         patong: {
           title: "شاطئ بات��نغ",
-          description: "القلب النابض بالحياة لفوكيت مع ترفيه وطعام وحياة ليلية على مستوى عالمي على بعد خطوات قليلة من المياه الصافية كالكريستال.",
+          description: "القلب النابض بالحياة لفوكيت مع ترفيه وطعام وحياة ليلية على مستوى عا��مي على بعد خطوات قليلة من المياه الصافية كالكريستال.",
           features: ["منتجعات 5 نجوم", "نوادي شاطئية", "رياضات مائية", "مراكز تسوق"]
         },
         kata: {
@@ -3197,7 +3198,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "الاستقرار والنمو الاقتصادي في تايلاند",
-        description: "البيئة السياسية المستقرة في تايلاند وصناعة السياحة القوية والموقع الاستراتيجي في جنوب شرق آسيا تجعلها الخيار الذكي لمستثمري العقارات المميزين. سياسات الحكومة المؤيدة للاستثمار وتطوير البنية التحتية تواصل دفع فرص الأموال الذكية.",
+        description: "البيئة السياسية المستقرة في تايلاند وصناعة السياحة القوية والموقع الاستراتيجي في جنوب شرق آسيا تجعلها الخيار الذكي لمستثمري العقارات ��لمميزين. سياسات الحكومة المؤيدة للاستثمار وتطوير البنية التحتية تواصل دفع فرص الأموال الذكية.",
         metrics: {
           rating: {
             title: "التصنيف الائتماني",
