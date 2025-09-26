@@ -21,14 +21,41 @@ export default function MapPage() {
     {
       title: t.location.locationStats.beaches.title,
       subtitle: t.location.locationStats.beaches.subtitle,
+      iconBackground: 'bg-gradient-to-br from-[#b48828] to-[#d4af37]',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
+          <path d="M12 3C8 3 5 6 5 10h14C19 6 16 3 12 3z" />
+          <path d="M12 10v8" />
+          <path d="M7 10C9 6 11 6 12 10" />
+          <path d="M12 10C13 6 15 6 17 10" />
+          <path d="M3 20h18" />
+          <path d="M5 22h14" />
+        </svg>
+      )
     },
     {
       title: t.location.locationStats.golf.title,
       subtitle: t.location.locationStats.golf.subtitle,
+      iconBackground: 'bg-gradient-to-br from-[#264f28] to-[#2d5a30]',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+          <path d="M10 2v18" />
+          <path d="M6 20h8" />
+          <path d="M10 2h2" />
+          <circle cx="10" cy="2" r="1" fill="white" />
+        </svg>
+      )
     },
     {
       title: t.location.locationStats.schools.title,
       subtitle: t.location.locationStats.schools.subtitle,
+      iconBackground: 'bg-gradient-to-br from-[#b48828] to-[#d4af37]',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+          <path d="M6 12v5c3 3 9 3 12 0v-5" />
+        </svg>
+      )
     }
   ]
 
@@ -104,7 +131,8 @@ export default function MapPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
                   {highlightCards.map((card) => (
-                    <div key={card.title} className="p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20 text-center">
+                    <div key={card.title} className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20">
+                      <div className={`w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center mb-4`}>{card.icon}</div>
                       <div className="text-lg font-semibold text-[#264f28] mb-2">{card.title}</div>
                       <div className="text-sm text-[#264f28]/70">{card.subtitle}</div>
                     </div>
