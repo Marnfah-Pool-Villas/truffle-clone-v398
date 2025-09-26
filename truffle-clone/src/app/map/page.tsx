@@ -71,9 +71,9 @@ export default function MapPage() {
         <Navigation />
         <PageTransition>
           <main>
-            <section className="bg-[#ede5d9]/25 py-10 sm:py-14 lg:py-20">
+            <section className="bg-[#ede5d9]/25 py-8 sm:py-10 lg:py-16">
               <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
                   <div className="relative inline-block">
                     <div className="inline-flex items-center justify-center gap-2 text-[#b48828] font-medium mb-4">
                       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
@@ -95,7 +95,7 @@ export default function MapPage() {
                 </div>
 
                 {primaryHighlight && (
-                  <div className="flex justify-center mt-10">
+                  <div className="flex justify-center mt-4 sm:mt-6 mb-10 sm:mb-12">
                     <div className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-[#b48828]/30 max-w-md w-full">
                       <div className={`w-16 h-16 ${primaryHighlight.iconBackground} rounded-full flex items-center justify-center mb-4`}>
                         {primaryHighlight.icon}
