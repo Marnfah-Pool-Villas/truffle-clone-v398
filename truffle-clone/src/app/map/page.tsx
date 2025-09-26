@@ -72,7 +72,7 @@ export default function MapPage() {
         <Navigation />
         <PageTransition>
           <main>
-            <section className="bg-[#ede5d9]/25 py-8 sm:py-10 lg:py-16">
+            <section className="bg-[#ede5d9]/25 pt-4 sm:pt-6 lg:pt-8 pb-8 sm:pb-10 lg:pb-16">
               <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
                   <div className="relative inline-block">
