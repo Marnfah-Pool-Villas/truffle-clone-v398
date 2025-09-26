@@ -3,7 +3,7 @@ import { useT } from '@/lib/useTranslation'
 export default function AmenitiesSection() {
   const t = useT()
   return (
-    <div className="max-w-7xl mx-auto pt-6 pb-6 sm:pt-12 sm:pb-14 lg:pt-20 lg:pb-20 px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-between gap-y-8 lg:gap-x-12">
+    <div className="max-w-7xl mx-auto pt-6 pb-6 sm:pt-8 sm:pb-10 lg:pt-20 lg:pb-20 px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-between gap-y-8 lg:gap-x-12">
       <div className="flex flex-col gap-y-6 w-full lg:w-1/2 h-full lg:h-[500px] xl:h-[600px] justify-center items-center md:items-start">
         <div className="inline-flex items-center gap-2 text-[#b48828] font-medium">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
