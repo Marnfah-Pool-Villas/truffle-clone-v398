@@ -53,35 +53,7 @@ export default function Navigation() {
     }, 100)
   }
 
-  // Smooth scroll function for anchor links
-  const smoothScrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    }
-  }
-
   // (Removed Home navigation helper)
-
-  // Navigate to home page and scroll to contact form
-  const goToContact = () => {
-    if (pathname !== '/') {
-      // For navigation from other pages, use a more reliable approach
-      window.location.href = '/#contact'
-    } else {
-      // Already on home page, just scroll to contact
-      const contactElement = document.getElementById('contact')
-      if (contactElement) {
-        contactElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-        })
-      }
-    }
-  }
 
   // Page transition with elegant animation
   const handlePageTransition = (href: string) => {
