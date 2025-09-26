@@ -142,7 +142,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-[#264f28] mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-[#264f28] mb-2 md:mb-3">
               {t.contact.form.message}
             </label>
             <div className="flex flex-row md:flex-col gap-3">
