@@ -58,7 +58,8 @@ export default function MapPage() {
       )
     }
   ]
-  const [primaryHighlight, ...secondaryHighlights] = highlightCards
+  const [primaryHighlight, ...otherHighlights] = highlightCards
+  const [mapAdjacentHighlight, ...secondaryHighlights] = otherHighlights
 
   return (
     <div className="antialiased min-h-screen">
@@ -120,6 +121,18 @@ export default function MapPage() {
                   </div>
                 </div>
 
+                {mapAdjacentHighlight && (
+                  <div className="flex justify-center mt-6 sm:mt-8">
+                    <div className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20 max-w-md w-full">
+                      <div className={`w-16 h-16 ${mapAdjacentHighlight.iconBackground} rounded-full flex items-center justify-center mb-4`}>
+                        {mapAdjacentHighlight.icon}
+                      </div>
+                      <div className="text-lg font-semibold text-[#264f28] mb-2">{mapAdjacentHighlight.title}</div>
+                      <div className="text-sm text-[#264f28]/70">{mapAdjacentHighlight.subtitle}</div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="relative mt-10 sm:mt-12 lg:mt-16">
                   <div
                     className="absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-10"
@@ -140,7 +153,7 @@ export default function MapPage() {
                 </div>
 
                 {secondaryHighlights.length > 0 && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-10">
+                  <div className={`grid grid-cols-1 ${secondaryHighlights.length > 1 ? 'sm:grid-cols-2 lg:grid-cols-2' : ''} gap-4 mt-8`}>
                     {secondaryHighlights.map((card) => (
                       <div key={card.title} className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20">
                         <div className={`w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center mb-4`}>{card.icon}</div>
