@@ -49,7 +49,7 @@ export default function Home() {
                 <AmenitiesSection />
               </section>
               <ExclusiveSection />
-              <section id="contact" className="pt-6 sm:pt-12 px-4 sm:px-6" style={{ margin: 0, paddingBottom: 0, minHeight: 'auto' }}>
+              <section id="contact" className="pt-6 sm:pt-8 md:pt-10 lg:pt-12 px-4 sm:px-6" style={{ margin: 0, paddingBottom: 0, minHeight: 'auto' }}>
                 <ContactForm />
               </section>
               {/* Spacing between contact form and footer */}
