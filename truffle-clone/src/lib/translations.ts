@@ -568,7 +568,7 @@ export const translations: Record<Language, Translations> = {
       location: "ชม ↗",
       map: "Map ↗",
       wealth: "ล���ทุน ↗",
-      language: "��าษา",
+      language: "��าษ��",
       contact: "ติดต��อ"
     },
     hero: {
@@ -590,7 +590,7 @@ export const translations: Record<Language, Translations> = {
         name: "ความสงบ",
         features: "4 ห้องนอน | Type 2",
         description: "",
-        status: "เ��ลื��� 2 หลัง"
+        status: "เ��ลื����� 2 หลัง"
       },
       villa3: {
         name: "ความกลมกลืน",
@@ -614,7 +614,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "ไลฟ์สไตล์สั่งทำพิเศษ",
-      description: "ควา��ใส่ใจในรายละเอียดอย่างมหาศาล - ออกแบบเพื่อคุณค่าทางสุนทรียศาสตร์อย่างแท้จริง\nออกแบบเพื่อเสริมการไหลของพลังงานเชิงบวก\nสำหรับผู้ที่รักสิ่งประณีต",
+      description: "คว����ใส่ใจในรายละเอียดอย่างมหาศาล - ออกแบบเพื่อคุณค่าทางสุนทรียศาสตร์อย่างแท้จริง\nออกแบบเพื่อเสริมการไหลของพลังงานเชิงบวก\nสำหรับผู้ที่รักสิ่งประณีต",
       buttonText: "ดูโบรชัวร์"
     },
     location: {
@@ -634,7 +634,7 @@ export const translations: Record<Language, Translations> = {
           subtitle: "สิ่งอำนวยความสะด���กระดับโลก"
         },
         schools: {
-          title: "โร��เรียนนานาชาติระดับแนวหน้า",
+          title: "��ร��เรียนนานาชาติระดับแนวหน้า",
           subtitle: "การศึกษาชั้นยอดใกล้เคียง"
         }
       },
@@ -668,7 +668,7 @@ export const translations: Record<Language, Translations> = {
           subtitle: "ค่าเช่า + มูลค่าเพ��่ม"
         },
         yield: {
-          title: "ผลตอบแท��ค่าเช่า",
+          title: "ผลต��บแท��ค่าเช่า",
           subtitle: "เลือกทำเลอย่างชาญฉลาด"
         },
         tax: {
@@ -713,7 +713,7 @@ export const translations: Record<Language, Translations> = {
           },
           ownership: {
             title: "กรรมสิทธิ์ฟ��ีโฮลด์",
-            description: "โครงสร้างสัญญา��ช่า 90 ปี พร้อมสิทธิ์สืบทอ��"
+            description: "โครงสร้างสัญญา��ช่า 90 ปี พร้อมสิทธิ��สืบทอ��"
           }
         }
       },
@@ -731,7 +731,7 @@ export const translations: Record<Language, Translations> = {
           },
           tourists: {
             title: "นักท่องเที่ยวต่อป��",
-            subtitle: "เป้าหมายฟื้น��ัวก่อนปี 2024"
+            subtitle: "เป้าห��ายฟื้น��ัวก่อนปี 2024"
           }
         }
       }
@@ -760,7 +760,7 @@ export const translations: Record<Language, Translations> = {
       villas: {
         type1: {
           name: "ว���ลล่าประเภท 1",
-          description: "4 ห้องนอน | สระ��ินฟินิตี้ | วิวทะเล",
+          description: "4 ห้องนอน | สระ��ินฟินิตี้ | ว���วทะเล",
           status: "เหลือ 2 หลัง",
           rooms: {
             living: "ห้องนั่งเล่น",
@@ -1014,7 +1014,7 @@ export const translations: Record<Language, Translations> = {
     },
     virtualTour: {
       title: "虚拟别墅体验",
-      subtitle: "通过沉浸式360°游览探索我们的豪华别墅",
+      subtitle: "通过沉浸式360°游览探索我们的豪��别墅",
       features: {
         views360: {
           title: "360° 视角",
@@ -1442,7 +1442,7 @@ export const translations: Record<Language, Translations> = {
       }
     },
     exclusive: {
-      title: "Инди��идуальный образ жизни",
+      title: "Инди��идуальны�� образ жизни",
       description: "Живите как королевская осо��а в полном изобилии. Специально разработано для усиления потока энергии. Для тех, кто любит прекрасное.",
       buttonText: "Посмотреть брошюру"
     },
@@ -1470,7 +1470,7 @@ export const translations: Record<Language, Translations> = {
       beachCards: {
         patong: {
           title: "Пляж Патонг",
-          description: "Яркое сердце Пхукета с раз��лечениями мир��вого класса, ресторанами и ночной жизнью в нес��ольких шагах от крист��льно чистых вод.",
+          description: "Яркое сердце Пхукета с раз��лече��иями мир��вого класса, ресторанами и ночной жизнью в нес��ольких шагах от крист��льно чистых вод.",
           features: ["5-звездочные курорты", "Пляжные клубы", "Водные виды спорта", "Торговые центры"]
         },
         kata: {
@@ -1677,7 +1677,7 @@ export const translations: Record<Language, Translations> = {
       contact: "연락처"
     },
     hero: {
-      subtitle1: "파타야에서 가장 권위 있는 지���에서 평화롭게 살아보세요",
+      subtitle1: "파���야에서 가장 권위 있는 지���에서 평화롭게 살아보세요",
       subtitle2: "시대를 초월한 디자인, 비할 데 없는 품질, 완벽에 대한 열정의 삼위일체",
       subtitle3: "매끄러운 인피니티 풀, ���리미엄 마감재, 럭셔리를 재정의하는 놀라운 전망"
     },
@@ -1947,6 +1947,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       residence: "ホーム ↗",
       location: "見る ↗",
+      map: "地図 ↗",
       wealth: "富 ↗",
       language: "言語",
       contact: "連絡"
@@ -1954,7 +1955,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       subtitle1: "パタヤで最も権威ある邸宅で平穏に暮らす",
       subtitle2: "時代を超越したデザイン、比類なき品質、完璧への情熱の三位一体",
-      subtitle3: "シームレスなインフィニティプール、プレミアム仕上げ、ラグジュアリーを再定義する素晴らしい景色"
+      subtitle3: "シームレスなインフィニティプール、プレミアム仕上げ、ラグジュアリーを再定義する��晴らしい景色"
     },
     properties: {
       title: "最高の現実を体験してください",
@@ -1986,7 +1987,7 @@ export const translations: Record<Language, Translations> = {
       title: "プレミアムアメニティ",
       description: "センスの良い住宅所有者のための世界クラスのデザイン。すべての事実と生地が慎重にキュレーションされています。比類のない生活体験をお楽しみください。",
       features: {
-        pools: "インフィニティエッジプール",
+        pools: "イン���ィニティエッジプール",
         spa: "プライベートス���パビリオン",
         concierge: "24時間コンシェルジュ",
         gardens: "トロピカルガーデン"
@@ -2037,7 +2038,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "戦略的立地",
-        description: "プーケットで最も人気のビーチの間に完璧に位置し、国際空港、ラグジュアリーショッピング、世界的に有名なゴルフコースに簡単にアクセスできます。"
+        description: "プーケットで最も人気のビーチの間に完璧に位置し、国際空港、ラグジュアリーショ���ピング、世界的に有名なゴルフコースに簡単にアクセスできます。"
       }
     },
     investment: {
@@ -2081,7 +2082,7 @@ export const translations: Record<Language, Translations> = {
           },
           currency: {
             title: "通貨分散",
-            description: "タイバーツの安定性と地域経済成長"
+            description: "��イバーツの安定性と地域経済成長"
           },
           management: {
             title: "賃��管理",
@@ -2366,7 +2367,7 @@ export const translations: Record<Language, Translations> = {
             description: "लक्जरी सुविधाओं के साथ व्यक्तिगत उपयोग अधिकार"
           },
           ownership: {
-            title: "मुक्त भूमि स्वामित्व",
+            title: "मुक्त भूम�� स्वामित्व",
             description: "विरासत अधिकारों के साथ 90-���र्ष��य पट्टा संरचना"
           }
         }
@@ -2415,7 +2416,7 @@ export const translations: Record<Language, Translations> = {
         type1: {
           name: "विला टाइप 1",
           description: "4 बेडरूम | अनंत पूल | समुद्री दृश्य",
-          status: "2 उपलब्ध",
+          status: "2 उ��लब्ध",
           rooms: {
             living: "लिविंग रूम",
             master: "म���स्टर बेडरूम",
@@ -3267,7 +3268,7 @@ export const translations: Record<Language, Translations> = {
             master: "ملاذ رئيسي",
             pool: "ملاذ خاص",
             kitchen: "مطبخ الشيف",
-            garden: "حديقة الزن"
+            garden: "��ديقة الزن"
           }
         }
       },
@@ -3676,7 +3677,7 @@ export const translations: Record<Language, Translations> = {
         karon: {
           title: "Bãi biển Karon",
           description: "Ba kilomet bãi biển cát trắng mịn như bột cung cấp sự thư giãn yên tĩnh và cảnh quan đại dương ngoạn mục.",
-          features: ["Nơi nghỉ dưỡng yên tĩnh", "Nước nguyên sơ", "Resort spa", "Đi bộ trong tự nhiên"]
+          features: ["Nơi ngh�� dưỡng yên tĩnh", "Nước nguyên sơ", "Resort spa", "Đi bộ trong tự nhiên"]
         }
       },
       mapSection: {
