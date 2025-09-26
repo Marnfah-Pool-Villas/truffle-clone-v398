@@ -160,7 +160,7 @@ export default function InvestmentSection() {
 
             {/* Chart insights */}
             <div className="mt-3">
-              <div className="p-2 bg-white/60 rounded-lg flex flex-row items-center justify-between gap-6 text-left">
+              <div className="p-2 bg-white/60 rounded-lg flex flex-row items-center justify-between gap-6 text-left flex-nowrap">
                 <div className="space-y-0.5">
                   <div className="text-sm font-bold text-[#264f28]">₿8.2M</div>
                   <div className="text-xs text-[#264f28]">2009 Average</div>
