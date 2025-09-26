@@ -19,6 +19,27 @@ export default function Navigation() {
   const pathname = usePathname()
   const { language, setLanguage, t } = useTranslation()
 
+  const contactOptions = [
+    {
+      key: 'whatsapp',
+      label: t.footer.whatsapp,
+      abbr: 'WA',
+      href: 'https://wa.me/66635517979'
+    },
+    {
+      key: 'wechat',
+      label: t.footer.wechat,
+      abbr: 'WC',
+      href: 'weixin://dl/chat?MarnfahVillas'
+    },
+    {
+      key: 'line',
+      label: t.footer.line,
+      abbr: 'LN',
+      href: 'https://line.me/ti/p/MarnfahPoolVillas'
+    }
+  ] as const
+
   // Close language dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
