@@ -24,20 +24,15 @@ export default function Navigation() {
       key: 'whatsapp',
       label: t.footer.whatsapp,
       href: 'https://wa.me/66635517979',
+      buttonClass: 'bg-[#25D366] hover:bg-[#1ebe5d] border border-[#1ebe5d] text-white focus-visible:outline-[#d5ffe5] focus-visible:outline-offset-4',
       icon: (
         <svg
-          viewBox="0 0 24 24"
+          viewBox="0 0 32 32"
           aria-hidden="true"
-          className="w-7 h-7 sm:w-8 sm:h-8"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          className="w-7 h-7 sm:w-9 sm:h-9"
+          fill="currentColor"
         >
-          <path d="M12 3a9 9 0 0 0-7.66 13.2L3 21l4.3-1.1A9 9 0 1 0 12 3z" />
-          <path d="M9.5 8.8v0a5.5 5.5 0 0 0 5.7 5" />
-          <path d="M10.2 11.3l.6 1.3a2.2 2.2 0 0 0 1 1l1.3.6" />
+          <path d="M16.019 0C7.168 0 0 7.168 0 16.019c0 2.818.744 5.577 2.154 8.006L0 32l8.188-2.136a16.02 16.02 0 1 0 7.83-29.864zM25.474 22.909c-.403 1.156-2.36 2.193-3.22 2.347-.82.123-1.874.175-3.017-.187-.693-.22-1.578-.508-2.713-1.015-4.78-2.073-7.893-6.865-8.137-7.185-.244-.319-1.942-2.592-1.942-4.95 0-2.357 1.228-3.501 1.662-3.983.433-.48.95-.6 1.266-.6.316 0 .633 0 .909.018.29.017.68-.11 1.066.817.403.967 1.372 3.328 1.49 3.569.118.244.197.528.034.848-.17.316-.257.508-.484.804-.227.295-.484.553-.205 1.085.278.53 1.237 2.04 2.665 3.306 1.834 1.632 3.378 2.145 3.874 2.379.496.233.785.2 1.077-.12.295-.325 1.23-1.43 1.559-1.918.33-.487.682-.4 1.153-.244.472.156 2.986 1.408 3.5 1.661.515.252.858.379.984.59.126.21.126 1.219-.278 2.375z" />
         </svg>
       )
     },
@@ -45,21 +40,15 @@ export default function Navigation() {
       key: 'wechat',
       label: t.footer.wechat,
       href: 'weixin://dl/chat?MarnfahVillas',
+      buttonClass: 'bg-[#07C160] hover:bg-[#05a955] border border-[#05a955] text-white focus-visible:outline-[#d4ffe9] focus-visible:outline-offset-4',
       icon: (
         <svg
-          viewBox="0 0 24 24"
+          viewBox="0 0 26 26"
           aria-hidden="true"
-          className="w-7 h-7 sm:w-8 sm:h-8"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          className="w-7 h-7 sm:w-9 sm:h-9"
+          fill="currentColor"
         >
-          <path d="M9 5.5h4.5a3.5 3.5 0 0 1 0 7H11l-2.2 2v-2H8.5a3.5 3.5 0 1 1 0-7z" />
-          <path d="M13 12.5h2a3 3 0 0 1 2.83 4.1L18 19l-2.4-1.1H13a3 3 0 0 1-2.83-2.1" />
-          <circle cx="10.25" cy="9.25" r=".4" fill="currentColor" stroke="none" />
-          <circle cx="12.75" cy="9.25" r=".4" fill="currentColor" stroke="none" />
+          <path d="M17.498 2C13.12 2 9.492 4.81 9.492 8.479c0 1.944 1 3.633 2.614 4.872-.114.46-.4 1.644-.458 1.935l-.145.693.68-.151 1.927-.429c.914.28 1.657.427 2.573.427 4.379 0 7.998-3.81 7.998-8.478C25.68 5.81 21.876 2 17.498 2zm-4.176 3.206c.431 0 .78.352.78.785 0 .434-.349.786-.78.786-.433 0-.782-.352-.782-.786 0-.433.35-.785.782-.785zm8.254 4.098c-.433 0-.782-.352-.782-.785 0-.434.35-.786.782-.786.432 0 .78.352.78.786 0 .433-.35.785-.78.785zm-2.747 0c-.431 0-.782-.352-.782-.785 0-.434.35-.786.782-.786.433 0 .782.352.782.786 0 .433-.349.785-.782.785zm-5.62 3.12c-4.378 0-7.997 3.81-7.997 8.478 0 2.264 1.092 4.209 2.96 5.567-.124.482-.466 1.725-.531 2.031l-.16.724.713-.158 1.969-.438c.933.291 1.673.443 2.586.443 4.378 0 7.997-3.81 7.997-8.478 0-4.668-3.804-8.369-7.997-8.369zm-4.175 3.103c.431 0 .78.352.78.785 0 .434-.349.786-.78.786-.433 0-.782-.352-.782-.786 0-.433.35-.785.782-.785zm-2.747 0c.432 0 .782.352.782.785 0 .434-.35.786-.782.786-.433 0-.782-.352-.782-.786 0-.433.349-.785.782-.785zm7.075 5.589H9.618c-.432 0-.782-.353-.782-.786 0-.432.35-.785.782-.785h4.76c.432 0 .782.353.782.785 0 .433-.35.786-.782.786zm-2.559-2.356H9.618c-.432 0-.782-.352-.782-.785 0-.434.35-.786.782-.786h1.97c.432 0 .782.352.782.786 0 .433-.35.785-.782.785z" />
         </svg>
       )
     },
@@ -67,20 +56,15 @@ export default function Navigation() {
       key: 'line',
       label: t.footer.line,
       href: 'https://line.me/ti/p/MarnfahPoolVillas',
+      buttonClass: 'bg-[#00B900] hover:bg-[#009900] border border-[#009900] text-white focus-visible:outline-[#d6ffd6] focus-visible:outline-offset-4',
       icon: (
         <svg
-          viewBox="0 0 24 24"
+          viewBox="0 0 22 24"
           aria-hidden="true"
-          className="w-7 h-7 sm:w-8 sm:h-8"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          className="w-7 h-7 sm:w-9 sm:h-9"
+          fill="currentColor"
         >
-          <path d="M5 5.5h14a2.5 2.5 0 0 1 2.5 2.5v6a2.5 2.5 0 0 1-2.5 2.5h-5.2l-3.8 3v-3H5a2.5 2.5 0 0 1-2.5-2.5v-6A2.5 2.5 0 0 1 5 5.5z" />
-          <path d="M8.5 10h7" />
-          <path d="M8.5 12.5h4" />
+          <path d="M19.5 0h-15C1.121 0 0 1.121 0 2.5v15C0 18.879 1.121 20 2.5 20H6l4 4v-4h9.5c1.379 0 2.5-1.121 2.5-2.5v-15C22 1.121 20.879 0 19.5 0zM7.958 12H6.333V8.75h-1v3.25H3.708V6.75h4.25v5.25zm3.541 0H9.792V6.75h1.707v5.25zm4.75 0-2.041-2.938V12H12.5V6.75h1.708l2.041 2.938V6.75h1.707V12zm3.75-3.167h-1.458V12H17.75V6.75H22v2.083z" />
         </svg>
       )
     }
@@ -386,7 +370,7 @@ export default function Navigation() {
                   hapticFeedback.light()
                   setIsContactMenuOpen(false)
                 }}
-                className="inline-flex items-center justify-center rounded-full border border-[#264f28]/20 bg-[#264f28]/10 text-[#264f28] shadow-2xl backdrop-blur-md transition-all duration-300 hover:bg-[#264f28]/20 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#264f28]/40 w-16 h-16 sm:w-[72px] sm:h-[72px]"
+                className={`inline-flex items-center justify-center rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 w-16 h-16 sm:w-[72px] sm:h-[72px] ${option.buttonClass}`}
                 aria-label={option.label}
               >
                 <span className="sr-only">{option.label}</span>
