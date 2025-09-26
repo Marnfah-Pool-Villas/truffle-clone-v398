@@ -222,11 +222,11 @@ export default function Navigation() {
                     onClick={() => setIsLanguageDropdownOpen(false)}
                   />
                   <div
-                    className="absolute top-full mt-2 w-16 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl max-h-[70vh] overflow-y-auto"
+                    className="absolute top-full mt-2 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl max-h-[70vh] overflow-y-auto"
                     style={{
-                      right: '-32px', // Centers dropdown between language and contact buttons
+                      right: '0px',
                       zIndex: 51,
-                      width: '64px'
+                      minWidth: '60px'
                     }}
                   >
                     <div className="p-1">
@@ -293,7 +293,7 @@ export default function Navigation() {
               {isLanguageDropdownOpen && (
                 <div
                   className="absolute top-full mt-2 left-0 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl overflow-hidden z-[99999]"
-                  style={{ minWidth: '60px' }}
+                  style={{ minWidth: '70px' }}
                 >
                   <div className="p-1">
                     {languageInfo.map((lang, index) => (
