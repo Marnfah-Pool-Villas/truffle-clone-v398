@@ -91,9 +91,6 @@ export default function MapPage() {
                       <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[#b48828] to-[#d4af37] rounded-full"></div>
                     </div>
                   </div>
-                  <p className="mt-6 text-base sm:text-lg text-[#264f28]/70 leading-relaxed">
-                    Perfectly positioned between Pattaya's best beaches. Easy access to luxury shopping, fine dining, and an international airport
-                  </p>
                 </div>
 
                 <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/30 backdrop-blur-sm">
