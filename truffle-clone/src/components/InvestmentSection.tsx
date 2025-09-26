@@ -238,7 +238,7 @@ export default function InvestmentSection() {
       </div>
 
       {/* Economic Stability & Growth */}
-      <div className="bg-gradient-to-r from-[#264f28]/5 to-[#b48828]/5 border border-[#b48828]/20 rounded-2xl p-6">
+      <div className="bg-gradient-to-r from-[#264f28]/5 to-[#b48828]/5 border border-[#b48828]/20 rounded-2xl p-6 mb-8">
         <h3 className="text-2xl font-medium text-[#264f28] mb-4 text-center">
           {t.investment.stability.title}
         </h3>
