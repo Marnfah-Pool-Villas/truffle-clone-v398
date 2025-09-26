@@ -74,6 +74,7 @@ export default function Navigation() {
   useEffect(() => {
     const handleRouteComplete = () => {
       setIsTransitioning(false)
+      setIsContactMenuOpen(false)
       document.body.style.opacity = '1'
     }
 
