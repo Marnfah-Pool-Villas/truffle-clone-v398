@@ -167,8 +167,8 @@ export default function InvestmentSection() {
                 </div>
                 <div className="hidden sm:block h-8 w-px bg-[#264f28]/20" />
                 <div className="space-y-0.5 text-right">
-                  <div className="text-sm font-bold text-[#264f28]">₿23.1M</div>
-                  <div className="text-xs text-[#264f28]">2024 Average</div>
+                  <div className="text-sm font-bold text-[#264f28]">₿23.4M</div>
+                  <div className="text-xs text-[#264f28]">2025 Average</div>
                 </div>
               </div>
             </div>
