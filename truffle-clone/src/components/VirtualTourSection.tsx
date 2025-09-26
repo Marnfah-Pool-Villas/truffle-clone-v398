@@ -101,19 +101,19 @@ export default function VirtualTourSection() {
           <div key={villa.id} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
             {/* Glow effect behind the card */}
             <div
-              className="absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-10"
+              className="absolute inset-0 w-full h-full rounded-3xl opacity-25 -z-10"
               style={{
                 background: 'radial-gradient(circle, rgba(237,229,217,0.8) 0%, rgba(237,229,217,0.4) 50%, rgba(237,229,217,0) 100%)',
-                filter: 'blur(30px)',
+                filter: 'blur(28px)',
                 transform: 'scale(1.05)'
               }}
             />
             <div
-              className="absolute inset-0 w-full h-full rounded-3xl opacity-15 -z-20"
+              className="absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-20 md:hidden"
               style={{
-                background: 'radial-gradient(circle, rgba(237,229,217,0.8) 0%, rgba(237,229,217,0.3) 45%, rgba(237,229,217,0) 100%)',
-                filter: 'blur(45px)',
-                transform: 'scale(1.2)'
+                background: 'radial-gradient(circle, rgba(237,229,217,0.7) 0%, rgba(237,229,217,0.3) 45%, rgba(237,229,217,0) 100%)',
+                filter: 'blur(52px)',
+                transform: 'scale(1.28)'
               }}
             />
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-4 border-[#b48828]/30 overflow-hidden shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
