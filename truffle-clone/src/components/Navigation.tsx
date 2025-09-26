@@ -297,26 +297,6 @@ export default function Navigation() {
                 </div>
               )}
             </div>
-            <button
-              onClick={() => {
-                hapticFeedback.light()
-                goToContact()
-              }}
-              className="flex w-[60px] items-center justify-center h-[60px] rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 group cursor-pointer hover:bg-[#264f28]/20 hover:scale-[1.02] transform hover:shadow-md"
-            >
-              <svg
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-            </button>
           </div>
         </div>
       </div>
