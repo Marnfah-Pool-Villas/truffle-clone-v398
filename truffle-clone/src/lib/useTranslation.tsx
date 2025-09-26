@@ -101,9 +101,10 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
         setLoadingProgress(30)
 
         const translation = await translationLoader.loadTranslation(initialLanguage)
+        const overriddenTranslation = applyTranslationOverrides(initialLanguage, translation)
 
         setLoadingProgress(80)
-        setCurrentTranslations(translation)
+        setCurrentTranslations(overriddenTranslation)
         setLoadingProgress(100)
 
         setTimeout(() => {
@@ -113,7 +114,7 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
 
       } catch (error) {
         console.error('Error initializing language:', error)
-        setCurrentTranslations(translations.en)
+        setCurrentTranslations(applyTranslationOverrides('en', translations.en))
         setIsLoading(false)
       }
     }
