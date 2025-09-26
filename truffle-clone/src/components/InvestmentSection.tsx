@@ -191,20 +191,6 @@ export default function InvestmentSection() {
             <div className="flex items-start gap-3 pb-5 border-b border-[#264f28]/10">
               <div className="w-4 h-4 rounded-full mt-2" style={{backgroundColor: 'rgba(180, 136, 40, 0.3)'}}></div>
               <div>
-                <div className="font-medium text-[#264f28] mb-1">{t.investment.benefits.items.residency.title}</div>
-                <div className="text-sm text-black/60">{t.investment.benefits.items.residency.description}</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-3 pb-5 border-b border-[#264f28]/10">
-              <div className="w-4 h-4 rounded-full mt-2" style={{backgroundColor: 'rgba(180, 136, 40, 0.3)'}}></div>
-              <div>
-                <div className="font-medium text-[#264f28] mb-1">{t.investment.benefits.items.tax.title}</div>
-                <div className="text-sm text-black/60">{t.investment.benefits.items.tax.description}</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-3 pb-5 border-b border-[#264f28]/10">
-              <div className="w-4 h-4 rounded-full mt-2" style={{backgroundColor: 'rgba(180, 136, 40, 0.3)'}}></div>
-              <div>
                 <div className="font-medium text-[#264f28] mb-1">{t.investment.benefits.items.currency.title}</div>
                 <div className="text-sm text-black/60">{t.investment.benefits.items.currency.description}</div>
               </div>
@@ -214,13 +200,6 @@ export default function InvestmentSection() {
               <div>
                 <div className="font-medium text-[#264f28] mb-1">{t.investment.benefits.items.management.title}</div>
                 <div className="text-sm text-black/60">{t.investment.benefits.items.management.description}</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-3 pb-5 border-b border-[#264f28]/10">
-              <div className="w-4 h-4 rounded-full mt-2" style={{backgroundColor: 'rgba(180, 136, 40, 0.3)'}}></div>
-              <div>
-                <div className="font-medium text-[#264f28] mb-1">{t.investment.benefits.items.lifestyle.title}</div>
-                <div className="text-sm text-black/60">{t.investment.benefits.items.lifestyle.description}</div>
               </div>
             </div>
             <div className="flex items-start gap-3">
