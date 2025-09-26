@@ -23,20 +23,66 @@ export default function Navigation() {
     {
       key: 'whatsapp',
       label: t.footer.whatsapp,
-      abbr: 'WA',
-      href: 'https://wa.me/66635517979'
+      href: 'https://wa.me/66635517979',
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="w-7 h-7 sm:w-8 sm:h-8"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 3a9 9 0 0 0-7.66 13.2L3 21l4.3-1.1A9 9 0 1 0 12 3z" />
+          <path d="M9.5 8.8v0a5.5 5.5 0 0 0 5.7 5" />
+          <path d="M10.2 11.3l.6 1.3a2.2 2.2 0 0 0 1 1l1.3.6" />
+        </svg>
+      )
     },
     {
       key: 'wechat',
       label: t.footer.wechat,
-      abbr: 'WE',
-      href: 'weixin://dl/chat?MarnfahVillas'
+      href: 'weixin://dl/chat?MarnfahVillas',
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="w-7 h-7 sm:w-8 sm:h-8"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M9 5.5h4.5a3.5 3.5 0 0 1 0 7H11l-2.2 2v-2H8.5a3.5 3.5 0 1 1 0-7z" />
+          <path d="M13 12.5h2a3 3 0 0 1 2.83 4.1L18 19l-2.4-1.1H13a3 3 0 0 1-2.83-2.1" />
+          <circle cx="10.25" cy="9.25" r=".4" fill="currentColor" stroke="none" />
+          <circle cx="12.75" cy="9.25" r=".4" fill="currentColor" stroke="none" />
+        </svg>
+      )
     },
     {
       key: 'line',
       label: t.footer.line,
-      abbr: 'LN',
-      href: 'https://line.me/ti/p/MarnfahPoolVillas'
+      href: 'https://line.me/ti/p/MarnfahPoolVillas',
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="w-7 h-7 sm:w-8 sm:h-8"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M5 5.5h14a2.5 2.5 0 0 1 2.5 2.5v6a2.5 2.5 0 0 1-2.5 2.5h-5.2l-3.8 3v-3H5a2.5 2.5 0 0 1-2.5-2.5v-6A2.5 2.5 0 0 1 5 5.5z" />
+          <path d="M8.5 10h7" />
+          <path d="M8.5 12.5h4" />
+        </svg>
+      )
     }
   ] as const
 
@@ -344,9 +390,7 @@ export default function Navigation() {
                 aria-label={option.label}
               >
                 <span className="sr-only">{option.label}</span>
-                <span className="text-xs font-semibold tracking-wide uppercase text-[#264f28]">
-                  {option.abbr}
-                </span>
+                {option.icon}
               </a>
             ))}
           </div>
