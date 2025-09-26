@@ -95,7 +95,7 @@ export default function MapPage() {
                 </div>
 
                 {primaryHighlight && (
-                  <div className="flex justify-center mt-4 sm:mt-6 mb-10 sm:mb-12">
+                  <div className="flex justify-center mt-3 sm:mt-4 mb-6 sm:mb-8">
                     <div className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-[#b48828]/30 max-w-md w-full">
                       <div className={`w-16 h-16 ${primaryHighlight.iconBackground} rounded-full flex items-center justify-center mb-4`}>
                         {primaryHighlight.icon}
