@@ -53,7 +53,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="bg-[#ede5d9]/50 backdrop-blur-sm rounded-2xl p-8 border border-[#b48828]/20">
+      <div className="bg-[#ede5d9]/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#b48828]/20">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
