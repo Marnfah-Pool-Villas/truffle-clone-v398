@@ -84,7 +84,7 @@ export default function Navigation() {
   return (
     <>
       <nav className="relative w-full z-30 pt-1 md:pt-2 pb-0 transition-all duration-300">
-      <div className="px-2 sm:px-3 md:w-full md:px-8 lg:px-16 xl:px-20">
+      <div className="px-2 sm:px-3 md:w-full md:px-6 lg:px-16 xl:px-20">
         <div className="relative flex justify-center items-center h-24 md:h-28 w-full md:justify-between">
           {/* Mobile layout: Logo moved 0.5cm left from hero border edge */}
           <Link href="/" onClick={() => hapticFeedback.light()} className="flex items-center md:hidden absolute left-1">
