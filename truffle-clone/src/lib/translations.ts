@@ -854,7 +854,7 @@ export const translations: Record<Language, Translations> = {
     },
     properties: {
       title: "至尊优雅",
-      description: "体验热带奢华\n温暖木材和意��利石材装饰\n限量供应从 ฿12.3M 至 ฿23.4M",
+      description: "体验热带奢华\n温暖木材和意��利石材装饰\n限量供应��� ฿12.3M 至 ฿23.4M",
       priceRange: "至",
       villa1: {
         name: "宁静",
@@ -933,7 +933,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "战略位置",
-        description: "完美位于普吉岛最令人向往��海滩之间，便于前往国际机场、奢侈品购物和世界知名高尔夫球��。"
+        description: "完美位于普吉岛最令人向往���海滩之间，便于前往国际机场、奢侈品购物和世界知名高尔夫球��。"
       }
     },
     investment: {
@@ -973,7 +973,7 @@ export const translations: Record<Language, Translations> = {
           },
           tax: {
             title: "税收优化",
-            description: "符合条件的外国投资者无资本利得��"
+            description: "符合条件的外国投资者无资本利得���"
           },
           currency: {
             title: "货币���元化",
@@ -1139,7 +1139,7 @@ export const translations: Record<Language, Translations> = {
         status: "已預訂"
       },
       villa2: {
-        name: "安詳",
+        name: "���詳",
         features: "4間臥室 | Type 2",
         description: "",
         status: "剩餘2套"
@@ -1209,7 +1209,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "戰略位置",
-        description: "完美位於普吉島最令人嚮往的海灘之間，便於前往國際機場、奢侈品購物和世界知名高爾夫球場。"
+        description: "完美位於普吉島最令人嚮往的海灘之間，便於前往國際機場、奢侈品��物和世界知名高爾夫球場。"
       }
     },
     investment: {
@@ -1508,7 +1508,7 @@ export const translations: Record<Language, Translations> = {
       marketAnalysis: {
         title: "Анализ рынка",
         luxuryGrowth: "Рост роскошной недвижимости (2009-2025)",
-        foreignInvestment: "Увеличение иностранных инвестиций (2009-2025)",
+        foreignInvestment: "Увел��чение иностранных инвестиций (2009-2025)",
         gdpGrowth: "П��огноз роста ВВП (2025)",
         chartTitle: "Тенденции роскошной недвижимости Таиланда",
         chartInsights: {
@@ -1955,7 +1955,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       subtitle1: "パタヤで最も権威ある邸宅で平穏に暮らす",
       subtitle2: "時代を超越したデザイン、比類なき品質、完璧への情熱の三位一体",
-      subtitle3: "シームレスなインフィニティプール、プレミアム仕上げ、ラグジュアリーを再定義する��晴らしい景色"
+      subtitle3: "シームレスなインフィニテ��プール、プレミアム仕上げ、ラグジュアリーを再定義する��晴らしい景色"
     },
     properties: {
       title: "最高の現実を体験してください",
@@ -2038,7 +2038,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "戦略的立地",
-        description: "プーケットで最も人気のビーチの間に完璧に位置し、国際空港、ラグジュアリーショ���ピング、世界的に有名なゴルフコースに簡単にアクセスできます。"
+        description: "プーケットで最も���気のビーチの間に完璧に位置し、国際空港、ラグジュアリーショ���ピング、世界的に有名なゴルフコースに簡単にアクセスできます。"
       }
     },
     investment: {
@@ -2146,7 +2146,7 @@ export const translations: Record<Language, Translations> = {
           rooms: {
             living: "リビングルーム",
             master: "マスターベッドルーム",
-            pool: "インフィニティプール",
+            pool: "インフィニティ���ール",
             kitchen: "キッチン",
             terrace: "テラス"
           }
@@ -2222,6 +2222,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       residence: "घर ↗",
       location: "देखें ↗",
+      map: "��ानचित्र ↗",
       wealth: "धन ↗",
       language: "भाषा",
       contact: "संपर्क"
@@ -2262,7 +2263,7 @@ export const translations: Record<Language, Translations> = {
       description: "रुचिशील घर के मालिक के लिए विश्व स्तरीय डिज़ाइन। हर तथ्य और कपड़े ���ो सावधानीपूर्वक तैयार किया गया। एक बेजोड़ जीवन अनुभव का आनंद लें।",
       features: {
         pools: "अनंत किनारे पूल",
-        spa: "निजी स्पा मंडप",
+        spa: "निजी स्पा मंड���",
         concierge: "24/7 कंसियर्ज",
         gardens: "उष्णकटिबंधीय उद्यान"
       }
@@ -2301,7 +2302,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "काता बीच",
-          description: "सुनहरी रेत का एक प्राचीन खंड जो सर्फिंग, धूप सेंकने और प्रामाणिक थाई समुद्र तट संस्कृति का अनुभव करने के लिए एकदम सही है।",
+          description: "सुनहरी रेत का एक प्राचीन खंड जो सर्फिंग, धूप सेंकने और प्रामाणिक थाई समुद्र तट संस्कृति का अनुभव करने के ल��ए एकदम सही है।",
           features: ["सर्फिंग तरंगें", "सूर्यास्त दृश्य", "स्थानीय व्यंजन", "शांतिपूर्ण वातावर���"]
         },
         karon: {
@@ -2364,7 +2365,7 @@ export const translations: Record<Language, Translations> = {
           },
           lifestyle: {
             title: "जीवनशैली पहुंच",
-            description: "लक्जरी सुविधाओं के साथ व्यक्तिगत उपयोग अधिकार"
+            description: "लक्जरी सुविधाओं के साथ व्���क्तिगत उपयोग अधिकार"
           },
           ownership: {
             title: "मुक्त भूम�� स्वामित्व",
@@ -2382,7 +2383,7 @@ export const translations: Record<Language, Translations> = {
           },
           gdp: {
             title: "जीडीपी (2024)",
-            subtitle: "आसियान की दूसरी सबसे बड़ी अर्थव्यवस्था"
+            subtitle: "आसियान की दूसर��� सबसे बड़ी अर्थव्यवस्था"
           },
           tourists: {
             title: "वार्षिक पर्यटक",
@@ -3134,7 +3135,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "موقع استراتيجي",
-        description: "��وضوع بشكل مثالي بين أكثر شواطئ فوكيت المرغوبة مع سهولة الوصول إلى المطار الدولي والتسوق الفاخر وملاعب الغولف المشهورة عالمياً."
+        description: "��وضو�� بشكل مثالي بين أكثر شواطئ فوكيت المرغوبة مع سهولة الوصول إلى المطار الدولي والتسوق الفاخر وملاعب الغولف المشهورة عالمياً."
       }
     },
     investment: {
@@ -3297,7 +3298,7 @@ export const translations: Record<Language, Translations> = {
           email: "your@email.com",
           phone: "+66 77-888-9999",
           villaSelect: "اختر فيلا",
-          allVillas: "جميعها",
+          allVillas: "ج��يعها",
           villa1: "فيلا 1",
           villa2: "فيلا 2",
           villa3: "فيلا 3",
@@ -3676,7 +3677,7 @@ export const translations: Record<Language, Translations> = {
         },
         karon: {
           title: "Bãi biển Karon",
-          description: "Ba kilomet bãi biển cát trắng mịn như bột cung cấp sự thư giãn yên tĩnh và cảnh quan đại dương ngoạn mục.",
+          description: "Ba kilomet bãi bi���n cát trắng mịn như bột cung cấp sự thư giãn yên tĩnh và cảnh quan đại dương ngoạn mục.",
           features: ["Nơi ngh�� dưỡng yên tĩnh", "Nước nguyên sơ", "Resort spa", "Đi bộ trong tự nhiên"]
         }
       },
@@ -3705,7 +3706,7 @@ export const translations: Record<Language, Translations> = {
         title: "Phân tích thị trường",
         luxuryGrowth: "Tăng trưởng bất động sản xa hoa (2009-2025)",
         foreignInvestment: "Tăng đầu tư nước ngoài (2009-2025)",
-        gdpGrowth: "Dự báo tăng trưởng GDP (2025)",
+        gdpGrowth: "Dự báo tăng trư��ng GDP (2025)",
         chartTitle: "Xu hướng bất động sản xa hoa Thái Lan",
         chartInsights: {
           growth: "Tăng trưởng 15 năm",
