@@ -4,6 +4,7 @@ import { DEFAULT_LANGUAGE, supportedLanguages } from '@/lib/translations'
 
 const GOOGLE_TRANSLATE_ENDPOINT = 'https://translate.googleapis.com/translate_a/single'
 const MAX_TRANSLATION_RETRIES = 2
+const MAX_PARALLEL_TRANSLATIONS = 8
 
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 
@@ -34,6 +35,8 @@ const normalizeTexts = (texts: unknown): string[] => {
     return String(text)
   })
 }
+
+const translationMemory = new Map<Language, Map<string, string>>()
 
 const mapLanguageForApi = (language: Language): string => {
   switch (language) {
@@ -70,6 +73,27 @@ const parseTranslationResponse = (data: unknown): string | null => {
     .map(segment => segment[0] as string)
     .join('')
   return translated.length > 0 ? translated : null
+}
+
+const getLanguageCache = (language: Language): Map<string, string> => {
+  let cache = translationMemory.get(language)
+  if (!cache) {
+    cache = new Map<string, string>()
+    translationMemory.set(language, cache)
+  }
+  return cache
+}
+
+const translateTextWithCache = async (text: string, language: Language): Promise<string> => {
+  const cache = getLanguageCache(language)
+  const cached = cache.get(text)
+  if (cached !== undefined) {
+    return cached
+  }
+
+  const translated = await translateText(text, language)
+  cache.set(text, translated)
+  return translated
 }
 
 const translateText = async (text: string, language: Language): Promise<string> => {
@@ -113,6 +137,21 @@ const translateText = async (text: string, language: Language): Promise<string> 
   return text
 }
 
+const translateUniqueTexts = async (texts: string[], language: Language): Promise<Map<string, string>> => {
+  const results = new Map<string, string>()
+
+  for (let index = 0; index < texts.length; index += MAX_PARALLEL_TRANSLATIONS) {
+    const batch = texts.slice(index, index + MAX_PARALLEL_TRANSLATIONS)
+    const translations = await Promise.all(batch.map(text => translateTextWithCache(text, language)))
+
+    batch.forEach((text, batchIndex) => {
+      results.set(text, translations[batchIndex])
+    })
+  }
+
+  return results
+}
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as TranslationRequestPayload
@@ -138,9 +177,11 @@ export async function POST(request: Request) {
     })
 
     const translations = new Array<string>(texts.length)
+    const uniqueTexts = Array.from(indexMap.keys())
+    const translatedMap = await translateUniqueTexts(uniqueTexts, normalizedLanguage)
 
     for (const [text, indexes] of indexMap.entries()) {
-      const translated = await translateText(text, normalizedLanguage)
+      const translated = translatedMap.get(text) ?? text
       indexes.forEach(position => {
         translations[position] = translated
       })
