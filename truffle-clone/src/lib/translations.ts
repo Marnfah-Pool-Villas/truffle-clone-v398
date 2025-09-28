@@ -346,24 +346,28 @@ const cloneTranslations = (): Translations => {
   return JSON.parse(JSON.stringify(englishTranslationsData)) as Translations
 }
 
-const setValueAtPath = (target: any, path: PathSegment[], value: string) => {
+const setValueAtPath = (target: MutableTranslationRecord, path: PathSegment[], value: string) => {
   if (path.length === 0) {
     return
   }
 
-  let current: any = target
+  let current: unknown = target
   for (let i = 0; i < path.length - 1; i += 1) {
-    const segment = path[i]
-    if (current == null) {
+    if (typeof current !== 'object' || current === null) {
       return
     }
-    current = current[segment]
+
+    const container = current as MutableTranslationRecord
+    current = container[path[i]]
   }
 
-  const leaf = path[path.length - 1]
-  if (current != null) {
-    current[leaf] = value
+  if (typeof current !== 'object' || current === null) {
+    return
   }
+
+  const container = current as MutableTranslationRecord
+  const leaf = path[path.length - 1]
+  container[leaf] = value
 }
 
 export const englishTranslations: Translations = englishTranslationsData
