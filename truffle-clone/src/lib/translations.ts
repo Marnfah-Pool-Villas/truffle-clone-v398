@@ -614,7 +614,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "ไลฟ์สไตล์สั่งทำพิเศษ",
-      description: "สำหรับผู้ที่รักในสิ่งประณีต\nรังสรรค์ด้วยความใส่ใจในรายละเอียดอย่างยิ่ง\nออกแบบเพื่อเสริมการไหลของพลังบวก",
+      description: "สำหรับผู้ที่รักในสิ่งประณีต\nรังสรรค์ด้วยความใส่ใจในรายละเอียดอย่างยิ่ง\nออกแ���บเพื่อเสริมการไหลของพลังบวก",
       buttonText: "โบรชัวร์"
     },
     location: {
@@ -641,18 +641,18 @@ export const translations: Record<Language, Translations> = {
       beachCards: {
         patong: {
           title: "หาดป่าตอง",
-          description: "หัวใจอันมีชีวิตชีวาของภูเก็ต พร้อมความบันเทิงระดับโลก ร้านอาหาร และชีวิตกลางคืน ห่างจากน้ำทะเลใสเพียงไม่กี่ก้าว",
+          description: "หัวใจอันมีชีวิตชีวาของภู���ก็ต พร้อมความบันเทิงระดับโลก ร้านอาหาร และชีวิตกลางคืน ห่างจากน้ำทะเลใสเพียงไม่กี่ก้าว",
           features: ["รีสอร์ต 5 ดาว", "บีชคลับ", "กีฬาทางน้ำ", "ศูนย์การค้า"]
         },
         kata: {
           title: "หาดกะตะ",
           description: "ชายหาดทรายทองที่บริสุทธิ์ เหมาะสำหรับโต้คลื่น อาบแดด และสัมผัสวัฒนธรรมชายหาดแบบไทยแท้",
-          features: ["คลื่นสำหรับโต้คลื่น", "ชมพระอาทิตย์ตก", "อาหารท้อง���ิ่น", "บรรยากาศสงบ"]
+          features: ["คลื่นสำหรับโต้คลื่น", "ชมพระอาทิตย์ตก", "อาหารท้องถิ่น", "บรรยากาศสงบ"]
         },
         karon: {
           title: "หาดกะรน",
           description: "ชายหาดทรายขาวยาวสามกิโลเมตร มอบการพักผ่อนอย่างเงียบสงบและวิวทะเลที่น่าตื่นตา",
-          features: ["ที่พักเงียบสงบ", "น้ำทะเลใส", "รีสอร์ตสปา", "เส้นทางธรรมชาติ"]
+          features: ["��ี่พักเงียบสงบ", "น้ำทะเลใส", "รีสอร์ตสปา", "เส้นทางธรรมชาติ"]
         }
       },
       mapSection: {
@@ -673,7 +673,7 @@ export const translations: Record<Language, Translations> = {
         },
         tax: {
           title: "ภาษีกำไรจากทุน",
-          subtitle: "ปกป้องเงินทุนของคุณ"
+          subtitle: "ปกป้องเงินทุนของคุ���"
         }
       },
       marketAnalysis: {
@@ -692,7 +692,7 @@ export const translations: Record<Language, Translations> = {
         title: "สิทธิประโยชน์",
         items: {
           residency: {
-            title: "วีซ่าไทยอีล��ท",
+            title: "วีซ่าไทยอีลิท",
             description: "วีซ่าพำนัก 5-20 ปีต่ออายุได้ พร้อมการลงทุน"
           },
           tax: {
@@ -731,7 +731,7 @@ export const translations: Record<Language, Translations> = {
           },
           tourists: {
             title: "นักท่องเที่ยวต่อปี",
-            subtitle: "เป้าหมายการฟื้นตัวก่อนปี 2024"
+            subtitle: "เป้าหมายการฟื้นตัวก่อนป��� 2024"
           }
         }
       }
@@ -750,7 +750,7 @@ export const translations: Record<Language, Translations> = {
         },
         walkthrough: {
           title: "วิดีโอพาชม",
-          description: "ทัวร์นำชมโดยมือ���าชีพ"
+          description: "ทัวร์นำชมโดยมืออาชีพ"
         }
       },
       buttons: {
@@ -823,7 +823,7 @@ export const translations: Record<Language, Translations> = {
           allVillas: "ทุกวิลล่า",
           villa1: "วิลล่า 1",
           villa2: "วิลล่า 2",
-          villa3: "วิลล่า 3",
+          villa3: "วิ��ล่า 3",
           villa4: "วิลล่า 4",
           message: "ฉันสนใจข้อมูลเพิ่มเติมเกี่ยวกับ..."
         }
@@ -1283,7 +1283,7 @@ export const translations: Record<Language, Translations> = {
           },
           tourists: {
             title: "年遊客量",
-            subtitle: "2024年前恢復目標"
+            subtitle: "2024���前恢復目標"
           }
         }
       }
@@ -1335,7 +1335,7 @@ export const translations: Record<Language, Translations> = {
           }
         },
         type3: {
-          name: "別墅類型3",
+          name: "別���類型3",
           description: "3間臥室 | 私人泳池 | 禪意花園",
           status: "已預訂",
           rooms: {
@@ -1433,7 +1433,7 @@ export const translations: Record<Language, Translations> = {
     },
     amenities: {
       title: "Преми��м Удобства",
-      description: "Дизайн мирового класса для взыскательного домовладельца. Каждый факт и ткань тщательно подобраны. Наслажд��йтесь непревзойденным жизненным опытом.",
+      description: "Дизайн мирового класса для взыскательного домовладельца. Каждый факт и ткань тщательно подобраны. Наслажд��йтесь непревзойденным жиз��енным опытом.",
       features: {
         pools: "Бассейны с бесконечным краем",
         spa: "Частные СПА-павильоны",
@@ -1526,7 +1526,7 @@ export const translations: Record<Language, Translations> = {
           },
           tax: {
             title: "Налоговая оптимизация",
-            description: "Отсутствие налога на прирост капитала для квалифицированных иностранных инвесторов"
+            description: "Отсутствие налога на прирост капитала для квалифиц��рованных иностранных инвесторов"
           },
           currency: {
             title: "Валютная диверсификация",
@@ -1548,7 +1548,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "Экономическая стабильность и рост Таиланда",
-        description: "Стабильная политическая среда Таиланда, креп��ая туристическая индустрия и стратегическое расположение в Юго-Восточной Азии делают его умным выбором для проницательных и��весторов �� ��едвижимость. Проинвестиционная политика правительства и развитие инфра��тру��туры продолжают стимулировать возможности умных ден��г.",
+        description: "Стабильная политическая среда Таиланда, креп����я туристическая индустрия и стратегическое расположение в Юго-Восточной Азии делают его умным выбором для проницательных и��весторов �� ��едвижимость. Проинвестиционная политика правительства и развитие инфра��тру��туры продолжают стимулировать возможности умных ден��г.",
         metrics: {
           rating: {
             title: "Кредитный рейтинг",
@@ -1995,7 +1995,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "オーダーメイドライフス��イル",
-      description: "����全な豊かさ�����で王族のように生活してください。エネルギーの流れ��向上させるために特別に設計されています。より良いものを愛する人々のために。",
+      description: "����全な豊かさ�����で王族のように生活してください。エネルギーの流れ��向上させるために特別に��計されています。より良いものを愛する人々のために。",
       buttonText: "パンフレットを見る"
     },
     location: {
@@ -2228,7 +2228,7 @@ export const translations: Record<Language, Translations> = {
       contact: "संपर्क"
     },
     hero: {
-      subtitle1: "पट्टाया की सबसे प्रति��्ठित संपत��ति में श��ंति से र��ें",
+      subtitle1: "पट्टाया की सबसे प्रति��्ठित संपत��ति में श����ंति से र��ें",
       subtitle2: "क���लातीत डिज़ाइन, अतुलनीय गुणवत्ता और पूर्णता के लिए ज��नून की त्रिमूर्ति",
       subtitle3: "निर्बाध अनंत पूल, प्री��ियम फिनिश और आश्चर्यजनक ����ृश्य जो लक्जरी को फिर से परिभाषित करते हैं"
     },
@@ -2287,7 +2287,7 @@ export const translations: Record<Language, Translations> = {
         },
         golf: {
           title: "चैम्पियनशिप गोल्फ कोर्स",
-          subtitle: "विश्व स्तरीय सुविधाएं"
+          subtitle: "विश्व स्तरीय सु���िधाएं"
         },
         schools: {
           title: "���ीर्ष स्तर के अंत���्र��ष्ट्रीय ��्कूल",
@@ -2369,7 +2369,7 @@ export const translations: Record<Language, Translations> = {
           },
           ownership: {
             title: "म��क्त भूम�� स्वाम��त्व",
-            description: "विरासत अधिकारों के साथ 90-���र्ष��य पट्टा ���ंरचना"
+            description: "विरासत ���धिकारों के साथ 90-���र्ष��य पट्टा ���ंरचना"
           }
         }
       },
@@ -2379,7 +2379,7 @@ export const translations: Record<Language, Translations> = {
         metrics: {
           rating: {
             title: "क्रेडिट रेटिंग",
-            subtitle: "���ूडीज़ और एसएंडपी स्थिर आउटलुक"
+            subtitle: "���ूडीज़ और एसएंडपी स्थिर आउटल���क"
           },
           gdp: {
             title: "जीडी��ी (2024)",
@@ -3165,7 +3165,7 @@ export const translations: Record<Language, Translations> = {
         chartTitle: "اتجاهات العقارات الفاخرة في تايلاند",
         chartInsights: {
           growth: "نمو 15 سنة",
-          average2009: "متوس�� 2009",
+          average2009: "��توس�� 2009",
           average2024: "متوسط 2024"
         }
       },
@@ -3194,7 +3194,7 @@ export const translations: Record<Language, Translations> = {
           },
           ownership: {
             title: "ملكية حرة",
-            description: "هياكل إيجا�� 90 سنة مع حقوق الوراثة"
+            description: "ه��اكل إيجا�� 90 سنة مع حقوق الوراثة"
           }
         }
       },
@@ -3218,7 +3218,7 @@ export const translations: Record<Language, Translations> = {
       }
     },
     virtualTour: {
-      title: "تجربة الفيل�� الافتراضية",
+      title: "تجربة الفيل�� الافترا��ية",
       subtitle: "استكشف فيلاتنا الفاخرة بجولات غامرة 360°",
       features: {
         views360: {
@@ -3253,7 +3253,7 @@ export const translations: Record<Language, Translations> = {
         },
         type2: {
           name: "فيلا النوع 2",
-          description: "5 غرف نوم | شرفة المسبح | ملاذ الحديقة",
+          description: "5 غرف نوم | شرفة المسبح | ملاذ ا��حديقة",
           status: "1 متاح",
           rooms: {
             living: "معيشة كبيرة",
@@ -3609,7 +3609,7 @@ export const translations: Record<Language, Translations> = {
     },
     properties: {
       title: "Trải nghiệm thực tế cao nhất của bạn",
-      description: "Hiện thân c��a thiên đường nhiệt đới; ốc đ��o xa hoa riêng c���a bạn. Kh��m phá ngôi nhà của bạn tại nơi tuyệt vời nhất trên Trái đất. Có sẵn giới hạn từ",
+      description: "Hiện thân c��a thiên đường nhiệt đới; ốc đ��o xa hoa riêng c���a bạn. Kh��m phá ngôi nhà của bạn tại nơi tuyệt vời nhất trên Trái đất. Có sẵn giới hạn t���",
       priceRange: "đến",
       villa1: {
         name: "Thanh Tịnh",
@@ -3672,7 +3672,7 @@ export const translations: Record<Language, Translations> = {
       beachCards: {
         patong: {
           title: "Bãi biển Patong",
-          description: "Trái tim sôi động của Phuket với giải trí, ẩm thực và cuộc sống về đêm đẳng cấp thế giới chỉ vài bước từ vùng nước trong vắt như pha lê.",
+          description: "Trái tim sôi động của Phuket với giải trí, ẩm thực và cuộc s��ng về đêm đẳng cấp thế giới chỉ vài bước từ vùng nước trong vắt như pha lê.",
           features: ["Resort 5 sao", "Club bãi biển", "Thể thao nước", "Trung tâm mua sắm"]
         },
         kata: {
