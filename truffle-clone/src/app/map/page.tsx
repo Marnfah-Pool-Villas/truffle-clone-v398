@@ -156,7 +156,7 @@ export default function MapPage() {
                 </div>
 
                 {secondaryHighlights.length > 0 && (
-                  <div className={`flex flex-wrap justify-center gap-4 mt-8 mb-12 sm:mb-16 ${isSingleSecondaryHighlight ? '' : ''}`}>
+                  <div className="flex flex-wrap justify-center gap-4 mt-8 mb-12 sm:mb-16">
                     {secondaryHighlights.map((card) => renderHighlightCard(card))}
                   </div>
                 )}
