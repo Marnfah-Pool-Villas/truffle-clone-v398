@@ -587,7 +587,7 @@ export const translations: Record<Language, Translations> = {
         status: "จองแล้ว"
       },
       villa2: {
-        name: "ความสงบ",
+        name: "ความ���งบ",
         features: "4 ห้องนอน | Type 2",
         description: "",
         status: "เ����ื����� 2 หลั��"
@@ -609,7 +609,7 @@ export const translations: Record<Language, Translations> = {
         pools: "สระขอบอินฟินิตี้",
         spa: "ศาลาสปาส่วนตั��",
         concierge: "คอนเซียร์จ 24/7",
-        gardens: "สวนเขตร้อน"
+        gardens: "สวนเขตร���อน"
       }
     },
     exclusive: {
@@ -647,7 +647,7 @@ export const translations: Record<Language, Translations> = {
         kata: {
           title: "หาดกะตะ",
           description: "หาดทรายทองคำที่บริสุทธิ์ เหมาะสำหรับการโต้คลื่น อาบแดด และสัมผัสวัฒนธรรมชายหาดไทยแท้",
-          features: ["คลื่นโต���คลื่น", "วิวพระอาทิตย์ตก", "อาหารท้องถิ่น", "บรรยากาศส���บ"]
+          features: ["คลื่นโต���คลื่น", "��ิวพระอาทิตย์ตก", "อาหารท้องถิ่น", "บรรยากาศส���บ"]
         },
         karon: {
           title: "หาดกะรน",
@@ -784,7 +784,7 @@ export const translations: Record<Language, Translations> = {
         },
         type3: {
           name: "วิลล่าประเภท 3",
-          description: "3 ห้องนอน | สระส่วนตัว | สวนเซน",
+          description: "3 ห้องนอ��� | สระส่วนตัว | สวนเซน",
           status: "จองแล้ว",
           rooms: {
             living: "��้องนั่งเล��นเซ��",
@@ -850,11 +850,11 @@ export const translations: Record<Language, Translations> = {
     hero: {
       subtitle1: "芭提雅最负盛名的地产",
       subtitle2: "无缝形式的高端装饰",
-      subtitle3: "永恒��计与激发灵感的景观"
+      subtitle3: "永恒����与激发灵感的景观"
     },
     properties: {
       title: "至尊优雅",
-      description: "体验热带���华\n温暖木材和意��利���材装饰\n�����供应��� ฿12.3M 至 ฿23.4M",
+      description: "体验热带���华\n温暖木材和意��利���材装饰\n�����供应����� ฿12.3M 至 ฿23.4M",
       priceRange: "至",
       villa1: {
         name: "宁静",
@@ -1204,7 +1204,7 @@ export const translations: Record<Language, Translations> = {
         karon: {
           title: "卡倫海灘",
           description: "三公里長的粉白色沙灘，提供寧靜的放鬆和令人嘆為觀止的海洋全景。",
-          features: ["寧靜度假", "純淨海水", "水療度假村", "自然漫步"]
+          features: ["寧��度假", "純淨海水", "水療度假村", "自然漫步"]
         }
       },
       mapSection: {
@@ -1324,7 +1324,7 @@ export const translations: Record<Language, Translations> = {
         },
         type2: {
           name: "別墅類型2",
-          description: "5間臥室 | ��池露台 | ��園聖地",
+          description: "5間臥室 | ��池露台 | ��園聖���",
           status: "剩餘1套",
           rooms: {
             living: "大客廳",
@@ -1456,7 +1456,7 @@ export const translations: Record<Language, Translations> = {
       locationStats: {
         beaches: {
           title: "Нетронутые пляжи",
-          subtitle: "Ваш приморский отдых"
+          subtitle: "Приморский образ жизни"
         },
         golf: {
           title: "Чемпионские поля для гольфа",
@@ -1526,7 +1526,7 @@ export const translations: Record<Language, Translations> = {
           },
           tax: {
             title: "Налоговая оптимизация",
-            description: "Отсутствие налога на прирост капитала для квалифицированных иностранных инвесторов"
+            description: "Отсутствие налога на прирост капитала для квалифицированных иностр��нных инвесторов"
           },
           currency: {
             title: "Валютная диверсификация",
@@ -1756,7 +1756,7 @@ export const translations: Record<Language, Translations> = {
         },
         karon: {
           title: "카론 비치",
-          description: "고요한 휴식과 숨막히는 바다 파노라마를 제공하는 3킬로미터의 가루 같은 하얀 모래 해변.",
+          description: "고요�� 휴식과 숨막히는 바다 파노라마를 제공하는 3킬로미터의 가루 같은 하얀 모래 해변.",
           features: ["조용한 휴양지", "원시 바다", "스파 리조트", "자연 산책"]
         }
       },
@@ -2165,7 +2165,7 @@ export const translations: Record<Language, Translations> = {
         },
         type3: {
           name: "ヴィラタイプ3",
-          description: "3ベッド��ーム | プライベートプール | 禅庭園",
+          description: "3ベッド��ーム | プライベートプー��� | 禅庭園",
           status: "予約済み",
           rooms: {
             living: "禅リビング",
@@ -2270,7 +2270,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "बेस्पोक जीवनशैली",
-      description: "पूर���ण प्रचुरता में रॉयल्टी की तरह जीएं��� ऊर्जा के प्रवाह को बढ़ाने के लिए विशेष रूप से डिज़ाइन किया गया। ���न लोगों के ल���ए जो बेहतर चीजों से प���यार करते हैं।",
+      description: "पूर���ण प्रचुरता में रॉयल्टी की तरह जीएं��� ऊर्जा के प्रवाह को बढ़ाने के लिए विशेष रूप से डिज़ाइन किया गया। ���न लोगों के ल���ए जो बेहतर चीजों से प���यार कर���े हैं।",
       buttonText: "ब्रोशर देखें"
     },
     location: {
@@ -2307,7 +2307,7 @@ export const translations: Record<Language, Translations> = {
         },
         karon: {
           title: "कैरन बीच",
-          description: "तीन कि���ोमीटर का पाउडरी सफेद रेत समुद्र तट जो शांत आराम और सांस लेन�� वाले समुद्री मनोरम दृ�����य प्रदान करता है।",
+          description: "तीन कि���ोमीटर का पाउडरी सफेद रेत समुद्र तट जो शांत आराम और सांस लेन�� वाले समुद्री मनोरम दृ�������य प्रदान करता है।",
           features: ["शांत विश्राम", "प्राचीन पानी", "स्पा रिसॉर्ट्स", "प्रकृति सैर"]
         }
       },
@@ -2353,7 +2353,7 @@ export const translations: Record<Language, Translations> = {
           },
           tax: {
             title: "कर अनुकूलन",
-            description: "योग्य विदेशी ���िवेशकों के लिए कोई पूंजीगत लाभ कर नहीं"
+            description: "योग्य विदेशी ���िवेश���ों के लिए कोई पूंजीगत लाभ कर नहीं"
           },
           currency: {
             title: "मुद्रा विविधीकरण",
@@ -2375,7 +2375,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "थाईलैंड क�� आर्थिक स्थिरता और विकास",
-        description: "���ाईलैंड का स्थिर राजनीतिक वातावरण, मजबूत पर्यटन उद्योग और दक्षिण पूर्व ��शिया में रणनीतिक स्थान इसे व��वेकशी��� रियल एस्टेट नि���ेशकों के लिए स्मार्ट विकल्प बनाता है। सरकार की निवेश समर्थक नीतियां और बुनियादी ढांचे ����ा विकास ��्मार्ट मनी के अवसरों को बढ़ावा देना जारी रखता है���",
+        description: "���ाईलैंड का स्थिर राजनीतिक वातावरण, मजबूत पर्यटन उद्योग और दक्षिण पूर्व ��शिया में रणनीतिक स्थान ���से व��वेकशी��� रियल एस्टेट नि���ेशकों के लिए स्मार्ट विकल्प बनाता है। सरकार की निवेश समर्थक नीतियां और बुनियादी ढांचे ����ा विकास ��्मार्ट मनी के अवसरों को बढ़ावा देना जारी रखता है���",
         metrics: {
           rating: {
             title: "क्रेडिट रेटिंग",
@@ -2394,7 +2394,7 @@ export const translations: Record<Language, Translations> = {
     },
     virtualTour: {
       title: "वर्चुअल विला अनुभव",
-      subtitle: "ह���ारे लक्जरी विला को इमर्सिव 360° टू��� के साथ एक्सप्लोर करें",
+      subtitle: "ह���ारे लक्जरी विला ��ो इमर्सिव 360° टू��� के साथ एक्सप्लोर करें",
       features: {
         views360: {
           title: "360° दृश्य",
@@ -3045,7 +3045,7 @@ export const translations: Record<Language, Translations> = {
   },
   ar: {
     nav: {
-      residence: "البيت ↗",
+      residence: "ال��يت ↗",
       location: "عرض ↗",
       map: "الخريطة ↗",
       wealth: "الثروة ↗",
@@ -3127,7 +3127,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "شاطئ كاتا",
-          description: "امتداد نقي من ال��مال ��لذهبية مثالي لركوب الأ��واج والاستحمام الشمسي وتجربة ثقافة الشاطئ التايلاندية ��لأصيلة.",
+          description: "امتداد ��قي من ال��مال ��لذهبية مثالي لركوب الأ��واج والاستحمام الشمسي وتجربة ثقافة الشاطئ التايلاندية ��لأصيلة.",
           features: ["أمواج ركوب الأمواج", "مناظر الغروب", "مأكولات محلية", "جو هادئ"]
         },
         karon: {
@@ -3182,7 +3182,7 @@ export const translations: Record<Language, Translations> = {
           },
           currency: {
             title: "تنويع العملة",
-            description: "استقرار الباهت التايلاندي والنمو الاقتصادي الإقليمي"
+            description: "استقرار الباهت التايلاندي والنمو ا��اقتصادي الإقليمي"
           },
           management: {
             title: "إدارة الإيجار",
@@ -3306,7 +3306,7 @@ export const translations: Record<Language, Translations> = {
           villa2: "فيلا 2",
           villa3: "فيلا 3",
           villa4: "فيلا 4",
-          message: "أنا مهتم بمعرفة المزيد ��ن..."
+          message: "أنا مهتم بمعرفة الم��يد ��ن..."
         }
       }
     },
