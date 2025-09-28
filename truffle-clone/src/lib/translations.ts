@@ -587,7 +587,7 @@ export const translations: Record<Language, Translations> = {
         status: "จองแล้ว"
       },
       villa2: {
-        name: "ค��ามสงบ",
+        name: "ความสงบ",
         features: "4 ห้องนอน | Type 2",
         description: "",
         status: "เ����ื����� 2 หลั��"
@@ -604,12 +604,12 @@ export const translations: Record<Language, Translations> = {
     },
     amenities: {
       title: "สิ่งอำนวยความสะดวกระดับพรีเมียม",
-      description: "การออกแบบระดับโลกสำหรับเจ้าขอ��บ้านที่มีรสนิยม\nทุกข้อเท็จจริงแล��ผ้าถูกคัดสรรมาอย่างละเอียด\nเพลิดเพลินกับความหร��หราที่ไร้ขีดจำกัด",
+      description: "การออกแบบระดับโลกสำหรับเจ้าขอ��บ้านที่มีรสนิยม\nทุกข้อเท็จจริงแล��ผ้าถูกคัดสรรมาอย่างละเอียด\nเพลิดเพลินกับความหร��หราที่ไร้ขีดจำก���ด",
       features: {
         pools: "สระขอบอินฟิน���ตี้",
         spa: "ศาลาสปาส่วนตั��",
         concierge: "คอนเซียร์จ 24/7",
-        gardens: "ส��นเขตร้อน"
+        gardens: "สวนเขตร้อน"
       }
     },
     exclusive: {
@@ -646,7 +646,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "หาดกะตะ",
-          description: "หาดทรายทองคำที่บริสุทธิ์ เหมาะสำ���รับกา���โต้คลื่�� อาบแดด และสัมผัสวัฒนธรรมชายหาดไทยแท้",
+          description: "หาดทรายทอ���คำที่บริสุทธิ์ เหมาะสำ���รับกา���โต้คลื่�� อาบแดด และสัมผัสวัฒนธรรมชายหาดไทยแท้",
           features: ["คลื่นโต���คลื่น", "วิวพระอาทิตย์ตก", "อาหารท้องถิ่น", "บรรยากาศส���บ"]
         },
         karon: {
@@ -657,7 +657,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "ท���เลที่ตั้งยุทธศาสตร์",
-        description: "ตั้งอยู่อย่างลงตัวระหว่างชายหาดที่ดีที่สุดของพัทยา เดินทางสะดวกสู่การช้อปป���้งหรู อาหารระดับ���รีเมียม และสนามบินนา��าชาติ"
+        description: "ตั้งอยู่อย่างลงตัวระหว่างชายหาดที่ดีที่สุดของพัทยา เดินทางสะดวกสู่การช้อปป���้งหรู อาหารร��ดับ���รีเมียม และสนามบินนา��าชาติ"
       }
     },
     investment: {
@@ -709,7 +709,7 @@ export const translations: Record<Language, Translations> = {
           },
           lifestyle: {
             title: "สิทธิ์การใช้ชีว���ต",
-            description: "สิทธิ์ใช้ส่วนตัวพร้อมสิ่งอำนวยความสะดวกระ���ับหรู"
+            description: "สิทธิ์ใช้ส่วนตัวพร้อมสิ่งอำนวยความสะดวกระดับหรู"
           },
           ownership: {
             title: "กรรมสิทธิ์ฟ��ีโฮลด์",
@@ -746,7 +746,7 @@ export const translations: Record<Language, Translations> = {
         },
         navigation: {
           title: "การนำทางในห้อง",
-          description: "การเปลี่ยนพื้นที่ที่ไร้รอยต่อ"
+          description: "การเปลี่ยนพื้นที่ที่ไร้รอย��่อ"
         },
         walkthrough: {
           title: "การเดินชมแบบ���ิดีโอ",
@@ -775,7 +775,7 @@ export const translations: Record<Language, Translations> = {
           description: "5 ห้องนอน | ระเบียงสระ | ��วนศักดิ์สิทธิ์",
           status: "เหลือ 1 หลัง",
           rooms: {
-            living: "ห��องนั่งเล่นใหญ่",
+            living: "ห��องนั่ง���ล่นใหญ่",
             master: "ห้องสวีทใหญ่",
             pool: "���ะเบียงสระ",
             kitchen: "ครัวหรู",
@@ -810,7 +810,7 @@ export const translations: Record<Language, Translations> = {
         firstName: "ชื่อ *",
         lastName: "นา��สกุล *",
         email: "อีเมล *",
-        phone: "เบอร์โทรศ���พท์ *",
+        phone: "เบอร์โทรศัพท์ *",
         villaOfInterest: "วิลล����ที่สนใจ *",
         message: "ความคิดเห็นหรือคำถาม?",
         submit: "ส่ง",
@@ -845,7 +845,7 @@ export const translations: Record<Language, Translations> = {
       map: "���图 ↗",
       wealth: "财富 ���",
       language: "语言",
-      contact: "��系"
+      contact: "联系"
     },
     hero: {
       subtitle1: "芭提雅最负盛名的地产",
@@ -926,7 +926,7 @@ export const translations: Record<Language, Translations> = {
           features: ["冲浪波浪", "日落美景", "当地美食", "宁静氛围"]
         },
         karon: {
-          title: "卡伦����滩",
+          title: "卡伦���滩",
           description: "三公里长的粉白色沙滩，提供宁静的放松和令人叹为观止的海洋全景。",
           features: ["宁静度假", "纯净海水", "水疗度假村", "自然漫步"]
         }
@@ -995,7 +995,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "泰国���济稳定与增长",
-        description: "泰国稳定的政治环境、强劲的旅游业和在东南亚的战略位置使其成为精明房地产投资者的明智选择。政�����亲投资政策和基础设施发展继续推动明智的资金机会。",
+        description: "泰国稳��的政治环境、强劲的旅游业和在东南亚的战略位置使其成为精明房地产投资者的明智选择。政�����亲投资政策和基础设施发展继续推动明智的资金机会。",
         metrics: {
           rating: {
             title: "信用评级",
@@ -1124,7 +1124,7 @@ export const translations: Record<Language, Translations> = {
       contact: "聯絡"
     },
     hero: {
-      subtitle1: "在芭達雅最負盛名的���區享受寧靜生活",
+      subtitle1: "在芭達雅最負盛名的���區享��寧靜生活",
       subtitle2: "永恆設計、無與倫比的品質和對完美的熱情三位一體",
       subtitle3: "無���無邊泳池��高端裝飾和令人驚豔的景觀重新定義奢華"
     },
@@ -1237,7 +1237,7 @@ export const translations: Record<Language, Translations> = {
         chartInsights: {
           growth: "15年增長",
           average2009: "2009年平均",
-          average2024: "2024年平���"
+          average2024: "2024年平均"
         }
       },
       benefits: {
@@ -1324,7 +1324,7 @@ export const translations: Record<Language, Translations> = {
         },
         type2: {
           name: "別墅類型2",
-          description: "5間臥室 | ��池露台 | ����聖地",
+          description: "5間臥室 | ��池露台 | ��園聖地",
           status: "剩餘1套",
           rooms: {
             living: "大客廳",
@@ -1401,9 +1401,9 @@ export const translations: Record<Language, Translations> = {
       contact: "Контакт"
     },
     hero: {
-      subtitle1: "Живите спокойно в самом престижном районе Паттайи",
+      subtitle1: "Живите спокойно в самом престижном райо��е Паттайи",
       subtitle2: "Троица ве��ного дизайна, непревзойденного качества и ��трасти к совершенству",
-      subtitle3: "Бе��шовные ба��сейн��-инфинити, премиум отделка и потрясающие ��иды, переопределяющие роскошь"
+      subtitle3: "Бе��шовные ба��сейны-инфинити, премиум отделка и потрясающие ��иды, переопределяющие роскошь"
     },
     properties: {
       title: "Испытайте свою высшую реальность",
@@ -1475,7 +1475,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "Пля�� Ката",
-          description: "Нетронутый участ��к золотого песка, и��еал��но подходящ��й для серфинга, заг��ра и знакомства с п��длинной тайской пля��ной культурой.",
+          description: "Нетронутый участ��к золотого песка, и��еал��но подходящ��й для серфинга, заг��ра и знакомства с подлинной тайской пля��ной культурой.",
           features: ["Волны дл�� серфинга", "Виды заката", "Местная кухня", "Мирная атмосфера"]
         },
         karon: {
@@ -1486,7 +1486,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "Стратегическое расположение",
-        description: "Идеально расположен ��ежду лучшими пляжами Паттайи. Лёгкий доступ к роскошным магазинам, изысканной кухне и международному аэропорту."
+        description: "Идеально расположен ��ежду лучшими пляжами Паттайи. Лёгкий доступ к роскошным магазинам, изысканной кухне и между��ародному аэропорту."
       }
     },
     investment: {
@@ -1494,7 +1494,7 @@ export const translations: Record<Language, Translations> = {
       metrics: {
         roi: {
           title: "Годовая доходность",
-          subtitle: "А��енда + рост стоимости"
+          subtitle: "Аренда + рост стоимости"
         },
         yield: {
           title: "Доходность аренды",
@@ -1518,11 +1518,11 @@ export const translations: Record<Language, Translations> = {
         }
       },
       benefits: {
-        title: "Преимущества",
+        title: "Преим��щества",
         items: {
           residency: {
             title: "Тайская элитная рези��енция",
-            description: "5-20-лет��яя возобновляемая виза на жительств��� с инвестициями"
+            description: "5-20-лет��яя возобновляемая виза на жительств�� с инвестициями"
           },
           tax: {
             title: "Налоговая оптимизация",
@@ -1659,7 +1659,7 @@ export const translations: Record<Language, Translations> = {
       }
     },
     footer: {
-      exclusiveDevelopment: "Эксклюзивная разработка",
+      exclusiveDevelopment: "Экскл��зивная разработка",
       whatsapp: "WhatsApp",
       wechat: "WeChat",
       line: "Line",
@@ -1693,7 +1693,7 @@ export const translations: Record<Language, Translations> = {
       },
       villa2: {
         name: "고요",
-        features: "침실 4개 | Type 2",
+        features: "침�� 4개 | Type 2",
         description: "",
         status: "2채 판매 중"
       },
@@ -1824,7 +1824,7 @@ export const translations: Record<Language, Translations> = {
       },
       stability: {
         title: "태국 경제 ��정성 및 성장",
-        description: "태국의 안정적인 정치 환경, ��고한 관광 산업, 동남아시아에서의 전략적 위치로 인해 안목 있는 부동산 투자자들에게 현명한 선택이 됩니다. ��부의 친투자 정책과 인프라 개발��� 계속해서 스마트 머니 기회를 이끌고 있습니다.",
+        description: "태국의 안정적인 정치 환경, ��고한 관광 산업, 동��아시아에서의 전략적 위치로 인해 안목 있는 부동산 투자자들에게 현명한 선택이 됩니다. ��부의 친투자 정책과 인프라 개발��� 계속해서 스마트 머니 기회를 이끌고 있습니다.",
         metrics: {
           rating: {
             title: "����� 등급",
@@ -1860,7 +1860,7 @@ export const translations: Record<Language, Translations> = {
       },
       buttons: {
         pictures: "사진",
-        videoTour: "���디오 투어"
+        videoTour: "����디오 투어"
       },
       villas: {
         type1: {
@@ -1889,7 +1889,7 @@ export const translations: Record<Language, Translations> = {
         },
         type3: {
           name: "빌라 ���입 3",
-          description: "침실 3개 | 전용 ��영장 | 선 ���든",
+          description: "침실 3개 | 전용 수영장 | 선 ���든",
           status: "예약됨",
           rooms: {
             living: "선 리빙",
@@ -1927,7 +1927,7 @@ export const translations: Record<Language, Translations> = {
           villaSelect: "���라 선택",
           allVillas: "모두",
           villa1: "���라 1",
-          villa2: "빌�� 2",
+          villa2: "빌라 2",
           villa3: "빌라 3",
           villa4: "빌라 4",
           message: "저는 ~에 대해 더 알고 싶습니다..."
@@ -1974,7 +1974,7 @@ export const translations: Record<Language, Translations> = {
         status: "2戸���売中"
       },
       villa3: {
-        name: "調和",
+        name: "��和",
         features: "5ベッドルーム | Type 1",
         description: "",
         status: "1戸販売中"
@@ -1995,13 +1995,13 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "オーダーメイドライフスタイル",
-      description: "����全な豊かさ������で王族のように生活してください。エネルギーの流れ��向上させるために特別に設計されています。より良いものを愛する人々のために。",
+      description: "����全な豊かさ�����で王族のように生活してください。エネルギーの流れ��向上させるために特別に設計されています。より良いものを愛する人々のために。",
       buttonText: "パンフレットを見る"
     },
     location: {
       title: "パラダイスに位置",
       stats: {
-        beaches: "原始的なビーチ",
+        beaches: "原始的���ビーチ",
         restaurants: "ミシュランレストラン",
         amenities: "ラグジュアリーアメニ���ィ"
       },
@@ -2046,7 +2046,7 @@ export const translations: Record<Language, Translations> = {
       metrics: {
         roi: {
           title: "年間ROI",
-          subtitle: "賃��� + 価値上���"
+          subtitle: "賃��� + 価値上��"
         },
         yield: {
           title: "賃貸利回り",
@@ -2062,7 +2062,7 @@ export const translations: Record<Language, Translations> = {
         luxuryGrowth: "��グジュアリ��不動産成長 (2009-2025)",
         foreignInvestment: "外国投資増加 (2009-2025)",
         gdpGrowth: "GDP��長予測 (2025)",
-        chartTitle: "タイのラグジュ��リ���不動産トレンド",
+        chartTitle: "タイのラグジュ����リ���不動産トレンド",
         chartInsights: {
           growth: "15年成長",
           average2009: "2009年平均",
@@ -2154,7 +2154,7 @@ export const translations: Record<Language, Translations> = {
         type2: {
           name: "ヴィラタイプ2",
           description: "5ベッドルー�� | プールテラス | ガーデンサンクチュアリ",
-          status: "1戸販��中",
+          status: "1戸販売中",
           rooms: {
             living: "グランドリビング",
             master: "マスタースイート",
@@ -2190,7 +2190,7 @@ export const translations: Record<Language, Translations> = {
       form: {
         firstName: "名前 *",
         lastName: "姓 *",
-        email: "メールア��レス *",
+        email: "メールアドレス *",
         phone: "電��番号 *",
         villaOfInterest: "興味のあるヴィラ *",
         message: "コメントまたは質問？",
@@ -2230,7 +2230,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       subtitle1: "पट्टाया की सबसे प्रति��्ठित संपत��ति में श��ंति से र��ें",
       subtitle2: "क���लातीत डिज़ाइन, अतुलनीय गुणवत्ता और पूर्णता के लिए ज��नून की त्रिमूर्ति",
-      subtitle3: "निर्बाध अनंत पूल, प्रीमियम फिनिश और आश्चर्यजनक ���ृश्य जो लक्जरी को फिर से परिभाषित करते हैं"
+      subtitle3: "निर्बाध अनंत पूल, प्री��ियम फिनिश और आश्चर्यजनक ���ृश्य जो लक्जरी को फिर से परिभाषित करते हैं"
     },
     properties: {
       title: "अपनी सर्वोच्च वास्तविकता का अनुभव ��रें",
@@ -2297,17 +2297,17 @@ export const translations: Record<Language, Translations> = {
       beachCards: {
         patong: {
           title: "पाटोंग बीच",
-          description: "फुकेत का जीव���त दिल, विश्व स्तर��य मनोरंजन, �����जन और रात्र��� जीवन के साथ क्रिस्टल-स्पष्ट पानी से कुछ ही कदम दूर।",
+          description: "���ुकेत का जीव���त दिल, विश्व स्तर��य मनोरंजन, �����जन और रात्र��� जीवन के साथ क्रिस्टल-स्पष्ट पानी से कुछ ही कदम दूर।",
           features: ["5-सितारा र��सॉर्ट���स", "बीच क्लब", "जल खेल", "शॉपिंग सेंटर"]
         },
         kata: {
           title: "काता बी���",
           description: "स���नहरी रेत का एक प्रा���ीन खंड जो सर्फिंग, धूप सेंकने और प्रामाणिक थाई समुद्र तट संस्कृति का अनुभव करने के ल��ए एकदम सही है।",
-          features: ["सर्फिंग तरंगे��", "सूर्यास्त द��श्य", "स्थानीय व्यंजन", "शांतिपूर्ण वातावर���"]
+          features: ["सर्फिंग तरंगें", "सूर्यास्त द��श्य", "स्थानीय व्यंजन", "शांतिपूर्ण वातावर���"]
         },
         karon: {
           title: "कैरन बीच",
-          description: "तीन कि���ोमीटर का पाउडरी सफेद र��त समुद्र तट जो शांत आराम और सांस लेन�� वाले समुद्री मनोरम दृ�������य प्रदान करता है।",
+          description: "तीन कि���ोमीटर का पाउडरी सफेद र���� समुद्र तट जो शांत आराम और सांस लेन�� वाले समुद्री मनोरम दृ�������य प्रदान करता है।",
           features: ["शांत विश्राम", "प्राचीन पानी", "स्पा रिसॉर्ट्स", "प्रकृति सैर"]
         }
       },
@@ -2383,7 +2383,7 @@ export const translations: Record<Language, Translations> = {
           },
           gdp: {
             title: "जीडीपी (2024)",
-            subtitle: "आसि��ान की दूसर���� सब���े बड़ी अर्थव्यव���्था"
+            subtitle: "आसि��ान की दूसर��� सब���े बड़ी अर्थव्यव���्था"
           },
           tourists: {
             title: "वार्षिक पर्यटक",
@@ -2443,7 +2443,7 @@ export const translations: Record<Language, Translations> = {
           description: "3 बेडरूम | निजी पूल | ज़ेन गार्डन",
           status: "आरक्षित",
           rooms: {
-            living: "��़ेन लिवि���ग",
+            living: "ज़ेन लिवि���ग",
             master: "मास्ट��� रि��्रीट",
             pool: "निजी अभयारण्य",
             kitchen: "शेफ की रसोई",
@@ -3138,7 +3138,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "موقع استراتيجي",
-        description: "متمركز بشكل مثالي بين أفضل شواطئ باتايا. وصول سهل إلى التسو�� الفاخر وتناول الطعام الراقي والمطار ال��ولي."
+        description: "متمركز بشكل مثالي بين أفضل شواطئ باتايا. وصول سهل إلى التسو�� الفاخر وتناول الطعام الراقي والمطار الدولي."
       }
     },
     investment: {
@@ -3293,7 +3293,7 @@ export const translations: Record<Language, Translations> = {
         email: "عن���ان البريد الإلكتروني *",
         phone: "رقم الهاتف *",
         villaOfInterest: "الفيل�� المرغوبة *",
-        message: "تع��يقات أ�� أسئلة؟",
+        message: "تع��يقات أو أسئلة؟",
         submit: "جدولة جولتي الخاصة",
         placeholders: {
           firstName: "اسمك الأول",
@@ -3301,7 +3301,7 @@ export const translations: Record<Language, Translations> = {
           email: "your@email.com",
           phone: "+66 77-888-9999",
           villaSelect: "اختر فيلا",
-          allVillas: "����يعها",
+          allVillas: "����يعه��",
           villa1: "فيلا 1",
           villa2: "فيلا 2",
           villa3: "فيلا 3",
@@ -3688,7 +3688,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "Vị trí Chiến lược",
-        description: "Được định vị hoàn hảo giữa những bãi biển được khao khát nhất của Phuket với lối vào dễ dàng tới sân bay quốc tế, mua s����m xa hoa và sân golf nổi tiếng thế giới."
+        description: "Nằm hoàn hảo giữa những bãi biển đẹp nhất Pattaya. Dễ dàng tiếp cận mua sắm cao cấp, ẩm thực tinh hoa và sân bay quốc tế."
       }
     },
     investment: {
@@ -3743,7 +3743,7 @@ export const translations: Record<Language, Translations> = {
             description: "Quyền sử dụng cá nhân với tiện ích xa hoa"
           },
           ownership: {
-            title: "Sở hữu tự do",
+            title: "Sở hữu t��� do",
             description: "Cấu trúc thuê 90 năm với quyền thừa kế"
           }
         }
@@ -3797,7 +3797,7 @@ export const translations: Record<Language, Translations> = {
             living: "Phòng khách",
             master: "Phòng ngủ chính",
             pool: "Hồ bơi vô cực",
-            kitchen: "Nhà b���p",
+            kitchen: "Nhà b��p",
             terrace: "Sân thượng"
           }
         },
