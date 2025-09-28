@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import Link from 'next/link'
+
 export default function NotFound() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-[#ede5d9] px-6 py-16 text-center">
