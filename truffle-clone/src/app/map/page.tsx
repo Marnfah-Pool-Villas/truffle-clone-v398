@@ -17,6 +17,8 @@ export default function MapPage() {
     setIsLoadingComplete(true)
   }
 
+  const highlightCardWidthClasses = 'w-full sm:w-[22rem] md:w-[24rem]'
+
   const highlightCards = [
     {
       title: t.location.locationStats.beaches.title,
@@ -62,7 +64,7 @@ export default function MapPage() {
   const renderHighlightCard = (card: HighlightCard, extraClasses = '') => (
     <div
       key={card.title}
-      className={`flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20 ${extraClasses}`.trim()}
+      className={`flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20 ${highlightCardWidthClasses} ${extraClasses}`.trim()}
     >
       <div className={`w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center mb-4`}>{card.icon}</div>
       <div className="text-lg font-semibold text-[#264f28] mb-2">{card.title}</div>
@@ -110,7 +112,7 @@ export default function MapPage() {
 
                 {primaryHighlight && (
                   <div className="flex justify-center mt-3 sm:mt-4 mb-6 sm:mb-8">
-                    {renderHighlightCard(primaryHighlight, 'rounded-3xl border-2 border-[#b48828]/30 max-w-md w-full')}
+                    {renderHighlightCard(primaryHighlight, 'rounded-3xl border-2 border-[#b48828]/30')}
                   </div>
                 )}
 
@@ -130,7 +132,7 @@ export default function MapPage() {
 
                 {mapAdjacentHighlight && (
                   <div className="flex justify-center mt-6 sm:mt-8">
-                    {renderHighlightCard(mapAdjacentHighlight, 'max-w-md w-full')}
+                    {renderHighlightCard(mapAdjacentHighlight)}
                   </div>
                 )}
 
@@ -156,7 +158,7 @@ export default function MapPage() {
                 {secondaryHighlights.length > 0 && (
                   isSingleSecondaryHighlight ? (
                     <div className="flex justify-center mt-8 mb-12 sm:mb-16">
-                      {renderHighlightCard(secondaryHighlights[0], 'max-w-md w-full sm:w-[22rem] md:w-[24rem]')}
+                      {renderHighlightCard(secondaryHighlights[0])}
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-8 mb-12 sm:mb-16">
