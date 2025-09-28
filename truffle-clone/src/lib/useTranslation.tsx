@@ -2,25 +2,56 @@
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react'
 import type { Language, Translations } from './translations'
-import { translations } from './translations'
-import { translationLoader } from './translationLoader'
-import { applyTranslationOverrides } from './translationOverrides'
+import { DEFAULT_LANGUAGE, englishTranslations, supportedLanguages, getTranslationsForLanguage } from './translations'
 
-// Language information for the dropdown
-export const languageInfo = [
-  { code: 'th' as Language, name: 'ไทย', currency: '🇹🇭' },
-  { code: 'zh-CN' as Language, name: '简体中文', currency: '🇨🇳' },
-  { code: 'zh-TW' as Language, name: '繁體中文', currency: '🇹🇼' },
-  { code: 'ja' as Language, name: '日本語', currency: '🇯🇵' },
-  { code: 'ko' as Language, name: '한국어', currency: '🇰🇷' },
-  { code: 'ar' as Language, name: 'العربية', currency: '🇸🇦' },
-  { code: 'hi' as Language, name: 'हिन्दी', currency: '🇮🇳' },
-  { code: 'ru' as Language, name: 'Русский', currency: '🇷🇺' },
-  { code: 'en' as Language, name: 'English', currency: '🇺🇸' },
-  { code: 'es' as Language, name: 'Español', currency: '🇪🇸' },
-  { code: 'fr' as Language, name: 'Français', currency: '🇫🇷' },
-  { code: 'ms' as Language, name: 'Malay', currency: '🇲🇾' },
-  { code: 'vi' as Language, name: 'Tiếng Việt', currency: '🇻🇳' },
+const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
+const LANGUAGE_STORAGE_KEY = 'preferred-language'
+
+const browserLanguageMatchers: Array<[RegExp, Language]> = [
+  [/^th/, 'th'],
+  [/^zh-cn|^zh$/, 'zh-CN'],
+  [/^zh-tw/, 'zh-TW'],
+  [/^ja/, 'ja'],
+  [/^ko/, 'ko'],
+  [/^ar/, 'ar'],
+  [/^hi/, 'hi'],
+  [/^ru/, 'ru'],
+  [/^es/, 'es'],
+  [/^fr/, 'fr'],
+  [/^ms/, 'ms'],
+  [/^vi/, 'vi']
+]
+
+const detectBrowserLanguage = (): Language => {
+  if (typeof navigator === 'undefined') {
+    return DEFAULT_LANGUAGE
+  }
+
+  const browserLanguage = navigator.language?.toLowerCase() ?? ''
+
+  for (const [pattern, lang] of browserLanguageMatchers) {
+    if (pattern.test(browserLanguage) && SUPPORTED_LANGUAGE_SET.has(lang)) {
+      return lang
+    }
+  }
+
+  return DEFAULT_LANGUAGE
+}
+
+export const languageInfo: Array<{ code: Language; name: string; currency: string }> = [
+  { code: 'th', name: 'ไทย', currency: '🇹🇭' },
+  { code: 'zh-CN', name: '简体中文', currency: '🇨🇳' },
+  { code: 'zh-TW', name: '繁體中文', currency: '🇹🇼' },
+  { code: 'ja', name: '日本語', currency: '🇯🇵' },
+  { code: 'ko', name: '한국어', currency: '🇰🇷' },
+  { code: 'ar', name: 'العربية', currency: '🇸🇦' },
+  { code: 'hi', name: 'हिन्दी', currency: '🇮🇳' },
+  { code: 'ru', name: 'Русский', currency: '🇷🇺' },
+  { code: 'en', name: 'English', currency: '🇺🇸' },
+  { code: 'es', name: 'Español', currency: '🇪🇸' },
+  { code: 'fr', name: 'Français', currency: '🇫🇷' },
+  { code: 'ms', name: 'Malay', currency: '🇲🇾' },
+  { code: 'vi', name: 'Tiếng Việt', currency: '🇻🇳' }
 ]
 
 interface TranslationContextType {
@@ -39,149 +70,80 @@ interface TranslationProviderProps {
 }
 
 export function TranslationProvider({ children }: TranslationProviderProps) {
-  const [language, setLanguageState] = useState<Language>('en')
-  const [currentTranslations, setCurrentTranslations] = useState<Translations>(
-    applyTranslationOverrides('en', translations.en)
-  )
-  const [isLoading, setIsLoading] = useState(false)
+  const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE)
+  const [currentTranslations, setCurrentTranslations] = useState<Translations>(englishTranslations)
+  const [isLoading, setIsLoading] = useState(true)
   const [isChangingLanguage, setIsChangingLanguage] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
 
-  // Ref to track the latest language request
-  const latestLanguageRequest = useRef<Language>('en')
+  const loadingResetRef = useRef<number | null>(null)
 
-  // Initialize with browser language preference
-  useEffect(() => {
-    const initializeLanguage = async () => {
-      try {
-        // Check localStorage first
-        const savedLanguage = localStorage.getItem('preferred-language') as Language
-        const browserLanguage = navigator.language.toLowerCase()
-
-        // Determine initial language
-        let initialLanguage: Language = 'en'
-
-        if (savedLanguage && languageInfo.some(info => info.code === savedLanguage)) {
-          initialLanguage = savedLanguage
-        } else if (browserLanguage.startsWith('th')) {
-          initialLanguage = 'th'
-        } else if (browserLanguage.startsWith('zh-cn') || browserLanguage === 'zh') {
-          initialLanguage = 'zh-CN'
-        } else if (browserLanguage.startsWith('zh-tw')) {
-          initialLanguage = 'zh-TW'
-        } else if (browserLanguage.startsWith('ja')) {
-          initialLanguage = 'ja'
-        } else if (browserLanguage.startsWith('ko')) {
-          initialLanguage = 'ko'
-        } else if (browserLanguage.startsWith('ru')) {
-          initialLanguage = 'ru'
-        } else if (browserLanguage.startsWith('hi')) {
-          initialLanguage = 'hi'
-        } else if (browserLanguage.startsWith('es')) {
-          initialLanguage = 'es'
-        } else if (browserLanguage.startsWith('fr')) {
-          initialLanguage = 'fr'
-        } else if (browserLanguage.startsWith('ar')) {
-          initialLanguage = 'ar'
-        } else if (browserLanguage.startsWith('ms')) {
-          initialLanguage = 'ms'
-        } else if (browserLanguage.startsWith('vi')) {
-          initialLanguage = 'vi'
-        }
-
-        // Set initial language
-        setLanguageState(initialLanguage)
-        latestLanguageRequest.current = initialLanguage
-
-        // Start preloading common languages
-        translationLoader.preloadCommonLanguages()
-
-        // Load initial translation with progress
-        setIsLoading(true)
-        setLoadingProgress(30)
-
-        const translation = await translationLoader.loadTranslation(initialLanguage)
-        const overriddenTranslation = applyTranslationOverrides(initialLanguage, translation)
-
-        setLoadingProgress(80)
-        setCurrentTranslations(overriddenTranslation)
-        setLoadingProgress(100)
-
-        setTimeout(() => {
-          setIsLoading(false)
-          setLoadingProgress(0)
-        }, 200) // Small delay for smooth UX
-
-      } catch (error) {
-        console.error('Error initializing language:', error)
-        setCurrentTranslations(applyTranslationOverrides('en', translations.en))
-        setIsLoading(false)
-      }
+  const clearScheduledFinish = useCallback(() => {
+    if (loadingResetRef.current !== null) {
+      window.clearTimeout(loadingResetRef.current)
+      loadingResetRef.current = null
     }
-
-    initializeLanguage()
   }, [])
 
-  const setLanguage = useCallback(async (newLanguage: Language) => {
-    if (newLanguage === language) return
-
-    try {
-      // Update latest request tracker
-      latestLanguageRequest.current = newLanguage
-
-      setIsChangingLanguage(true)
-      setLoadingProgress(10)
-
-      // Check if translation is already cached
-      const cached = translationLoader.getCached(newLanguage)
-
-      if (cached) {
-        // Fast path: use cached translation
-        const overriddenCached = applyTranslationOverrides(newLanguage, cached)
-        setLoadingProgress(90)
-        setCurrentTranslations(overriddenCached)
-        setLanguageState(newLanguage)
-        localStorage.setItem('preferred-language', newLanguage)
-        setLoadingProgress(100)
-
-        setTimeout(() => {
-          setIsChangingLanguage(false)
-          setLoadingProgress(0)
-        }, 150)
-        return
-      }
-
-      // Slow path: load translation dynamically
-      setLoadingProgress(30)
-
-      const translation = await translationLoader.loadTranslation(newLanguage)
-      const overriddenTranslation = applyTranslationOverrides(newLanguage, translation)
-
-      // Check if this is still the latest request
-      if (latestLanguageRequest.current !== newLanguage) {
-        return // Ignore outdated requests
-      }
-
-      setLoadingProgress(70)
-      setCurrentTranslations(overriddenTranslation)
-      setLanguageState(newLanguage)
-      localStorage.setItem('preferred-language', newLanguage)
-      setLoadingProgress(100)
-
-      // Smooth transition completion
-      setTimeout(() => {
-        setIsChangingLanguage(false)
-        setLoadingProgress(0)
-      }, 300)
-
-    } catch (error) {
-      console.error('Error changing language:', error)
+  const scheduleFinish = useCallback(() => {
+    clearScheduledFinish()
+    loadingResetRef.current = window.setTimeout(() => {
       setIsChangingLanguage(false)
+      setIsLoading(false)
       setLoadingProgress(0)
-      setCurrentTranslations(applyTranslationOverrides('en', translations.en))
-      // Keep current language on error
+      loadingResetRef.current = null
+    }, 150)
+  }, [clearScheduledFinish])
+
+  useEffect(() => {
+    const savedLanguage = typeof window !== 'undefined'
+      ? (localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null)
+      : null
+
+    let initialLanguage = DEFAULT_LANGUAGE
+
+    if (savedLanguage && SUPPORTED_LANGUAGE_SET.has(savedLanguage)) {
+      initialLanguage = savedLanguage
+    } else {
+      initialLanguage = detectBrowserLanguage()
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(LANGUAGE_STORAGE_KEY, initialLanguage)
+      }
     }
-  }, [language])
+
+    setLanguageState(initialLanguage)
+    setCurrentTranslations(getTranslationsForLanguage(initialLanguage))
+    setLoadingProgress(100)
+    scheduleFinish()
+  }, [scheduleFinish])
+
+  useEffect(() => {
+    return () => {
+      clearScheduledFinish()
+    }
+  }, [clearScheduledFinish])
+
+  const setLanguage = useCallback(async (newLanguage: Language) => {
+    const safeLanguage = SUPPORTED_LANGUAGE_SET.has(newLanguage) ? newLanguage : DEFAULT_LANGUAGE
+
+    if (safeLanguage === language) {
+      return
+    }
+
+    setIsChangingLanguage(true)
+    setIsLoading(true)
+    setLoadingProgress(60)
+
+    setLanguageState(safeLanguage)
+    setCurrentTranslations(getTranslationsForLanguage(safeLanguage))
+
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, safeLanguage)
+    }
+
+    setLoadingProgress(100)
+    scheduleFinish()
+  }, [language, scheduleFinish])
 
   const contextValue: TranslationContextType = {
     language,
@@ -207,7 +169,6 @@ export function useTranslation() {
   return context
 }
 
-// Convenience hook for just getting translations
 export function useT() {
   const { t } = useTranslation()
   return t
