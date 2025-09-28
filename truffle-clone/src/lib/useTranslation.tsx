@@ -1,11 +1,29 @@
 'use client'
 
-import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react'
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState
+} from 'react'
 import type { Language, Translations } from './translations'
-import { DEFAULT_LANGUAGE, englishTranslations, supportedLanguages, getTranslationsForLanguage } from './translations'
+import {
+  DEFAULT_LANGUAGE,
+  englishTranslations,
+  englishTranslationStrings,
+  supportedLanguages,
+  createTranslationsFromStrings
+} from './translations'
 
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 const LANGUAGE_STORAGE_KEY = 'preferred-language'
+const TRANSLATION_CACHE_PREFIX = 'translation-cache-v1-'
+const TRANSLATION_EXPECTED_COUNT = englishTranslationStrings.length
+
+const translationObjectCache = new Map<Language, Translations>([[DEFAULT_LANGUAGE, englishTranslations]])
+const translationFetchPromises = new Map<Language, Promise<ReadonlyArray<string>>>()
 
 const browserLanguageMatchers: Array<[RegExp, Language]> = [
   [/^th/, 'th'],
@@ -69,6 +87,120 @@ interface TranslationProviderProps {
   children: React.ReactNode
 }
 
+const getCacheKey = (language: Language) => `${TRANSLATION_CACHE_PREFIX}${language}`
+
+const readCachedStrings = (language: Language): string[] | null => {
+  if (typeof window === 'undefined') {
+    return null
+  }
+
+  try {
+    const raw = localStorage.getItem(getCacheKey(language))
+    if (!raw) {
+      return null
+    }
+
+    const parsed = JSON.parse(raw) as { strings?: unknown }
+    const strings = parsed?.strings
+
+    if (!Array.isArray(strings) || strings.length !== TRANSLATION_EXPECTED_COUNT) {
+      return null
+    }
+
+    if (!strings.every(item => typeof item === 'string')) {
+      return null
+    }
+
+    return [...strings]
+  } catch (error) {
+    console.error('Failed to parse cached translations:', error)
+    return null
+  }
+}
+
+const writeCachedStrings = (language: Language, strings: ReadonlyArray<string>) => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  try {
+    const payload = JSON.stringify({ strings: Array.from(strings), timestamp: Date.now() })
+    localStorage.setItem(getCacheKey(language), payload)
+  } catch (error) {
+    console.error('Failed to persist translations cache:', error)
+  }
+}
+
+const fetchTranslationsFromApi = async (language: Language): Promise<ReadonlyArray<string>> => {
+  let promise = translationFetchPromises.get(language)
+
+  if (!promise) {
+    promise = (async () => {
+      const response = await fetch('/api/translate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          targetLanguage: language,
+          texts: englishTranslationStrings
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error(`Translation API responded with status ${response.status}`)
+      }
+
+      const payload = await response.json() as { translations?: unknown }
+      const translatedTexts = payload?.translations
+
+      if (!Array.isArray(translatedTexts)) {
+        throw new Error('Translation API payload missing translations array')
+      }
+
+      const normalized = translatedTexts.map(item => (typeof item === 'string' ? item : ''))
+
+      if (normalized.length !== TRANSLATION_EXPECTED_COUNT) {
+        throw new Error(`Translation API returned ${normalized.length} items, expected ${TRANSLATION_EXPECTED_COUNT}`)
+      }
+
+      return normalized
+    })()
+
+    translationFetchPromises.set(language, promise)
+  }
+
+  try {
+    return await promise
+  } finally {
+    translationFetchPromises.delete(language)
+  }
+}
+
+const loadLanguageTranslations = async (language: Language): Promise<Translations> => {
+  if (translationObjectCache.has(language)) {
+    return translationObjectCache.get(language) as Translations
+  }
+
+  if (language === DEFAULT_LANGUAGE) {
+    translationObjectCache.set(language, englishTranslations)
+    return englishTranslations
+  }
+
+  const cachedStrings = readCachedStrings(language)
+  if (cachedStrings) {
+    const cachedTranslations = createTranslationsFromStrings(cachedStrings)
+    translationObjectCache.set(language, cachedTranslations)
+    return cachedTranslations
+  }
+
+  const fetchedStrings = await fetchTranslationsFromApi(language)
+  writeCachedStrings(language, fetchedStrings)
+  const fetchedTranslations = createTranslationsFromStrings(fetchedStrings)
+  translationObjectCache.set(language, fetchedTranslations)
+  return fetchedTranslations
+}
+
 export function TranslationProvider({ children }: TranslationProviderProps) {
   const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE)
   const [currentTranslations, setCurrentTranslations] = useState<Translations>(englishTranslations)
@@ -77,6 +209,8 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
   const [loadingProgress, setLoadingProgress] = useState(0)
 
   const loadingResetRef = useRef<number | null>(null)
+  const activeRequestRef = useRef(0)
+  const languageRef = useRef<Language>(DEFAULT_LANGUAGE)
 
   const clearScheduledFinish = useCallback(() => {
     if (loadingResetRef.current !== null) {
@@ -96,6 +230,73 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
   }, [clearScheduledFinish])
 
   useEffect(() => {
+    languageRef.current = language
+  }, [language])
+
+  useEffect(() => {
+    return () => {
+      clearScheduledFinish()
+    }
+  }, [clearScheduledFinish])
+
+  const applyLanguage = useCallback(async (requestedLanguage: Language, treatAsInitial = false) => {
+    const safeLanguage = SUPPORTED_LANGUAGE_SET.has(requestedLanguage) ? requestedLanguage : DEFAULT_LANGUAGE
+
+    if (!treatAsInitial && safeLanguage === languageRef.current) {
+      return
+    }
+
+    const requestId = activeRequestRef.current + 1
+    activeRequestRef.current = requestId
+
+    if (!treatAsInitial) {
+      setIsChangingLanguage(true)
+    }
+
+    setIsLoading(true)
+    setLoadingProgress(treatAsInitial ? 35 : 60)
+
+    setLanguageState(safeLanguage)
+    languageRef.current = safeLanguage
+
+    try {
+      const translations = await loadLanguageTranslations(safeLanguage)
+
+      if (activeRequestRef.current !== requestId) {
+        return
+      }
+
+      setCurrentTranslations(translations)
+
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(LANGUAGE_STORAGE_KEY, safeLanguage)
+      }
+
+      setLoadingProgress(100)
+      scheduleFinish()
+    } catch (error) {
+      console.error('Failed to load translations:', error)
+
+      if (activeRequestRef.current !== requestId) {
+        throw error
+      }
+
+      setLanguageState(DEFAULT_LANGUAGE)
+      languageRef.current = DEFAULT_LANGUAGE
+      setCurrentTranslations(englishTranslations)
+
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(LANGUAGE_STORAGE_KEY, DEFAULT_LANGUAGE)
+      }
+
+      setLoadingProgress(100)
+      scheduleFinish()
+
+      throw error
+    }
+  }, [scheduleFinish])
+
+  useEffect(() => {
     const savedLanguage = typeof window !== 'undefined'
       ? (localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null)
       : null
@@ -111,39 +312,14 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
       }
     }
 
-    setLanguageState(initialLanguage)
-    setCurrentTranslations(getTranslationsForLanguage(initialLanguage))
-    setLoadingProgress(100)
-    scheduleFinish()
-  }, [scheduleFinish])
-
-  useEffect(() => {
-    return () => {
-      clearScheduledFinish()
-    }
-  }, [clearScheduledFinish])
+    applyLanguage(initialLanguage, true).catch(error => {
+      console.error('Initial language load failed:', error)
+    })
+  }, [applyLanguage])
 
   const setLanguage = useCallback(async (newLanguage: Language) => {
-    const safeLanguage = SUPPORTED_LANGUAGE_SET.has(newLanguage) ? newLanguage : DEFAULT_LANGUAGE
-
-    if (safeLanguage === language) {
-      return
-    }
-
-    setIsChangingLanguage(true)
-    setIsLoading(true)
-    setLoadingProgress(60)
-
-    setLanguageState(safeLanguage)
-    setCurrentTranslations(getTranslationsForLanguage(safeLanguage))
-
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, safeLanguage)
-    }
-
-    setLoadingProgress(100)
-    scheduleFinish()
-  }, [language, scheduleFinish])
+    await applyLanguage(newLanguage, false)
+  }, [applyLanguage])
 
   const contextValue: TranslationContextType = {
     language,
