@@ -44,10 +44,15 @@ export default function Navigation() {
   // Close language dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target as Node)) {
+      const target = event.target as Node
+      const isInsideMobileDropdown = mobileLanguageDropdownRef.current?.contains(target) ?? false
+      const isInsideDesktopDropdown = desktopLanguageDropdownRef.current?.contains(target) ?? false
+
+      if (!isInsideMobileDropdown && !isInsideDesktopDropdown) {
         setIsLanguageDropdownOpen(false)
       }
-      if (contactMenuRef.current && !contactMenuRef.current.contains(event.target as Node)) {
+
+      if (contactMenuRef.current && !contactMenuRef.current.contains(target)) {
         setIsContactMenuOpen(false)
       }
     }
