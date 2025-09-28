@@ -565,7 +565,7 @@ export const translations: Record<Language, Translations> = {
   th: {
     nav: {
       residence: "บ้า��� ↗",
-      location: "ชม ↗",
+      location: "���ม ↗",
       map: "Map ↗",
       wealth: "ล���ทุน ↗",
       language: "��า�����",
@@ -587,7 +587,7 @@ export const translations: Record<Language, Translations> = {
         status: "จองแล้ว"
       },
       villa2: {
-        name: "ความสงบ",
+        name: "ความส���บ",
         features: "4 ห้องนอน | Type 2",
         description: "",
         status: "เ����ื����� 2 หลั��"
@@ -609,7 +609,7 @@ export const translations: Record<Language, Translations> = {
         pools: "สระขอบอินฟิน���ตี้",
         spa: "ศาลาสปาส่วนตั��",
         concierge: "คอนเซียร์จ 24/7",
-        gardens: "สวนเขตร้อน"
+        gardens: "สวนเขต���้อน"
       }
     },
     exclusive: {
@@ -647,7 +647,7 @@ export const translations: Record<Language, Translations> = {
         kata: {
           title: "หาดกะตะ",
           description: "หาดทรายทองคำที่บริสุทธิ์ เหมาะสำ���รับกา���โต้คลื่�� อาบแดด และสัมผัสวัฒนธรรมชายหาดไทยแท้",
-          features: ["คลื่นโต���คลื่น", "วิวพระอาทิตย์ตก", "อาหารท้องถิ่น", "บรรยากาศส���บ"]
+          features: ["คลื��นโต���คลื่น", "วิวพระอาทิตย์ตก", "อาหารท้องถิ่น", "บรรยากาศส���บ"]
         },
         karon: {
           title: "หาดกะรน",
@@ -754,7 +754,7 @@ export const translations: Record<Language, Translations> = {
         }
       },
       buttons: {
-        pictures: "��ูปภาพ",
+        pictures: "����ปภาพ",
         videoTour: "ทัวร์วิดีโอ"
       },
       villas: {
@@ -890,7 +890,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "定制生活方式",
-      description: "在完全富足中过���皇室般的生活。专门设计以增强能量流动。��那些热爱精致事物的人。",
+      description: "在完全富足中过���皇室般的生活。专门设计以增强能量流动。��那些���爱精致事物的人。",
       buttonText: "查看宣传册"
     },
     location: {
@@ -1166,7 +1166,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "訂製生活方式",
-      description: "在完全富足中過著皇室般的生活。專門設計以增強能量流動。為那��熱愛精緻事物的人。",
+      description: "在完全富足中過著皇室般的生活。專門設計���增強能量流動。為那��熱愛精緻事物的人。",
       buttonText: "查看宣傳冊"
     },
     location: {
@@ -1403,7 +1403,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       subtitle1: "Живите спокойно в самом престижном районе Паттайи",
       subtitle2: "Троица ве��ного дизайна, непревзойденного качества и страсти к совершенству",
-      subtitle3: "Бе��шовные ба��сейны-инфинити, премиум отделка и потрясающие ��иды, переопределяющие роскошь"
+      subtitle3: "Бе��шовные ба��сейны-инфинити, премиум отделка и потрясающие ���иды, переопределяющие роскошь"
     },
     properties: {
       title: "Испытайте свою высшую реальность",
@@ -1525,7 +1525,7 @@ export const translations: Record<Language, Translations> = {
             description: "5-20-лет��яя возобновляемая виза на жительств�� с инвестициями"
           },
           tax: {
-            title: "Налоговая оптимизация",
+            title: "Н��логовая оптимизация",
             description: "Отсутствие налога на прирост капитала для квалифицированных иностранных инвесторов"
           },
           currency: {
@@ -1567,7 +1567,7 @@ export const translations: Record<Language, Translations> = {
     },
     virtualTour: {
       title: "В��ртуальный опыт виллы",
-      subtitle: "Исследуйте наши роскошные виллы с захватывающими 360° турами",
+      subtitle: "Иссле��уйте наши роскошные виллы с захватывающими 360° турами",
       features: {
         views360: {
           title: "360° Обзор",
@@ -1600,7 +1600,7 @@ export const translations: Record<Language, Translations> = {
           }
         },
         type2: {
-          name: "Вилла Тип 2",
+          name: "Вилла Ти�� 2",
           description: "5 спален | Терраса с бассейном | Садовое святилище",
           status: "��оступно 1",
           rooms: {
@@ -1683,7 +1683,7 @@ export const translations: Record<Language, Translations> = {
     },
     properties: {
       title: "당신의 최고 현실을 경험하세요",
-      description: "열대 풍요로움�� 오��시스, 자연 속 사적 낙원으로 나타남\n지구상에서 가장 훌륭한 곳에서 당신의 집을 발견하세요\n한정 판매, 시작 가격",
+      description: "열대 풍요로움�� 오��시스, 자연 속 사적 낙원으로 나타남\n지구상에서 가장 훌륭한 곳에서 당신의 집을 발견하세요\n한정 판매, 시�� 가격",
       priceRange: "부터",
       villa1: {
         name: "평온",
@@ -1751,7 +1751,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "���타 비치",
-          description: "서핑, 일광욕, 정통 태국 해변 문화를 경험하기에 완벽한 원시 황금 모래 해변.",
+          description: "서핑, 일광욕, 정통 태국 해변 문화를 경험하기에 완벽한 원시 황금 모�� 해변.",
           features: ["서핑 ���도", "일몰 경치", "현지 요리", "평화로운 분위기"]
         },
         karon: {
@@ -1784,7 +1784,7 @@ export const translations: Record<Language, Translations> = {
       marketAnalysis: {
         title: "시장 분석",
         luxuryGrowth: "럭셔리 부동산 성장 (2009-2025)",
-        foreignInvestment: "외국인 투자 증가 (2009-2025)",
+        foreignInvestment: "외��인 투자 증가 (2009-2025)",
         gdpGrowth: "GDP 성장 전망 (2025)",
         chartTitle: "태국 럭셔리 부동산 트렌드",
         chartInsights: {
@@ -1851,7 +1851,7 @@ export const translations: Record<Language, Translations> = {
         },
         navigation: {
           title: "룸 내비게이션",
-          description: "매끄러운 공간 전환"
+          description: "매끄���운 공간 전환"
         },
         walkthrough: {
           title: "비디오 워크스루",
@@ -1995,7 +1995,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "オーダーメイドライフスタイル",
-      description: "����全な豊かさ�����で王族のように生活してください。エネルギーの流れ��向上させるために特別に設計されています。より良いものを愛する人々のために。",
+      description: "����全な豊かさ�����で王族のように生活してください。エネルギーの流れ��向上させるため���特別に設計されています。より良いものを愛する人々のために。",
       buttonText: "パンフレットを見る"
     },
     location: {
@@ -2050,7 +2050,7 @@ export const translations: Record<Language, Translations> = {
         },
         yield: {
           title: "賃貸利回り",
-          subtitle: "スマートな立地選択"
+          subtitle: "スマー��な立地選択"
         },
         tax: {
           title: "キャピタルゲイン税",
@@ -2090,7 +2090,7 @@ export const translations: Record<Language, Translations> = {
           },
           lifestyle: {
             title: "ライフスタイルアクセス",
-            description: "ラグジュアリーアメニ��ィ付き個人使用権"
+            description: "ラグジュアリー��メニ��ィ付き個人使用権"
           },
           ownership: {
             title: "���リーホールド所有権",
@@ -2122,7 +2122,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "没入型360°ツアーでラグジュア���ーヴィラを探索",
       features: {
         views360: {
-          title: "360°ビュー",
+          title: "360��ビュー",
           description: "完��なパノラマ没入"
         },
         navigation: {
@@ -2157,7 +2157,7 @@ export const translations: Record<Language, Translations> = {
           status: "1戸販売中",
           rooms: {
             living: "グランドリビング",
-            master: "マスタースイート",
+            master: "マ��タースイート",
             pool: "プールテラス",
             kitchen: "グ���メキッチン",
             garden: "ガーデ��ビュー"
@@ -2290,7 +2290,7 @@ export const translations: Record<Language, Translations> = {
           subtitle: "विश्व स्तरीय सुविधाएं"
         },
         schools: {
-          title: "���ीर्ष स्तर के अंत���्र��ष्ट्रीय ��्कूल",
+          title: "���ीर्ष स्तर के अंत���्र��ष्��्रीय ��्कूल",
           subtitle: "पास में एलीट शिक्षा"
         }
       },
@@ -2303,7 +2303,7 @@ export const translations: Record<Language, Translations> = {
         kata: {
           title: "काता बी���",
           description: "स���नहरी रेत का एक प्रा���ीन खंड जो सर्फिंग, धूप सेंकने और प्रामाणिक थाई समुद्र तट संस्कृति का अनुभव करने के ल��ए एकदम सही है।",
-          features: ["सर्फिंग तरंगें", "सूर्यास्त द��श्य", "स्थानीय व्यंजन", "शांतिपूर्ण वातावर���"]
+          features: ["सर्फिंग तरंगें", "सूर्यास्त द��श्य", "स्थानीय व्यंजन", "शा��तिपूर्ण वातावर���"]
         },
         karon: {
           title: "कैरन बीच",
@@ -2321,7 +2321,7 @@ export const translations: Record<Language, Translations> = {
       metrics: {
         roi: {
           title: "��ार्षिक ROI",
-          subtitle: "क���राया + मूल्य वृद्धि"
+          subtitle: "क���र��या + मूल्य वृद्धि"
         },
         yield: {
           title: "किराय��� यील्ड",
@@ -2349,7 +2349,7 @@ export const translations: Record<Language, Translations> = {
         items: {
           residency: {
             title: "थाई एलीट निवास",
-            description: "निवेश ��े साथ 5-20 वर्षीय नवीक���णीय निवास वीज़ा"
+            description: "निव���श ��े साथ 5-20 वर्षीय नवीक���णीय निवास वीज़ा"
           },
           tax: {
             title: "कर अनुकूलन",
@@ -2440,7 +2440,7 @@ export const translations: Record<Language, Translations> = {
         },
         type3: {
           name: "विला टाइप 3",
-          description: "3 बेडरूम | निजी पूल | ज़ेन गार्डन",
+          description: "3 बेडरूम | निजी पूल | ��़ेन गार्डन",
           status: "आरक्षित",
           rooms: {
             living: "ज़ेन लिवि���ग",
@@ -2468,7 +2468,7 @@ export const translations: Record<Language, Translations> = {
         email: "ईमेल पता *",
         phone: "फोन नंबर *",
         villaOfInterest: "रुचि का विल�� *",
-        message: "टिप्पणियां या प्रश्न?",
+        message: "टिप्���णियां या प्रश्न?",
         submit: "मेरा प्राइवेट टूर शेड्यूल करें",
         placeholders: {
           firstName: "आपका नाम",
@@ -3108,7 +3108,7 @@ export const translations: Record<Language, Translations> = {
       locationStats: {
         beaches: {
           title: "شواطئ نقية",
-          subtitle: "هروبك الساحل��"
+          subtitle: "أسلوب حياة على شاطئ البحر"
         },
         golf: {
           title: "ملاعب غولف البطولة",
@@ -3677,7 +3677,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "Bãi biển Kata",
-          description: "Dải cát vàng nguyên sơ hoàn hảo cho lướt sóng, tắm nắng và trải nghiệm văn hóa bãi biển Thái chính thống.",
+          description: "Dải cát vàng nguyên sơ hoàn hảo cho l��ớt sóng, tắm nắng và trải nghiệm văn hóa bãi biển Thái chính thống.",
           features: ["Sóng lướt", "Cảnh hoàng hôn", "Ẩm thực địa phương", "Không gian yên b��nh"]
         },
         karon: {
