@@ -142,7 +142,7 @@ export default function Navigation() {
                 onClick={() => hapticFeedback.light()}
                 className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
               >
-                <span>{t.nav.map?.replace(' ���', '') ?? 'Map'}</span>
+                <span>{t.nav.map?.replace(' ↗', '') ?? 'Map'}</span>
                 <span className="text-xl lg:text-2xl">↗</span>
               </Link>
               <Link
@@ -302,7 +302,9 @@ export default function Navigation() {
                     {languageInfo.map((lang, index) => (
                       <button
                         key={lang.code}
-                        onClick={() => handleLanguageSelect(lang)}
+                        onClick={() => {
+                          void handleLanguageSelect(lang)
+                        }}
                         className={`w-full px-2 py-1.5 bg-transparent hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-between text-sm`}
                         style={{
                           display: 'flex',
