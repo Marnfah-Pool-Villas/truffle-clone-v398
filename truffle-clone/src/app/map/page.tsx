@@ -130,13 +130,7 @@ export default function MapPage() {
 
                 {mapAdjacentHighlight && (
                   <div className="flex justify-center mt-6 sm:mt-8">
-                    <div className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20 max-w-md w-full">
-                      <div className={`w-16 h-16 ${mapAdjacentHighlight.iconBackground} rounded-full flex items-center justify-center mb-4`}>
-                        {mapAdjacentHighlight.icon}
-                      </div>
-                      <div className="text-lg font-semibold text-[#264f28] mb-2">{mapAdjacentHighlight.title}</div>
-                      <div className="text-sm text-[#264f28]/70">{mapAdjacentHighlight.subtitle}</div>
-                    </div>
+                    {renderHighlightCard(mapAdjacentHighlight, 'max-w-md w-full')}
                   </div>
                 )}
 
