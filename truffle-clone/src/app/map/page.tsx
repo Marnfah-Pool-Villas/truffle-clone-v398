@@ -110,13 +110,7 @@ export default function MapPage() {
 
                 {primaryHighlight && (
                   <div className="flex justify-center mt-3 sm:mt-4 mb-6 sm:mb-8">
-                    <div className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-[#b48828]/30 max-w-md w-full">
-                      <div className={`w-16 h-16 ${primaryHighlight.iconBackground} rounded-full flex items-center justify-center mb-4`}>
-                        {primaryHighlight.icon}
-                      </div>
-                      <div className="text-lg font-semibold text-[#264f28] mb-2">{primaryHighlight.title}</div>
-                      <div className="text-sm text-[#264f28]/70">{primaryHighlight.subtitle}</div>
-                    </div>
+                    {renderHighlightCard(primaryHighlight, 'rounded-3xl border-2 border-[#b48828]/30 max-w-md w-full')}
                   </div>
                 )}
 
