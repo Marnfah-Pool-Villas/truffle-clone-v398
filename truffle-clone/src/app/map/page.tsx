@@ -144,8 +144,8 @@ export default function MapPage() {
                   />
                   <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/10 backdrop-blur-sm">
                     <img
-                      src="/mapp.png"
-                      alt="Thailand location map showing Marnfah Pool Villas"
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fc9f8537acf3a48f48f52d3615f3a74f5?format=webp&width=800"
+                      alt="Marnfah Pool Villas location map overview"
                       className="w-full h-auto object-contain transform scale-[1.009]"
                       style={{ transformOrigin: 'center left' }}
                     />
