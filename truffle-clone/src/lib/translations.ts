@@ -383,7 +383,7 @@ export function createTranslationsFromStrings(translatedStrings: ReadonlyArray<s
     const entry = translationEntries[index]
     const fallback = entry.value
     const nextValue = typeof possibleValue === 'string' && possibleValue.length > 0 ? possibleValue : fallback
-    setValueAtPath(result as any, entry.path as PathSegment[], nextValue)
+    setValueAtPath(result as unknown as MutableTranslationRecord, Array.from(entry.path) as PathSegment[], nextValue)
   })
 
   return result
