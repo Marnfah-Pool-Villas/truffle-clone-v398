@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server'
-import { NextResponse } from 'next/server'
 import type { Language } from '@/lib/translations'
 import { DEFAULT_LANGUAGE, supportedLanguages } from '@/lib/translations'
 
@@ -160,11 +159,11 @@ export async function POST(request: Request) {
     const texts = normalizeTexts(body.texts)
 
     if (texts.length === 0) {
-      return NextResponse.json({ translations: [] })
+      return Response.json({ translations: [] })
     }
 
     if (normalizedLanguage === DEFAULT_LANGUAGE) {
-      return NextResponse.json({ translations: texts })
+      return Response.json({ translations: texts })
     }
 
     const indexMap = new Map<string, number[]>()
@@ -188,9 +187,9 @@ export async function POST(request: Request) {
       })
     }
 
-    return NextResponse.json({ translations })
+    return Response.json({ translations })
   } catch (error) {
     console.error('Translation API error:', error)
-    return NextResponse.json({ error: 'Translation request failed' }, { status: 502 })
+    return Response.json({ error: 'Translation request failed' }, { status: 502 })
   }
 }
