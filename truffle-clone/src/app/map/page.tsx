@@ -156,15 +156,9 @@ export default function MapPage() {
                 </div>
 
                 {secondaryHighlights.length > 0 && (
-                  isSingleSecondaryHighlight ? (
-                    <div className="flex justify-center mt-8 mb-12 sm:mb-16">
-                      {renderHighlightCard(secondaryHighlights[0])}
-                    </div>
-                  ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-8 mb-12 sm:mb-16">
-                      {secondaryHighlights.map((card) => renderHighlightCard(card))}
-                    </div>
-                  )
+                  <div className={`flex flex-wrap justify-center gap-4 mt-8 mb-12 sm:mb-16 ${isSingleSecondaryHighlight ? '' : ''}`}>
+                    {secondaryHighlights.map((card) => renderHighlightCard(card))}
+                  </div>
                 )}
               </div>
             </section>
