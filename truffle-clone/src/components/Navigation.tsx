@@ -266,7 +266,7 @@ export default function Navigation() {
           </div>
 
           {/* Desktop language menu - moved further right */}
-          <div className="hidden md:flex items-center gap-4 md:-translate-x-6 lg:-translate-x-8 xl:-translate-x-10">
+          <div className="hidden md:flex items-center gap-4 transform md:-translate-x-6 lg:-translate-x-8 xl:-translate-x-10">
             <div className="relative" ref={desktopLanguageDropdownRef}>
               <button
                 onClick={() => {
