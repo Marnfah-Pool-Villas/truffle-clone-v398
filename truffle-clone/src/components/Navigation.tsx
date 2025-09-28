@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import type { MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter, usePathname } from 'next/navigation'
@@ -79,7 +80,7 @@ export default function Navigation() {
     }
   }, [language, setLanguage])
 
-  const handleMobileLanguageInteraction = useCallback((event: React.PointerEvent<HTMLButtonElement> | React.MouseEvent<HTMLButtonElement>, lang: { code: Language; name: string; currency: string }) => {
+  const handleMobileLanguageInteraction = useCallback((event: ReactPointerEvent<HTMLButtonElement> | ReactMouseEvent<HTMLButtonElement>, lang: { code: Language; name: string; currency: string }) => {
     event.preventDefault()
     event.stopPropagation()
     void handleLanguageSelect(lang)
