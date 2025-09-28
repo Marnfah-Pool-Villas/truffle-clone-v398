@@ -303,6 +303,8 @@ export interface TranslationEntry {
 
 type PathSegment = string | number
 
+type MutableTranslationRecord = Record<string | number, unknown>
+
 const collectTranslationEntries = (
   value: unknown,
   path: PathSegment[],
