@@ -296,6 +296,89 @@ const englishTranslationsData = {
 
 export type Translations = typeof englishTranslationsData
 
+export interface TranslationEntry {
+  path: ReadonlyArray<string | number>
+  value: string
+}
+
+type PathSegment = string | number
+
+const collectTranslationEntries = (
+  value: unknown,
+  path: PathSegment[],
+  entries: TranslationEntry[]
+): void => {
+  if (typeof value === 'string') {
+    entries.push({ path: [...path], value })
+    return
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => {
+      collectTranslationEntries(item, [...path, index], entries)
+    })
+    return
+  }
+
+  if (value !== null && typeof value === 'object') {
+    Object.entries(value).forEach(([key, nestedValue]) => {
+      collectTranslationEntries(nestedValue, [...path, key], entries)
+    })
+  }
+}
+
+const translationEntriesInternal = (() => {
+  const entries: TranslationEntry[] = []
+  collectTranslationEntries(englishTranslationsData, [], entries)
+  return entries
+})()
+
+export const translationEntries: ReadonlyArray<TranslationEntry> = translationEntriesInternal
+
+export const englishTranslationStrings: ReadonlyArray<string> = translationEntries.map(entry => entry.value)
+
+const cloneTranslations = (): Translations => {
+  if (typeof structuredClone === 'function') {
+    return structuredClone(englishTranslationsData) as Translations
+  }
+  return JSON.parse(JSON.stringify(englishTranslationsData)) as Translations
+}
+
+const setValueAtPath = (target: any, path: PathSegment[], value: string) => {
+  if (path.length === 0) {
+    return
+  }
+
+  let current: any = target
+  for (let i = 0; i < path.length - 1; i += 1) {
+    const segment = path[i]
+    if (current == null) {
+      return
+    }
+    current = current[segment]
+  }
+
+  const leaf = path[path.length - 1]
+  if (current != null) {
+    current[leaf] = value
+  }
+}
+
 export const englishTranslations: Translations = englishTranslationsData
 
-export const getTranslationsForLanguage = (_language: Language): Translations => englishTranslations
+export function createTranslationsFromStrings(translatedStrings: ReadonlyArray<string>): Translations {
+  if (translatedStrings.length !== translationEntries.length) {
+    throw new Error(`Expected ${translationEntries.length} translations but received ${translatedStrings.length}`)
+  }
+
+  const result = cloneTranslations()
+
+  translatedStrings.forEach((possibleValue, index) => {
+    const entry = translationEntries[index]
+    const fallback = entry.value
+    const nextValue = typeof possibleValue === 'string' && possibleValue.length > 0 ? possibleValue : fallback
+    setValueAtPath(result as any, entry.path as PathSegment[], nextValue)
+  })
+
+  return result
+}
