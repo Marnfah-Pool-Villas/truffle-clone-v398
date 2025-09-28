@@ -248,9 +248,6 @@ export default function Navigation() {
                           onClick={(event) => {
                             handleMobileLanguageInteraction(event, lang)
                           }}
-                          onPointerUp={(event) => {
-                            handleMobileLanguageInteraction(event, lang)
-                          }}
                           type="button"
                           className={`w-full px-2 py-1.5 hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-between text-xs active:bg-[#b48828]/30`}
                           style={{
