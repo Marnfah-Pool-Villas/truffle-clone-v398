@@ -58,8 +58,21 @@ export default function MapPage() {
       )
     }
   ]
+  type HighlightCard = (typeof highlightCards)[number]
+  const renderHighlightCard = (card: HighlightCard, extraClasses = '') => (
+    <div
+      key={card.title}
+      className={`flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20 ${extraClasses}`.trim()}
+    >
+      <div className={`w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center mb-4`}>{card.icon}</div>
+      <div className="text-lg font-semibold text-[#264f28] mb-2">{card.title}</div>
+      <div className="text-sm text-[#264f28]/70">{card.subtitle}</div>
+    </div>
+  )
+
   const [primaryHighlight, ...otherHighlights] = highlightCards
   const [mapAdjacentHighlight, ...secondaryHighlights] = otherHighlights
+  const isSingleSecondaryHighlight = secondaryHighlights.length === 1
 
   return (
     <div className="antialiased min-h-screen">
