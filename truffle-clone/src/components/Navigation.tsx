@@ -193,7 +193,7 @@ export default function Navigation() {
           </div>
 
           <div className="flex items-center gap-2 md:hidden absolute right-4" style={{ zIndex: 40 }}>
-            <div className="relative" ref={languageDropdownRef}>
+            <div className="relative" ref={mobileLanguageDropdownRef}>
               <button
                 onClick={() => {
                   hapticFeedback.light()
