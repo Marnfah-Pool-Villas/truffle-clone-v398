@@ -587,7 +587,7 @@ export const translations: Record<Language, Translations> = {
         status: "จองแล้ว"
       },
       villa2: {
-        name: "ความสงบ",
+        name: "ค��ามสงบ",
         features: "4 ห้องนอน | Type 2",
         description: "",
         status: "เ����ื����� 2 หลั��"
@@ -609,7 +609,7 @@ export const translations: Record<Language, Translations> = {
         pools: "สระขอบอินฟิน���ตี้",
         spa: "ศาลาสปาส่วนตั��",
         concierge: "คอนเซียร์จ 24/7",
-        gardens: "สวนเขตร้อน"
+        gardens: "ส��นเขตร้อน"
       }
     },
     exclusive: {
@@ -709,7 +709,7 @@ export const translations: Record<Language, Translations> = {
           },
           lifestyle: {
             title: "สิทธิ์การใช้ชีว���ต",
-            description: "สิทธิ์ใช้ส่วนตัวพร้อมสิ่งอำนวยความสะดวกระดับหรู"
+            description: "สิทธิ์ใช้ส่วนตัวพร้อมสิ่งอำนวยความสะดวกระ���ับหรู"
           },
           ownership: {
             title: "กรรมสิทธิ์ฟ��ีโฮลด์",
@@ -810,7 +810,7 @@ export const translations: Record<Language, Translations> = {
         firstName: "ชื่อ *",
         lastName: "นา��สกุล *",
         email: "อีเมล *",
-        phone: "เบอร์โทรศัพท์ *",
+        phone: "เบอร์โทรศ���พท์ *",
         villaOfInterest: "วิลล����ที่สนใจ *",
         message: "ความคิดเห็นหรือคำถาม?",
         submit: "ส่ง",
@@ -845,7 +845,7 @@ export const translations: Record<Language, Translations> = {
       map: "���图 ↗",
       wealth: "财富 ���",
       language: "语言",
-      contact: "联系"
+      contact: "��系"
     },
     hero: {
       subtitle1: "芭提雅最负盛名的地产",
@@ -926,7 +926,7 @@ export const translations: Record<Language, Translations> = {
           features: ["冲浪波浪", "日落美景", "当地美食", "宁静氛围"]
         },
         karon: {
-          title: "卡伦���滩",
+          title: "卡伦����滩",
           description: "三公里长的粉白色沙滩，提供宁静的放松和令人叹为观止的海洋全景。",
           features: ["宁静度假", "纯净海水", "水疗度假村", "自然漫步"]
         }
@@ -1237,7 +1237,7 @@ export const translations: Record<Language, Translations> = {
         chartInsights: {
           growth: "15年增長",
           average2009: "2009年平均",
-          average2024: "2024年平均"
+          average2024: "2024年平���"
         }
       },
       benefits: {
@@ -1324,7 +1324,7 @@ export const translations: Record<Language, Translations> = {
         },
         type2: {
           name: "別墅類型2",
-          description: "5間臥室 | ��池露台 | ��園聖地",
+          description: "5間臥室 | ��池露台 | ����聖地",
           status: "剩餘1套",
           rooms: {
             living: "大客廳",
@@ -1403,7 +1403,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       subtitle1: "Живите спокойно в самом престижном районе Паттайи",
       subtitle2: "Троица ве��ного дизайна, непревзойденного качества и ��трасти к совершенству",
-      subtitle3: "Бе��шовные ба��сейны-инфинити, премиум отделка и потрясающие ��иды, переопределяющие роскошь"
+      subtitle3: "Бе��шовные ба��сейн��-инфинити, премиум отделка и потрясающие ��иды, переопределяющие роскошь"
     },
     properties: {
       title: "Испытайте свою высшую реальность",
@@ -1475,7 +1475,7 @@ export const translations: Record<Language, Translations> = {
         },
         kata: {
           title: "Пля�� Ката",
-          description: "Нетронутый участ��к золотого песка, и��еал��но подходящ��й для серфинга, заг��ра и знакомства с подлинной тайской пля��ной культурой.",
+          description: "Нетронутый участ��к золотого песка, и��еал��но подходящ��й для серфинга, заг��ра и знакомства с п��длинной тайской пля��ной культурой.",
           features: ["Волны дл�� серфинга", "Виды заката", "Местная кухня", "Мирная атмосфера"]
         },
         karon: {
@@ -1494,7 +1494,7 @@ export const translations: Record<Language, Translations> = {
       metrics: {
         roi: {
           title: "Годовая доходность",
-          subtitle: "Аренда + рост стоимости"
+          subtitle: "А��енда + рост стоимости"
         },
         yield: {
           title: "Доходность аренды",
@@ -1522,7 +1522,7 @@ export const translations: Record<Language, Translations> = {
         items: {
           residency: {
             title: "Тайская элитная рези��енция",
-            description: "5-20-лет��яя возобновляемая виза на жительств�� с инвестициями"
+            description: "5-20-лет��яя возобновляемая виза на жительств��� с инвестициями"
           },
           tax: {
             title: "Налоговая оптимизация",
@@ -1889,7 +1889,7 @@ export const translations: Record<Language, Translations> = {
         },
         type3: {
           name: "빌라 ���입 3",
-          description: "침실 3개 | 전용 수영장 | 선 ���든",
+          description: "침실 3개 | 전용 ��영장 | 선 ���든",
           status: "예약됨",
           rooms: {
             living: "선 리빙",
@@ -1927,7 +1927,7 @@ export const translations: Record<Language, Translations> = {
           villaSelect: "���라 선택",
           allVillas: "모두",
           villa1: "���라 1",
-          villa2: "빌라 2",
+          villa2: "빌�� 2",
           villa3: "빌라 3",
           villa4: "빌라 4",
           message: "저는 ~에 대해 더 알고 싶습니다..."
@@ -1995,7 +1995,7 @@ export const translations: Record<Language, Translations> = {
     },
     exclusive: {
       title: "オーダーメイドライフスタイル",
-      description: "����全な豊かさ�����で王族のように生活してください。エネルギーの流れ��向上させるために特別に設計されています。より良いものを愛する人々のために。",
+      description: "����全な豊かさ������で王族のように生活してください。エネルギーの流れ��向上させるために特別に設計されています。より良いものを愛する人々のために。",
       buttonText: "パンフレットを見る"
     },
     location: {
@@ -2046,7 +2046,7 @@ export const translations: Record<Language, Translations> = {
       metrics: {
         roi: {
           title: "年間ROI",
-          subtitle: "賃��� + 価値上��"
+          subtitle: "賃��� + 価値上���"
         },
         yield: {
           title: "賃貸利回り",
@@ -2154,7 +2154,7 @@ export const translations: Record<Language, Translations> = {
         type2: {
           name: "ヴィラタイプ2",
           description: "5ベッドルー�� | プールテラス | ガーデンサンクチュアリ",
-          status: "1戸販売中",
+          status: "1戸販��中",
           rooms: {
             living: "グランドリビング",
             master: "マスタースイート",
@@ -2190,7 +2190,7 @@ export const translations: Record<Language, Translations> = {
       form: {
         firstName: "名前 *",
         lastName: "姓 *",
-        email: "メールアドレス *",
+        email: "メールア��レス *",
         phone: "電��番号 *",
         villaOfInterest: "興味のあるヴィラ *",
         message: "コメントまたは質問？",
@@ -2303,7 +2303,7 @@ export const translations: Record<Language, Translations> = {
         kata: {
           title: "काता बी���",
           description: "स���नहरी रेत का एक प्रा���ीन खंड जो सर्फिंग, धूप सेंकने और प्रामाणिक थाई समुद्र तट संस्कृति का अनुभव करने के ल��ए एकदम सही है।",
-          features: ["सर्फिंग तरंगें", "सूर्यास्त द��श्य", "स्थानीय व्यंजन", "शांतिपूर्ण वातावर���"]
+          features: ["सर्फिंग तरंगे��", "सूर्यास्त द��श्य", "स्थानीय व्यंजन", "शांतिपूर्ण वातावर���"]
         },
         karon: {
           title: "कैरन बीच",
@@ -2383,7 +2383,7 @@ export const translations: Record<Language, Translations> = {
           },
           gdp: {
             title: "जीडीपी (2024)",
-            subtitle: "आसि��ान की दूसर��� सब���े बड़ी अर्थव्यव���्था"
+            subtitle: "आसि��ान की दूसर���� सब���े बड़ी अर्थव्यव���्था"
           },
           tourists: {
             title: "वार्षिक पर्यटक",
@@ -2443,7 +2443,7 @@ export const translations: Record<Language, Translations> = {
           description: "3 बेडरूम | निजी पूल | ज़ेन गार्डन",
           status: "आरक्षित",
           rooms: {
-            living: "ज़ेन लिवि���ग",
+            living: "��़ेन लिवि���ग",
             master: "मास्ट��� रि��्रीट",
             pool: "निजी अभयारण्य",
             kitchen: "शेफ की रसोई",
@@ -3138,7 +3138,7 @@ export const translations: Record<Language, Translations> = {
       },
       mapSection: {
         title: "موقع استراتيجي",
-        description: "متمركز بشكل مثالي بين أفضل شواطئ باتايا. وصول سهل إلى التسو�� الفاخر وتناول الطعام الراقي والمطار الدولي."
+        description: "متمركز بشكل مثالي بين أفضل شواطئ باتايا. وصول سهل إلى التسو�� الفاخر وتناول الطعام الراقي والمطار ال��ولي."
       }
     },
     investment: {
@@ -3293,7 +3293,7 @@ export const translations: Record<Language, Translations> = {
         email: "عن���ان البريد الإلكتروني *",
         phone: "رقم الهاتف *",
         villaOfInterest: "الفيل�� المرغوبة *",
-        message: "تع��يقات أو أسئلة؟",
+        message: "تع��يقات أ�� أسئلة؟",
         submit: "جدولة جولتي الخاصة",
         placeholders: {
           firstName: "اسمك الأول",
@@ -3658,7 +3658,7 @@ export const translations: Record<Language, Translations> = {
       locationStats: {
         beaches: {
           title: "Bãi biển nguyên sơ",
-          subtitle: "Nơi nghỉ dưỡng ven biển của bạn"
+          subtitle: "Phong cách sống ven biển"
         },
         golf: {
           title: "Sân Golf Vô địch",
@@ -3797,7 +3797,7 @@ export const translations: Record<Language, Translations> = {
             living: "Phòng khách",
             master: "Phòng ngủ chính",
             pool: "Hồ bơi vô cực",
-            kitchen: "Nhà b��p",
+            kitchen: "Nhà b���p",
             terrace: "Sân thượng"
           }
         },
