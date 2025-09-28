@@ -79,6 +79,12 @@ export default function Navigation() {
     }
   }, [language, setLanguage])
 
+  const handleMobileLanguageInteraction = useCallback((event: React.PointerEvent<HTMLButtonElement> | React.MouseEvent<HTMLButtonElement>, lang: { code: Language; name: string; currency: string }) => {
+    event.preventDefault()
+    event.stopPropagation()
+    void handleLanguageSelect(lang)
+  }, [handleLanguageSelect])
+
   // (Removed Home navigation helper)
 
   // Page transition with elegant animation
@@ -238,12 +244,11 @@ export default function Navigation() {
                       {languageInfo.map((lang, index) => (
                         <button
                           key={lang.code}
-                          onClick={() => {
-                            void handleLanguageSelect(lang)
+                          onClick={(event) => {
+                            handleMobileLanguageInteraction(event, lang)
                           }}
-                          onTouchEnd={(e) => {
-                            e.preventDefault()
-                            void handleLanguageSelect(lang)
+                          onPointerUp={(event) => {
+                            handleMobileLanguageInteraction(event, lang)
                           }}
                           type="button"
                           className={`w-full px-2 py-1.5 hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-between text-xs active:bg-[#b48828]/30`}
