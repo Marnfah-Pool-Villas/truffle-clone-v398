@@ -154,15 +154,15 @@ export default function MapPage() {
                 </div>
 
                 {secondaryHighlights.length > 0 && (
-                  <div className={`grid grid-cols-1 ${secondaryHighlights.length > 1 ? 'sm:grid-cols-2 lg:grid-cols-2' : ''} gap-4 mt-8 mb-12 sm:mb-16`}>
-                    {secondaryHighlights.map((card) => (
-                      <div key={card.title} className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-[#b48828]/20 sm:max-w-md sm:w-full sm:mx-auto lg:max-w-none">
-                        <div className={`w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center mb-4`}>{card.icon}</div>
-                        <div className="text-lg font-semibold text-[#264f28] mb-2">{card.title}</div>
-                        <div className="text-sm text-[#264f28]/70">{card.subtitle}</div>
-                      </div>
-                    ))}
-                  </div>
+                  isSingleSecondaryHighlight ? (
+                    <div className="flex justify-center mt-8 mb-12 sm:mb-16">
+                      {renderHighlightCard(secondaryHighlights[0], 'max-w-md w-full sm:w-[22rem] md:w-[24rem]')}
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-8 mb-12 sm:mb-16">
+                      {secondaryHighlights.map((card) => renderHighlightCard(card))}
+                    </div>
+                  )
                 )}
               </div>
             </section>
