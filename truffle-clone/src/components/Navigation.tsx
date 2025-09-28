@@ -13,7 +13,8 @@ export default function Navigation() {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false)
 
-  const languageDropdownRef = useRef<HTMLDivElement>(null)
+  const mobileLanguageDropdownRef = useRef<HTMLDivElement>(null)
+  const desktopLanguageDropdownRef = useRef<HTMLDivElement>(null)
   const contactMenuRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
   const pathname = usePathname()
