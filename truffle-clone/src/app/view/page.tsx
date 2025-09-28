@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Navigation from '@/components/Navigation'
-import LocationSection from '@/components/LocationSection'
 import VirtualTourSection from '@/components/VirtualTourSection'
 import ContactFooter from '@/components/ContactFooter'
 import PageTransition from '@/components/PageTransition'
@@ -32,7 +31,6 @@ export default function LocationPage() {
             <section className="bg-[#ede5d9]/20">
               <VirtualTourSection />
             </section>
-            <LocationSection />
             <ContactFooter />
           </main>
         </PageTransition>

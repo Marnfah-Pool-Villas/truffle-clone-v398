@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { TranslationProvider } from "@/lib/useTranslation";
+import TranslationLoadingOverlay from "@/components/TranslationLoadingOverlay";
 
 export default function ClientBody({
   children,
@@ -16,9 +17,11 @@ export default function ClientBody({
 
   return (
     <TranslationProvider>
-      <div className="antialiased">
-        {children}
-      </div>
+      <TranslationLoadingOverlay>
+        <div className="antialiased">
+          {children}
+        </div>
+      </TranslationLoadingOverlay>
     </TranslationProvider>
   );
 }

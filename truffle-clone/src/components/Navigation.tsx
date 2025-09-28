@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
+import type { MouseEvent as ReactMouseEvent } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter, usePathname } from 'next/navigation'
@@ -11,17 +12,49 @@ import type { Language } from '@/lib/translations'
 export default function Navigation() {
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
+  const [isContactMenuOpen, setIsContactMenuOpen] = useState(false)
 
-  const languageDropdownRef = useRef<HTMLDivElement>(null)
+  const mobileLanguageDropdownRef = useRef<HTMLDivElement>(null)
+  const desktopLanguageDropdownRef = useRef<HTMLDivElement>(null)
+  const contactMenuRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
   const pathname = usePathname()
   const { language, setLanguage, t } = useTranslation()
 
+  const contactOptions = [
+    {
+      key: 'whatsapp',
+      label: t.footer.whatsapp,
+      href: 'https://wa.me/66635517979',
+      imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F3ca95af26ebe4c74850ec260d05ce271?format=webp&width=800'
+    },
+    {
+      key: 'wechat',
+      label: t.footer.wechat,
+      href: 'weixin://dl/chat?MarnfahVillas',
+      imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fabb0ec401a4e4035a9e1722644989e26?format=webp&width=800'
+    },
+    {
+      key: 'line',
+      label: t.footer.line,
+      href: 'https://line.me/ti/p/MarnfahPoolVillas',
+      imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F9487ed1d900b4348834f3adb2824e1e9?format=webp&width=800'
+    }
+  ] as const
+
   // Close language dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target as Node)) {
+      const target = event.target as Node
+      const isInsideMobileDropdown = mobileLanguageDropdownRef.current?.contains(target) ?? false
+      const isInsideDesktopDropdown = desktopLanguageDropdownRef.current?.contains(target) ?? false
+
+      if (!isInsideMobileDropdown && !isInsideDesktopDropdown) {
         setIsLanguageDropdownOpen(false)
+      }
+
+      if (contactMenuRef.current && !contactMenuRef.current.contains(target)) {
+        setIsContactMenuOpen(false)
       }
     }
 
@@ -31,52 +64,29 @@ export default function Navigation() {
     }
   }, [])
 
-  const handleLanguageSelect = (selectedLang: { code: Language; name: string; currency: string }) => {
-    console.log('Language selected:', selectedLang.code)
-    hapticFeedback.selection()
-
-    // Close dropdown immediately
+  const handleLanguageSelect = useCallback(async (selectedLang: { code: Language; name: string; currency: string }) => {
     setIsLanguageDropdownOpen(false)
 
-    // Change language after a small delay to ensure dropdown closes first
-    setTimeout(() => {
-      setLanguage(selectedLang.code).then(() => {
-        console.log('Language changed successfully to:', selectedLang.code)
-      }).catch((error) => {
-        console.error('Failed to change language:', error)
-      })
-    }, 100)
-  }
-
-  // Smooth scroll function for anchor links
-  const smoothScrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
+    if (selectedLang.code === language) {
+      return
     }
-  }
+
+    hapticFeedback.selection()
+
+    try {
+      await setLanguage(selectedLang.code)
+    } catch (error) {
+      console.error('Failed to change language:', error)
+    }
+  }, [language, setLanguage])
+
+  const handleMobileLanguageInteraction = useCallback((event: ReactMouseEvent<HTMLButtonElement>, lang: { code: Language; name: string; currency: string }) => {
+    event.preventDefault()
+    event.stopPropagation()
+    void handleLanguageSelect(lang)
+  }, [handleLanguageSelect])
 
   // (Removed Home navigation helper)
-
-  // Navigate to home page and scroll to contact form
-  const goToContact = () => {
-    if (pathname !== '/') {
-      // For navigation from other pages, use a more reliable approach
-      window.location.href = '/#contact'
-    } else {
-      // Already on home page, just scroll to contact
-      const contactElement = document.getElementById('contact')
-      if (contactElement) {
-        contactElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-        })
-      }
-    }
-  }
 
   // Page transition with elegant animation
   const handlePageTransition = (href: string) => {
@@ -97,6 +107,7 @@ export default function Navigation() {
   useEffect(() => {
     const handleRouteComplete = () => {
       setIsTransitioning(false)
+      setIsContactMenuOpen(false)
       document.body.style.opacity = '1'
     }
 
@@ -104,8 +115,9 @@ export default function Navigation() {
   }, [pathname])
 
   return (
-    <nav className="relative w-full z-30 pt-1 md:pt-2 pb-0 transition-all duration-300">
-      <div className="px-4 md:w-full md:px-12 lg:px-16 xl:px-20">
+    <>
+      <nav className="relative w-full z-30 pt-1 md:pt-2 pb-0 transition-all duration-300">
+      <div className="px-2 sm:px-3 md:w-full md:px-6 lg:px-16 xl:px-20">
         <div className="relative flex justify-center items-center h-24 md:h-28 w-full md:justify-between">
           {/* Mobile layout: Logo moved 0.5cm left from hero border edge */}
           <Link href="/" onClick={() => hapticFeedback.light()} className="flex items-center md:hidden absolute left-1">
@@ -120,7 +132,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop layout: Logo + buttons grouped - moved further left */}
-          <div className="hidden md:flex items-center gap-x-1 lg:gap-x-2" style={{ transform: 'translateX(-40px)' }}>
+          <div className="hidden md:flex items-center gap-x-1 lg:gap-x-2" style={{ transform: 'translateX(-28px)' }}>
             <Link href="/" onClick={() => hapticFeedback.light()} className="flex items-center">
               <Image
                 src="/leafy.jpg"
@@ -132,6 +144,14 @@ export default function Navigation() {
               />
             </Link>
             <div className="flex items-center gap-x-1 lg:gap-x-2">
+              <Link
+                href="/map"
+                onClick={() => hapticFeedback.light()}
+                className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
+              >
+                <span>{t.nav.map?.replace(' ↗', '') ?? 'Map'}</span>
+                <span className="text-xl lg:text-2xl">↗</span>
+              </Link>
               <Link
                 href="/view"
                 onClick={() => hapticFeedback.light()}
@@ -152,7 +172,15 @@ export default function Navigation() {
           </div>
 
           {/* Mobile navigation buttons - moved 0.5cm left with equal sizing and minimal spacing, then adjusted */}
-          <div className="flex items-center gap-x-0.5 md:hidden absolute left-16 ml-1 rounded-sm px-0.5 py-0.5" style={{ marginLeft: '-0.22cm' }}>
+          <div className="flex items-center gap-x-0.5 md:hidden absolute left-16 ml-1 rounded-sm px-0.5 py-0.5" style={{ marginLeft: '-0.03cm' }}>
+            <Link
+              href="/map"
+              onClick={() => hapticFeedback.light()}
+              className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
+            >
+              <span className="text-lg">↗</span>
+              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.map?.replace(' ↗', '') ?? 'Map'}</span>
+            </Link>
             <Link
               href="/view"
               onClick={() => hapticFeedback.light()}
@@ -172,7 +200,7 @@ export default function Navigation() {
           </div>
 
           <div className="flex items-center gap-2 md:hidden absolute right-4" style={{ zIndex: 40 }}>
-            <div className="relative" ref={languageDropdownRef}>
+            <div className="relative" ref={mobileLanguageDropdownRef}>
               <button
                 onClick={() => {
                   hapticFeedback.light()
@@ -206,27 +234,22 @@ export default function Navigation() {
                     onClick={() => setIsLanguageDropdownOpen(false)}
                   />
                   <div
-                    className="absolute top-full mt-2 w-32 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl max-h-[70vh] overflow-y-auto"
+                    className="absolute top-full mt-2 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl max-h-[70vh] overflow-y-auto"
                     style={{
-                      right: '-32px', // Centers dropdown between language and contact buttons
-                      zIndex: 51
+                      right: '0px',
+                      zIndex: 51,
+                      minWidth: '60px'
                     }}
                   >
-                    <div className="p-2">
+                    <div className="p-1">
                       {languageInfo.map((lang, index) => (
                         <button
                           key={lang.code}
-                          onClick={() => {
-                            console.log('Mobile language clicked:', lang.code)
-                            handleLanguageSelect(lang)
-                          }}
-                          onTouchEnd={(e) => {
-                            e.preventDefault()
-                            console.log('Mobile touch language:', lang.code)
-                            handleLanguageSelect(lang)
+                          onClick={(event) => {
+                            handleMobileLanguageInteraction(event, lang)
                           }}
                           type="button"
-                          className={`w-full py-2 hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-center text-sm active:bg-[#b48828]/30`}
+                          className={`w-full px-2 py-1.5 hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-between text-xs active:bg-[#b48828]/30`}
                           style={{
                             backgroundColor: language === lang.code ? 'rgba(180, 136, 40, 0.2)' : 'transparent',
                             marginBottom: index < languageInfo.length - 1 ? '4px' : '0px',
@@ -234,7 +257,8 @@ export default function Navigation() {
                             touchAction: 'manipulation'
                           }}
                         >
-                          {lang.name}
+                          <span className="text-left flex-1 truncate">{lang.name}</span>
+                          <span aria-hidden className="ml-1 text-sm leading-none">{lang.currency}</span>
                         </button>
                       ))}
                     </div>
@@ -242,31 +266,11 @@ export default function Navigation() {
                 </>
               )}
             </div>
-            <button
-              onClick={() => {
-                hapticFeedback.light()
-                goToContact()
-              }}
-              className="flex w-16 items-center justify-center py-2.5 rounded-xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 group cursor-pointer hover:bg-[#264f28]/20 hover:scale-[1.02] transform hover:shadow-md h-16"
-            >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-            </button>
           </div>
 
-          {/* Desktop Language + Contact - moved further right */}
-          <div className="hidden md:flex items-center gap-4" style={{ transform: 'translateX(40px)' }}>
-            <div className="relative" ref={languageDropdownRef}>
+          {/* Desktop language menu - moved further right */}
+          <div className="hidden md:flex items-center gap-4 transform md:-translate-x-6 lg:-translate-x-8 xl:-translate-x-10">
+            <div className="relative" ref={desktopLanguageDropdownRef}>
               <button
                 onClick={() => {
                   hapticFeedback.light()
@@ -294,53 +298,92 @@ export default function Navigation() {
               {/* Language Dropdown Menu - Desktop Only */}
               {isLanguageDropdownOpen && (
                 <div
-                  className="absolute top-full mt-2 left-0 w-36 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl overflow-hidden z-[99999]"
+                  className="absolute top-full mt-2 left-0 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl overflow-hidden z-[99999]"
+                  style={{ minWidth: '70px' }}
                 >
-                  <div className="p-2">
+                  <div className="p-1">
                     {languageInfo.map((lang, index) => (
                       <button
                         key={lang.code}
-                        onClick={() => handleLanguageSelect(lang)}
-                        className={`w-full px-4 py-2 text-center bg-transparent hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200`}
+                        onClick={() => {
+                          void handleLanguageSelect(lang)
+                        }}
+                        className={`w-full px-2 py-1.5 bg-transparent hover:bg-[#b48828]/10 border border-[#b48828]/20 ${index === 0 ? 'border-t-0' : ''} ${index < languageInfo.length - 1 ? 'border-b-white/20' : ''} rounded text-white font-medium transition-all duration-200 flex items-center justify-between text-sm`}
                         style={{
-                          display: 'block',
+                          display: 'flex',
                           width: '100%',
-                          padding: '8px 16px',
                           backgroundColor: language === lang.code ? 'rgba(180, 136, 40, 0.2)' : 'transparent',
                           marginBottom: index < languageInfo.length - 1 ? '4px' : '0px',
-                          textAlign: 'center'
+                          textAlign: 'left'
                         }}
                       >
-                        {lang.name}
+                        <span className="text-left flex-1 truncate">{lang.name}</span>
+                        <span aria-hidden className="ml-1 text-base leading-none">{lang.currency}</span>
                       </button>
                     ))}
                   </div>
                 </div>
               )}
             </div>
-            <button
-              onClick={() => {
-                hapticFeedback.light()
-                goToContact()
-              }}
-              className="flex w-[60px] items-center justify-center h-[60px] rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 group cursor-pointer hover:bg-[#264f28]/20 hover:scale-[1.02] transform hover:shadow-md"
-            >
-              <svg
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-            </button>
           </div>
         </div>
       </div>
     </nav>
+      <div
+        ref={contactMenuRef}
+        className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3 md:bottom-6 md:right-6"
+      >
+        {isContactMenuOpen && (
+          <div className="flex flex-col items-end gap-2 sm:gap-3">
+            {contactOptions.map(option => (
+              <a
+                key={option.key}
+                href={option.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  hapticFeedback.light()
+                  setIsContactMenuOpen(false)
+                }}
+                className="inline-flex items-center justify-center rounded-full overflow-hidden shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#264f28]/25 border border-[#264f28]/20 bg-[#264f28]/15 w-16 h-16 sm:w-[72px] sm:h-[72px]"
+                aria-label={option.label}
+              >
+                <span className="sr-only">{option.label}</span>
+                <img
+                  src={option.imgSrc}
+                  alt={option.label}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </a>
+            ))}
+          </div>
+        )}
+        <button
+          type="button"
+          onClick={() => {
+            hapticFeedback.light()
+            setIsContactMenuOpen(prev => !prev)
+          }}
+          className={`group inline-flex items-center justify-center rounded-full border border-[#264f28]/20 bg-[#264f28]/10 text-[#264f28] shadow-2xl backdrop-blur-md transition-all duration-300 hover:bg-[#264f28]/20 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#264f28]/40 w-16 h-16 sm:w-[72px] sm:h-[72px] ${isContactMenuOpen ? 'bg-[#264f28]/20' : ''}`}
+          aria-expanded={isContactMenuOpen}
+          aria-label={t.nav.contact}
+        >
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="opacity-90"
+          >
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </button>
+      </div>
+    </>
   )
 }

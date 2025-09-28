@@ -53,11 +53,11 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="bg-[#ede5d9]/50 backdrop-blur-sm rounded-2xl p-8 border border-[#b48828]/20">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-[#264f28] mb-2">
+      <div className="bg-[#ede5d9]/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#b48828]/20">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 lg:space-y-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="firstName" className="text-sm font-medium text-[#264f28]">
                 {t.contact.form.firstName}
               </label>
               <input
@@ -67,13 +67,13 @@ export default function ContactForm() {
                 required
                 value={formData.firstName}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+                className="w-full px-4 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
                 placeholder={t.contact.form.placeholders.firstName}
               />
             </div>
 
-            <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-[#264f28] mb-2">
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="lastName" className="text-sm font-medium text-[#264f28]">
                 {t.contact.form.lastName}
               </label>
               <input
@@ -83,41 +83,41 @@ export default function ContactForm() {
                 required
                 value={formData.lastName}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+                className="w-full px-4 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
                 placeholder={t.contact.form.placeholders.lastName}
               />
             </div>
-          </div>
 
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-[#264f28] mb-2">
-              {t.contact.form.email}
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              value={formData.email}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
-              placeholder={t.contact.form.placeholders.email}
-            />
-          </div>
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="email" className="text-sm font-medium text-[#264f28]">
+                {t.contact.form.email}
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+                placeholder={t.contact.form.placeholders.email}
+              />
+            </div>
 
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-[#264f28] mb-2">
-              {t.contact.form.phone}
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
-              placeholder={t.contact.form.placeholders.phone}
-            />
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="phone" className="text-sm font-medium text-[#264f28]">
+                {t.contact.form.phone}
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300"
+                placeholder={t.contact.form.placeholders.phone}
+              />
+            </div>
           </div>
 
           <div>
@@ -142,27 +142,26 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-[#264f28] mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-[#264f28] mb-2 md:mb-3">
               {t.contact.form.message}
             </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              value={formData.message}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300 resize-none"
-              placeholder={t.contact.form.placeholders.message}
-            />
-          </div>
-
-          <div className="flex justify-center w-full">
-            <button
-              type="submit"
-              className="bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-xl px-4 py-3 transition-all duration-300 hover:scale-105 transform text-[#264f28] text-base font-medium flex items-center justify-center gap-3"
-            >
-              {t.contact.form.submit}
-            </button>
+            <div className="flex flex-row items-stretch gap-2 md:gap-3">
+              <textarea
+                id="message"
+                name="message"
+                rows={2}
+                value={formData.message}
+                onChange={handleInputChange}
+                className="flex-1 h-12 md:h-12 px-4 py-2 rounded-xl bg-gray-100/70 border border-gray-300/60 text-[#264f28] placeholder-[#264f28]/50 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400/40 hover:bg-gray-100/90 transition-all duration-300 resize-none"
+                placeholder={t.contact.form.placeholders.message}
+              />
+              <button
+                type="submit"
+                className="flex-none w-28 md:w-32 h-12 bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-xl px-4 transition-all duration-300 hover:scale-105 transform text-[#264f28] text-base font-medium flex items-center justify-center gap-3"
+              >
+                {t.contact.form.submit}
+              </button>
+            </div>
           </div>
         </form>
       </div>

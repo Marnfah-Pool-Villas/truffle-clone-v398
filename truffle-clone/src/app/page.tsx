@@ -37,7 +37,7 @@ export default function Home() {
             <div className="relative w-full" style={{ margin: 0, padding: 0 }}>
               <HeroSection />
               {/* View Brochure Button - positioned between hero and properties */}
-              <div className="w-full flex justify-center" style={{ marginTop: '-0.56cm', marginBottom: '0.43cm' }}>
+              <div className="w-full flex justify-center mt-4 md:mt-12 lg:mt-16 xl:mt-20 mb-6 md:mb-10 lg:mb-12">
                 <button className="px-16 md:px-20 py-4 md:py-5 rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-lg md:text-xl font-medium">
                   {t.exclusive.buttonText}
                 </button>
@@ -49,7 +49,7 @@ export default function Home() {
                 <AmenitiesSection />
               </section>
               <ExclusiveSection />
-              <section id="contact" className="pt-6 sm:pt-12 px-4 sm:px-6" style={{ margin: 0, paddingBottom: 0, minHeight: 'auto' }}>
+              <section id="contact" className="pt-6 sm:pt-6 md:pt-8 lg:pt-12 px-4 sm:px-6" style={{ margin: 0, paddingBottom: 0, minHeight: 'auto' }}>
                 <ContactForm />
               </section>
               {/* Spacing between contact form and footer */}

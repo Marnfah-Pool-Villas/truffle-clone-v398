@@ -1,5 +1,7 @@
 'use client'
 
+'use client'
+
 import { useTranslation } from '@/lib/useTranslation'
 
 interface TranslationLoadingOverlayProps {

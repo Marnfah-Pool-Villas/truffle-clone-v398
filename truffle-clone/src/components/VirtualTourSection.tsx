@@ -74,14 +74,14 @@ export default function VirtualTourSection() {
   return (
     <div className="max-w-6xl mx-auto pt-2 sm:pt-4 pb-10 sm:pb-20 px-4 sm:px-6">
       {/* Header */}
-      <div className="flex flex-col gap-y-6 mb-12 text-center">
+      <div className="flex flex-col gap-y-6 mb-6 text-center">
         <div className="relative">
-          <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4">
+          <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-3">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z"/>
             </svg>
           </div>
-          <div className="relative mb-6">
+          <div className="relative mb-4">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
               <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#264f28]/20 via-[#264f28]/10 to-transparent rounded-2xl blur-sm"></span>
@@ -95,58 +95,16 @@ export default function VirtualTourSection() {
         </div>
       </div>
 
-      {/* Virtual Tour Features */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20 shadow-lg">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#b48828] to-[#d4af37] rounded-full flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"/>
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-[#264f28] mb-2">{t.virtualTour.features.views360.title}</h3>
-          <p className="text-sm text-[#264f28]/70">{t.virtualTour.features.views360.description}</p>
-        </div>
-
-        <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20 shadow-lg">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#264f28] to-[#2d5a30] rounded-full flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-[#264f28] mb-2">{t.virtualTour.features.navigation.title}</h3>
-          <p className="text-sm text-[#264f28]/70">{t.virtualTour.features.navigation.description}</p>
-        </div>
-
-        <div className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-2xl border border-[#b48828]/20 shadow-lg">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#b48828] to-[#d4af37] rounded-full flex items-center justify-center mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-              <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/>
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-[#264f28] mb-2">{t.virtualTour.features.walkthrough.title}</h3>
-          <p className="text-sm text-[#264f28]/70">{t.virtualTour.features.walkthrough.description}</p>
-        </div>
-      </div>
-
       {/* Villa Tour Selection */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 overflow-hidden sm:overflow-visible">
         {villas.map((villa) => (
-          <div key={villa.id} className="group cursor-pointer relative">
-            {/* Glow effect behind the card */}
-            <div
-              className="absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-10"
-              style={{
-                background: 'radial-gradient(circle, rgba(237,229,217,0.8) 0%, rgba(237,229,217,0.4) 50%, rgba(237,229,217,0) 100%)',
-                filter: 'blur(30px)',
-                transform: 'scale(1.2)'
-              }}
-            />
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-4 border-[#b48828]/30 overflow-hidden shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
+          <div key={villa.id} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden transition-all duration-300 sm:group-hover:scale-[1.02]">
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={villa.image}
                   alt={villa.name}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 sm:group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -154,27 +112,6 @@ export default function VirtualTourSection() {
                 </div>
               </div>
 
-              <div className="px-6 py-4 flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-4 w-full">
-                  <button
-                    className="px-3 py-4 bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 text-[#264f28] transition-all duration-300 hover:scale-[1.02] rounded-xl font-medium text-sm flex flex-col items-center justify-center gap-2"
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                      <circle cx="8.5" cy="8.5" r="1.5"/>
-                      <polyline points="21,15 16,10 5,21"/>
-                    </svg>
-                    {t.virtualTour.buttons.pictures}
-                  </button>
-                  <button className="px-3 py-4 bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 hover:bg-[#b48828]/20 transition-all duration-300 rounded-xl font-medium text-sm flex flex-col items-center justify-center gap-2">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M23 7L16 12 23 17V7Z"/>
-                      <rect width="15" height="14" x="1" y="5" rx="2" ry="2"/>
-                    </svg>
-                    {t.virtualTour.buttons.videoTour}
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         ))}

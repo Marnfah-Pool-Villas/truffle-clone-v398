@@ -11,7 +11,7 @@ export default function ContactFooter() {
     <footer className="bg-[#b48828]/10 border-t border-[#b48828]/20 backdrop-blur-sm" style={{ margin: 0, padding: 0, minHeight: 'auto', height: 'auto' }}>
       <div className="max-w-5xl mx-auto pt-6 pb-2 px-4 sm:px-6" style={{ margin: '0 auto', minHeight: 'auto', paddingBottom: '0.5rem' }}>
         <div className="flex flex-col sm:flex-row items-center justify-between text-[#264f28]/90 gap-y-4 sm:gap-y-0">
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-2 sm:-mt-3 md:-mt-5 lg:-mt-4">
             <div className="bg-[#b48828]/20 border border-[#b48828]/30 rounded-xl px-4 py-3 hover:bg-[#b48828]/30 transition-all duration-300">
               <div className="text-[#b48828] text-base font-medium flex items-center justify-center gap-3">
                 <img src="/leafy.jpg" alt="Leaf Logo" className="w-10 h-10 object-contain" />
