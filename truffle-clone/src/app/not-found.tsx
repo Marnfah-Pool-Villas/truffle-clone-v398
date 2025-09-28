@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+/* eslint-disable @next/next/no-html-link-for-pages */
+
 export default function NotFound() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-[#ede5d9] px-6 py-16 text-center">
