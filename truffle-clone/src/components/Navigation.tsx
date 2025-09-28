@@ -63,22 +63,21 @@ export default function Navigation() {
     }
   }, [])
 
-  const handleLanguageSelect = (selectedLang: { code: Language; name: string; currency: string }) => {
-    console.log('Language selected:', selectedLang.code)
-    hapticFeedback.selection()
-
-    // Close dropdown immediately
+  const handleLanguageSelect = useCallback(async (selectedLang: { code: Language; name: string; currency: string }) => {
     setIsLanguageDropdownOpen(false)
 
-    // Change language after a small delay to ensure dropdown closes first
-    setTimeout(() => {
-      setLanguage(selectedLang.code).then(() => {
-        console.log('Language changed successfully to:', selectedLang.code)
-      }).catch((error) => {
-        console.error('Failed to change language:', error)
-      })
-    }, 100)
-  }
+    if (selectedLang.code === language) {
+      return
+    }
+
+    hapticFeedback.selection()
+
+    try {
+      await setLanguage(selectedLang.code)
+    } catch (error) {
+      console.error('Failed to change language:', error)
+    }
+  }, [language, setLanguage])
 
   // (Removed Home navigation helper)
 
