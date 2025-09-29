@@ -94,7 +94,7 @@ export default function BrochurePage() {
   const galleryContent = useMemo(() => {
     if (isFetchingImages) {
       return (
-        <div className="flex flex-col border-t border-b border-[#b48828]/20">
+        <div className="flex flex-col border border-[#b48828]/20 rounded-2xl overflow-hidden">
           {Array.from({ length: 6 }).map((_, index) => (
             <div
               key={`brochure-skeleton-${index}`}
