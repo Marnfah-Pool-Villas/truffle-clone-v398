@@ -24,6 +24,7 @@ export async function GET() {
       .filter(entry => entry.isFile())
       .map(entry => entry.name)
       .filter(name => name.toLowerCase().endsWith('.webp'))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
       .map(name => ({
         src: `/brochure/${name}`,
         alt: formatAlt(name)
