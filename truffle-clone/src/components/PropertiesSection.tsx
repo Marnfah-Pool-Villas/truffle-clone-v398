@@ -130,8 +130,8 @@ export default function PropertiesSection() {
                 </div>
                 <div className="mt-4 flex justify-center md:justify-start">
                   <Link
-                    href="/brochure"
-                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#b48828]/40 bg-white/90 text-[#264f28] font-semibold italic tracking-wide shadow-sm hover:bg-[#b48828]/10 hover:text-[#b48828] transition-colors duration-300"
+                    href="/view"
+                    className="inline-flex items-center justify-center px-16 md:px-20 py-4 md:py-5 rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-lg md:text-xl font-semibold italic"
                   >
                     See All Villa Types ↗
                   </Link>
