@@ -1,0 +1,31 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
+import { useCallback } from 'react'
+import clsx from 'clsx'
+
+interface BrochureButtonProps {
+  children: React.ReactNode
+  className?: string
+}
+
+export default function BrochureButton({ children, className }: BrochureButtonProps) {
+  const router = useRouter()
+
+  const handleClick = useCallback(() => {
+    router.push('/brochure')
+  }, [router])
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      className={clsx(
+        'inline-flex items-center justify-center px-16 md:px-20 py-4 md:py-5 rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-lg md:text-xl font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48828]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent',
+        className
+      )}
+    >
+      {children}
+    </button>
+  )
+}
