@@ -50,7 +50,6 @@ export default function BrochurePage() {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false)
   const [isFetchingImages, setIsFetchingImages] = useState(true)
   const [images, setImages] = useState<BrochureImage[]>([])
-  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   useEffect(() => {
     const controller = new AbortController()
@@ -64,10 +63,9 @@ export default function BrochurePage() {
 
         const payload = (await response.json()) as { images?: BrochureImage[] }
         setImages(Array.isArray(payload.images) ? payload.images : [])
-        setErrorMessage(null)
       } catch (error) {
         if ((error as Error).name !== 'AbortError') {
-          setErrorMessage('Unable to load brochure assets right now. Please refresh or try again later.')
+          console.error('Unable to load brochure assets', error)
         }
       } finally {
         if (!controller.signal.aborted) {
@@ -76,8 +74,8 @@ export default function BrochurePage() {
       }
     }
 
-    loadImages().catch(() => {
-      setErrorMessage('Unable to load brochure assets right now. Please refresh or try again later.')
+    loadImages().catch(error => {
+      console.error('Unable to load brochure assets', error)
       setIsFetchingImages(false)
     })
 
