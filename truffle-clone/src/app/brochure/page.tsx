@@ -56,11 +56,11 @@ const FALLBACK_IMAGES: BrochureImage[] = [
   'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Ffc3f04c20d794de88bcaeafd2be9d113?format=webp&width=800',
   'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F8ed078e4b5cb4b5b8910954142fc7fd4?format=webp&width=800',
   'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fc4171d0ac7614f06b2d32c027a0a18a1?format=webp&width=800'
-].map(url => {
+].map((url, index) => {
   const cleanedUrl = removeWidthQuery(url)
   return {
     src: cleanedUrl,
-    alt: deriveAltFromPath(cleanedUrl)
+    alt: `Brochure Page ${index + 1}`
   }
 })
 
