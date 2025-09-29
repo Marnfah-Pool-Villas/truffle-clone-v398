@@ -30,7 +30,7 @@ export default function InvestmentSection() {
 
       {/* Key Investment Metrics */}
       <div className="grid grid-cols-1 gap-6 mb-8">
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#b48828]/20 text-center">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#b48828]/20 text-center lg:hidden">
           <div className="text-3xl font-bold text-[#264f28] mb-2">Up to 12%</div>
           <div className="text-[#b48828] font-medium mb-1">{t.investment.metrics.yield.title}</div>
           <div className="text-sm text-black/60">{t.investment.metrics.tax.subtitle}</div>
@@ -185,7 +185,12 @@ export default function InvestmentSection() {
             </svg>
             {t.investment.benefits.title}
           </h3>
-          <div className="space-y-6">
+          <div className="space-y-6 lg:pt-12 lg:space-y-10 lg:-translate-y-[0.5cm]">
+            <div className="hidden lg:block pb-5 border-b border-[#264f28]/10 text-center">
+              <div className="text-3xl font-bold text-[#264f28] mb-2">Up to 12%</div>
+              <div className="text-[#b48828] font-medium mb-1">{t.investment.metrics.yield.title}</div>
+              <div className="text-sm text-black/60">{t.investment.metrics.tax.subtitle}</div>
+            </div>
             <div className="flex items-start gap-3 pb-5 border-b border-[#264f28]/10">
               <div className="w-4 h-4 rounded-full mt-2" style={{backgroundColor: 'rgba(180, 136, 40, 0.3)'}}></div>
               <div>

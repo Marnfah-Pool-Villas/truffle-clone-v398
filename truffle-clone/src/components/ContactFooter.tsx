@@ -26,7 +26,7 @@ export default function ContactFooter() {
                 onClick={() => hapticFeedback.light()}
                 className="bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-l-xl px-3 py-2 transition-all duration-300 hover:scale-105 transform flex items-center justify-center group"
               >
-                <span className="text-[#264f28] text-xs font-medium">{t.footer.whatsapp}</span>
+                <span className="text-[#264f28] text-xs font-medium">WhatsApp</span>
               </a>
               <a
                 href="weixin://dl/chat?MarnfahVillas"
@@ -35,7 +35,7 @@ export default function ContactFooter() {
                 onClick={() => hapticFeedback.light()}
                 className="bg-[#264f28]/10 hover:bg-[#264f28]/20 border-y border-[#264f28]/20 hover:border-[#264f28]/40 px-3 py-2 transition-all duration-300 hover:scale-105 transform flex items-center justify-center group"
               >
-                <span className="text-[#264f28] text-xs font-medium">{t.footer.wechat}</span>
+                <span className="text-[#264f28] text-xs font-medium">WeChat</span>
               </a>
               <a
                 href="https://line.me/ti/p/MarnfahPoolVillas"
@@ -44,7 +44,7 @@ export default function ContactFooter() {
                 onClick={() => hapticFeedback.light()}
                 className="bg-[#264f28]/10 hover:bg-[#264f28]/20 border border-[#264f28]/20 hover:border-[#264f28]/40 rounded-r-xl px-3 py-2 transition-all duration-300 hover:scale-105 transform flex items-center justify-center group"
               >
-                <span className="text-[#264f28] text-xs font-medium">{t.footer.line}</span>
+                <span className="text-[#264f28] text-xs font-medium">Line</span>
               </a>
             </div>
 
@@ -61,7 +61,7 @@ export default function ContactFooter() {
               sizes="(max-width: 768px) 300px, 400px"
               className="h-16 w-auto object-contain mb-3"
             />
-            <p className="text-[#264f28]/70 text-sm">{t.footer.copyright}</p>
+            <p className="text-[#264f28]/70 text-sm">© 2025 MCLL ASIA CO.</p>
             {/* Tiny spacing below copyright */}
             <div className="h-2"></div>
           </div>

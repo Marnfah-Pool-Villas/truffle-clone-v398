@@ -168,14 +168,14 @@ const englishTranslationsData = {
           description: "Personal use rights with luxury amenities"
         },
         ownership: {
-          title: "Freehold Ownership",
-          description: "90-year lease structures with inheritance rights"
+          title: "Lease & Freehold Ownership",
+          description: "Properly structured with inheritance rights"
         }
       }
     },
     stability: {
       title: "Thailand Economic Stability & Growth",
-      description: "Thailand's stable political environment, robust tourism industry, and the strategic location of Southeast Asia has created a world-class market for investors. The government's pro-investment policies and immense infrastructure development continue to drive smart money opportunities.",
+      description: "Thailand's stable political environment and robust tourism industry within Southeast Asia has created an exponential market for investors. The government's pro-investment policies and rapid infrastructure development shows the next decades are fruitful.",
       metrics: {
         rating: {
           title: "Credit Rating",
@@ -193,7 +193,7 @@ const englishTranslationsData = {
     }
   },
   virtualTour: {
-    title: "Virtual Villa Experience",
+    title: "Luxury Villa Experience",
     subtitle: "Explore our luxury villas with immersive 360° tours",
     features: {
       views360: {

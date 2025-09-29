@@ -1,5 +1,7 @@
 // CACHE BUST v68 - FORCED VILLA ORDER: Tranquility (12.3M) → Serenity (18.8M) → Harmony (23.4M) THB
 
+import Link from 'next/link'
+import BrochureButton from '@/components/BrochureButton'
 import { useTranslation } from '@/lib/useTranslation'
 
 export default function PropertiesSection() {
@@ -127,6 +129,20 @@ export default function PropertiesSection() {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="mt-10 mb-10 md:mt-12 md:mb-12 flex flex-col items-center gap-4 md:flex-col md:items-start">
+                <Link
+                  href="/view"
+                  className="inline-flex items-center justify-center px-10 md:px-12 py-3 md:py-3.5 min-w-[11rem] rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#264f28]/20 hover:border-[#264f28]/40 hover:scale-105 text-base md:text-lg font-normal mt-[1cm] md:mt-[1cm] lg:mt-0"
+                >
+                  <span className="inline-flex items-center gap-2">
+                    See All Villa Types
+                    <span aria-hidden="true">↗</span>
+                  </span>
+                </Link>
+                <BrochureButton className="font-normal min-w-[11rem]">
+                  {t.exclusive.buttonText}
+                </BrochureButton>
               </div>
           </div>
         </div>
