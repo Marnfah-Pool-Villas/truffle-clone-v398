@@ -1,5 +1,6 @@
 // CACHE BUST v68 - FORCED VILLA ORDER: Tranquility (12.3M) → Serenity (18.8M) → Harmony (23.4M) THB
 
+import Link from 'next/link'
 import { useTranslation } from '@/lib/useTranslation'
 
 export default function PropertiesSection() {
