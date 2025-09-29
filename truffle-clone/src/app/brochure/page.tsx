@@ -131,7 +131,7 @@ export default function BrochurePage() {
         <Navigation />
         <PageTransition>
           <main className="w-full overflow-hidden" style={{ margin: 0, padding: 0 }}>
-            <section className="bg-[#ede5d9]/25 pt-0 sm:pt-0 lg:pt-0 pb-12 sm:pb-16 lg:pb-20">
+            <section className="bg-[#ede5d9]/25 pt-0 sm:pt-0 lg:pt-0 pb-8 sm:pb-10 lg:pb-12">
               <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 {galleryContent}
               </div>
