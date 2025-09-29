@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import HeroSection from '@/components/HeroSection'
+import BrochureButton from '@/components/BrochureButton'
 import PropertiesSection from '@/components/PropertiesSection'
 import AmenitiesSection from '@/components/AmenitiesSection'
 import ExclusiveSection from '@/components/ExclusiveSection'
