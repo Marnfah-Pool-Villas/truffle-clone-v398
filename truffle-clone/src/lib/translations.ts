@@ -193,7 +193,7 @@ const englishTranslationsData = {
     }
   },
   virtualTour: {
-    title: "Virtual Villa Experience",
+    title: "Luxury Villa Experience",
     subtitle: "Explore our luxury villas with immersive 360° tours",
     features: {
       views360: {
