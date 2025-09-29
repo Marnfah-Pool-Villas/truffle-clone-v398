@@ -116,27 +116,7 @@ export default function MapPage() {
                   </div>
                 )}
 
-                <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/30 backdrop-blur-sm mt-6 sm:mt-8 mb-8 sm:mb-10 aspect-[1980/1488]">
-                  <iframe
-                    src="https://maps.google.com/maps?q=Pattaya%20Thailand&z=12&output=embed"
-                    title="Pattaya Map"
-                    className="absolute inset-0 w-full h-full"
-                    loading="lazy"
-                    allowFullScreen
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                  <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-md rounded-xl px-4 py-2 text-[#264f28] shadow-lg">
-                    <span className="text-sm font-medium">12.8°N, 100.9°E</span>
-                  </div>
-                </div>
-
-                {mapAdjacentHighlight && (
-                  <div className="flex justify-center mt-6 sm:mt-8">
-                    {renderHighlightCard(mapAdjacentHighlight)}
-                  </div>
-                )}
-
-                <div className="relative mt-10 sm:mt-12 lg:mt-16">
+                <div className="relative mt-6 sm:mt-8 lg:mt-10 mb-8 sm:mb-10">
                   <div
                     className="absolute inset-0 w-full h-full rounded-3xl opacity-20 -z-10"
                     style={{
@@ -152,6 +132,26 @@ export default function MapPage() {
                       className="w-full h-auto object-contain transform scale-[1.009]"
                       style={{ transformOrigin: 'center left' }}
                     />
+                  </div>
+                </div>
+
+                {mapAdjacentHighlight && (
+                  <div className="flex justify-center mt-6 sm:mt-8">
+                    {renderHighlightCard(mapAdjacentHighlight)}
+                  </div>
+                )}
+
+                <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/30 backdrop-blur-sm mt-10 sm:mt-12 lg:mt-16 mb-8 sm:mb-10 aspect-[1980/1488]">
+                  <iframe
+                    src="https://maps.google.com/maps?q=Pattaya%20Thailand&z=12&output=embed"
+                    title="Pattaya Map"
+                    className="absolute inset-0 w-full h-full"
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                  <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-md rounded-xl px-4 py-2 text-[#264f28] shadow-lg">
+                    <span className="text-sm font-medium">12.8°N, 100.9°E</span>
                   </div>
                 </div>
 
