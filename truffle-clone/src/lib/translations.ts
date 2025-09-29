@@ -168,8 +168,8 @@ const englishTranslationsData = {
           description: "Personal use rights with luxury amenities"
         },
         ownership: {
-          title: "Freehold Ownership",
-          description: "90-year lease structures with inheritance rights"
+          title: "Lease & Freehold Ownership",
+          description: "Properly structured with inheritance rights"
         }
       }
     },
