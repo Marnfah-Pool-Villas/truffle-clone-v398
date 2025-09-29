@@ -12,6 +12,58 @@ interface BrochureImage {
   alt: string
 }
 
+const removeWidthQuery = (url: string): string => url.replace(/&width=\d+/u, '')
+
+const deriveAltFromPath = (value: string): string => {
+  const cleaned = value
+    .replace(/\?.*$/u, '')
+    .split('/')
+    .pop()
+
+  if (!cleaned) {
+    return 'Brochure Image'
+  }
+
+  return cleaned
+    .replace(/\.[^.]+$/u, '')
+    .replace(/[-_]+/gu, ' ')
+    .replace(/\s+/gu, ' ')
+    .trim()
+    .replace(/\b\w/gu, match => match.toUpperCase())
+}
+
+const FALLBACK_IMAGES: BrochureImage[] = [
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F3a964a2b72a94a3899fa444eaddd254a?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fd79e433943024a1382ca0858218c6bbf?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Faf59ca04394e445b8aae2f7089f4dc37?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fb32de40fc1b54393b2aae50c545dc975?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F07db7127f85249d1a543b3a561e63ace?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F05b9b8dcab944b7ab46515d8562352e4?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F0d3b33d6ad8943f5aeb1fc27d27ca103?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Ffd1b5c27aea94918a779f9915bc9f52a?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F492e9aaf524a4cbb9512c62199258efb?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fe5f9ab2e7fd24d32b684933c677c4d9d?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F6dcbd13430e1492eae4c3f04d9ecb818?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Ff916b93693e149bcad99d86cdaa88f9e?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Faeaea1c858504ece9ee54ad3c5dfc6e0?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F897b11e2e9354328afe22e47e4e703c4?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Ff40216105f7340d590c2b2752c063e98?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F3ca55f3b39bc4de499871b4a8f16f7b6?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fae4763bca63a4230bb8ea0e4f5a423cc?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F3867eac59d634329b0ef455431e266d2?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fee3f37e7d3b04e838b2f0905b9083725?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F34f853a90ea34379a91a93d40545df06?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Ffc3f04c20d794de88bcaeafd2be9d113?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F8ed078e4b5cb4b5b8910954142fc7fd4?format=webp&width=800',
+  'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fc4171d0ac7614f06b2d32c027a0a18a1?format=webp&width=800'
+].map(url => {
+  const cleanedUrl = removeWidthQuery(url)
+  return {
+    src: cleanedUrl,
+    alt: deriveAltFromPath(cleanedUrl)
+  }
+})
+
 export default function BrochurePage() {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false)
   const [isFetchingImages, setIsFetchingImages] = useState(true)
@@ -52,52 +104,41 @@ export default function BrochurePage() {
     }
   }, [])
 
+  const resolvedImages = useMemo(() => {
+    if (images.length > 0) {
+      return [...images].sort((a, b) => a.src.localeCompare(b.src, undefined, { numeric: true, sensitivity: 'base' }))
+    }
+    return [...FALLBACK_IMAGES]
+  }, [images])
+
   const galleryContent = useMemo(() => {
     if (isFetchingImages) {
       return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="flex flex-col mt-8">
           {Array.from({ length: 6 }).map((_, index) => (
             <div
               key={`brochure-skeleton-${index}`}
-              className="h-48 sm:h-56 lg:h-64 rounded-2xl bg-[#264f28]/10 animate-pulse"
+              className="w-full aspect-[3/2] bg-[#264f28]/10 animate-pulse"
             />
           ))}
         </div>
       )
     }
 
-    if (images.length === 0) {
-      return (
-        <div className="max-w-3xl mx-auto text-center mt-10 bg-white/60 border border-[#b48828]/20 rounded-2xl px-6 py-10">
-          <h2 className="text-2xl font-semibold text-[#264f28] mb-3">Brochure gallery is empty</h2>
-          <p className="text-[#264f28]/70 leading-relaxed">
-            Upload .webp files into <code className="bg-[#b48828]/10 px-2 py-1 rounded">public/brochure</code> and refresh this page to see your brochure collection automatically.
-          </p>
-        </div>
-      )
-    }
-
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {images.map(image => (
-          <figure
+      <div className="flex flex-col mt-8">
+        {resolvedImages.map(image => (
+          <img
             key={image.src}
-            className="group relative overflow-hidden rounded-2xl border border-[#b48828]/20 bg-white/80 backdrop-blur-sm shadow-lg"
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
-            />
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white px-4 py-3 text-sm font-medium">
-              {image.alt}
-            </figcaption>
-          </figure>
+            src={image.src}
+            alt={image.alt}
+            className="w-full h-auto block"
+            loading="lazy"
+          />
         ))}
       </div>
     )
-  }, [images, isFetchingImages])
+  }, [isFetchingImages, resolvedImages])
 
   return (
     <div className="antialiased" style={{ margin: 0, padding: 0 }}>
