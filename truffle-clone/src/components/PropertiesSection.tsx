@@ -128,6 +128,14 @@ export default function PropertiesSection() {
                     </div>
                   </div>
                 </div>
+                <div className="mt-4 flex justify-center md:justify-start">
+                  <Link
+                    href="/brochure"
+                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#b48828]/40 bg-white/90 text-[#264f28] font-semibold italic tracking-wide shadow-sm hover:bg-[#b48828]/10 hover:text-[#b48828] transition-colors duration-300"
+                  >
+                    See All Villa Types ↗
+                  </Link>
+                </div>
               </div>
           </div>
         </div>
