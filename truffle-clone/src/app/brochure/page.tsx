@@ -14,24 +14,6 @@ interface BrochureImage {
 
 const removeWidthQuery = (url: string): string => url.replace(/&width=\d+/u, '')
 
-const deriveAltFromPath = (value: string): string => {
-  const cleaned = value
-    .replace(/\?.*$/u, '')
-    .split('/')
-    .pop()
-
-  if (!cleaned) {
-    return 'Brochure Image'
-  }
-
-  return cleaned
-    .replace(/\.[^.]+$/u, '')
-    .replace(/[-_]+/gu, ' ')
-    .replace(/\s+/gu, ' ')
-    .trim()
-    .replace(/\b\w/gu, match => match.toUpperCase())
-}
-
 const FALLBACK_IMAGES: BrochureImage[] = [
   'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F3a964a2b72a94a3899fa444eaddd254a?format=webp&width=800',
   'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fd79e433943024a1382ca0858218c6bbf?format=webp&width=800',
