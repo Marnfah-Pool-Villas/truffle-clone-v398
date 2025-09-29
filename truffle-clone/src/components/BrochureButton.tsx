@@ -21,7 +21,7 @@ export default function BrochureButton({ children, className }: BrochureButtonPr
       type="button"
       onClick={handleClick}
       className={clsx(
-        'inline-flex items-center justify-center px-14 md:px-16 py-3.5 md:py-4 rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-base md:text-lg font-normal focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48828]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent',
+        'inline-flex items-center justify-center px-12 md:px-14 py-3 md:py-3.5 rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-base md:text-lg font-normal focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48828]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent',
         className
       )}
     >
