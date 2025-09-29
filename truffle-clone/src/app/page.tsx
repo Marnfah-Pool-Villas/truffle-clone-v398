@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import HeroSection from '@/components/HeroSection'
 import BrochureButton from '@/components/BrochureButton'
@@ -38,10 +39,16 @@ export default function Home() {
             <div className="relative w-full" style={{ margin: 0, padding: 0 }}>
               <HeroSection />
               {/* View Brochure Button - positioned between hero and properties */}
-              <div className="w-full flex justify-center mt-1 md:mt-6 lg:mt-12 xl:mt-15 mb-6 md:mb-10 lg:mb-12">
+              <div className="w-full flex flex-wrap items-center justify-center gap-4 mt-1 md:mt-6 lg:mt-12 xl:mt-15 mb-6 md:mb-10 lg:mb-12">
                 <BrochureButton>
                   {t.exclusive.buttonText}
                 </BrochureButton>
+                <Link
+                  href="/view"
+                  className="inline-flex items-center justify-center px-16 md:px-20 py-4 md:py-5 rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-lg md:text-xl font-semibold italic"
+                >
+                  See All Villa Types ↗
+                </Link>
               </div>
               <section id="properties">
                 <PropertiesSection />
