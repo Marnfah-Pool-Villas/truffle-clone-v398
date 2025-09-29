@@ -76,6 +76,33 @@ export default function MapPage() {
   const [mapAdjacentHighlight, ...secondaryHighlights] = otherHighlights
   const isSingleSecondaryHighlight = secondaryHighlights.length === 1
 
+  const staticMapCard = (
+    <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/10 backdrop-blur-sm">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F2ab8e8c603ef4f25996b3b87dfc135eb?format=webp"
+        alt="Marnfah Pool Villas location map overview"
+        className="w-full h-auto object-contain transform scale-[1.009]"
+        style={{ transformOrigin: 'center left' }}
+      />
+    </div>
+  )
+
+  const googleMapCard = (
+    <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/30 backdrop-blur-sm aspect-[1980/1488]">
+      <iframe
+        src="https://maps.google.com/maps?q=Pattaya%20Thailand&z=12&output=embed"
+        title="Pattaya Map"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+      <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-md rounded-xl px-4 py-2 text-[#264f28] shadow-lg">
+        <span className="text-sm font-medium">12.8°N, 100.9°E</span>
+      </div>
+    </div>
+  )
+
   return (
     <div className="antialiased min-h-screen">
       {!isLoadingComplete && (
