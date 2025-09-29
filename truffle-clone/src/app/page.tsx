@@ -37,7 +37,7 @@ export default function Home() {
             <div className="relative w-full" style={{ margin: 0, padding: 0 }}>
               <HeroSection />
               {/* View Brochure Button - positioned between hero and properties */}
-              <div className="w-full flex justify-center mt-3 md:mt-9 lg:mt-12 xl:mt-15 mb-6 md:mb-10 lg:mb-12">
+              <div className="w-full flex justify-center mt-[0.5625rem] md:mt-[1.6875rem] lg:mt-12 xl:mt-15 mb-6 md:mb-10 lg:mb-12">
                 <button className="px-16 md:px-20 py-4 md:py-5 rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-lg md:text-xl font-medium">
                   {t.exclusive.buttonText}
                 </button>
