@@ -106,7 +106,7 @@ export default function BrochurePage() {
     }
 
     return (
-      <div className="flex flex-col border-t border-b border-[#b48828]/20">
+      <div className="flex flex-col border border-[#b48828]/20 rounded-2xl overflow-hidden">
         {resolvedImages.map(image => (
           <img
             key={image.src}
