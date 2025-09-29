@@ -152,14 +152,7 @@ export default function MapPage() {
                       transform: 'scale(1.05)'
                     }}
                   />
-                  <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/10 backdrop-blur-sm">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F2ab8e8c603ef4f25996b3b87dfc135eb?format=webp"
-                      alt="Marnfah Pool Villas location map overview"
-                      className="w-full h-auto object-contain transform scale-[1.009]"
-                      style={{ transformOrigin: 'center left' }}
-                    />
-                  </div>
+                  {staticMapCard}
                 </div>
 
                 {mapAdjacentHighlight && (
