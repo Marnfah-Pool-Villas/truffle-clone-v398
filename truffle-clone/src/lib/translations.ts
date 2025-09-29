@@ -175,7 +175,7 @@ const englishTranslationsData = {
     },
     stability: {
       title: "Thailand Economic Stability & Growth",
-      description: "Thailand's stable political environment, robust tourism industry, and the strategic location of Southeast Asia has created a world-class market for investors. The government's pro-investment policies and immense infrastructure development continue to drive smart money opportunities.",
+      description: "Thailand's stable political environment and robust tourism industry within Southeast Asia has created an exponential market for investors. The government's pro-investment policies and immense infrastructure development continue to drive smart money opportunities.",
       metrics: {
         rating: {
           title: "Credit Rating",
