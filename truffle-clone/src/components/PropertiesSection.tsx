@@ -133,14 +133,14 @@ export default function PropertiesSection() {
               <div className="mt-10 mb-10 md:mt-12 md:mb-12 flex flex-wrap items-center justify-center gap-4 md:justify-start">
                 <Link
                   href="/view"
-                  className="inline-flex items-center justify-center px-12 md:px-14 py-3 md:py-3.5 min-w-[13.5rem] rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-base md:text-lg font-normal"
+                  className="inline-flex items-center justify-center px-10 md:px-12 py-3 md:py-3.5 min-w-[11rem] rounded-2xl bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#b48828]/20 hover:scale-105 text-base md:text-lg font-normal"
                 >
                   <span className="inline-flex items-center gap-2">
                     See All Villa Types
                     <span aria-hidden="true">↗</span>
                   </span>
                 </Link>
-                <BrochureButton className="font-normal min-w-[13.5rem]">
+                <BrochureButton className="font-normal min-w-[11rem]">
                   {t.exclusive.buttonText}
                 </BrochureButton>
               </div>
