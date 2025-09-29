@@ -25,7 +25,10 @@ export default function BrochureButton({ children, className }: BrochureButtonPr
         className
       )}
     >
-      {children}
+      <span className="inline-flex items-center gap-2">
+        {children}
+        <span aria-hidden="true">↗</span>
+      </span>
     </button>
   )
 }
