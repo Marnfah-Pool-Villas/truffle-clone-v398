@@ -9,6 +9,15 @@ import { hapticFeedback } from '@/lib/haptics'
 import { useTranslation, languageInfo } from '@/lib/useTranslation'
 import type { Language } from '@/lib/translations'
 
+const stripNavArrow = (value: string | undefined, fallback: string): string => {
+  if (typeof value !== 'string') {
+    return fallback
+  }
+
+  const cleaned = value.replace(/↗/gu, '').trim()
+  return cleaned.length > 0 ? cleaned : fallback
+}
+
 export default function Navigation() {
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
@@ -149,7 +158,7 @@ export default function Navigation() {
                 onClick={() => hapticFeedback.light()}
                 className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
               >
-                <span>{t.nav.map?.replace(' ↗', '') ?? 'Map'}</span>
+                <span>{stripNavArrow(t.nav.map, 'Map')}</span>
                 <span className="text-xl lg:text-2xl">↗</span>
               </Link>
               <Link
@@ -157,7 +166,7 @@ export default function Navigation() {
                 onClick={() => hapticFeedback.light()}
                 className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
               >
-                <span>{t.nav.location.replace(' ↗', '')}</span>
+                <span>{stripNavArrow(t.nav.location, 'Gallery')}</span>
                 <span className="text-xl lg:text-2xl">↗</span>
               </Link>
               <Link
@@ -165,7 +174,7 @@ export default function Navigation() {
                 onClick={() => hapticFeedback.light()}
                 className="hidden md:flex text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2 lg:px-3 py-2.5 lg:py-4 rounded-lg hover:bg-[#b48828]/5 text-lg lg:text-xl items-center gap-1"
               >
-                <span>{t.nav.wealth.replace(' ↗', '')}</span>
+                <span>{stripNavArrow(t.nav.wealth, 'Market')}</span>
                 <span className="text-xl lg:text-2xl">↗</span>
               </Link>
             </div>
@@ -179,7 +188,7 @@ export default function Navigation() {
               className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
             >
               <span className="text-lg">↗</span>
-              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.map?.replace(' ↗', '') ?? 'Map'}</span>
+              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{stripNavArrow(t.nav.map, 'Map')}</span>
             </Link>
             <Link
               href="/view"
@@ -187,7 +196,7 @@ export default function Navigation() {
               className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
             >
               <span className="text-lg">↗</span>
-              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.location.replace(' ↗', '')}</span>
+              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{stripNavArrow(t.nav.location, 'Gallery')}</span>
             </Link>
             <Link
               href="/capital"
@@ -195,7 +204,7 @@ export default function Navigation() {
               className="text-[#264f28] font-medium hover:text-[#b48828] transition-all duration-300 hover:scale-105 hover:drop-shadow-md transform px-2.5 py-1.5 rounded-md hover:bg-[#b48828]/5 text-base flex flex-col items-center w-16 h-16"
             >
               <span className="text-lg">↗</span>
-              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{t.nav.wealth.replace(' ↗', '')}</span>
+              <span className={`font-medium ${language === 'en' ? 'text-base' : language === 'ru' ? 'text-xs' : language === 'ja' ? 'text-sm' : 'text-base'}`}>{stripNavArrow(t.nav.wealth, 'Market')}</span>
             </Link>
           </div>
 
