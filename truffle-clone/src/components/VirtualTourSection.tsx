@@ -96,7 +96,7 @@ export default function VirtualTourSection() {
       </div>
 
       {/* Villa Tour Selection */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 overflow-hidden sm:overflow-visible">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 overflow-hidden sm:overflow-visible">
         {villas.map((villa) => (
           <div key={villa.id} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden transition-all duration-300 sm:group-hover:scale-[1.02]">
