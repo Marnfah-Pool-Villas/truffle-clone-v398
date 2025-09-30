@@ -34,7 +34,7 @@ export default function PropertiesSection() {
           </div>
 
           {/* Villa Grid - Three columns on desktop, single column on mobile */}
-          <div className="w-full space-y-6 lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-10 lg:space-y-0 mt-6 villa-section-no-scroll villa-container-static">
+          <div className="w-full space-y-6 lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-10 lg:space-y-0 mt-6 lg:mt-0 villa-section-no-scroll villa-container-static">
               {/* FIRST VILLA: Harmony - MOST EXPENSIVE at ฿23.4M THB */}
               <div className="w-full group relative villa-container-static">
                 {/* Glow effect behind the image */}
