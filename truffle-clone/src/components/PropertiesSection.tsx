@@ -35,7 +35,7 @@ export default function PropertiesSection() {
 
           {/* Villa Grid - Three columns on desktop, single column on mobile */}
           <div className="w-full space-y-6 lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-10 lg:space-y-0 mt-6 villa-section-no-scroll villa-container-static">
-              {/* FIRST VILLA: Tranquility - CHEAPEST at ฿12.3M THB */}
+              {/* FIRST VILLA: Harmony - MOST EXPENSIVE at ฿23.4M THB */}
               <div className="w-full group relative villa-container-static">
                 {/* Glow effect behind the image */}
                 <div
@@ -48,17 +48,17 @@ export default function PropertiesSection() {
                 />
                 <div className="relative aspect-[4/3] lg:aspect-[3/4] xl:aspect-square rounded-3xl md:shadow-2xl w-full overflow-hidden border-8 border-[#b48828]/30">
                   <img
-                    src="/villa4.jpg"
-                    alt="Tranquility - Contemporary Pool Villa"
+                    src="/villa2.jpg"
+                    alt="Harmony - Luxury Pool Terrace Villa"
                     className="w-full h-full object-cover"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6 text-white">
                     <div className="text-center md:text-left">
-                      <h3 className="text-lg lg:text-xl font-semibold mb-0.5">{t.properties.villa1.name}</h3>
+                      <h3 className="text-lg lg:text-xl font-semibold mb-0.5">{t.properties.villa3.name}</h3>
                       <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
-                        {t.properties.villa1.features}
+                        {t.properties.villa3.features}
                         <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
                               style={{boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)'}}></span>
                       </p>
@@ -99,7 +99,7 @@ export default function PropertiesSection() {
                 </div>
               </div>
 
-              {/* THIRD VILLA: Harmony - MOST EXPENSIVE at ฿23.4M THB */}
+              {/* THIRD VILLA: Tranquility - CHEAPEST at ฿12.3M THB */}
               <div className="w-full group relative villa-container-static">
                 {/* Glow effect behind the image */}
                 <div
@@ -112,17 +112,17 @@ export default function PropertiesSection() {
                 />
                 <div className="relative aspect-[4/3] lg:aspect-[3/4] xl:aspect-square rounded-3xl md:shadow-2xl w-full overflow-hidden border-8 border-[#b48828]/30">
                   <img
-                    src="/villa2.jpg"
-                    alt="Harmony - Luxury Pool Terrace Villa"
+                    src="/villa4.jpg"
+                    alt="Tranquility - Contemporary Pool Villa"
                     className="w-full h-full object-cover"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6 text-white">
                     <div className="text-center md:text-left">
-                      <h3 className="text-lg lg:text-xl font-semibold mb-0.5">{t.properties.villa3.name}</h3>
+                      <h3 className="text-lg lg:text-xl font-semibold mb-0.5">{t.properties.villa1.name}</h3>
                       <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
-                        {t.properties.villa3.features}
+                        {t.properties.villa1.features}
                         <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
                               style={{boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)'}}></span>
                       </p>
