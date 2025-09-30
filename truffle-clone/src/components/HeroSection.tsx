@@ -72,7 +72,7 @@ export default function HeroSection() {
             </div>
             <div className="relative w-full px-4 md:px-8 lg:px-12">
               <div>
-                <p className="text-[15px] text-white text-center font-medium lg:text-[22px] xl:text-[24px]" style={{
+                <p className="text-[15px] text-white text-center font-medium md:text-[19px] lg:text-[22px] xl:text-[24px]" style={{
                   WebkitTextStroke: '0.1px #d4af37',
                   textShadow: '0 0 0.5px #d4af37',
                   lineHeight: '1.6'
