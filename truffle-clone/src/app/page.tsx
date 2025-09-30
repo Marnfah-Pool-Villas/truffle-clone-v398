@@ -38,7 +38,7 @@ export default function Home() {
             <div className="relative w-full" style={{ margin: 0, padding: 0 }}>
               <HeroSection />
               {/* View Brochure Button - positioned between hero and properties */}
-              <section id="properties">
+              <section id="properties" className="-mt-[0.5cm]">
                 <PropertiesSection />
               </section>
               <section id="amenities">
