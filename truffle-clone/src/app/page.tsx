@@ -41,7 +41,7 @@ export default function Home() {
               <section id="properties" className="-mt-[0.5cm]">
                 <PropertiesSection />
               </section>
-              <section id="amenities">
+              <section id="amenities" className="-mt-[0.5cm]">
                 <AmenitiesSection />
               </section>
               <ExclusiveSection />
