@@ -69,6 +69,12 @@ export default function VirtualTourSection() {
     setCurrentRoom(0)
   }
 
+  const villaDetails: Record<string, string> = {
+    type1: '5 Bed - 6 Bath - 592 sqm.',
+    type2: '4 Bed - 5 Bath - 457 sqm.',
+    type3: '4 Bed - 5 Bath - 382.5 sqm.'
+  }
+
   const selectedVillaData = villas.find(v => v.id === selectedVilla)
 
   return (
