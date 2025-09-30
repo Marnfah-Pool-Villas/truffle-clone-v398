@@ -12,12 +12,12 @@ export default function PropertiesSection() {
       <div className="bg-[#ede5d9]/50 w-full villa-section-no-scroll">
         <div className="flex flex-col gap-y-4 max-w-7xl mx-auto pt-0 pb-6 sm:pb-10 px-4 sm:px-6 villa-section-no-scroll">
           <div className="relative flex flex-col items-center md:items-start">
-            <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4">
+            <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4 lg:pl-[0.5cm] lg:mt-[0.5cm]">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z"/>
               </svg>
             </div>
-            <div className="relative mb-6 text-center md:text-left">
+            <div className="relative mb-6 text-center md:text-left lg:pl-[0.5cm]">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
                 <span className="relative inline-block">
                   <span className="absolute -inset-2 bg-gradient-to-r from-[#264f28]/20 via-[#264f28]/10 to-transparent rounded-2xl blur-sm"></span>
@@ -26,16 +26,16 @@ export default function PropertiesSection() {
                   </span>
                 </span>
               </h1>
-              <div className="absolute -top-2 left-0 md:left-0 right-0 md:right-auto mx-auto md:mx-0 w-16 h-1 bg-gradient-to-r from-[#b48828] to-[#d4af37] rounded-full"></div>
+              <div className="absolute -top-2 left-0 md:left-0 right-0 md:right-auto mx-auto md:mx-0 w-16 h-1 bg-gradient-to-r from-[#b48828] to-[#d4af37] rounded-full lg:left-[0.5cm]"></div>
             </div>
           </div>
-          <div className="text-lg sm:text-xl text-[#264f28] leading-relaxed text-center md:text-left whitespace-pre-line">
+          <div className="text-lg sm:text-xl text-[#264f28] leading-relaxed text-center md:text-left whitespace-pre-line lg:pl-[0.5cm] lg:mb-[0.5cm]">
             {t.properties.description}
           </div>
 
           {/* Villa Grid - Three columns on desktop, single column on mobile */}
-          <div className="w-full space-y-6 lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-10 lg:space-y-0 mt-6 villa-section-no-scroll villa-container-static">
-              {/* FIRST VILLA: Tranquility - CHEAPEST at ฿12.3M THB */}
+          <div className="w-full space-y-6 lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-10 lg:space-y-0 mt-6 lg:mt-0 villa-section-no-scroll villa-container-static">
+              {/* FIRST VILLA: Harmony - MOST EXPENSIVE at ฿23.4M THB */}
               <div className="w-full group relative villa-container-static">
                 {/* Glow effect behind the image */}
                 <div
@@ -48,17 +48,17 @@ export default function PropertiesSection() {
                 />
                 <div className="relative aspect-[4/3] lg:aspect-[3/4] xl:aspect-square rounded-3xl md:shadow-2xl w-full overflow-hidden border-8 border-[#b48828]/30">
                   <img
-                    src="/villa4.jpg"
-                    alt="Tranquility - Contemporary Pool Villa"
+                    src="/villa2.jpg"
+                    alt="Harmony - Luxury Pool Terrace Villa"
                     className="w-full h-full object-cover"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6 text-white">
                     <div className="text-center md:text-left">
-                      <h3 className="text-lg lg:text-xl font-semibold mb-0.5">{t.properties.villa1.name}</h3>
+                      <h3 className="text-lg lg:text-xl font-semibold mb-0.5">{t.properties.villa3.name}</h3>
                       <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
-                        {t.properties.villa1.features}
+                        {t.properties.villa3.features}
                         <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
                               style={{boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)'}}></span>
                       </p>
@@ -99,7 +99,7 @@ export default function PropertiesSection() {
                 </div>
               </div>
 
-              {/* THIRD VILLA: Harmony - MOST EXPENSIVE at ฿23.4M THB */}
+              {/* THIRD VILLA: Tranquility - CHEAPEST at ฿12.3M THB */}
               <div className="w-full group relative villa-container-static">
                 {/* Glow effect behind the image */}
                 <div
@@ -112,17 +112,17 @@ export default function PropertiesSection() {
                 />
                 <div className="relative aspect-[4/3] lg:aspect-[3/4] xl:aspect-square rounded-3xl md:shadow-2xl w-full overflow-hidden border-8 border-[#b48828]/30">
                   <img
-                    src="/villa2.jpg"
-                    alt="Harmony - Luxury Pool Terrace Villa"
+                    src="/villa4.jpg"
+                    alt="Tranquility - Contemporary Pool Villa"
                     className="w-full h-full object-cover"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6 text-white">
                     <div className="text-center md:text-left">
-                      <h3 className="text-lg lg:text-xl font-semibold mb-0.5">{t.properties.villa3.name}</h3>
+                      <h3 className="text-lg lg:text-xl font-semibold mb-0.5">{t.properties.villa1.name}</h3>
                       <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
-                        {t.properties.villa3.features}
+                        {t.properties.villa1.features}
                         <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
                               style={{boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)'}}></span>
                       </p>
@@ -130,10 +130,10 @@ export default function PropertiesSection() {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 mb-10 md:mt-12 md:mb-12 flex flex-col items-center gap-4 md:flex-col md:items-start">
+              <div className="mt-10 mb-[0.25cm] md:mb-0 md:mt-12 flex flex-col items-center gap-4 md:items-center lg:col-start-2 lg:mt-[1cm] pb-[0.5cm] sm:pb-0">
                 <Link
                   href="/view"
-                  className="inline-flex items-center justify-center px-10 md:px-12 py-3 md:py-3.5 min-w-[11rem] rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#264f28]/20 hover:border-[#264f28]/40 hover:scale-105 text-base md:text-lg font-normal mt-[1cm] md:mt-[1cm] lg:mt-0"
+                  className="inline-flex items-center justify-center px-10 md:px-12 py-3 md:py-3.5 min-w-[11rem] rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#264f28]/20 hover:border-[#264f28]/40 hover:scale-105 text-base md:text-lg font-normal mt-[0.25cm] md:mt-[0.25cm] lg:mt-0"
                 >
                   <span className="inline-flex items-center gap-2">
                     See All Villa Types

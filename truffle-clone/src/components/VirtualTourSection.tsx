@@ -69,6 +69,12 @@ export default function VirtualTourSection() {
     setCurrentRoom(0)
   }
 
+  const villaDetails: Record<string, string> = {
+    type1: '5 Bed - 6 Bath - 592 sqm.',
+    type2: '4 Bed - 5 Bath - 457 sqm.',
+    type3: '4 Bed - 5 Bath - 382.5 sqm.'
+  }
+
   const selectedVillaData = villas.find(v => v.id === selectedVilla)
 
   return (
@@ -96,9 +102,9 @@ export default function VirtualTourSection() {
       </div>
 
       {/* Villa Tour Selection */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 overflow-hidden sm:overflow-visible">
-        {villas.map((villa) => (
-          <div key={villa.id} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 overflow-hidden sm:overflow-visible">
+        {villas.map((villa, index) => (
+          <div key={`${villa.id}-${index}`} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden transition-all duration-300 sm:group-hover:scale-[1.02]">
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -108,13 +114,65 @@ export default function VirtualTourSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="text-xl font-semibold">{villa.name}</h3>
+                  <div className="flex items-end justify-between gap-3 text-left">
+                    <div className="flex flex-col gap-1">
+                      <h3 className="text-xl font-semibold">{villa.name}</h3>
+                      {villaDetails[villa.id] && (
+                        <p className="text-white/90 text-sm lg:text-base pb-1 relative">
+                          {villaDetails[villa.id]}
+                          <span
+                            className="absolute bottom-0 left-0 right-0 h-[0.5px] bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                            style={{ boxShadow: '0 0 4px rgba(255, 255, 255, 0.3), 0 0 8px rgba(212, 175, 55, 0.2)' }}
+                          ></span>
+                        </p>
+                      )}
+                    </div>
+                    <button
+                      type="button"
+                      className="text-xs font-medium bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-full border border-white/30 transition-colors"
+                    >
+                      View Pictures ↗
+                    </button>
+                  </div>
                 </div>
               </div>
 
             </div>
           </div>
         ))}
+        <div className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden transition-all duration-300 sm:group-hover:scale-[1.02]">
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src={villas[0].image}
+                alt="Villa Type 4"
+                className="w-full h-full object-cover transition-transform duration-300 sm:group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <div className="flex items-end justify-between gap-3 text-left">
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-xl font-semibold">Villa Type 4</h3>
+                    <p className="text-white/90 text-sm lg:text-base pb-1 relative">
+                      4 Bed - 5 Bath - 353 sqm.
+                      <span
+                        className="absolute bottom-0 left-0 right-0 h-[0.5px] bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                        style={{ boxShadow: '0 0 4px rgba(255, 255, 255, 0.3), 0 0 8px rgba(212, 175, 55, 0.2)' }}
+                      ></span>
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    className="text-xs font-medium bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-full border border-white/30 transition-colors"
+                  >
+                    View Pictures ↗
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       {/* Virtual Tour Modal */}

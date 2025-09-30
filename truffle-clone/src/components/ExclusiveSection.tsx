@@ -3,7 +3,7 @@ import { useT } from '@/lib/useTranslation'
 export default function ExclusiveSection() {
   const t = useT()
   return (
-    <div className="max-w-7xl mx-auto pt-6 pb-6 sm:pt-8 sm:pb-10 lg:pt-20 lg:pb-20 px-4 sm:px-6 flex flex-col-reverse lg:flex-row items-center justify-between gap-y-6 sm:gap-y-8 lg:gap-y-10 lg:gap-x-12">
+    <div className="max-w-7xl mx-auto pt-0 pb-6 sm:pt-0 sm:pb-10 md:pt-0 lg:pt-20 lg:pb-20 px-4 sm:px-6 flex flex-col-reverse lg:flex-row items-center justify-between gap-y-6 sm:gap-y-8 lg:gap-y-10 lg:gap-x-12">
       <div className="w-full lg:w-1/2 flex justify-center relative">
         {/* Glow effect behind the image */}
         <div
@@ -22,8 +22,8 @@ export default function ExclusiveSection() {
 
         </div>
       </div>
-      <div className="flex flex-col gap-y-6 w-full lg:w-1/2 h-full lg:h-[500px] xl:h-[600px] justify-center items-center md:items-start">
-        <div className="inline-flex items-center gap-2 text-[#b48828] font-medium">
+      <div className="flex flex-col gap-y-6 w-full lg:w-1/2 h-full lg:h-[500px] xl:h-[600px] justify-center items-center md:items-start mt-0 sm:mt-0">
+        <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mt-0 sm:mt-[9px]">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z"/>
           </svg>

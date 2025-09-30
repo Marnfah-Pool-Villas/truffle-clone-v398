@@ -38,14 +38,14 @@ export default function Home() {
             <div className="relative w-full" style={{ margin: 0, padding: 0 }}>
               <HeroSection />
               {/* View Brochure Button - positioned between hero and properties */}
-              <section id="properties">
+              <section id="properties" className="-mt-[0.5cm] lg:mt-[0.5cm]">
                 <PropertiesSection />
               </section>
-              <section id="amenities">
+              <section id="amenities" className="-mt-[0.5cm]">
                 <AmenitiesSection />
               </section>
               <ExclusiveSection />
-              <section id="contact" className="pt-6 sm:pt-6 md:pt-8 lg:pt-12 px-4 sm:px-6" style={{ margin: 0, paddingBottom: 0, minHeight: 'auto' }}>
+              <section id="contact" className="pt-0 sm:pt-0 md:pt-0 lg:pt-12 px-4 sm:px-6" style={{ margin: 0, paddingBottom: 0, minHeight: 'auto' }}>
                 <ContactForm />
               </section>
               {/* Spacing between contact form and footer */}
