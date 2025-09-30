@@ -17,7 +17,7 @@ export default function PropertiesSection() {
                 <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z"/>
               </svg>
             </div>
-            <div className="relative mb-6 text-center md:text-left">
+            <div className="relative mb-6 text-center md:text-left lg:pl-[0.5cm]">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
                 <span className="relative inline-block">
                   <span className="absolute -inset-2 bg-gradient-to-r from-[#264f28]/20 via-[#264f28]/10 to-transparent rounded-2xl blur-sm"></span>
@@ -29,7 +29,7 @@ export default function PropertiesSection() {
               <div className="absolute -top-2 left-0 md:left-0 right-0 md:right-auto mx-auto md:mx-0 w-16 h-1 bg-gradient-to-r from-[#b48828] to-[#d4af37] rounded-full"></div>
             </div>
           </div>
-          <div className="text-lg sm:text-xl text-[#264f28] leading-relaxed text-center md:text-left whitespace-pre-line">
+          <div className="text-lg sm:text-xl text-[#264f28] leading-relaxed text-center md:text-left whitespace-pre-line lg:pl-[0.5cm]">
             {t.properties.description}
           </div>
 
