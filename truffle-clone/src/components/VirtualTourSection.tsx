@@ -120,12 +120,12 @@ export default function VirtualTourSection() {
             <div className="relative h-64 overflow-hidden">
               <img
                 src={villas[0].image}
-                alt={villas[0].name}
+                alt="Villa Type 4"
                 className="w-full h-full object-cover transition-transform duration-300 sm:group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <h3 className="text-xl font-semibold">{villas[0].name}</h3>
+                <h3 className="text-xl font-semibold">Villa Type 4</h3>
               </div>
             </div>
 
