@@ -97,8 +97,8 @@ export default function VirtualTourSection() {
 
       {/* Villa Tour Selection */}
       <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 overflow-hidden sm:overflow-visible">
-        {villas.map((villa) => (
-          <div key={villa.id} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
+        {villas.map((villa, index) => (
+          <div key={`${villa.id}-${index}`} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden transition-all duration-300 sm:group-hover:scale-[1.02]">
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -115,6 +115,22 @@ export default function VirtualTourSection() {
             </div>
           </div>
         ))}
+        <div className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden transition-all duration-300 sm:group-hover:scale-[1.02]">
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src={villas[0].image}
+                alt={villas[0].name}
+                className="w-full h-full object-cover transition-transform duration-300 sm:group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <h3 className="text-xl font-semibold">{villas[0].name}</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       {/* Virtual Tour Modal */}
