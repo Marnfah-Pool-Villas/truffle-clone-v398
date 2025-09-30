@@ -108,7 +108,18 @@ export default function VirtualTourSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="text-xl font-semibold">{villa.name}</h3>
+                  <div className="text-left">
+                    <h3 className="text-xl font-semibold mb-1">{villa.name}</h3>
+                    {villa.id === 'type1' && (
+                      <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
+                        - 5 Bed - 6 Bath - 592 sqm.
+                        <span
+                          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                          style={{ boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)' }}
+                        ></span>
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
 
