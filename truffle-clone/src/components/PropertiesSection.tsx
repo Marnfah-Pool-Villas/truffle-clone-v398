@@ -130,7 +130,7 @@ export default function PropertiesSection() {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 mb-[0.25cm] md:mb-0 md:mt-12 flex flex-col items-center gap-4 md:items-center lg:col-start-2 lg:mt-[1cm]">
+              <div className="mt-10 mb-[0.25cm] md:mb-0 md:mt-12 flex flex-col items-center gap-4 md:items-center lg:col-start-2 lg:mt-[1cm] pb-[0.5cm] sm:pb-0">
                 <Link
                   href="/view"
                   className="inline-flex items-center justify-center px-10 md:px-12 py-3 md:py-3.5 min-w-[11rem] rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#264f28]/20 hover:border-[#264f28]/40 hover:scale-105 text-base md:text-lg font-normal mt-[0.25cm] md:mt-[0.25cm] lg:mt-0"
