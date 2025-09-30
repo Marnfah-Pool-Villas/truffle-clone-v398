@@ -362,6 +362,7 @@ export default function Navigation() {
                   src={option.imgSrc}
                   alt={option.label}
                   className="w-full h-full object-cover"
+                  style={option.key === 'whatsapp' ? { transform: 'scale(1.1) translate(4px, -4px)', transformOrigin: 'center' } : undefined}
                   loading="lazy"
                 />
               </a>
