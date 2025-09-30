@@ -22,8 +22,8 @@ export default function ExclusiveSection() {
 
         </div>
       </div>
-      <div className="flex flex-col gap-y-6 w-full lg:w-1/2 h-full lg:h-[500px] xl:h-[600px] justify-center items-center md:items-start">
-        <div className="inline-flex items-center gap-2 text-[#b48828] font-medium">
+      <div className="flex flex-col gap-y-6 w-full lg:w-1/2 h-full lg:h-[500px] xl:h-[600px] justify-center items-center md:items-start mt-3 sm:mt-0">
+        <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mt-[9px]">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z"/>
           </svg>
