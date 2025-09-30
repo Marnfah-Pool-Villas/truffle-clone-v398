@@ -12,7 +12,7 @@ export default function PropertiesSection() {
       <div className="bg-[#ede5d9]/50 w-full villa-section-no-scroll">
         <div className="flex flex-col gap-y-4 max-w-7xl mx-auto pt-0 pb-6 sm:pb-10 px-4 sm:px-6 villa-section-no-scroll">
           <div className="relative flex flex-col items-center md:items-start">
-            <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4">
+            <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4 lg:pl-[0.5cm]">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z"/>
               </svg>
@@ -26,7 +26,7 @@ export default function PropertiesSection() {
                   </span>
                 </span>
               </h1>
-              <div className="absolute -top-2 left-0 md:left-0 right-0 md:right-auto mx-auto md:mx-0 w-16 h-1 bg-gradient-to-r from-[#b48828] to-[#d4af37] rounded-full"></div>
+              <div className="absolute -top-2 left-0 md:left-0 right-0 md:right-auto mx-auto md:mx-0 w-16 h-1 bg-gradient-to-r from-[#b48828] to-[#d4af37] rounded-full lg:left-[0.5cm]"></div>
             </div>
           </div>
           <div className="text-lg sm:text-xl text-[#264f28] leading-relaxed text-center md:text-left whitespace-pre-line lg:pl-[0.5cm]">
