@@ -114,35 +114,25 @@ export default function VirtualTourSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="text-left">
-                    <h3 className="text-xl font-semibold mb-1">{villa.name}</h3>
-                    {villa.id === 'type1' && (
-                      <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
-                        5 Bed - 6 Bath - 592 sqm.
-                        <span
-                          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
-                          style={{ boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)' }}
-                        ></span>
-                      </p>
-                    )}
-                    {villa.id === 'type2' && (
-                      <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
-                        4 Bed - 5 Bath - 457 sqm.
-                        <span
-                          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
-                          style={{ boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)' }}
-                        ></span>
-                      </p>
-                    )}
-                    {villa.id === 'type3' && (
-                      <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
-                        4 Bed - 5 Bath - 382.5 sqm.
-                        <span
-                          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
-                          style={{ boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)' }}
-                        ></span>
-                      </p>
-                    )}
+                  <div className="flex flex-col gap-2 text-left">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-1">{villa.name}</h3>
+                      {villaDetails[villa.id] && (
+                        <p className="text-white/90 text-sm lg:text-base mb-1 pb-1 relative">
+                          {villaDetails[villa.id]}
+                          <span
+                            className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                            style={{ boxShadow: '0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(212, 175, 55, 0.2)' }}
+                          ></span>
+                        </p>
+                      )}
+                    </div>
+                    <button
+                      type="button"
+                      className="self-end text-xs font-medium bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-full border border-white/30 transition-colors"
+                    >
+                      View Pictures ↗
+                    </button>
                   </div>
                 </div>
               </div>
