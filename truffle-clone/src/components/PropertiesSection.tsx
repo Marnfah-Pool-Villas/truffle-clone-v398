@@ -12,7 +12,7 @@ export default function PropertiesSection() {
       <div className="bg-[#ede5d9]/50 w-full villa-section-no-scroll">
         <div className="flex flex-col gap-y-4 max-w-7xl mx-auto pt-0 pb-6 sm:pb-10 px-4 sm:px-6 villa-section-no-scroll">
           <div className="relative flex flex-col items-center md:items-start">
-            <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4 lg:pl-[0.5cm]">
+            <div className="inline-flex items-center gap-2 text-[#b48828] font-medium mb-4 lg:pl-[0.5cm] lg:mt-[0.5cm]">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L14.5 8.5L21 8.5L16 13L17.5 19.5L12 16L6.5 19.5L8 13L3 8.5L9.5 8.5L12 2Z"/>
               </svg>
@@ -29,7 +29,7 @@ export default function PropertiesSection() {
               <div className="absolute -top-2 left-0 md:left-0 right-0 md:right-auto mx-auto md:mx-0 w-16 h-1 bg-gradient-to-r from-[#b48828] to-[#d4af37] rounded-full lg:left-[0.5cm]"></div>
             </div>
           </div>
-          <div className="text-lg sm:text-xl text-[#264f28] leading-relaxed text-center md:text-left whitespace-pre-line lg:pl-[0.5cm]">
+          <div className="text-lg sm:text-xl text-[#264f28] leading-relaxed text-center md:text-left whitespace-pre-line lg:pl-[0.5cm] lg:mb-[0.5cm]">
             {t.properties.description}
           </div>
 
@@ -130,7 +130,7 @@ export default function PropertiesSection() {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 mb-0 md:mt-12 md:mb-0 flex flex-col items-center gap-4 md:items-center lg:col-start-2">
+              <div className="mt-10 mb-0 md:mt-12 md:mb-0 flex flex-col items-center gap-4 md:items-center lg:col-start-2 lg:mt-[0.5cm]">
                 <Link
                   href="/view"
                   className="inline-flex items-center justify-center px-10 md:px-12 py-3 md:py-3.5 min-w-[11rem] rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#264f28]/20 hover:border-[#264f28]/40 hover:scale-105 text-base md:text-lg font-normal mt-[0.25cm] md:mt-[0.25cm] lg:mt-0"
