@@ -80,7 +80,7 @@ const detectBrowserLanguage = (): Language => {
 export const languageInfo: Array<{ code: Language; name: string; currency: string }> = [
   { code: 'th', name: 'ไทย', currency: '🇹🇭' },
   { code: 'zh-CN', name: '简体中文', currency: '🇨🇳' },
-  { code: 'zh-TW', name: '繁體中���', currency: '🇹🇼' },
+  { code: 'zh-TW', name: '繁體中文', currency: '🇹🇼' },
   { code: 'ja', name: '日本語', currency: '🇯🇵' },
   { code: 'ko', name: '한국어', currency: '🇰🇷' },
   { code: 'ar', name: 'العربية', currency: '🇸🇦' },
@@ -235,7 +235,7 @@ const loadLanguageTranslations = async (language: Language): Promise<Translation
   const cachedStrings = readCachedStrings(language)
   if (cachedStrings) {
     const cachedTranslations = createTranslationsFromStrings(cachedStrings)
-    applyCtaOverrides(language, cachedTranslations)
+    applyCtaOverrideToTranslations(language, cachedTranslations)
     setCachedTranslationObject(language, cachedTranslations)
     return cachedTranslations
   }
@@ -243,7 +243,7 @@ const loadLanguageTranslations = async (language: Language): Promise<Translation
   const fetchedStrings = await fetchTranslationsFromApi(language)
   writeCachedStrings(language, fetchedStrings)
   const fetchedTranslations = createTranslationsFromStrings(fetchedStrings)
-  applyCtaOverrides(language, fetchedTranslations)
+  applyCtaOverrideToTranslations(language, fetchedTranslations)
   setCachedTranslationObject(language, fetchedTranslations)
   return fetchedTranslations
 }
