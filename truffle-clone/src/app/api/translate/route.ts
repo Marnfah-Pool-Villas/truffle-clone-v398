@@ -7,62 +7,6 @@ const GOOGLE_TRANSLATE_ENDPOINT = 'https://translate.googleapis.com/translate_a/
 const MAX_TRANSLATION_RETRIES = 2
 const MAX_PARALLEL_TRANSLATIONS = 8
 
-const CTA_TRANSLATION_OVERRIDES: Partial<Record<Language, Record<string, string>>> = {
-  th: {
-    'See All Villa Types': 'ดูวิลล่าทุกประเภท',
-    'View Brochure': 'ดูโบรชัวร์'
-  },
-  'zh-CN': {
-    'See All Villa Types': '查看所有别墅类型',
-    'View Brochure': '查看宣传册'
-  },
-  'zh-TW': {
-    'See All Villa Types': '查看所有別墅類型',
-    'View Brochure': '查看型錄'
-  },
-  ja: {
-    'See All Villa Types': 'すべてのヴィラタイプを見る',
-    'View Brochure': 'パンフレットを見る'
-  },
-  ko: {
-    'See All Villa Types': '모든 빌라 유형 보기',
-    'View Brochure': '브로셔 보기'
-  },
-  ar: {
-    'See All Villa Types': 'عرض جميع أنواع الفلل',
-    'View Brochure': 'عرض الكتيب'
-  },
-  hi: {
-    'See All Villa Types': 'सभी विला प्रकार देखें',
-    'View Brochure': 'ब्रोशर देखें'
-  },
-  ru: {
-    'See All Villa Types': 'Посмотреть все типы вилл',
-    'View Brochure': 'Посмотреть брошюру'
-  },
-  es: {
-    'See All Villa Types': 'Ver todos los tipos de villas',
-    'View Brochure': 'Ver folleto'
-  },
-  fr: {
-    'See All Villa Types': 'Voir tous les types de villa',
-    'View Brochure': 'Voir la brochure'
-  },
-  ms: {
-    'See All Villa Types': 'Lihat semua jenis vila',
-    'View Brochure': 'Lihat risalah'
-  },
-  vi: {
-    'See All Villa Types': 'Xem tất cả các loại biệt thự',
-    'View Brochure': 'Xem tờ giới thiệu'
-  }
-}
-
-const getOverrideTranslation = (language: Language, text: string): string | null => {
-  const overrides = CTA_TRANSLATION_OVERRIDES[language]
-  return overrides?.[text] ?? null
-}
-
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 
 interface TranslationRequestPayload {
