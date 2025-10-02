@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { Language } from '@/lib/translations'
 import { DEFAULT_LANGUAGE, supportedLanguages } from '@/lib/translations'
+import { getCtaOverrideForText } from '@/lib/ctaOverrides'
 
 const GOOGLE_TRANSLATE_ENDPOINT = 'https://translate.googleapis.com/translate_a/single'
 const MAX_TRANSLATION_RETRIES = 2
