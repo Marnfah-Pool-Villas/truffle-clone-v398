@@ -80,7 +80,7 @@ const detectBrowserLanguage = (): Language => {
 export const languageInfo: Array<{ code: Language; name: string; currency: string }> = [
   { code: 'th', name: 'ไทย', currency: '🇹🇭' },
   { code: 'zh-CN', name: '简体中文', currency: '🇨🇳' },
-  { code: 'zh-TW', name: '繁體中文', currency: '🇹🇼' },
+  { code: 'zh-TW', name: '繁體中���', currency: '🇹🇼' },
   { code: 'ja', name: '日本語', currency: '🇯🇵' },
   { code: 'ko', name: '한국어', currency: '🇰🇷' },
   { code: 'ar', name: 'العربية', currency: '🇸🇦' },
@@ -92,81 +92,6 @@ export const languageInfo: Array<{ code: Language; name: string; currency: strin
   { code: 'ms', name: 'Malay', currency: '🇲🇾' },
   { code: 'vi', name: 'Tiếng Việt', currency: '🇻🇳' }
 ]
-
-interface CtaOverrides {
-  seeAllVillaTypes?: string
-  viewBrochure?: string
-}
-
-const CTA_OVERRIDES: Partial<Record<Language, CtaOverrides>> = {
-  th: {
-    seeAllVillaTypes: 'ดูวิลล่าทุกประเภท',
-    viewBrochure: 'ดูโบรชัวร์'
-  },
-  'zh-CN': {
-    seeAllVillaTypes: '查看所有别墅类型',
-    viewBrochure: '查看宣传册'
-  },
-  'zh-TW': {
-    seeAllVillaTypes: '查看所有別墅類型',
-    viewBrochure: '查看型錄'
-  },
-  ja: {
-    seeAllVillaTypes: 'すべてのヴィラタイプを見る',
-    viewBrochure: 'パンフレットを見る'
-  },
-  ko: {
-    seeAllVillaTypes: '모든 빌라 유형 보기',
-    viewBrochure: '브로셔 보기'
-  },
-  ar: {
-    seeAllVillaTypes: 'عرض جميع أنواع الفلل',
-    viewBrochure: 'عرض الكتيب'
-  },
-  hi: {
-    seeAllVillaTypes: 'सभी विल�� प्रकार देखें',
-    viewBrochure: 'ब्रोशर देखें'
-  },
-  ru: {
-    seeAllVillaTypes: 'Посмотреть все типы вилл',
-    viewBrochure: 'Посмотреть брошюру'
-  },
-  es: {
-    seeAllVillaTypes: 'Ver todos los tipos de villas',
-    viewBrochure: 'Ver folleto'
-  },
-  fr: {
-    seeAllVillaTypes: 'Voir tous les types de villa',
-    viewBrochure: 'Voir la brochure'
-  },
-  ms: {
-    seeAllVillaTypes: 'Lihat semua jenis vila',
-    viewBrochure: 'Lihat risalah'
-  },
-  vi: {
-    seeAllVillaTypes: 'Xem tất cả các loại biệt thự',
-    viewBrochure: 'Xem tờ giới thiệu'
-  }
-}
-
-const applyCtaOverrides = (language: Language, translations: Translations) => {
-  if (language === DEFAULT_LANGUAGE) {
-    return
-  }
-
-  const overrides = CTA_OVERRIDES[language]
-  if (!overrides) {
-    return
-  }
-
-  if (overrides.seeAllVillaTypes) {
-    translations.properties.seeAllVillaTypes = overrides.seeAllVillaTypes
-  }
-
-  if (overrides.viewBrochure) {
-    translations.exclusive.buttonText = overrides.viewBrochure
-  }
-}
 
 interface TranslationContextType {
   language: Language
