@@ -26,7 +26,7 @@ export default function BrochureButton({ children, className }: BrochureButtonPr
       )}
     >
       <span className="inline-flex items-center gap-2">
-        View {children}
+        {children}
         <span aria-hidden="true">↗</span>
       </span>
     </button>
