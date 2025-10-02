@@ -140,12 +140,12 @@ export default function PropertiesSection() {
                   className="inline-flex items-center justify-center px-10 md:px-12 py-3 md:py-3.5 min-w-[11rem] rounded-2xl bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 transition-all duration-300 whitespace-nowrap hover:bg-[#264f28]/20 hover:border-[#264f28]/40 hover:scale-105 text-base md:text-lg font-normal mt-[0.25cm] md:mt-[0.25cm] lg:mt-0"
                 >
                   <span className="inline-flex items-center gap-2">
-                    {t.properties.seeAllVillaTypes}
+                    {seeAllVillaTypesText}
                     <span aria-hidden="true">↗</span>
                   </span>
                 </Link>
                 <BrochureButton className="font-normal min-w-[11rem]">
-                  {t.exclusive.buttonText}
+                  {brochureButtonText}
                 </BrochureButton>
               </div>
           </div>
