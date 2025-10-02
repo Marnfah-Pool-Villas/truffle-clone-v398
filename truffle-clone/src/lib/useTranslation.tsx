@@ -19,10 +19,30 @@ import {
 
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 const LANGUAGE_STORAGE_KEY = 'preferred-language'
-const TRANSLATION_CACHE_PREFIX = 'translation-cache-v1-'
+
+const computeStringsVersion = (strings: ReadonlyArray<string>): string => {
+  let hash = 0
+  for (const value of strings) {
+    for (let index = 0; index < value.length; index += 1) {
+      hash = (hash * 31 + value.charCodeAt(index)) >>> 0
+    }
+    hash = (hash + 0x9e3779b9) >>> 0
+  }
+  return hash.toString(36)
+}
+
+const TRANSLATION_SCHEMA_VERSION = computeStringsVersion(englishTranslationStrings)
+const TRANSLATION_CACHE_PREFIX = `translation-cache-${TRANSLATION_SCHEMA_VERSION}-`
 const TRANSLATION_EXPECTED_COUNT = englishTranslationStrings.length
 
-const translationObjectCache = new Map<Language, Translations>([[DEFAULT_LANGUAGE, englishTranslations]])
+interface TranslationCacheEntry {
+  version: string
+  value: Translations
+}
+
+const translationObjectCache = new Map<Language, TranslationCacheEntry>([
+  [DEFAULT_LANGUAGE, { version: TRANSLATION_SCHEMA_VERSION, value: englishTranslations }]
+])
 const translationFetchPromises = new Map<Language, Promise<ReadonlyArray<string>>>()
 
 const browserLanguageMatchers: Array<[RegExp, Language]> = [
@@ -100,8 +120,13 @@ const readCachedStrings = (language: Language): string[] | null => {
       return null
     }
 
-    const parsed = JSON.parse(raw) as { strings?: unknown }
+    const parsed = JSON.parse(raw) as { strings?: unknown; version?: unknown }
     const strings = parsed?.strings
+    const version = typeof parsed?.version === 'string' ? parsed.version : null
+
+    if (version !== TRANSLATION_SCHEMA_VERSION) {
+      return null
+    }
 
     if (!Array.isArray(strings) || strings.length !== TRANSLATION_EXPECTED_COUNT) {
       return null
@@ -124,7 +149,11 @@ const writeCachedStrings = (language: Language, strings: ReadonlyArray<string>) 
   }
 
   try {
-    const payload = JSON.stringify({ strings: Array.from(strings), timestamp: Date.now() })
+    const payload = JSON.stringify({
+      strings: Array.from(strings),
+      version: TRANSLATION_SCHEMA_VERSION,
+      timestamp: Date.now()
+    })
     localStorage.setItem(getCacheKey(language), payload)
   } catch (error) {
     console.error('Failed to persist translations cache:', error)
@@ -177,27 +206,42 @@ const fetchTranslationsFromApi = async (language: Language): Promise<ReadonlyArr
   }
 }
 
+const getCachedTranslationObject = (language: Language): Translations | null => {
+  const entry = translationObjectCache.get(language)
+  if (entry && entry.version === TRANSLATION_SCHEMA_VERSION) {
+    return entry.value
+  }
+  return null
+}
+
+const setCachedTranslationObject = (language: Language, value: Translations) => {
+  translationObjectCache.set(language, { version: TRANSLATION_SCHEMA_VERSION, value })
+}
+
 const loadLanguageTranslations = async (language: Language): Promise<Translations> => {
-  if (translationObjectCache.has(language)) {
-    return translationObjectCache.get(language) as Translations
+  const cached = getCachedTranslationObject(language)
+  if (cached) {
+    return cached
   }
 
+  translationObjectCache.delete(language)
+
   if (language === DEFAULT_LANGUAGE) {
-    translationObjectCache.set(language, englishTranslations)
+    setCachedTranslationObject(language, englishTranslations)
     return englishTranslations
   }
 
   const cachedStrings = readCachedStrings(language)
   if (cachedStrings) {
     const cachedTranslations = createTranslationsFromStrings(cachedStrings)
-    translationObjectCache.set(language, cachedTranslations)
+    setCachedTranslationObject(language, cachedTranslations)
     return cachedTranslations
   }
 
   const fetchedStrings = await fetchTranslationsFromApi(language)
   writeCachedStrings(language, fetchedStrings)
   const fetchedTranslations = createTranslationsFromStrings(fetchedStrings)
-  translationObjectCache.set(language, fetchedTranslations)
+  setCachedTranslationObject(language, fetchedTranslations)
   return fetchedTranslations
 }
 
