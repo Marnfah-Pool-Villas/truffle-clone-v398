@@ -188,7 +188,7 @@ export async function POST(request: Request) {
     const translatedMap = await translateUniqueTexts(uniqueTexts, normalizedLanguage)
 
     for (const [text, indexes] of indexMap.entries()) {
-      const manual = getOverrideTranslation(normalizedLanguage, text)
+      const manual = getCtaOverrideForText(normalizedLanguage, text)
       const translated = manual ?? translatedMap.get(text) ?? text
       indexes.forEach(position => {
         translations[position] = translated
