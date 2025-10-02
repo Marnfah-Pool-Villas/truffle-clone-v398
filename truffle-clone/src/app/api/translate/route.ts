@@ -61,6 +61,7 @@ const getOverrideTranslation = (language: Language, text: string): string | null
   const overrides = CTA_TRANSLATION_OVERRIDES[language]
   return overrides?.[text] ?? null
 }
+
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 
 interface TranslationRequestPayload {
