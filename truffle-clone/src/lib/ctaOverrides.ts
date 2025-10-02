@@ -1,6 +1,11 @@
 import type { Language, Translations } from '@/lib/translations'
 import { DEFAULT_LANGUAGE } from '@/lib/translations'
 
+export const CTA_SOURCE_TEXTS = {
+  seeAllVillaTypes: 'See All Villa Types',
+  viewBrochure: 'View Brochure'
+} as const
+
 export interface CtaOverride {
   seeAllVillaTypes: string
   viewBrochure: string
@@ -9,7 +14,7 @@ export interface CtaOverride {
 const CTA_OVERRIDES: Partial<Record<Language, CtaOverride>> = {
   th: {
     seeAllVillaTypes: 'ดูวิลล่าทุกประเภท',
-    viewBrochure: 'ดูโบรชัวร์'
+    viewBrochure: '��ูโบรชัวร์'
   },
   'zh-CN': {
     seeAllVillaTypes: '查看所有别墅类型',
@@ -25,7 +30,7 @@ const CTA_OVERRIDES: Partial<Record<Language, CtaOverride>> = {
   },
   ko: {
     seeAllVillaTypes: '모든 빌라 유형 보기',
-    viewBrochure: '브��셔 보기'
+    viewBrochure: '브로셔 보기'
   },
   ar: {
     seeAllVillaTypes: 'عرض جميع أنواع الفلل',
@@ -59,6 +64,23 @@ const CTA_OVERRIDES: Partial<Record<Language, CtaOverride>> = {
 
 export const getCtaOverride = (language: Language): CtaOverride | null => {
   return CTA_OVERRIDES[language] ?? null
+}
+
+export const getCtaOverrideForText = (language: Language, sourceText: string): string | null => {
+  const override = getCtaOverride(language)
+  if (!override) {
+    return null
+  }
+
+  if (sourceText === CTA_SOURCE_TEXTS.seeAllVillaTypes) {
+    return override.seeAllVillaTypes
+  }
+
+  if (sourceText === CTA_SOURCE_TEXTS.viewBrochure) {
+    return override.viewBrochure
+  }
+
+  return null
 }
 
 export const applyCtaOverrideToTranslations = (language: Language, translations: Translations) => {
