@@ -35,6 +35,7 @@ const englishTranslationsData = {
   properties: {
     title: "Supreme Elegance",
     description: "Experience tropical opulence\nWarm wood and Italian stone accents\nLimited availability from ฿10.9M to ฿34.9M",
+    seeAllVillaTypes: "See All Villa Types",
     priceRange: "",
     villa1: {
       name: "Tranquility",
@@ -71,7 +72,7 @@ const englishTranslationsData = {
   exclusive: {
     title: "Bespoke Lifestyle",
     description: "For those who love the finer things\nCrafted with immense attention to detail\nShaped to enhance the flow of positive energy",
-    buttonText: "Brochure"
+    buttonText: "View Brochure"
   },
   location: {
     title: "Located in Paradise",
