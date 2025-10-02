@@ -16,6 +16,7 @@ import {
   supportedLanguages,
   createTranslationsFromStrings
 } from './translations'
+import { applyCtaOverrideToTranslations } from '@/lib/ctaOverrides'
 
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 const LANGUAGE_STORAGE_KEY = 'preferred-language'
@@ -123,7 +124,7 @@ const CTA_OVERRIDES: Partial<Record<Language, CtaOverrides>> = {
     viewBrochure: 'عرض الكتيب'
   },
   hi: {
-    seeAllVillaTypes: 'सभी विला प्रकार देखें',
+    seeAllVillaTypes: 'सभी विल�� प्रकार देखें',
     viewBrochure: 'ब्रोशर देखें'
   },
   ru: {
