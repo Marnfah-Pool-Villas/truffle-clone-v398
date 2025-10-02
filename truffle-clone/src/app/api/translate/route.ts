@@ -87,7 +87,7 @@ const getLanguageCache = (language: Language): Map<string, string> => {
 
 const translateTextWithCache = async (text: string, language: Language): Promise<string> => {
   const cache = getLanguageCache(language)
-  const override = getOverrideTranslation(language, text)
+  const override = getCtaOverrideForText(language, text)
   if (override) {
     cache.set(text, override)
     return override
