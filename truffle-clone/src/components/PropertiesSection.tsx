@@ -3,9 +3,13 @@
 import Link from 'next/link'
 import BrochureButton from '@/components/BrochureButton'
 import { useTranslation } from '@/lib/useTranslation'
+import { getCtaOverride } from '@/lib/ctaOverrides'
 
 export default function PropertiesSection() {
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
+  const ctaOverride = getCtaOverride(language)
+  const seeAllVillaTypesText = ctaOverride?.seeAllVillaTypes ?? t.properties.seeAllVillaTypes
+  const brochureButtonText = ctaOverride?.viewBrochure ?? t.exclusive.buttonText
 
   return (
     <div className="w-full villa-section-no-scroll">
