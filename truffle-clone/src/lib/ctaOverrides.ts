@@ -62,6 +62,19 @@ const CTA_OVERRIDES: Partial<Record<Language, CtaOverride>> = {
   }
 }
 
+const CTA_OVERRIDES_SIGNATURE = (() => {
+  const entries = Object.entries(CTA_OVERRIDES).map(([language, override]) => {
+    if (!override) {
+      return `${language}::`
+    }
+    return `${language}:${override.seeAllVillaTypes}|${override.viewBrochure}`
+  })
+  entries.sort()
+  return entries.join('||')
+})()
+
+export const getCtaOverridesSignature = (): string => CTA_OVERRIDES_SIGNATURE
+
 export const getCtaOverride = (language: Language): CtaOverride | null => {
   return CTA_OVERRIDES[language] ?? null
 }
