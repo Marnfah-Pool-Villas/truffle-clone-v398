@@ -32,7 +32,10 @@ const computeStringsVersion = (strings: ReadonlyArray<string>): string => {
   return hash.toString(36)
 }
 
-const TRANSLATION_SCHEMA_VERSION = computeStringsVersion(englishTranslationStrings)
+const TRANSLATION_SCHEMA_VERSION = computeStringsVersion([
+  ...englishTranslationStrings,
+  getCtaOverridesSignature()
+])
 const TRANSLATION_CACHE_PREFIX = `translation-cache-${TRANSLATION_SCHEMA_VERSION}-`
 const TRANSLATION_EXPECTED_COUNT = englishTranslationStrings.length
 
@@ -83,7 +86,7 @@ export const languageInfo: Array<{ code: Language; name: string; currency: strin
   { code: 'zh-TW', name: '繁體中文', currency: '🇹🇼' },
   { code: 'ja', name: '日本語', currency: '🇯🇵' },
   { code: 'ko', name: '한국어', currency: '🇰🇷' },
-  { code: 'ar', name: 'العربية', currency: '����🇦' },
+  { code: 'ar', name: 'العربية', currency: '🇸🇦' },
   { code: 'hi', name: 'हिन्दी', currency: '🇮🇳' },
   { code: 'ru', name: 'Русский', currency: '🇷🇺' },
   { code: 'en', name: 'English', currency: '🇺🇸' },
