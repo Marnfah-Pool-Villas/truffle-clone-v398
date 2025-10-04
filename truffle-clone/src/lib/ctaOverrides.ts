@@ -14,7 +14,7 @@ export interface CtaOverride {
 const CTA_OVERRIDES: Partial<Record<Language, CtaOverride>> = {
   th: {
     seeAllVillaTypes: 'ดูวิลล่าทุกประเภท',
-    viewBrochure: '��ูโบรชัวร์'
+    viewBrochure: 'ดูโบรชัวร์'
   },
   'zh-CN': {
     seeAllVillaTypes: '查看所有别墅类型',
