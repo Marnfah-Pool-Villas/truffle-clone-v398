@@ -16,7 +16,7 @@ import {
   supportedLanguages,
   createTranslationsFromStrings
 } from './translations'
-import { applyCtaOverrideToTranslations } from '@/lib/ctaOverrides'
+import { applyCtaOverrideToTranslations, getCtaOverridesSignature } from '@/lib/ctaOverrides'
 
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 const LANGUAGE_STORAGE_KEY = 'preferred-language'
@@ -83,7 +83,7 @@ export const languageInfo: Array<{ code: Language; name: string; currency: strin
   { code: 'zh-TW', name: '繁體中文', currency: '🇹🇼' },
   { code: 'ja', name: '日本語', currency: '🇯🇵' },
   { code: 'ko', name: '한국어', currency: '🇰🇷' },
-  { code: 'ar', name: 'العربية', currency: '🇸🇦' },
+  { code: 'ar', name: 'العربية', currency: '����🇦' },
   { code: 'hi', name: 'हिन्दी', currency: '🇮🇳' },
   { code: 'ru', name: 'Русский', currency: '🇷🇺' },
   { code: 'en', name: 'English', currency: '🇺🇸' },
