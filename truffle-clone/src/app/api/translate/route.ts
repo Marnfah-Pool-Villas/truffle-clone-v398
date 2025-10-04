@@ -6,6 +6,7 @@ import { getCtaOverrideForText, getCtaOverridesSignature } from '@/lib/ctaOverri
 const GOOGLE_TRANSLATE_ENDPOINT = 'https://translate.googleapis.com/translate_a/single'
 const MAX_TRANSLATION_RETRIES = 2
 const MAX_PARALLEL_TRANSLATIONS = 8
+const CTA_SIGNATURE = getCtaOverridesSignature()
 
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 
