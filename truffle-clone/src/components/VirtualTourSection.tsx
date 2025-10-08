@@ -88,7 +88,7 @@ export default function VirtualTourSection() {
             </svg>
           </div>
           <div className="relative mb-4">
-            <h1 className="text-3xl md:text-6xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
+            <h1 className="text-3xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
               <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#264f28]/20 via-[#264f28]/10 to-transparent rounded-2xl blur-sm"></span>
                 <span className="relative bg-gradient-to-r from-[#264f28] to-[#2d5a30] bg-clip-text text-transparent font-medium">
