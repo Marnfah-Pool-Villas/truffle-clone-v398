@@ -265,7 +265,7 @@ export default function VirtualTourSection() {
                 {/* Tour Controls */}
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <h5 className="text-sm font-medium text-[#264f28] mb-3">Tour Controls</h5>
-                  <div className="space-y-3">
+                  <div className="space-y-3 md:space-y-4">
                     <button className="w-full bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 rounded-xl px-4 py-2 text-sm hover:bg-[#b48828]/20 transition-colors">
                       Full Screen Mode
                     </button>
