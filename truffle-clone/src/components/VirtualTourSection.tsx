@@ -106,7 +106,7 @@ export default function VirtualTourSection() {
         {villas.map((villa, index) => (
           <div key={`${villa.id}-${index}`} className="relative overflow-hidden">
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden">
-              <div className="relative h-64 sm:h-64 overflow-hidden">
+              <div className="relative h-64 lg:h-[520px] overflow-hidden">
                 <img
                   src={villa.image}
                   alt={villa.name}
@@ -142,7 +142,7 @@ export default function VirtualTourSection() {
         ))}
         <div className="relative overflow-hidden">
           <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden">
-            <div className="relative h-64 sm:h-64 overflow-hidden">
+            <div className="relative h-64 lg:h-[520px] overflow-hidden">
               <img
                 src={villas[0].image}
                 alt="Villa Type 4"
