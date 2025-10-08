@@ -118,7 +118,7 @@ export default function VirtualTourSection() {
                     <div className="flex flex-col gap-1">
                       <h3 className="text-xl font-semibold">{villa.name}</h3>
                       {villaDetails[villa.id] && (
-                        <p className="text-white/90 text-sm md:text-base pb-1 relative">
+                        <p className="text-white/90 text-sm pb-1 relative">
                           {villaDetails[villa.id]}
                           <span
                             className="absolute bottom-0 left-0 right-0 h-[0.5px] bg-gradient-to-r from-transparent via-white/40 to-transparent"
