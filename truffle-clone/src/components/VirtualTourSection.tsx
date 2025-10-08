@@ -153,7 +153,7 @@ export default function VirtualTourSection() {
                 <div className="flex items-end justify-between gap-3 text-left">
                   <div className="flex flex-col gap-1">
                     <h3 className="text-xl font-semibold">Villa Type 4</h3>
-                    <p className="text-white/90 text-sm md:text-base pb-1 relative">
+                    <p className="text-white/90 text-sm pb-1 relative">
                       4 Bed - 5 Bath - 353 sqm.
                       <span
                         className="absolute bottom-0 left-0 right-0 h-[0.5px] bg-gradient-to-r from-transparent via-white/40 to-transparent"
