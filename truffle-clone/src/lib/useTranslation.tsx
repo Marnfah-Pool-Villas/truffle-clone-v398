@@ -93,7 +93,7 @@ export const languageInfo: Array<{ code: Language; name: string; currency: strin
   { code: 'es', name: 'Español', currency: '🇪🇸' },
   { code: 'fr', name: 'Français', currency: '🇫🇷' },
   { code: 'ms', name: 'Malay', currency: '🇲🇾' },
-  { code: 'vi', name: 'Tiếng Việt', currency: '��🇳' }
+  { code: 'vi', name: 'Tiếng Việt', currency: '🇻🇳' }
 ]
 
 interface TranslationContextType {
