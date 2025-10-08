@@ -269,7 +269,7 @@ export default function VirtualTourSection() {
                     <button className="w-full bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 rounded-xl px-4 py-2 text-sm md:text-base hover:bg-[#b48828]/20 transition-colors">
                       Full Screen Mode
                     </button>
-                    <button className="w-full bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 rounded-xl px-4 py-2 text-sm hover:bg-[#264f28]/20 transition-colors">
+                    <button className="w-full bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 rounded-xl px-4 py-2 text-sm md:text-base hover:bg-[#264f28]/20 transition-colors">
                       Schedule Physical Tour
                     </button>
                   </div>
