@@ -163,7 +163,7 @@ export default function VirtualTourSection() {
                   </div>
                   <button
                     type="button"
-                    className="text-xs md:text-sm font-medium bg-white/10 hover:bg-white/20 text-white px-3 md:px-4 py-1 md:py-1.5 rounded-full border border-white/30 transition-colors"
+                    className="text-xs font-medium bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-full border border-white/30 transition-colors"
                   >
                     View Pictures ↗
                   </button>
