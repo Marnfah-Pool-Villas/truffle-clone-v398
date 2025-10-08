@@ -238,7 +238,7 @@ export default function VirtualTourSection() {
               {/* Room Navigation Sidebar */}
               <div className="absolute right-0 top-0 bottom-0 w-80 bg-white/95 backdrop-blur-sm border-l border-gray-200 p-6 overflow-y-auto">
                 <h4 className="text-lg font-semibold text-[#264f28] mb-4">Room Navigation</h4>
-                <div className="space-y-3">
+                <div className="space-y-3 md:space-y-4">
                   {selectedVillaData.rooms.map((room, index) => (
                     <button
                       key={index}
