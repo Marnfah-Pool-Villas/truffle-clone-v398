@@ -76,6 +76,14 @@ export default function MapPage() {
   const [mapAdjacentHighlight, ...secondaryHighlights] = otherHighlights
   const isSingleSecondaryHighlight = secondaryHighlights.length === 1
 
+  const mapLocation = {
+    lat: 12.888972,
+    lng: 100.949889,
+    display: '12°53\'20.3"N 100°56\'59.6"E'
+  }
+  const mapZoom = 16
+  const mapEmbedSrc = `https://maps.google.com/maps?q=${mapLocation.lat},${mapLocation.lng}&z=${mapZoom}&output=embed`
+
   const staticMapCard = (
     <div className="relative rounded-3xl overflow-hidden border-8 border-[#b48828]/30 shadow-2xl bg-white/10 backdrop-blur-sm">
       <img
