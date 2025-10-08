@@ -88,7 +88,7 @@ export default function VirtualTourSection() {
             </svg>
           </div>
           <div className="relative mb-4">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
+            <h1 className="text-3xl lg:text-6xl font-light italic text-[#264f28] tracking-wide leading-tight">
               <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#264f28]/20 via-[#264f28]/10 to-transparent rounded-2xl blur-sm"></span>
                 <span className="relative bg-gradient-to-r from-[#264f28] to-[#2d5a30] bg-clip-text text-transparent font-medium">
@@ -102,15 +102,15 @@ export default function VirtualTourSection() {
       </div>
 
       {/* Villa Tour Selection */}
-      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 overflow-hidden sm:overflow-visible">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 overflow-hidden lg:overflow-visible">
         {villas.map((villa, index) => (
-          <div key={`${villa.id}-${index}`} className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden transition-all duration-300 sm:group-hover:scale-[1.02]">
-              <div className="relative h-64 overflow-hidden">
+          <div key={`${villa.id}-${index}`} className="relative overflow-hidden">
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden">
+              <div className="relative h-64 lg:h-[520px] overflow-hidden">
                 <img
                   src={villa.image}
                   alt={villa.name}
-                  className="w-full h-full object-cover transition-transform duration-300 sm:group-hover:scale-110"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -118,7 +118,7 @@ export default function VirtualTourSection() {
                     <div className="flex flex-col gap-1">
                       <h3 className="text-xl font-semibold">{villa.name}</h3>
                       {villaDetails[villa.id] && (
-                        <p className="text-white/90 text-sm lg:text-base pb-1 relative">
+                        <p className="text-white/90 text-sm pb-1 relative">
                           {villaDetails[villa.id]}
                           <span
                             className="absolute bottom-0 left-0 right-0 h-[0.5px] bg-gradient-to-r from-transparent via-white/40 to-transparent"
@@ -140,20 +140,20 @@ export default function VirtualTourSection() {
             </div>
           </div>
         ))}
-        <div className="group cursor-pointer relative overflow-hidden sm:overflow-visible">
-          <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden transition-all duration-300 sm:group-hover:scale-[1.02]">
-            <div className="relative h-64 overflow-hidden">
+        <div className="relative overflow-hidden">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden">
+            <div className="relative h-64 lg:h-[520px] overflow-hidden">
               <img
                 src={villas[0].image}
                 alt="Villa Type 4"
-                className="w-full h-full object-cover transition-transform duration-300 sm:group-hover:scale-110"
+                className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <div className="flex items-end justify-between gap-3 text-left">
                   <div className="flex flex-col gap-1">
                     <h3 className="text-xl font-semibold">Villa Type 4</h3>
-                    <p className="text-white/90 text-sm lg:text-base pb-1 relative">
+                    <p className="text-white/90 text-sm pb-1 relative">
                       4 Bed - 5 Bath - 353 sqm.
                       <span
                         className="absolute bottom-0 left-0 right-0 h-[0.5px] bg-gradient-to-r from-transparent via-white/40 to-transparent"
@@ -238,7 +238,7 @@ export default function VirtualTourSection() {
               {/* Room Navigation Sidebar */}
               <div className="absolute right-0 top-0 bottom-0 w-80 bg-white/95 backdrop-blur-sm border-l border-gray-200 p-6 overflow-y-auto">
                 <h4 className="text-lg font-semibold text-[#264f28] mb-4">Room Navigation</h4>
-                <div className="space-y-3">
+                <div className="space-y-3 md:space-y-4">
                   {selectedVillaData.rooms.map((room, index) => (
                     <button
                       key={index}
@@ -265,11 +265,11 @@ export default function VirtualTourSection() {
                 {/* Tour Controls */}
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <h5 className="text-sm font-medium text-[#264f28] mb-3">Tour Controls</h5>
-                  <div className="space-y-3">
-                    <button className="w-full bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 rounded-xl px-4 py-2 text-sm hover:bg-[#b48828]/20 transition-colors">
+                  <div className="space-y-3 md:space-y-4">
+                    <button className="w-full bg-[#b48828]/10 text-[#b48828] border border-[#b48828]/20 rounded-xl px-4 py-2 text-sm md:text-base hover:bg-[#b48828]/20 transition-colors">
                       Full Screen Mode
                     </button>
-                    <button className="w-full bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 rounded-xl px-4 py-2 text-sm hover:bg-[#264f28]/20 transition-colors">
+                    <button className="w-full bg-[#264f28]/10 text-[#264f28] border border-[#264f28]/20 rounded-xl px-4 py-2 text-sm md:text-base hover:bg-[#264f28]/20 transition-colors">
                       Schedule Physical Tour
                     </button>
                   </div>

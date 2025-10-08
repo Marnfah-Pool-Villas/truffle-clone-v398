@@ -46,7 +46,7 @@ export default function Navigation() {
     {
       key: 'line',
       label: t.footer.line,
-      href: 'https://line.me/ti/p/MarnfahPoolVillas',
+      href: 'https://lin.ee/xK6xWUi',
       imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F9487ed1d900b4348834f3adb2824e1e9?format=webp&width=800'
     }
   ] as const
@@ -278,7 +278,7 @@ export default function Navigation() {
           </div>
 
           {/* Desktop language menu - moved further right */}
-          <div className="hidden md:flex items-center gap-4 transform md:-translate-x-6 lg:-translate-x-8 xl:-translate-x-10">
+          <div className="hidden md:flex items-center gap-4 transform md:translate-x-6 lg:translate-x-8 xl:translate-x-10">
             <div className="relative" ref={desktopLanguageDropdownRef}>
               <button
                 onClick={() => {
@@ -307,7 +307,7 @@ export default function Navigation() {
               {/* Language Dropdown Menu - Desktop Only */}
               {isLanguageDropdownOpen && (
                 <div
-                  className="absolute top-full mt-2 left-0 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl overflow-hidden z-[99999]"
+                  className="absolute top-full mt-2 right-0 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl overflow-hidden z-[99999]"
                   style={{ minWidth: '70px' }}
                 >
                   <div className="p-1">

@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server'
 import type { Language } from '@/lib/translations'
 import { DEFAULT_LANGUAGE, supportedLanguages } from '@/lib/translations'
+import { getCtaOverrideForText, getCtaOverridesSignature } from '@/lib/ctaOverrides'
 
 const GOOGLE_TRANSLATE_ENDPOINT = 'https://translate.googleapis.com/translate_a/single'
 const MAX_TRANSLATION_RETRIES = 2
 const MAX_PARALLEL_TRANSLATIONS = 8
+const CTA_SIGNATURE = getCtaOverridesSignature()
 
 const SUPPORTED_LANGUAGE_SET = new Set<Language>(supportedLanguages)
 
@@ -86,6 +88,12 @@ const getLanguageCache = (language: Language): Map<string, string> => {
 
 const translateTextWithCache = async (text: string, language: Language): Promise<string> => {
   const cache = getLanguageCache(language)
+  const override = getCtaOverrideForText(language, text)
+  if (override) {
+    cache.set(text, override)
+    return override
+  }
+
   const cached = cache.get(text)
   if (cached !== undefined) {
     return cached
@@ -181,7 +189,8 @@ export async function POST(request: Request) {
     const translatedMap = await translateUniqueTexts(uniqueTexts, normalizedLanguage)
 
     for (const [text, indexes] of indexMap.entries()) {
-      const translated = translatedMap.get(text) ?? text
+      const manual = getCtaOverrideForText(normalizedLanguage, text)
+      const translated = manual ?? translatedMap.get(text) ?? text
       indexes.forEach(position => {
         translations[position] = translated
       })
