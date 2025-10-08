@@ -46,7 +46,7 @@ export default function Navigation() {
     {
       key: 'line',
       label: t.footer.line,
-      href: 'https://line.me/ti/p/MarnfahPoolVillas',
+      href: 'https://lin.ee/xK6xWUi',
       imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F9487ed1d900b4348834f3adb2824e1e9?format=webp&width=800'
     }
   ] as const
