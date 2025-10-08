@@ -307,7 +307,7 @@ export default function Navigation() {
               {/* Language Dropdown Menu - Desktop Only */}
               {isLanguageDropdownOpen && (
                 <div
-                  className="absolute top-full mt-2 left-0 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl overflow-hidden z-[99999]"
+                  className="absolute top-full mt-2 right-0 rounded-xl border border-[#b48828]/20 bg-[#b48828]/60 shadow-2xl overflow-hidden z-[99999]"
                   style={{ minWidth: '70px' }}
                 >
                   <div className="p-1">
