@@ -94,24 +94,4 @@ export const getCtaOverrideForText = (language: Language, sourceText: string): s
  * Apply CTA overrides immutably to a Translations object.
  * Returns a **new Translations object** without mutating readonly properties.
  */
-export const applyCtaOverrideToTranslations = (
-  language: Language,
-  translations: Translations
-): Translations => {
-  if (language === DEFAULT_LANGUAGE) return translations
-
-  const override = getCtaOverride(language)
-  if (!override) return translations
-
-  return {
-    ...translations,
-    properties: {
-      ...translations.properties,
-      seeAllVillaTypes: override.seeAllVillaTypes
-    },
-    exclusive: {
-      ...translations.exclusive,
-      buttonText: override.viewBrochure
-    }
-  }
-}
+e
