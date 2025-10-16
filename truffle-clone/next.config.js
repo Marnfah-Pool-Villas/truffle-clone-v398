@@ -1,6 +1,7 @@
 const nextConfig = {
-  distDir: 'out',
   reactStrictMode: true,
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   allowedDevOrigins: [
     'builder.io',
     'https://builder.io',
