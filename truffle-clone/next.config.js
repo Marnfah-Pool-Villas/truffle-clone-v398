@@ -1,5 +1,4 @@
 const nextConfig = {
-  output: 'export',
   distDir: 'out',
   allowedDevOrigins: [
     'builder.io',
