@@ -14,7 +14,6 @@ export interface CtaOverride {
 interface Translations {
   properties: {
     readonly seeAllVillaTypes: string;
-    ...
   };
   exclusive: {
     readonly buttonText: string;
