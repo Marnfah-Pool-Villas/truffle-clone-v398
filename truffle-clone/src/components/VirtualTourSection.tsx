@@ -145,14 +145,14 @@ export default function VirtualTourSection() {
             <div className="relative h-64 lg:h-[520px] overflow-hidden">
               <img
                 src={villas[0].image}
-                alt="Villa Type 4"
+                alt="Unity *Villa Type 4"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <div className="flex items-end justify-between gap-3 text-left">
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-xl font-semibold">Villa Type 4</h3>
+                    <h3 className="text-xl font-semibold">Unity *Villa Type 4</h3>
                     <p className="text-white/90 text-sm pb-1 relative">
                       4 Bed - 5 Bath - 353 sqm.
                       <span

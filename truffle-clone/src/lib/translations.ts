@@ -216,7 +216,7 @@ const englishTranslationsData = {
     },
     villas: {
       type1: {
-        name: "Villa Type 1",
+        name: "Harmony *Villa Type 1",
         description: "4 Bedrooms | Infinity Pool | Ocean Views",
         status: "2 Available",
         rooms: {
@@ -228,7 +228,7 @@ const englishTranslationsData = {
         }
       },
       type2: {
-        name: "Villa Type 2",
+        name: "Serenity *Villa Type 2",
         description: "5 Bedrooms | Pool Terrace | Garden Sanctuary",
         status: "1 Available",
         rooms: {
@@ -240,7 +240,7 @@ const englishTranslationsData = {
         }
       },
       type3: {
-        name: "Villa Type 3",
+        name: "Tranquility *Villa Type 3",
         description: "3 Bedrooms | Private Pool | Zen Gardens",
         status: "Reserved",
         rooms: {
@@ -295,7 +295,12 @@ const englishTranslationsData = {
   }
 } as const
 
-export type Translations = typeof englishTranslationsData
+export type MutableTranslations<T> = {
+  [K in keyof T]: T[K] extends object ? MutableTranslations<T[K]> : string
+}
+
+export type Translations = MutableTranslations<typeof englishTranslationsData>
+
 
 export interface TranslationEntry {
   path: ReadonlyArray<string | number>

@@ -62,6 +62,7 @@ const CTA_OVERRIDES: Partial<Record<Language, CtaOverride>> = {
   }
 }
 
+// Generate a deterministic signature for overrides
 const CTA_OVERRIDES_SIGNATURE = (() => {
   const entries = Object.entries(CTA_OVERRIDES).map(([language, override]) => {
     if (!override) {
@@ -81,31 +82,37 @@ export const getCtaOverride = (language: Language): CtaOverride | null => {
 
 export const getCtaOverrideForText = (language: Language, sourceText: string): string | null => {
   const override = getCtaOverride(language)
-  if (!override) {
-    return null
-  }
+  if (!override) return null
 
-  if (sourceText === CTA_SOURCE_TEXTS.seeAllVillaTypes) {
-    return override.seeAllVillaTypes
-  }
-
-  if (sourceText === CTA_SOURCE_TEXTS.viewBrochure) {
-    return override.viewBrochure
-  }
+  if (sourceText === CTA_SOURCE_TEXTS.seeAllVillaTypes) return override.seeAllVillaTypes
+  if (sourceText === CTA_SOURCE_TEXTS.viewBrochure) return override.viewBrochure
 
   return null
 }
 
-export const applyCtaOverrideToTranslations = (language: Language, translations: Translations) => {
-  if (language === DEFAULT_LANGUAGE) {
-    return
-  }
+/**
+ * Apply CTA overrides immutably to a Translations object.
+ * Returns a **new Translations object** without mutating readonly properties.
+ */
+export const applyCtaOverrideToTranslations = (
+  language: Language,
+  translations: Translations
+): Translations => {
+  if (language === DEFAULT_LANGUAGE) return translations
 
   const override = getCtaOverride(language)
-  if (!override) {
-    return
-  }
+  if (!override) return translations
 
-  translations.properties.seeAllVillaTypes = override.seeAllVillaTypes
-  translations.exclusive.buttonText = override.viewBrochure
+  return {
+    ...translations,
+    properties: {
+      ...translations.properties,
+      seeAllVillaTypes: override.seeAllVillaTypes
+    },
+    exclusive: {
+      ...translations.exclusive,
+      buttonText: override.viewBrochure
+    }
+  }
 }
+
