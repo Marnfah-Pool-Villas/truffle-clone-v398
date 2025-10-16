@@ -1,5 +1,4 @@
 [build]
-    base = "truffle-clone"
     command = "npm run build"
 
 [[plugins]]
