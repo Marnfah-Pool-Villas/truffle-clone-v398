@@ -295,7 +295,12 @@ const englishTranslationsData = {
   }
 } as const
 
-export type Translations = typeof englishTranslationsData
+export type MutableTranslations<T> = {
+  [K in keyof T]: T[K] extends object ? MutableTranslations<T[K]> : string
+}
+
+export type Translations = MutableTranslations<typeof englishTranslationsData>
+
 
 export interface TranslationEntry {
   path: ReadonlyArray<string | number>
