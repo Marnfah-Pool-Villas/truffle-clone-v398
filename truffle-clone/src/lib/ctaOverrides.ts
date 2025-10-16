@@ -11,16 +11,6 @@ export interface CtaOverride {
   viewBrochure: string
 }
 
-interface Translations {
-  properties: {
-    readonly seeAllVillaTypes: string;
-  };
-  exclusive: {
-    readonly buttonText: string;
-  };
-}
-
-
 const CTA_OVERRIDES: Partial<Record<Language, CtaOverride>> = {
   th: {
     seeAllVillaTypes: 'ดูวิลล่าทุกประเภท',
