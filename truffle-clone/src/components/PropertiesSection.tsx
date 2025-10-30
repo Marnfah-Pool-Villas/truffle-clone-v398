@@ -52,7 +52,7 @@ export default function PropertiesSection() {
                 />
                 <div className="relative aspect-[4/3] lg:aspect-[3/4] xl:aspect-square rounded-3xl md:shadow-2xl w-full overflow-hidden border-8 border-[#b48828]/30">
                   <img
-                    src="/villa2.jpg"
+                    src="/set2/type1.webp"
                     alt="Harmony - Luxury Pool Terrace Villa"
                     className="w-full h-full object-cover"
                   />
@@ -84,7 +84,7 @@ export default function PropertiesSection() {
                 />
                 <div className="relative aspect-[4/3] lg:aspect-[3/4] xl:aspect-square rounded-3xl md:shadow-2xl w-full overflow-hidden border-8 border-[#b48828]/30">
                   <img
-                    src="/villa3.jpg"
+                    src="/set2/villa2.webp"
                     alt="Serenity - Modern Tropical Villa"
                     className="w-full h-full object-cover"
                   />
@@ -116,7 +116,7 @@ export default function PropertiesSection() {
                 />
                 <div className="relative aspect-[4/3] lg:aspect-[3/4] xl:aspect-square rounded-3xl md:shadow-2xl w-full overflow-hidden border-8 border-[#b48828]/30">
                   <img
-                    src="/villa4.jpg"
+                    src="/set2/type3.webp"
                     alt="Tranquility - Contemporary Pool Villa"
                     className="w-full h-full object-cover"
                   />

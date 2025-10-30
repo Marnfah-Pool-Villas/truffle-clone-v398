@@ -29,12 +29,13 @@ const englishTranslationsData = {
   },
   hero: {
     subtitle1: "Pattaya's most prestigious estate",
+    subtitle11: "Wellness & Luxury",
     subtitle2: "Premium finishes in seamless form",
     subtitle3: "Timeless design with views that inspire"
   },
   properties: {
     title: "Supreme Elegance",
-    description: "Experience tropical opulence\nWarm wood and Italian stone accents\nLimited availability from ฿10.9M to ฿34.9M",
+    description: "Experience tropical opulence\nWarm wood and Italian stone accents\nLimited availability from ฿12.9M to ฿38.9M",
     seeAllVillaTypes: "See All Villa Types",
     priceRange: "",
     villa1: {
@@ -216,7 +217,7 @@ const englishTranslationsData = {
     },
     villas: {
       type1: {
-        name: "Harmony *Villa Type 1",
+        name: "Villa Type 1",
         description: "4 Bedrooms | Infinity Pool | Ocean Views",
         status: "2 Available",
         rooms: {
@@ -228,7 +229,7 @@ const englishTranslationsData = {
         }
       },
       type2: {
-        name: "Serenity *Villa Type 2",
+        name: "Villa Type 2",
         description: "5 Bedrooms | Pool Terrace | Garden Sanctuary",
         status: "1 Available",
         rooms: {
@@ -240,7 +241,7 @@ const englishTranslationsData = {
         }
       },
       type3: {
-        name: "Tranquility *Villa Type 3",
+        name: "Villa Type 3",
         description: "3 Bedrooms | Private Pool | Zen Gardens",
         status: "Reserved",
         rooms: {
@@ -249,6 +250,18 @@ const englishTranslationsData = {
           pool: "Private Sanctuary",
           kitchen: "Chef's Kitchen",
           garden: "Zen Garden"
+        }
+      },
+      type4: {
+        name: "Villa Type 4",
+        description: "4 Bedrooms | Private Pool | Modern Design",
+        status: "Available",
+        rooms: {
+          living: "Living Space",
+          master: "Master Suite",
+          pool: "Pool Area",
+          kitchen: "Modern Kitchen",
+          terrace: "Outdoor Terrace"
         }
       }
     },

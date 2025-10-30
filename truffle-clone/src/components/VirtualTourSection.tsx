@@ -1,13 +1,34 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useT } from '@/lib/useTranslation'
+
+// Import lightgallery styles
+import 'lightgallery/css/lightgallery.css'
+
+// Custom styles for gallery
+const customGalleryStyles = `
+  .lg-toolbar .lg-icon {
+    cursor: pointer;
+  }
+
+  .lg-outer .lg-sub-html {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+  }
+`
 
 export default function VirtualTourSection() {
   const t = useT()
   const [selectedVilla, setSelectedVilla] = useState<string | null>(null)
   const [currentRoom, setCurrentRoom] = useState(0)
   const [isVirtualTourOpen, setIsVirtualTourOpen] = useState(false)
+
+  // Refs for lightgallery
+  const galleryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({})
+  const galleryInstances = useRef<{ [key: string]: { destroy?: () => void; openGallery?: (index: number) => void } | null }>({})
 
   const villas = [
     {
@@ -17,6 +38,14 @@ export default function VirtualTourSection() {
       status: t.virtualTour.villas.type1.status,
       description: t.virtualTour.villas.type1.description,
       image: '/int.JPG',
+      galleryImages: [
+        '/lightgallery/type1/type1 layout.webp',
+        '/lightgallery/type1/type1.0.0.webp',
+        '/lightgallery/type1/type1.2.webp',
+        '/lightgallery/type1/type1.3.webp',
+        '/lightgallery/type1/type1.4.webp',
+        '/lightgallery/type1/type1.5.webp',
+      ],
       rooms: [
         { name: t.virtualTour.villas.type1.rooms.living, image: '/villa2.jpg', hotspots: 3 },
         { name: t.virtualTour.villas.type1.rooms.master, image: '/villa1.jpg', hotspots: 2 },
@@ -32,6 +61,17 @@ export default function VirtualTourSection() {
       status: t.virtualTour.villas.type2.status,
       description: t.virtualTour.villas.type2.description,
       image: '/inttt.JPG',
+      galleryImages: [
+        '/lightgallery/type2/type2-1 layout.webp',
+        '/lightgallery/type2/type2-2 layout.webp',
+        '/lightgallery/type2/type2-3 layout.webp',
+        '/lightgallery/type2/type2.0.webp',
+        '/lightgallery/type2/type2.0.2.webp',
+        '/lightgallery/type2/type2.1.webp',
+        '/lightgallery/type2/type2.2.webp',
+        '/lightgallery/type2/type2.3.webp',
+        '/lightgallery/type2/type2.4.webp',
+      ],
       rooms: [
         { name: t.virtualTour.villas.type2.rooms.living, image: '/villa3.jpg', hotspots: 4 },
         { name: t.virtualTour.villas.type2.rooms.master, image: '/villa1.jpg', hotspots: 3 },
@@ -47,6 +87,14 @@ export default function VirtualTourSection() {
       status: t.virtualTour.villas.type3.status,
       description: t.virtualTour.villas.type3.description,
       image: '/intt.JPG',
+      galleryImages: [
+        '/lightgallery/type3/type3 layout.webp',
+        '/lightgallery/type3/type3.0.0.webp',
+        '/lightgallery/type3/type3.1.webp',
+        '/lightgallery/type3/type3.2.webp',
+        '/lightgallery/type3/type3.4.webp',
+        '/lightgallery/type3/type3.6.webp',
+      ],
       rooms: [
         { name: t.virtualTour.villas.type3.rooms.living, image: '/villa4.jpg', hotspots: 2 },
         { name: t.virtualTour.villas.type3.rooms.master, image: '/villa1.jpg', hotspots: 3 },
@@ -54,8 +102,109 @@ export default function VirtualTourSection() {
         { name: t.virtualTour.villas.type3.rooms.kitchen, image: '/villa3.jpg', hotspots: 2 },
         { name: t.virtualTour.villas.type3.rooms.garden, image: '/villa2.jpg', hotspots: 3 }
       ]
+    },
+    {
+      id: 'type4',
+      name: t.virtualTour.villas.type4.name,
+      price: '$2.2M USD',
+      status: t.virtualTour.villas.type4.status,
+      description: t.virtualTour.villas.type4.description,
+      image: '/lightgallery/type4.3.webp',
+      galleryImages: [
+        '/lightgallery/type4/type4 layout.webp',
+        '/lightgallery/type4/type4.0.0.webp',
+        '/lightgallery/type4/type4.1.webp',
+        '/lightgallery/type4/type4.2.webp',
+        '/lightgallery/type4/type4.3.webp',
+        '/lightgallery/type4/type4.5.webp',
+      ],
+      rooms: [
+        { name: t.virtualTour.villas.type4.rooms.living, image: '/villa3.jpg', hotspots: 2 },
+        { name: t.virtualTour.villas.type4.rooms.master, image: '/villa1.jpg', hotspots: 3 },
+        { name: t.virtualTour.villas.type4.rooms.pool, image: '/villa5.jpg', hotspots: 4 },
+        { name: t.virtualTour.villas.type4.rooms.kitchen, image: '/villa2.jpg', hotspots: 2 },
+        { name: t.virtualTour.villas.type4.rooms.terrace, image: '/villa4.jpg', hotspots: 3 }
+      ]
     }
   ]
+
+  // Add custom styles and cleanup on unmount
+  useEffect(() => {
+    // Inject custom styles
+    const styleElement = document.createElement('style')
+    styleElement.innerHTML = customGalleryStyles
+    document.head.appendChild(styleElement)
+
+    return () => {
+      // Remove styles safely
+      if (styleElement && styleElement.parentNode) {
+        styleElement.parentNode.removeChild(styleElement)
+      }
+
+      // Cleanup gallery instances
+      Object.values(galleryInstances.current).forEach((instance) => {
+        if (instance && instance.destroy) {
+          instance.destroy()
+        }
+      })
+    }
+  }, [])
+
+  const openGallery = async (villaId: string) => {
+    try {
+      // Check if instance already exists
+      if (galleryInstances.current[villaId]) {
+        galleryInstances.current[villaId]?.openGallery?.(0)
+        return
+      }
+
+      // Initialize gallery on demand
+      const galleryElement = galleryRefs.current[villaId]
+      console.log('Opening gallery for:', villaId, 'Element:', galleryElement)
+
+      if (!galleryElement) {
+        console.error('Gallery element not found for:', villaId)
+        return
+      }
+
+      // Dynamically import lightgallery
+      const lightGallery = (await import('lightgallery')).default
+
+      // Initialize gallery with fullscreen mode (provides pinch-to-zoom on mobile)
+      galleryInstances.current[villaId] = lightGallery(galleryElement, {
+        speed: 500,
+        download: true,
+        counter: true,
+        selector: 'a',
+        // Enable fullscreen for better viewing
+        fullScreen: true,
+        // Show zoom controls
+        actualSize: true,
+        // Enable keyboard navigation
+        escKey: true,
+        // Enable touch gestures
+        swipeToClose: true,
+        // Slideshow
+        autoplay: false,
+        // Misc
+        closable: true,
+        loop: true,
+        // Add CSS class for custom styling
+        addClass: 'lg-custom-gallery',
+      })
+
+      console.log(`Gallery initialized for ${villaId}`)
+
+      // Open the gallery
+      setTimeout(() => {
+        if (galleryInstances.current[villaId]) {
+          galleryInstances.current[villaId]?.openGallery?.(0)
+        }
+      }, 100)
+    } catch (error) {
+      console.error('Error opening gallery:', error)
+    }
+  }
 
   const startVirtualTour = (villaId: string) => {
     setSelectedVilla(villaId)
@@ -72,7 +221,8 @@ export default function VirtualTourSection() {
   const villaDetails: Record<string, string> = {
     type1: '5 Bed - 6 Bath - 592 sqm.',
     type2: '4 Bed - 5 Bath - 457 sqm.',
-    type3: '4 Bed - 5 Bath - 382.5 sqm.'
+    type3: '4 Bed - 5 Bath - 382.5 sqm.',
+    type4: '4 Bed - 5 Bath - 353 sqm.'
   }
 
   const selectedVillaData = villas.find(v => v.id === selectedVilla)
@@ -129,50 +279,30 @@ export default function VirtualTourSection() {
                     </div>
                     <button
                       type="button"
+                      onClick={() => openGallery(villa.id)}
                       className="text-xs font-medium bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-full border border-white/30 transition-colors"
                     >
-                      View Pictures ↗
+                      View Layout & Pictures ↗
                     </button>
                   </div>
                 </div>
               </div>
 
             </div>
+
+            {/* Hidden gallery items for lightgallery */}
+            <div
+              ref={(el) => { galleryRefs.current[villa.id] = el }}
+              className="hidden"
+            >
+              {villa.galleryImages.map((image, imgIndex) => (
+                <a key={imgIndex} href={image} data-src={image}>
+                  <img alt={`${villa.name} - Image ${imgIndex + 1}`} src={image} />
+                </a>
+              ))}
+            </div>
           </div>
         ))}
-        <div className="relative overflow-hidden">
-          <div className="bg-white/90 backdrop-blur-sm rounded-3xl border-8 border-[#b48828]/30 overflow-hidden">
-            <div className="relative h-64 lg:h-[520px] overflow-hidden">
-              <img
-                src={villas[0].image}
-                alt="Unity *Villa Type 4"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <div className="flex items-end justify-between gap-3 text-left">
-                  <div className="flex flex-col gap-1">
-                    <h3 className="text-xl font-semibold">Unity *Villa Type 4</h3>
-                    <p className="text-white/90 text-sm pb-1 relative">
-                      4 Bed - 5 Bath - 353 sqm.
-                      <span
-                        className="absolute bottom-0 left-0 right-0 h-[0.5px] bg-gradient-to-r from-transparent via-white/40 to-transparent"
-                        style={{ boxShadow: '0 0 4px rgba(255, 255, 255, 0.3), 0 0 8px rgba(212, 175, 55, 0.2)' }}
-                      ></span>
-                    </p>
-                  </div>
-                  <button
-                    type="button"
-                    className="text-xs font-medium bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-full border border-white/30 transition-colors"
-                  >
-                    View Pictures ↗
-                  </button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
       </div>
 
       {/* Virtual Tour Modal */}

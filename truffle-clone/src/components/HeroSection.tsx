@@ -9,9 +9,9 @@ export default function HeroSection() {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="h-auto min-h-[500px] lg:min-h-[800px] xl:min-h-[900px] md:h-screen w-full flex-shrink-0 flex justify-center items-center relative overflow-hidden -mt-12 pb-0 md:mt-0 md:pb-0">
+      <div className="h-[500px] md:h-[calc(100vh-1rem)] lg:h-screen w-full flex-shrink-0 flex justify-center items-center relative overflow-hidden mt-0 md:mt-0 pb-0 md:pb-0">
         {/* Hero image container with full height and rounded border - DOUBLED HEIGHT */}
-        <div className="absolute top-1/2 left-4 right-4 -translate-y-1/2 h-[400px] md:top-4 md:left-4 md:right-4 md:bottom-4 md:h-[calc(100vh-2rem)] md:translate-y-0 border-8 border-[#b48828]/30 overflow-hidden rounded-[32px]">
+        <div className="absolute inset-4 md:inset-4 h-[calc(100%-2rem)] md:h-auto border-8 border-[#b48828]/30 overflow-hidden rounded-[32px]">
           {/* Mobile background - cropped for better mobile viewing */}
           <div
             className="absolute inset-0 w-full h-full bg-center bg-no-repeat md:hidden"
@@ -52,36 +52,52 @@ export default function HeroSection() {
           }}
         />
 
-        {/* Content overlay */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 container mx-auto gap-y-20 w-full flex flex-col justify-center items-center h-full px-4 md:px-6 z-20">
-          <div className="flex items-center flex-col w-full gap-y-10 text-center">
-            <div className="w-full flex flex-col items-center gap-y-6 mt-[0.5cm] md:mt-[1cm]">
-              {/* Leafy logo - larger on desktop to match taller hero, moved up on mobile */}
+        {/* Content overlay - Fixed sizes for all screens */}
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 flex flex-col justify-center items-center z-20"
+          style={{
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 'calc(100% - 2rem)',
+            maxWidth: '900px'
+          }}
+        >
+          <div className="flex items-center flex-col w-full text-center gap-3 md:gap-4 lg:gap-6">
+            <div className="w-full flex flex-col items-center gap-2 md:gap-3">
+              {/* Leafy logo - Dynamic responsive size using viewport units */}
               <img
                 src="/leafy.jpg"
                 alt="Marnfah Pool Villas Logo"
-                className="h-28 md:h-64 lg:h-72 w-auto object-contain drop-shadow-lg"
+                className="w-auto max-h-[120px] md:max-h-[15vh] lg:max-h-[18vh] object-contain"
+                style={{
+                  filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))'
+                }}
               />
 
-              {/* Custom branded text - larger on desktop to match taller hero */}
+              {/* Custom branded text - Dynamic responsive size using viewport and container width */}
               <img
                 src="/text.webp"
                 alt="Marnfah Pool Villas"
-                className="h-20 md:h-40 lg:h-44 w-auto object-contain drop-shadow-lg"
+                className="w-[85%] max-w-[600px] md:w-[75%] md:max-w-[700px] lg:w-[70%] lg:max-w-[800px] h-auto object-contain"
+                style={{
+                  filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))'
+                }}
               />
             </div>
-            <div className="relative w-full px-4 md:px-8 lg:px-12">
-              <div>
-                <p className="text-[15px] text-white text-center font-medium md:text-[22px] lg:text-[22px] xl:text-[24px]" style={{
+            <div className="relative w-full px-4 md:px-6 lg:px-8">
+              <p
+                className="text-white text-center font-medium text-[clamp(14px,3.5vw,16px)] md:text-[clamp(18px,2vw,24px)] lg:text-[clamp(20px,1.8vw,28px)]"
+                style={{
                   WebkitTextStroke: '0.1px #d4af37',
                   textShadow: '0 0 0.5px #d4af37',
                   lineHeight: '1.6'
-                }}>
-                  <span className="block">{t.hero.subtitle1}</span>
-                  <span className="block">{t.hero.subtitle2}</span>
-                  <span className="block">{t.hero.subtitle3}</span>
-                </p>
-              </div>
+                }}
+              >
+                <span className="block mb-2 md:mb-3">{t.hero.subtitle11}</span>
+                <span className="block">{t.hero.subtitle1}</span>
+                <span className="block">{t.hero.subtitle2}</span>
+                <span className="block">{t.hero.subtitle3}</span>
+              </p>
             </div>
           </div>
         </div>

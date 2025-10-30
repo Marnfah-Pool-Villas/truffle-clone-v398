@@ -135,10 +135,10 @@ export default function LoadingAnimation({ onLoadingComplete }: LoadingAnimation
           }`}
         >
           <h2 className="text-2xl font-light text-[#264f28] mb-2 tracking-wide">
-            MARNFAH
+            MARNFAH POOL VILLAS
           </h2>
-          <p className="text-sm text-[#264f28]/70 tracking-wider uppercase">
-            Luxury Pool Villas
+          <p className="text-xs text-[#264f28]/70 tracking-wider uppercase">
+            Wellness & Luxury
           </p>
 
           {/* Sophisticated loading dots */}
