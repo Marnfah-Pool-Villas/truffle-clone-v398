@@ -14,7 +14,7 @@ export default function ExclusiveSection() {
         />
         <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[600px] rounded-3xl overflow-hidden md:shadow-2xl border-8 border-[#b48828]/30">
           <img
-            src="/set2/villa pic 5.webp"
+            src="/assets/home/contactus.webp"
             alt="Bespoke Lifestyle Design"
             className="w-full h-full object-cover"
             style={{ objectPosition: '75% center' }}
