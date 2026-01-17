@@ -39,9 +39,9 @@ export default function Navigation() {
     },
     {
       key: 'facebook',
-      label: t.footer.wechat,
+      label: t.footer.facebook,
       href: 'https://www.facebook.com/people/Marnfah-Pool-villas/61551696712872/#',
-      imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fabb0ec401a4e4035a9e1722644989e26?format=webp&width=800'
+      imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg'
     },
     {
       key: 'line',
