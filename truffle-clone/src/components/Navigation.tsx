@@ -40,7 +40,7 @@ export default function Navigation() {
     {
       key: 'facebook',
       label: t.footer.wechat,
-      href: 'https://www.facebook.com/61551696712872/',
+      href: 'https://www.facebook.com/people/Marnfah-Pool-villas/61551696712872/#',
       imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fabb0ec401a4e4035a9e1722644989e26?format=webp&width=800'
     },
     {
