@@ -12,14 +12,14 @@ export default function InternationalContacts() {
       url: 'https://wa.me/66635517979'
     },
     {
-      name: 'WeChat',
+      name: 'Facebook',
       icon: '🗨️',
-      url: 'weixin://dl/chat?MarnfahVillas'
+      url: 'https://www.facebook.com/61551696712872/'
     },
     {
       name: 'Line',
       icon: '💭',
-      url: 'https://line.me/ti/p/MarnfahPoolVillas'
+      url: 'https://line.me/R/ti/p/@294vnbgc'
     }
   ]
 
