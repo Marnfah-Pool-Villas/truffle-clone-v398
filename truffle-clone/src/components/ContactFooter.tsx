@@ -29,16 +29,16 @@ export default function ContactFooter() {
                 <span className="text-[#264f28] text-xs font-medium">WhatsApp</span>
               </a>
               <a
-                href="weixin://dl/chat?MarnfahVillas"
+                href="https://www.facebook.com/61551696712872/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => hapticFeedback.light()}
                 className="bg-[#264f28]/10 hover:bg-[#264f28]/20 border-y border-[#264f28]/20 hover:border-[#264f28]/40 px-3 py-2 transition-all duration-300 hover:scale-105 transform flex items-center justify-center group"
               >
-                <span className="text-[#264f28] text-xs font-medium">WeChat</span>
+                <span className="text-[#264f28] text-xs font-medium">Facebook</span>
               </a>
               <a
-                href="https://line.me/ti/p/MarnfahPoolVillas"
+                href="https://line.me/R/ti/p/@294vnbgc"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => hapticFeedback.light()}
