@@ -38,15 +38,15 @@ export default function Navigation() {
       imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F3ca95af26ebe4c74850ec260d05ce271?format=webp&width=800'
     },
     {
-      key: 'wechat',
+      key: 'facebook',
       label: t.footer.wechat,
-      href: 'weixin://dl/chat?MarnfahVillas',
+      href: 'https://www.facebook.com/61551696712872/',
       imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2Fabb0ec401a4e4035a9e1722644989e26?format=webp&width=800'
     },
     {
       key: 'line',
       label: t.footer.line,
-      href: 'https://lin.ee/xK6xWUi',
+      href: 'https://line.me/R/ti/p/@294vnbgc',
       imgSrc: 'https://cdn.builder.io/api/v1/image/assets%2Fea91dcb877424cffabd32075be7aafd0%2F9487ed1d900b4348834f3adb2824e1e9?format=webp&width=800'
     }
   ] as const
